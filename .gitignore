@@ -4,7 +4,6 @@
 *.log
 Thumbs.db
 error-*.xml
-Elmah.txt
 @ElmahLogs/
 @Scrap/
 
@@ -33,7 +32,7 @@ Zebble-Meta.xml
 
 
 # Build results **************************************************
-/firstTest/packages/
+/packages/
 [Bb]in
 [Tt]est[Rr]esult/
 *.Cache
@@ -69,8 +68,4 @@ UpgradeLog*.XML
 # KDiff3
 *.orig
 *.csproj.bak
-/firstTest/first test/App.UI/Views/Pages/FancyPgae
-firstTest/first test/Run/Android/Android_BACKUP_2240.csproj
-firstTest/first test/Run/Android/Android_BASE_2240.csproj
-firstTest/first test/Run/Android/Android_LOCAL_2240.csproj
-firstTest/first test/Run/Android/Android_REMOTE_2240.csproj
+
