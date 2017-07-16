@@ -101,6 +101,30 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\logout.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\my_rides.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\new_ride.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\report.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\upcoming_ride.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\user.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SampleVideo.wmv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -141,26 +165,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Contact\ContactForm.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Modules\Contact\ContactForm.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Contact\ContactsList.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Modules\Contact\ContactsList.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\ContactContactType\Types_ContactFormFormInfo.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Modules\ContactContactType\Types_ContactFormFormInfo.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Menu\MainMenu.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Menu\MainMenu.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Page-1.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Page-1.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Page-1\Enter.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Page-1\Enter.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Page-2.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Page-2.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Page-3.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Page-3.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Page-4.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Page-4.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Page-5.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Page-5.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\HomePage.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\HomePage.zbl" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />

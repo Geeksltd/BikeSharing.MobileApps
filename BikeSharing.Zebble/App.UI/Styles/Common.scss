@@ -177,10 +177,10 @@ SearchInput { margin-bottom: 5px;
 .form-field-header { padding: $input-padding; font-weight: bold; font-size: 16px; }
 
 /*main menu --------------------*/
-MainMenu { background: #282828;
+MainMenu {  background-image: "Images/Menu/background.png";
     Button { color: white; height: 50px; }
     #LogoImage { height: 90px; width: 100%; margin-bottom: 10px; margin-top: 10px; }
-    IconButton { height: 50px; border-bottom-width: 1px; border-color: $dark-grey; color: white;
+    IconButton { height: 60px;  color: deepskyblue;
         #Icon { background-size: contain; margin-top: 7px; height: 25px; width: 30px; margin-left: 10px; }
     }
 }

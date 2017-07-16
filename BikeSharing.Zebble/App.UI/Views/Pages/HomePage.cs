@@ -9,12 +9,13 @@ namespace UI.Pages
     using Zebble.Framework;
     using Domain;
 
-    partial class Page1Enter
+    partial class HomePage
     {
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
+
         }
     }
 }

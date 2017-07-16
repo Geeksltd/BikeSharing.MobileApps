@@ -4,12 +4,12 @@ namespace UI.Templates
     using System.Threading.Tasks;
     using Zebble;
 
-    public class Default : NavBarTabsPage<Modules.MainTabs>
+    public class Default : NavBarPage
     {
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            BodyScroller.Background(Colors.White);
+          //  BodyScroller.Background(Colors.White);
             await WhenShown(() => new MenuDisplayer().Setup());
         }
 
@@ -17,6 +17,12 @@ namespace UI.Templates
 
         protected override View CreateMenuIcon() => new ImageView { CssClass = "menu-icon" };
 
-        protected override Task OnMenuTapped() => MenuDisplayer.Current.Show();
+        protected override Task OnMenuTapped()
+        {
+            MenuDisplayer.Current.Y.Set(this.GetNavBar().ActualHeight);
+            MenuDisplayer.Current.Height.Set(View.Root.ActualHeight - MenuDisplayer.Current.Y.CurrentValue);
+            MenuDisplayer.Current.Show();
+            return Task.CompletedTask;
+        }
     }
 }

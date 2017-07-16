@@ -5,29 +5,18 @@
     xsi:noNamespaceSchemaLocation="./../../.zebble-schema.xml">
 
   <Stack Id="Body">
-
-    <Stack Id="ButtonsContainer" Direction="Horizontal" CssClass="top-buttons-row">
-
-      <ImageView Id="LogoImage" Path="/Images/Logo.png" />
-
-    </Stack>
+      <!--<ImageView Id="LogoImage" Path="/Images/Logo.png" />-->
 
     <Stack Id="Items">
-
-      <IconButton Id="Page1" Text="Page 1" IconPath="Images/Icons/contacts.png"
-          on-Tapped="@Page1Tapped" />
-
-      <IconButton Id="Page2" Text="Page 2" IconPath="Images/Icons/Types.png"
-          on-Tapped="@Page2Tapped" />
-
-      <IconButton Id="Page3" Text="Page 3" IconPath="Images/Icons/Settings.png"
-          on-Tapped="@Page3Tapped" />
-
-      <IconButton Id="Contact" Text="Page 4" IconPath="Images/Icons/Map.png"
-          on-Tapped="@ContactTapped" />
-
+      <IconButton Id="Home" Text="Home" IconPath="Images/Menu/Home.png" />
+      <IconButton Id="NewRide" Text="New Ride" IconPath="Images/Menu/new_ride.png"   />
+      <IconButton Id="MyRides" Text="My Rides" IconPath="Images/Menu/my_rides.png" />
+      <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" />
+      <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" />
+      <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" />    
     </Stack>
-
+    <Stack >
+      <IconButton Id="logout" Text="Logout"  />
+    </Stack>
   </Stack>
-
 </z-Component>
