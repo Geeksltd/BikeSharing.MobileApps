@@ -9,7 +9,7 @@
     {
         public override async Task Run()
         {
-            ApplicationName = "AppName2";
+            ApplicationName = "BikeSharing";
 
             await InstallIfNeeded();
 

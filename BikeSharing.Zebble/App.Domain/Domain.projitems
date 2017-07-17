@@ -9,21 +9,28 @@
     <Import_RootNamespace>Domain</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Booking.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Event.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\GeoLocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\OpenWeatherMapResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Ride.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Station.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Suggestion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Venue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\WeatherInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\RideType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\TempUnit.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Api.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\EventsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\OpenWeatherMapService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RidesService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\AnonymousUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\Extensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\Contact.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\ContactContactType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\ContactType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\@AdoDotNetDataProviderFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\ContactContactTypeDataProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\ContactDataProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\ContactTypeDataProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\SettingsDataProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\UserDataProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)-Logic\Contact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Logic\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Logic\User.cs" />
   </ItemGroup>

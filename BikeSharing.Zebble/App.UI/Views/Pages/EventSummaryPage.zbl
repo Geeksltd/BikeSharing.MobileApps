@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<z-Component z-type="EventSummaryPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="EventSummaryPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+  <z-place inside="Body">
+    <!-- TODO: Add the page body here... -->
+  </z-place>
+</z-Component>

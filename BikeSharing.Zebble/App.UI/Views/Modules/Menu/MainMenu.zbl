@@ -8,15 +8,15 @@
       <!--<ImageView Id="LogoImage" Path="/Images/Logo.png" />-->
 
     <Stack Id="Items">
-      <IconButton Id="Home" Text="Home" IconPath="Images/Menu/Home.png" />
-      <IconButton Id="NewRide" Text="New Ride" IconPath="Images/Menu/new_ride.png"   />
-      <IconButton Id="MyRides" Text="My Rides" IconPath="Images/Menu/my_rides.png" />
-      <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" />
-      <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" />
-      <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" />    
+      <IconButton Id="Home" Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.HomePage" />
+      <IconButton Id="NewRide" Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRidePage"   />
+      <IconButton Id="MyRides" Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRidesPage" />
+      <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.BookingPage" />
+      <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncidentPage" />
+      <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.ProfilePage" />    
     </Stack>
     <Stack >
-      <IconButton Id="logout" Text="Logout"  />
+      <Button Id="logout" Text="Logout"  />
     </Stack>
   </Stack>
 </z-Component>

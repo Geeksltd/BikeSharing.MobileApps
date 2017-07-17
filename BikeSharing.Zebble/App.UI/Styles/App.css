@@ -1,0 +1,26 @@
+﻿HomePage #Body { height: 100%; }
+
+#WeatherInfoModule { background-image: "Images/background.png"; background-size: cover; height: 33%; }
+
+#WeatherInfoModule #infoDiv { margin: 20px; margin-top: 90px; }
+
+#WeatherInfoModule #infoDiv TextView { color: white; }
+
+#WeatherInfoModule #infoDiv #Temp { font-size: 30px; }
+
+#EventSummaryModule { height: 33%; }
+
+#EventSummaryModule #infoDiv { margin: 20px; margin-top: 90px; }
+
+#EventSummaryModule #infoDiv TextView { color: white; }
+
+#EventSummaryModule #infoDiv #Temp { font-size: 30px; }
+
+#RecommendedModule { height: 33%; }
+
+#RecommendedModule #infoDiv { margin: 20px; margin-top: 90px; }
+
+#RecommendedModule #infoDiv TextView { color: white; }
+
+#RecommendedModule #infoDiv #Temp { font-size: 30px; }
+

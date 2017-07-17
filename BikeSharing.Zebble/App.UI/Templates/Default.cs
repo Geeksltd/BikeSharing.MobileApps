@@ -21,6 +21,7 @@ namespace UI.Templates
         {
             MenuDisplayer.Current.Y.Set(this.GetNavBar().ActualHeight);
             MenuDisplayer.Current.Height.Set(View.Root.ActualHeight - MenuDisplayer.Current.Y.CurrentValue);
+       
             MenuDisplayer.Current.Show();
             return Task.CompletedTask;
         }

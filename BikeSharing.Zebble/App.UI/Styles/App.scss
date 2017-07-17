@@ -1,0 +1,40 @@
+﻿@import "_Settings";
+
+
+HomePage{
+    #Body{
+        height:100%;
+    }
+}
+
+#WeatherInfoModule {
+    background-image: "Images/background.png";
+    background-size: cover;
+    height: 33%;
+    #infoDiv{        
+        margin:20px;
+        margin-top:90px;
+        TextView{ color:white;}
+        #Temp{ font-size:30px;}
+    }
+}
+
+#EventSummaryModule {   
+    height: 33%;
+    #infoDiv{        
+        margin:20px;
+        margin-top:90px;
+        TextView{ color:white;}
+        #Temp{ font-size:30px;}
+    }
+}
+
+#RecommendedModule {   
+    height: 33%;
+    #infoDiv{        
+        margin:20px;
+        margin-top:90px;
+        TextView{ color:white;}
+        #Temp{ font-size:30px;}
+    }
+}

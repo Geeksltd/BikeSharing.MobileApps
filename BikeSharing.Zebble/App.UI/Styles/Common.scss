@@ -127,7 +127,7 @@ NavigationBar {
 Modal { background: white; padding: 20px; height: auto; }
 
 MenuDisplayer { position: absolute; width: 100%; height: 100%; MenuWidth: 250px;
-    #Overlay { width: 100%; height: 100%; opacity: 0.35; background: black; }
+ 
 }
 
 /*Tabs --------------------- */
@@ -178,9 +178,11 @@ SearchInput { margin-bottom: 5px;
 
 /*main menu --------------------*/
 MainMenu {  background-image: "Images/Menu/background.png";
+          
     Button { color: white; height: 50px; }
     #LogoImage { height: 90px; width: 100%; margin-bottom: 10px; margin-top: 10px; }
     IconButton { height: 60px;  color: deepskyblue;
+        #TextView { color: deepskyblue;  text-align:left; font-size:16px; margin-left:50px; }
         #Icon { background-size: contain; margin-top: 7px; height: 25px; width: 30px; margin-left: 10px; }
     }
 }
@@ -189,4 +191,4 @@ Carousel-Bullet { background: #C8C8C8;
     &:active { background: #505050; }
 }
 
-Default #BodyScroller > #Body { padding: 10px; }
+Default #BodyScroller > #Body {  }

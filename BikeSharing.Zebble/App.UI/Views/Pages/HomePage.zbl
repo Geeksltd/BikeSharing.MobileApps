@@ -5,8 +5,12 @@
     xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
 
   <z-place inside="Body">
+    
+    <Modules.WeatherInfoModule Id="WeatherInfoModule" />
+    
+    <Modules.EventSummaryModule Id="EventSummaryModule" />
 
- 
+    <Modules.RecommendedModule Id="RecommendedModule" />
 
   </z-place>
 
