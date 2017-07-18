@@ -1,16 +1,12 @@
 ﻿@import "_Settings";
 
-
-HomePage{
-    #Body{
-        height:100%;
-    }
-}
+MainMenu { #Body{  height:100%; background-image: "Images/Menu/background.png"; }  }
+HomePage{  #Body{ height:100%; }}
 
 #WeatherInfoModule {
     background-image: "Images/background.png";
     background-size: cover;
-    height: 33%;
+    height: 25%;
     #infoDiv{        
         margin:20px;
         margin-top:90px;
@@ -20,21 +16,54 @@ HomePage{
 }
 
 #EventSummaryModule {   
-    height: 33%;
-    #infoDiv{        
-        margin:20px;
-        margin-top:90px;
-        TextView{ color:white;}
-        #Temp{ font-size:30px;}
+    height: 35%;
+    padding: 10px; 
+    #title { color: #484f63; margin:10px; font-size:20px; }
+
+    #List {
+        height: 100%;       
+
+        #Content {
+            height: 100%;
+            padding: 10px; 
+            #rowStack {    
+                height:80%;
+                background-size: cover;               
+                TextView {  margin-left: 10px;  color:white;  }   
+                #EventName{ font-size:26px; margin-top:10px;}
+            }
+        }
     }
 }
 
-#RecommendedModule {   
-    height: 33%;
-    #infoDiv{        
-        margin:20px;
-        margin-top:90px;
-        TextView{ color:white;}
-        #Temp{ font-size:30px;}
+#RecommendedModule {
+    height: 35%;
+    padding: 10px; 
+    #title { color: #484f63; margin:10px; font-size:20px; }
+
+    #List {
+        height: 100%;       
+
+        #Content {
+            height: 100%;
+            padding: 10px; 
+            #rowStack {
+              
+                background-size: cover;
+               
+                TextView {  margin-left: 10px;  color:white;  }
+                #RideIn  {  font-size: 26px; margin-top:20px;    }
+                #Splitor {  border-bottom: 1px solid; border-color:white; margin:10px; }
+                ImageView{  width:25px;  margin-left: 10px;  }
+            }
+        }
+    }
+}
+
+CustomRidePage {
+    #Body {
+        height: 100%;
+        #PathSelector{ height: 250px; width:300px; background-color:white; opacity:0.4; margin:20px; }
+        #MainStack{ margin:10px;  background-color:white; height:90%; opacity:1;}
     }
 }

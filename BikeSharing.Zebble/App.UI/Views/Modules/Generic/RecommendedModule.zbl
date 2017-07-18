@@ -1,12 +1,22 @@
 <?xml version="1.0"?>
 <z-Component z-type="RecommendedModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <ListView z-of="Suggestion, Row" Id="List" EmptyText="Empty list" DataSource="@Items">
-    <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Suggestion]">
-     
-        <TextView  Text="Ride In"  />
-        <TextView Id="Name" Text="@Item.Name"/>
-        <TextView Id="Distance" Text="@Item.Distance.ToString()"  />
-     
+    <TextView Id="title" Text="Recommended"  />
+    <ListView z-of="Suggestion, Row" Id="List" EmptyText="Empty list" DataSource="@Items" Direction="Horizontal"   >
+    <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Suggestion]" Style.Height="100%">
+     <Stack Id ="rowStack" BackgroundImagePath="@Item.ImagePath" Direction="Vertical">
+       <Stack >
+       <Stack Id="st1">
+         <TextView Id="RideIn" Text="Ride In" />
+         <TextView Id="Name" Text="@Item.Name" Style.Font.Size="30"/>
+         <TextView Id="Splitor" />
+       </Stack>
+       <Stack Id="st2" Direction="Horizontal">
+         <ImageView  Path="Images/Icons/ic_distance_white.png"/>
+         <TextView Id="Distance" Text="@Item.Distance.ToString()" />
+       </Stack>
+       </Stack>
+     </Stack>
     </z-Component>
   </ListView>
+ 
 </z-Component>

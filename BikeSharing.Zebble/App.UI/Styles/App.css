@@ -1,6 +1,8 @@
-﻿HomePage #Body { height: 100%; }
+﻿MainMenu #Body { height: 100%; background-image: "Images/Menu/background.png"; }
 
-#WeatherInfoModule { background-image: "Images/background.png"; background-size: cover; height: 33%; }
+HomePage #Body { height: 100%; }
+
+#WeatherInfoModule { background-image: "Images/background.png"; background-size: cover; height: 25%; }
 
 #WeatherInfoModule #infoDiv { margin: 20px; margin-top: 90px; }
 
@@ -8,19 +10,41 @@
 
 #WeatherInfoModule #infoDiv #Temp { font-size: 30px; }
 
-#EventSummaryModule { height: 33%; }
+#EventSummaryModule { height: 35%; padding: 10px; }
 
-#EventSummaryModule #infoDiv { margin: 20px; margin-top: 90px; }
+#EventSummaryModule #title { color: #484f63; margin: 10px; font-size: 20px; }
 
-#EventSummaryModule #infoDiv TextView { color: white; }
+#EventSummaryModule #List { height: 100%; }
 
-#EventSummaryModule #infoDiv #Temp { font-size: 30px; }
+#EventSummaryModule #List #Content { height: 100%; padding: 10px; }
 
-#RecommendedModule { height: 33%; }
+#EventSummaryModule #List #Content #rowStack { height: 80%; background-size: cover; }
 
-#RecommendedModule #infoDiv { margin: 20px; margin-top: 90px; }
+#EventSummaryModule #List #Content #rowStack TextView { margin-left: 10px; color: white; }
 
-#RecommendedModule #infoDiv TextView { color: white; }
+#EventSummaryModule #List #Content #rowStack #EventName { font-size: 26px; margin-top: 10px; }
 
-#RecommendedModule #infoDiv #Temp { font-size: 30px; }
+#RecommendedModule { height: 35%; padding: 10px; }
+
+#RecommendedModule #title { color: #484f63; margin: 10px; font-size: 20px; }
+
+#RecommendedModule #List { height: 100%; }
+
+#RecommendedModule #List #Content { height: 100%; padding: 10px; }
+
+#RecommendedModule #List #Content #rowStack { background-size: cover; }
+
+#RecommendedModule #List #Content #rowStack TextView { margin-left: 10px; color: white; }
+
+#RecommendedModule #List #Content #rowStack #RideIn { font-size: 26px; margin-top: 20px; }
+
+#RecommendedModule #List #Content #rowStack #Splitor { border-bottom: 1px solid; border-color: white; margin: 10px; }
+
+#RecommendedModule #List #Content #rowStack ImageView { width: 25px; margin-left: 10px; }
+
+CustomRidePage #Body { height: 100%; }
+
+CustomRidePage #Body #PathSelector { height: 250px; width: 300px; background-color: white; opacity: 0.4; margin: 20px; }
+
+CustomRidePage #Body #MainStack { margin: 10px; background-color: white; height: 90%; opacity: 1; }
 

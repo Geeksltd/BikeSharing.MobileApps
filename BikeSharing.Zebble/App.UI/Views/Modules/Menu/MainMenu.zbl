@@ -15,8 +15,8 @@
       <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncidentPage" />
       <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.ProfilePage" />    
     </Stack>
-    <Stack >
+    <!--<Stack >
       <Button Id="logout" Text="Logout"  />
-    </Stack>
+    </Stack>-->
   </Stack>
 </z-Component>

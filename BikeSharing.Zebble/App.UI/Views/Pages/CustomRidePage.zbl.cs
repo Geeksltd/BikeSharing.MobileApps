@@ -8,6 +8,8 @@
     using Zebble;
     using Zebble.Framework;
     using Domain;
+    using Zebble.Services;
+    using UI._Custom;
 
     partial class CustomRidePage
     {
@@ -15,6 +17,15 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
+            MapView.ZoomLevel = 10;
+            await MapView.Add(new Map.Annotation
+            {
+                Title = "Station",
+                SubTitle = "Station 1",
+                Location = new Zebble.Services.GeoLocation(GlobalSettings.EventLatitude, GlobalSettings.EventLongitude)
+            });
+
+            PathSelector.Y.Set(10);
         }
     }
 }

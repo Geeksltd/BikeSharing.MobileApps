@@ -15,7 +15,7 @@ namespace UI._Custom
                 {
                     Name = "Beacon Hill",
                     Distance = 1900,
-                    ImagePath = "Images/suggestion_beacon_hill",
+                    ImagePath = "Images/suggestion_beacon_hill.png",
                     Latitude = 47.608013f,
                     Longitude = -122.9675438f
                 },
@@ -23,7 +23,7 @@ namespace UI._Custom
                 {
                     Name = "Golden Gardens",
                     Distance = 2200,
-                    ImagePath = "Images/suggestion_golden_gardens",
+                    ImagePath = "Images/suggestion_golden_gardens.png",
                     Latitude = 47.7397176f,
                     Longitude = -122.8429737f
                 },
@@ -31,7 +31,7 @@ namespace UI._Custom
                 {
                     Name = "Lake Union Loop",
                     Distance = 3500,
-                    ImagePath = "Images/suggestion_lake_union_loop",
+                    ImagePath = "Images/suggestion_lake_union_loop.png",
                     Latitude = 47.703336f,
                     Longitude = -122.8429737f
                 }

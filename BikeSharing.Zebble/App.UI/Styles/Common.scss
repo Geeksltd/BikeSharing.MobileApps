@@ -5,7 +5,7 @@
 @import "_Settings";
 
 /*General components -----------------*/
-TextView { color: $text-color; }
+TextView { color: $text-color;  font-size:16px;}
 
 Button { opacity: 1;
     &:disabled { opacity: 0.3; }
@@ -112,7 +112,7 @@ Slider {
     #Caption, #UpCaption { }
 }
 /*Navigation bar ----------------------------- */
-.navbar-background { background: linear-gradient(to bottom, $primary-color, #196e6d); }
+.navbar-background { background: $blue-color; }
 NavigationBar {
     IconButton { margin: 0; padding: 0 }
     Button { padding: 0; }
@@ -121,7 +121,7 @@ NavigationBar {
     .back { color: white;
         #Icon { background: url(Images/Icons/Back.png); margin: 0; width: 48px; padding: 10px 5px; height: 100%; }
     }
-    .menu-icon { background: url(Images/Icons/Burger.png); margin: 0; height: 45px; }
+    .menu-icon { background: url(Images/Icons/Burger.png); margin: 0; height: 30px; }
 }
 
 Modal { background: white; padding: 20px; height: auto; }
@@ -148,7 +148,7 @@ ListView {
         .title { font-weight: bold; margin-bottom: 10px; }
     }
 
-    #SlideIn TextView { height: 100%; margin: 0; color: white; background: #444; padding: 10px; AutoSizeWidth: calc("true");
+    #SlideIn TextView { height: 100%; margin: 0; color: white; background: #444;  AutoSizeWidth: calc("true");
         &.delete-button { background: #ff4c32; }
     }
 }
@@ -177,7 +177,7 @@ SearchInput { margin-bottom: 5px;
 .form-field-header { padding: $input-padding; font-weight: bold; font-size: 16px; }
 
 /*main menu --------------------*/
-MainMenu {  background-image: "Images/Menu/background.png";
+MainMenu {background-color:white;
           
     Button { color: white; height: 50px; }
     #LogoImage { height: 90px; width: 100%; margin-bottom: 10px; margin-top: 10px; }

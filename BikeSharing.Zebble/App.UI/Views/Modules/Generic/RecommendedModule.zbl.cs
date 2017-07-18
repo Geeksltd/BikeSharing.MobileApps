@@ -23,6 +23,8 @@
             Items = rides.ToList();
             await base.OnInitializing();
             await InitializeComponents();
+
+         //   List.Height.Set(Root.Height.CurrentValue / 3);
         }
 
 
@@ -33,6 +35,7 @@
             {
                 await base.OnInitializing();
                 await InitializeComponents();
+                this.Width.Set(400);
             }
 
             public Task RowTapped()

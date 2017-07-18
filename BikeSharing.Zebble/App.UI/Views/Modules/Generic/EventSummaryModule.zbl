@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
 <z-Component z-type="EventSummaryModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <ListView z-of="Event, Row" Id="List" EmptyText="Empty list" DataSource="@Items">
-    <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Event]">
-      <Stack  >
-        <TextView Text="@Item.Name"  />
-        <TextView Text="@Item.StartTimeString"/>
-        <!--<TextView Text="@Item.ImagePath"  />-->
+  <TextView Id="title" Text="Event"   />
+  <ListView z-of="Event, Row" Id="List" EmptyText="Empty list" DataSource="@Items" Direction="Horizontal"   >
+    <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Event]" Style.Height="100%">
+      <Stack Id ="rowStack" BackgroundImagePath="@Item.ImagePath" Direction="Vertical">      
+        <Stack>  
+            <TextView Text="@Item.Name" Id="EventName"  />
+            <TextView Text="@Item.Venue.Name"/>
+            <TextView Text="@Item.StartTimeString"/>
+            <TextView Text="GlobalSettings.City"/>
+      </Stack>
       </Stack>
     </z-Component>
   </ListView>

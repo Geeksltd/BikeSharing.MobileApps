@@ -1,17 +1,17 @@
 ﻿{
-    "dependencies": {
-        "HtmlAgilityPack": "1.4.9.5",
-        "Microsoft.Data.Sqlite": "1.1.0",
-        "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
-        "Newtonsoft.Json": "9.0.1",
-        "System.ComponentModel": "4.3.0",
-        "System.Data.Common": "4.3.0",
-        "System.Data.SqlClient": "4.3.0",
-        "System.Reflection": "4.3.0",
-        "System.Security.Cryptography.Algorithms": "4.3.0",
-        "System.Threading": "4.3.0",
-        "Zebble": "4.0.207"
-    },
+  "dependencies": {
+    "HtmlAgilityPack": "1.4.9.5",
+    "Microsoft.Data.Sqlite": "1.1.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+    "Newtonsoft.Json": "9.0.1",
+    "System.ComponentModel": "4.3.0",
+    "System.Data.Common": "4.3.0",
+    "System.Data.SqlClient": "4.3.0",
+    "System.Reflection": "4.3.0",
+    "System.Security.Cryptography.Algorithms": "4.3.0",
+    "System.Threading": "4.3.0",
+    "Zebble": "4.0.218"
+  },
   "frameworks": {
     "uap10.0": {}
   },

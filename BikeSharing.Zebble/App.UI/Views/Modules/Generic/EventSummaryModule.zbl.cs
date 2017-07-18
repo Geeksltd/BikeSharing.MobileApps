@@ -21,18 +21,22 @@
             var _eventsService = new EventsService();
             var events = await _eventsService.GetEvents();
             Items = events.ToList();
-            //   Items = GetSource().ToList();
+          
             await base.OnInitializing();
             await InitializeComponents();
+
+         
         }
 
+        
 
         partial class Row
         {
             public override async Task OnInitializing()
             {
                 await base.OnInitializing();
-                await InitializeComponents();
+                await InitializeComponents();               
+                this.Width.Set(300);
             }
 
             public Task RowTapped()
