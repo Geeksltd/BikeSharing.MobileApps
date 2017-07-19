@@ -44,7 +44,51 @@ HomePage #Body { height: 100%; }
 
 CustomRidePage #Body { height: 100%; }
 
-CustomRidePage #Body #PathSelector { height: 250px; width: 300px; background-color: white; opacity: 0.4; margin: 20px; }
+CustomRidePage #Body #RouteSelector { height: 250px; width: 90%; background-color: white; opacity: 0.4; margin: 20px; }
 
-CustomRidePage #Body #MainStack { margin: 10px; background-color: white; height: 90%; opacity: 1; }
+CustomRidePage #Body #MainStack { margin: 20px; padding: 10px; background-color: white; height: 85%; opacity: 1; }
+
+CustomRidePage #Body #GoButton { width: 100%; padding: 10px; margin-top: 20px; background-color: blue; color: white; }
+
+CustomRidePage #Body #RouteSelected { height: 180px; width: 90%; background-color: gray; opacity: 0.4; padding: 20px; margin: 20px; }
+
+CustomRidePage #Body #RouteSelected TextView { color: white; font-size: 12px; }
+
+CustomRidePage #Body #RouteSelected .title { font-size: 16px; }
+
+CustomRidePage #Body #FromPS { background-color: blue; padding: 10px; visibility: hidden; }
+
+CustomRidePage #Body #ToPS { background-color: orangered; padding: 10px; visibility: hidden; margin-top: 10px; }
+
+BookingPage #Body { height: 100%; }
+
+BookingPage #Body #MainStack { padding: 20px; padding-top: 200px; background-color: blue; height: 100%; opacity: 0.4; }
+
+BookingPage #Body TextView { color: white; margin-top: 10px; }
+
+BookingPage #Body .title { font-size: 30px; }
+
+BookingPage #Body .date { font-size: 20px; }
+
+BookingPage #Body .city { font-size: 20px; }
+
+BookingPage #Body .avilable { color: yellow; }
+
+BookingPage #Body #BookButton { border: 3px solid; border-color: white; width: 200px; padding: 20px; }
+
+ThanksBookingPage #Body { background-image: "Images/booking_background.png"; height: 100%; background-size: cover; }
+
+ThanksBookingPage #Body TextView { color: white; text-align: center; margin-top: 10px; }
+
+ThanksBookingPage #Body .title { margin-top: 200px; font-size: 28px; }
+
+TimeRemainingPage #Body { background-image: "Images/booking_background.png"; height: 100%; background-size: cover; }
+
+TimeRemainingPage #Body TextView { color: white; text-align: center; margin-top: 10px; font-size: 18px; }
+
+TimeRemainingPage #Body .title { margin-top: 100px; }
+
+TimeRemainingPage #Body #stackTimer { background-image: "Images/booking_circle_white.png"; width: 80px; height: 80px; margin-top: 50px; margin-left: calc("(View.Root.ActualWidth/ 2)- 40"); background-size: cover; }
+
+TimeRemainingPage #Body #txtTimer { color: black; }
 

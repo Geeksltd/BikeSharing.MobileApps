@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<z-Component z-type="TimeRemainingPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+  <z-place inside="Body">
+    <Stack Id="MainStack">
+      <TextView Text="From" CssClass="title" />
+      <TextView Id="fromText" />
+      <TextView Text="To" />
+      <TextView Id="toText" />
+      <TextView Id="DateText" />
+      <TextView Id="CityText" />
+      <Stack Id="stackTimer">
+          <TextView Id="txtTimer" />
+      </Stack>
+      <TextView Text="Time Remaining"  />
+      
+      <TextView Id="BookIdText" />
+    </Stack>
+  </z-place>
+</z-Component>

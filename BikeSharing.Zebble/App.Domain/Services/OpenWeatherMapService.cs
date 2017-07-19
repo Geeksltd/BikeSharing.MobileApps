@@ -68,11 +68,7 @@ namespace Domain.Services
 
         public async Task<WeatherInfo> GetDemoWeatherInfoAsync()
         {
-            var geolocation = new GeoLocation
-            {
-                Latitude = GlobalSettings.EventLatitude,
-                Longitude = GlobalSettings.EventLongitude
-            };
+            var geolocation = new GeoLocation(GlobalSettings.EventLatitude, GlobalSettings.EventLongitude);
 
             var latitude = geolocation.Latitude.ToString("0.0000", CultureInfo.InvariantCulture);
             var longitude = geolocation.Longitude.ToString("0.0000", CultureInfo.InvariantCulture);

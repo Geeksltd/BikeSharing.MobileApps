@@ -36,6 +36,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\bike.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\booking_background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\booking_circle_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\building.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -201,6 +207,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Zebble-Meta.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)-Custom\CustomPin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\GlobalSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\StaticData.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
@@ -212,8 +219,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\WeatherInfoModule.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Menu\MainMenu.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Menu\MainMenu.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\BookingPage.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\BookingPage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\BookingPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\BookingPage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\ThanksBookingPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\ThanksBookingPage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\TimeRemainingPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\TimeRemainingPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\CustomRidePage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\CustomRidePage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\EventSummaryPage.zbl" />

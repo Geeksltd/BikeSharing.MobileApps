@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<z-Component z-type="BookingPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="Booking" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+  <z-place inside="Body"> 
+    <Map Id="MapView" />   
+    <Stack Id="MainStack">
+        <TextView  Text="From"  />
+        <TextView Id="fromText" CssClass="title" />
+        <TextView Text="To" />
+        <TextView Id="toText" CssClass="title" />
+        <TextView Id="DateText" CssClass="date" />
+        <TextView Id="CityText" CssClass="city" />
+        <Button Id="BookButton" Text="Book a bike" on-Tapped="BookClicked" AutoFlash="true" />
+        <TextView Id="AvilableText" CssClass="avilable" Text="Avilable for 30 minutes" />
+      </Stack>
+  </z-place>
+</z-Component>
