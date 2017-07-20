@@ -23,11 +23,11 @@
             await InitializeComponents();
 
             var book = Nav.Param<Booking>("Booking");
-            DateText.Text = book.DueDate.ToString("dddd, MMMM dd");
-            CityText.Text = _Custom.GlobalSettings.City;
-            fromText.Text = book.FromStation.Name;
-            toText.Text = book.ToStation.Name;
-            BookIdText.Text = string.Format("YOUR BIKE NUMBER IS {0}", book.BikeId.ToString());
+            txtDate.Text = book.DueDate.ToString("dddd, MMMM dd");
+            txtCity.Text = _Custom.GlobalSettings.City;
+            txtFrom.Text = book.FromStation.Name;
+            txtTo.Text = book.ToStation.Name;
+            txtBookId.Text =  book.BikeId.ToString();
             timer = new Timer(CounterFunc, null, 1, 1000);
         }
 
@@ -37,9 +37,9 @@
             TimeSpan tp = new TimeSpan(0, 0, 1);
             timeSpanCounter= timeSpanCounter.Subtract(tp);
           
-            if (timeSpanCounter.TotalSeconds > 0)
+            if (timeSpanCounter.TotalSeconds >= 0)
             {
-                txtTimer.Text = timeSpanCounter.ToStringOrEmpty();
+                txtTimer.Text = timeSpanCounter.ToString("m\\:ss");
             } 
             else
                 timer.Dispose();

@@ -4,11 +4,14 @@
     <Stack Id="MainStack">
       <TextView Text="THANK YOU FOR BOOKING" CssClass="title"  />     
       <TextView Text="Your bike will be available for 30 minutes" />     
-      <TextView Id="DateText" CssClass="date" />
-      <TextView Id="CityText" CssClass="city" />
-      
-      
-      <TextView Id="BookIdText" CssClass="bookId"  />
+      <TextView Id="txtDate" CssClass="date" />
+      <TextView Id="txtCity" CssClass="city" />
+
+
+      <Stack Id="stackBookId" Direction="Vertical">
+        <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" TextTransform="Uppercase"/>
+        <TextView Id="txtBookId" />
+      </Stack>
     </Stack>
   </z-place>
 </z-Component>

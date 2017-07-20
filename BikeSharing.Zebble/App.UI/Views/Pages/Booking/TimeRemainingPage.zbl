@@ -3,17 +3,19 @@
   <z-place inside="Body">
     <Stack Id="MainStack">
       <TextView Text="From" CssClass="title" />
-      <TextView Id="fromText" />
+      <TextView Id="txtFrom" />
       <TextView Text="To" />
-      <TextView Id="toText" />
-      <TextView Id="DateText" />
-      <TextView Id="CityText" />
+      <TextView Id="txtTo" />
+      <TextView Id="txtDate" />
+      <TextView Id="txtCity" />
       <Stack Id="stackTimer">
           <TextView Id="txtTimer" />
       </Stack>
-      <TextView Text="Time Remaining"  />
-      
-      <TextView Id="BookIdText" />
+      <TextView Text="Time remaining"  CssClass="small" />
+      <Stack Id="stackBookId" Direction="Vertical">
+         <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" TextTransform="Uppercase"/>
+         <TextView Id="txtBookId" />
+      </Stack>
     </Stack>
   </z-place>
 </z-Component>

@@ -45,6 +45,9 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\building.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\city-gray.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Arrow-Right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -147,6 +150,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Menu\user.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\progress.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\progress_pending.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\suggestion_beacon_hill.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -213,6 +222,8 @@
     <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventSummaryModule.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventSummaryModule.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\MyRidesModule.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\MyRidesModule.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\RecommendedModule.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\RecommendedModule.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\WeatherInfoModule.zbl" />

@@ -42,6 +42,22 @@ HomePage #Body { height: 100%; }
 
 #RecommendedModule #List #Content #rowStack ImageView { width: 25px; margin-left: 10px; }
 
+MyRidesPage #Body { height: 100%; }
+
+MyRidesPage #infoDiv { height: 75%; }
+
+MyRidesPage #MyRidesModule { width: 30%; }
+
+MyRidesPage #MapView { width: 40%; }
+
+MyRidesPage #dateDiv { width: 30%; background-image: "Images/city-gray.png"; background-size: cover; color: blue; height: 100%; }
+
+MyRidesPage #txtDate { margin-top: 100px; }
+
+MyRidesPage TextView { color: white; margin: 10px; }
+
+#MyRidesModule { height: 100%; }
+
 CustomRidePage #Body { height: 100%; }
 
 CustomRidePage #Body #RouteSelector { height: 250px; width: 90%; background-color: white; opacity: 0.4; margin: 20px; }
@@ -62,7 +78,7 @@ CustomRidePage #Body #ToPS { background-color: orangered; padding: 10px; visibil
 
 BookingPage #Body { height: 100%; }
 
-BookingPage #Body #MainStack { padding: 20px; padding-top: 200px; background-color: blue; height: 100%; opacity: 0.4; }
+BookingPage #Body #MainStack { padding: 20px; padding-top: 150px; background-color: blue; height: 100%; opacity: 0.4; }
 
 BookingPage #Body TextView { color: white; margin-top: 10px; }
 
@@ -72,9 +88,9 @@ BookingPage #Body .date { font-size: 20px; }
 
 BookingPage #Body .city { font-size: 20px; }
 
-BookingPage #Body .avilable { color: yellow; }
+BookingPage #Body .avilable { color: yellow; font-size: 11px; }
 
-BookingPage #Body #BookButton { border: 3px solid; border-color: white; width: 200px; padding: 20px; }
+BookingPage #Body #BookButton { border: 3px solid; border-color: white; width: 200px; padding: 20px; margin-top: 20px; }
 
 ThanksBookingPage #Body { background-image: "Images/booking_background.png"; height: 100%; background-size: cover; }
 
@@ -82,13 +98,25 @@ ThanksBookingPage #Body TextView { color: white; text-align: center; margin-top:
 
 ThanksBookingPage #Body .title { margin-top: 200px; font-size: 28px; }
 
+ThanksBookingPage #Body #stackBookId { background-image: "Images/booking_circle_white.png"; width: 90px; height: 90px; margin-top: 50px; margin-left: calc("(View.Root.ActualWidth/ 2)- 45"); background-size: cover; }
+
+ThanksBookingPage #Body .blacktext { color: black; font-size: 12px; }
+
+ThanksBookingPage #Body #txtBookId { color: aqua; }
+
 TimeRemainingPage #Body { background-image: "Images/booking_background.png"; height: 100%; background-size: cover; }
 
 TimeRemainingPage #Body TextView { color: white; text-align: center; margin-top: 10px; font-size: 18px; }
 
 TimeRemainingPage #Body .title { margin-top: 100px; }
 
-TimeRemainingPage #Body #stackTimer { background-image: "Images/booking_circle_white.png"; width: 80px; height: 80px; margin-top: 50px; margin-left: calc("(View.Root.ActualWidth/ 2)- 40"); background-size: cover; }
+TimeRemainingPage #Body #stackTimer { background-image: "Images/progress.png"; width: 80px; height: 80px; margin-top: 50px; margin-left: calc("(View.Root.ActualWidth/ 2)- 40"); background-size: cover; }
 
-TimeRemainingPage #Body #txtTimer { color: black; }
+TimeRemainingPage #Body #stackBookId { background-image: "Images/booking_circle_white.png"; width: 90px; height: 90px; margin-top: 50px; margin-left: calc("(View.Root.ActualWidth/ 2)- 45"); background-size: cover; }
+
+TimeRemainingPage #Body .blacktext { color: black; font-size: 12px; }
+
+TimeRemainingPage #Body .small { font-size: 11px; }
+
+TimeRemainingPage #Body #txtBookId { color: aqua; }
 

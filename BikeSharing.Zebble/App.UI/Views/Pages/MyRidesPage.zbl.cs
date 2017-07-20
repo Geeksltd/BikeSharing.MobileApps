@@ -8,6 +8,7 @@
     using Zebble;
     using Zebble.Framework;
     using Domain;
+    using UI._Custom;
 
     partial class MyRidesPage
     {
@@ -15,6 +16,15 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
+
+            await MapView.Add(new Map.Annotation
+            {
+                Title = GlobalSettings.City,
+                Location = new Zebble.Services.GeoLocation(GlobalSettings.EventLatitude, GlobalSettings.EventLongitude)
+            });
+
+            txtDate.Text = DateTime.Now.ToString("dddd, MMMM dd");
+            txtCity.Text = _Custom.GlobalSettings.City;
         }
     }
 }

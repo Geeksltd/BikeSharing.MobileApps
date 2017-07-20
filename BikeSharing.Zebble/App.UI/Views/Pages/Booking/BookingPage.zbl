@@ -10,7 +10,7 @@
         <TextView Id="DateText" CssClass="date" />
         <TextView Id="CityText" CssClass="city" />
         <Button Id="BookButton" Text="Book a bike" on-Tapped="BookClicked" AutoFlash="true" />
-        <TextView Id="AvilableText" CssClass="avilable" Text="Avilable for 30 minutes" />
+        <TextView Id="AvilableText" CssClass="small" Text="Avilable for 30 minutes" />
       </Stack>
   </z-place>
 </z-Component>

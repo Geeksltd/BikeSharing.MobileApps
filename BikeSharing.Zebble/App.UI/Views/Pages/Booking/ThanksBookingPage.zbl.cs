@@ -28,10 +28,10 @@
                 book = Nav.Param<Booking>("Booking"); 
                 
 
-                DateText.Text =book.DueDate.ToString("dddd, MMMM dd");
-                CityText.Text = _Custom.GlobalSettings.City;
+                txtDate.Text =book.DueDate.ToString("dddd, MMMM dd");
+                txtCity.Text = _Custom.GlobalSettings.City;
 
-                BookIdText.Text = string.Format("YOUR BIKE NUMBER IS {0}", book.BikeId.ToString());
+                txtBookId.Text =  book.BikeId.ToString();
 
                 timer= new Timer(NavToTimeRemaining,null, 1, 4000);          
             }
