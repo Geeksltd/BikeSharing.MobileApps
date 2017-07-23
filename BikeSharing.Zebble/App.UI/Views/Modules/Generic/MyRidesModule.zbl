@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<z-Component z-type="MyRidesModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+
+  <ListView z-of="Ride, Row" Id="List" EmptyText="Empty list" DataSource="@Items" >
+    <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Ride]" Style.Height="100%">
+     
+    <TextView Text="@Item.Name" Id="EventName"  />       
+     
+    </z-Component>
+  </ListView>
+  
+</z-Component>
