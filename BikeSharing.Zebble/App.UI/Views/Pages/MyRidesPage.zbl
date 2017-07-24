@@ -2,10 +2,10 @@
 <z-Component z-type="MyRidesPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="My Rides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Modules.WeatherInfoModule Id="WeatherInfoModule" />
-    <Stack Direction="Horizontal" Id="infoDiv">
+    <Stack Direction="Horizontal" Id="infoStack">
       <Modules.MyRidesModule Id="MyRidesModule" />
       <Map Id="MapView"/>
-      <Stack  Id="dateDiv" >
+      <Stack  Id="selectedRowInfoStack" >
         <Stack>
         <TextView Id="txtDate" CssClass="date" />
         <TextView Id="txtCity" CssClass="city" />

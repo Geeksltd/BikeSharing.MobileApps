@@ -174,7 +174,7 @@ namespace Domain.Services
 
             string uri = builder.ToString();
 
-            IEnumerable<Ride> rides = await Api.Get<IEnumerable<Ride>>(uri);
+            IEnumerable<Ride> rides = await Api.Get<List<Ride>>(uri, cacheChoice: Zebble.ApiResponseCache.Refuse);
 
             return rides;
         }

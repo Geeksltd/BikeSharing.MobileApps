@@ -40,9 +40,6 @@
         }
     }
 
-    Slider {
-        #Handle, #UpHandle { width: 20px; height: 20px; margin-top: 2px; }
-    }
 
     Switch { width: 50px;
         #Bar { background: $grey; height: 14px; border-radius: 7px; margin-top: 6px; opacity: 1; }

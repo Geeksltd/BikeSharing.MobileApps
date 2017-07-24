@@ -12,6 +12,7 @@
     using UI._Custom;
     using Domain.Services;
     using System.Collections.ObjectModel;
+    using Zebble.Plugin;
 
     partial class CustomRidePage
     {

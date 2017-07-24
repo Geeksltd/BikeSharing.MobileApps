@@ -3,7 +3,25 @@
 
   <ListView z-of="Ride, Row" Id="List" EmptyText="Empty list" DataSource="@Items" >
     <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Ride]" Style.Height="100%">
-     
+     <Stack Direction="Horizontal" Id="mainStack">
+       <Stack Id="iconStack">
+         <ImageView Path="Images/myrides_ic_custom_ride.png" Id="myRidesImage" />
+       </Stack>
+       <Stack Id="rideInfoStack">
+         <TextView Text="From"   />       
+         <TextView Text="@Item.From" Id="fromStationNameTextView"   />       
+         <TextView Text="To" Id="EventName"  />       
+         <TextView Text="@Item.To" Id="toStationNameTextView"  /> 
+         <TextView Text="@Item.StartString"/>
+         <TextView Text="GlobalSettings.City"/>  
+         <Stack  Direction="Horizontal" >
+           <ImageView  Path="Images/myrides_ic_time.png" CssClass="image"/>
+           <TextView  Text="@Item.Duration.ToString()" />
+           <ImageView  Path="Images/myrides_ic_distance.png"  CssClass="image"/>
+           <TextView  Text="@Item.Distance.ToString()" />
+         </Stack>
+       </Stack>
+     </Stack>
     <TextView Text="@Item.Name" Id="EventName"  />       
      
     </z-Component>

@@ -106,11 +106,7 @@ DatePicker-Dialog, TimePicker-Dialog {
     #RotatorsRow { }
 }
 
-Slider {
-    #RangeBar { background: $grey; }
-    #SelectedBar, #Handle, #UpHandle { background: $primary-color; }
-    #Caption, #UpCaption { }
-}
+
 /*Navigation bar ----------------------------- */
 .navbar-background { background: $blue-color; }
 NavigationBar {
@@ -187,8 +183,5 @@ MainMenu {background-color:white;
     }
 }
 
-Carousel-Bullet { background: #C8C8C8;
-    &:active { background: #505050; }
-}
 
 Default #BodyScroller > #Body {  }

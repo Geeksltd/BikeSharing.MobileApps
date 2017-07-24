@@ -9,6 +9,7 @@
     using Zebble.Framework;
     using Domain;
     using UI._Custom;
+    using Zebble.Plugin;
 
     partial class MyRidesPage
     {

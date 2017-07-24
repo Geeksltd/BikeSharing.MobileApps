@@ -44,19 +44,37 @@ HomePage #Body { height: 100%; }
 
 MyRidesPage #Body { height: 100%; }
 
-MyRidesPage #infoDiv { height: 75%; }
+MyRidesPage #infoStack { height: 75%; }
 
 MyRidesPage #MyRidesModule { width: 30%; }
 
 MyRidesPage #MapView { width: 40%; }
 
-MyRidesPage #dateDiv { width: 30%; background-image: "Images/city-gray.png"; background-size: cover; color: blue; height: 100%; }
+MyRidesPage #selectedRowInfoStack { width: 30%; background-image: "Images/city-gray.png"; background-size: cover; color: blue; height: 100%; }
+
+MyRidesPage #selectedRowInfoStack TextView { color: white; margin: 7px; }
 
 MyRidesPage #txtDate { margin-top: 100px; }
 
-MyRidesPage TextView { color: white; margin: 10px; }
-
 #MyRidesModule { height: 100%; }
+
+#MyRidesModule #List { height: 100%; }
+
+#MyRidesModule TextView { color: black; font-size: 12px; margin-top: 5px; }
+
+#MyRidesModule #iconStack { width: 40px; height: 100%; }
+
+#MyRidesModule #iconStack #myRidesImage { margin-top: 10px; margin-left: 5px; height: 30px; }
+
+#MyRidesModule #rideInfoStack { width: 90%; height: 100%; padding: 10px; }
+
+#MyRidesModule #rideInfoStack .image { height: 20px; width: 20px; }
+
+#MyRidesModule #rideInfoStack #fromStationNameTextView { color: blue; }
+
+#MyRidesModule #rideInfoStack #toStationNameTextView { color: red; }
+
+#MyRidesModule #mainStack { width: 100%; height: 170px; border: 1px solid; border-color: gray; }
 
 CustomRidePage #Body { height: 100%; }
 

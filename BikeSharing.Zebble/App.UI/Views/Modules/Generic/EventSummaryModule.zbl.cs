@@ -11,24 +11,38 @@
     using Domain.Services;
     using Domain.Entities;
     using UI.Pages;
+    using UI._Custom;
 
     partial class EventSummaryModule
     {
 
-        public List<Event> Items;
+        List< Event> Items;
         public override async Task OnInitializing()
         {
-            var _eventsService = new EventsService();
-            var events = await _eventsService.GetEvents();
-            Items = events.ToList();
-          
+            try
+            {
+                // var _eventsService = new EventsService();
+                // var events = await _eventsService.GetEvents();
+                // Items = events.ToList();
+                UriBuilder builder = new UriBuilder(GlobalSettings.EventsEndpoint);
+                builder.Path = "api/Events";
+
+                string uri = builder.ToString();
+
+                Items = await Api.Get <List<Event>>(uri , cacheChoice:ApiResponseCache.PreferThenUpdate, refresher : Refresh);
+
+            }catch(Exception ex)
+            {
+
+
+            }
             await base.OnInitializing();
             await InitializeComponents();
 
          
         }
 
-        
+        Task Refresh(List<Event> items) => WhenShown(() => List.UpdateSource(Items = items));
 
         partial class Row
         {

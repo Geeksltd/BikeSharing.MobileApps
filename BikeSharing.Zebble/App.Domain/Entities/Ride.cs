@@ -19,6 +19,8 @@ namespace Domain
 
         public DateTime Start { get; set; }
 
+        public string StartString { get { return Start.ToString("dddd, MMMM dd"); } }
+
         public DateTime Stop { get; set; }
 
         public string From { get; set; }

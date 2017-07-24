@@ -11,6 +11,7 @@
     using UI._Custom;
     using Domain.Entities;
     using Domain.Services;
+    using Zebble.Plugin;
 
     partial class BookingPage
     {

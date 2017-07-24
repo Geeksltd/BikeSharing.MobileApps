@@ -11,7 +11,7 @@
          <TextView Id="Splitor" />
        </Stack>
        <Stack Id="st2" Direction="Horizontal">
-         <ImageView  Path="Images/Icons/ic_distance_white.png"/>
+         <ImageView  Path="Images/ic_distance_white.png"/>
          <TextView Id="Distance" Text="@Item.Distance.ToString()" />
        </Stack>
        </Stack>
