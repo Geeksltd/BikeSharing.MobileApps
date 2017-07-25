@@ -1,5 +1,5 @@
 ﻿using Domain.Entities;
-using Domain.Enums;
+using Domain;
 
 using System;
 using System.Collections.Generic;
@@ -7,9 +7,10 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
-using UI._Custom;
+using UI;
 using Zebble.Framework;
 using Zebble.Services;
+using Zebble;
 
 namespace Domain.Services
 {
@@ -18,53 +19,47 @@ namespace Domain.Services
         private const int OkResponseCode = 200;
         private readonly string OpenWeatherMapEndpoint = "http://api.openweathermap.org/";
 
-       // private readonly ILocationProvider _locationProvider;
-       // private readonly IRequestProvider _requestProvider;
 
-      //  public OpenWeatherMapService(LocationProvider locationProvider, RequestProvider requestProvider)
-      //  {
-      //      this._locationProvider = locationProvider;
-      //      this._requestProvider = requestProvider;
-       // }
 
-        //public async Task<WeatherInfo> GetWeatherInfoAsync()
-        //{
-        //    var location = await this._locationProvider.GetPositionAsync();
-        //    if (location is GeoLocation)
-        //    {
-        //        var geolocation = location as GeoLocation;
-        //        var latitude = geolocation.Latitude.ToString("0.0000", CultureInfo.InvariantCulture);
-        //        var longitude = geolocation.Longitude.ToString("0.0000", CultureInfo.InvariantCulture);
+        public async Task<WeatherInfo> GetWeatherInfoAsync()
+        {
 
-        //        var builder = new UriBuilder(OpenWeatherMapEndpoint);
-        //        builder.Path = $"data/2.5/weather";
-        //        builder.Query = $"lat={latitude}&lon={longitude}&units=imperial&appid={GlobalSettings.OpenWeatherMapAPIKey}";
-        //        var uri = builder.ToString();
+            var location = await Device.Location.GetCurrentPosition();
 
-        //        var response = await Api.Get<OpenWeatherMapResponse>(uri);
-        //        if (response?.cod == OkResponseCode)
-        //        {
-        //            var weatherInfo = new WeatherInfo
-        //            {
-        //                LocationName = response.name,
-        //                Temp = response.main.temp,
-        //                TempUnit = TempUnit.Fahrenheit
-        //            };
+            if (location != null)
+            {
+                var latitude = location.Latitude;
+                var longitude = location.Longitude;
+            
+                var builder = new UriBuilder(OpenWeatherMapEndpoint);
+                builder.Path = $"data/2.5/weather";
+                builder.Query = $"lat={latitude}&lon={longitude}&units=imperial&appid={GlobalSettings.OpenWeatherMapAPIKey}";
+                var uri = builder.ToString();
 
-        //            return weatherInfo;
-        //        }
+                var response = await Api.Get<OpenWeatherMapResponse>(uri);
+                if (response?.cod == OkResponseCode)
+                {
+                    var weatherInfo = new WeatherInfo
+                    {
+                        LocationName = response.name,
+                        Temp = response.main.temp,
+                        TempUnit = TempUnit.Fahrenheit
+                    };
 
-        //        Debug.WriteLine("OpenWeatherMap API answered with: " + ((response != null) ? $"Error code = {response.cod}." : "Invalid response."));
-        //    }
+                    return weatherInfo;
+                }
 
-        //    // Default data for demo
-        //    return new WeatherInfo
-        //    {
-        //        LocationName = GlobalSettings.City,
-        //        Temp = 56,
-        //        TempUnit = TempUnit.Fahrenheit
-        //    };
-        //}
+                Debug.WriteLine("OpenWeatherMap API answered with: " + ((response != null) ? $"Error code = {response.cod}." : "Invalid response."));
+            }
+
+            // Default data for demo
+            return new WeatherInfo
+            {
+                LocationName = GlobalSettings.City,
+                Temp = 56,
+                TempUnit = TempUnit.Fahrenheit
+            };
+        }
 
         public async Task<WeatherInfo> GetDemoWeatherInfoAsync()
         {

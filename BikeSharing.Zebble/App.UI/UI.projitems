@@ -51,6 +51,42 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_distance_white.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_chain.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_chain_selec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_flat_tire.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_flat_tire_selec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_fork.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_fork_selec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_handlebar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_handlebar_selec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_loss.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_loss_selec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_pedals.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_report_pedals_selec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\Icons\Arrow-Right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -162,10 +198,19 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\myrides_ic_time.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\myrides_placeholder_event.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\progress.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\progress_pending.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\report_done_message.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\report_open_bot.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\suggestion_beacon_hill.png">
@@ -230,12 +275,11 @@
     </EmbeddedResource>
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\CustomPin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\GlobalSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)-Custom\ReportIncidentPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\StaticData.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventSummaryModule.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventSummaryModule.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\MyRidesModule.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\MyRidesModule.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\RecommendedModule.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\RecommendedModule.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\WeatherInfoModule.zbl" />

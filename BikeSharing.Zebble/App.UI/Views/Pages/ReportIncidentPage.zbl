@@ -1,6 +1,43 @@
 <?xml version="1.0"?>
-<z-Component z-type="ReportIncidentPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="ReportIncidentPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+<z-Component z-type="ReportIncidentPage" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="Report" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
-    <!-- TODO: Add the page body here... -->
+    <Stack Id="BotButtonStack">
+      <IconButton Id="BotButton" IconLocation="Left" IconPath="Images/report_open_bot.png"  Text="Customer service"  AutoFlash="true" on-Tapped="OpenBot"/>
+    </Stack>
+    <Stack Direction="Horizontal" Id="IncidentSelectorStack">
+      <Stack >
+        <ImageView Id="handlebarImageView"  Path="Images/ic_report_handlebar.png" CssClass="image" on-Tapped="HandlebarTapped"/>
+        <TextView Text="Handlebar" />
+      </Stack>
+      <Stack>
+        <ImageView  Id="forkImageView" Path="Images/ic_report_fork.png" CssClass="image" on-Tapped="ForkTapped" />
+        <TextView Text="Fork" />
+      </Stack>
+      <Stack>
+        <ImageView  Id="pedalsImageView" Path="Images/ic_report_pedals.png" CssClass="image" on-Tapped="PedalsTapped"/>
+        <TextView Text="Pedals" />
+      </Stack>
+      <Stack>
+        <ImageView  Id="flat_tireImageView" Path="Images/ic_report_flat_tire.png" CssClass="image" on-Tapped="FlatTireTapped"/>
+        <TextView Text="Flat tire" />
+      </Stack>
+      <Stack>
+        <ImageView  Id="chainImageView" Path="Images/ic_report_chain.png" CssClass="image" on-Tapped="ChainTapped"/>
+        <TextView Text="Chain" />
+      </Stack>
+      <Stack>
+        <ImageView  Id="lossImageView"  Path="Images/ic_report_loss.png" CssClass="image" on-Tapped="LossTapped"/>
+        <TextView Text="Loss" />
+      </Stack>      
+    </Stack>
+
+    <TextView Text="Title" CssClass="title"  />
+    <TextInput Id="titleInput" />
+
+    <TextView Text="Description" CssClass="title"  />
+    <TextInput Id="descriptionInput"  />
+    <Stack Id="ReportButtonStack">
+      <Button Text="Report" Id="ReportButton" on-Tapped="ReportButtonTapped"/>
+    </Stack>
   </z-place>
 </z-Component>

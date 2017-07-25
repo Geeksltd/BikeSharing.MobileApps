@@ -1,4 +1,4 @@
-﻿using Domain.Enums;
+﻿using Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +12,8 @@ namespace Domain
         public int Id { get; set; }
 
         public int? EventId { get; set; }
+
+        public int BikeId { get; set; }
 
         public RideType RideType { get; set; }
 

@@ -11,7 +11,7 @@
     using Domain.Services;
     using Domain.Entities;
     using UI.Pages;
-    using UI._Custom;
+    using UI;
 
     partial class EventSummaryModule
     {

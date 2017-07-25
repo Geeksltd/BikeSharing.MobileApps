@@ -8,7 +8,7 @@
     using Zebble;
     using Zebble.Framework;
     using Domain;
-    using UI._Custom;
+    using UI;
     using Domain.Entities;
     using Domain.Services;
     using Zebble.Plugin;
@@ -30,7 +30,7 @@
             fromText.Text = From.Label;
             toText.Text = To.Label;
             DateText.Text = DateTime.Now.ToString("dddd, MMMM dd");
-            CityText.Text = _Custom.GlobalSettings.City; 
+            CityText.Text = GlobalSettings.City; 
             await MapView.Add(new Map.Annotation
             {
                 Title = From.Label,

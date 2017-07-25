@@ -29,7 +29,7 @@
                 
 
                 txtDate.Text =book.DueDate.ToString("dddd, MMMM dd");
-                txtCity.Text = _Custom.GlobalSettings.City;
+                txtCity.Text = GlobalSettings.City;
 
                 txtBookId.Text =  book.BikeId.ToString();
 

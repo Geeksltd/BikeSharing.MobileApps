@@ -1,12 +1,12 @@
 ﻿using Domain.Entities;
-using Domain.Enums;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UI._Custom;
+using UI;
 using Zebble.Framework;
 
 namespace Domain.Services
@@ -167,7 +167,8 @@ namespace Domain.Services
 
         public async Task<IEnumerable<Ride>> GetUserRides()
         {
-            var userId = 1 ;// _authenticationService.GetCurrentUserId();
+            var _authenticationService = new AuthenticationService();
+            var userId =  _authenticationService.GetCurrentUserId();
 
             UriBuilder builder = new UriBuilder(GlobalSettings.RidesEndpoint);
             builder.Path = $"api/rides/user/{userId}";

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UI._Custom
+namespace UI
 {
     public static class GlobalSettings
     {

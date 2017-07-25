@@ -1,14 +1,42 @@
 <?xml version="1.0"?>
-<z-Component z-type="MyRidesPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="My Rides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+<z-Component z-type="MyRidesPage" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="My Rides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Modules.WeatherInfoModule Id="WeatherInfoModule" />
     <Stack Direction="Horizontal" Id="infoStack">
-      <Modules.MyRidesModule Id="MyRidesModule" />
-      <Map Id="MapView"/>
+      <Stack Id="MyRidesStack" >
+        <ListView z-of="Ride, Row" Id="List" EmptyText="Empty list" DataSource="@Items" >
+          <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Ride]" >
+            <Stack Direction="Horizontal" Id="mainStack" on-Tapped="@RowTapped">
+              <Stack Id="iconStack">
+                <ImageView Path="Images/myrides_ic_custom_ride.png" Id="myRidesImage" />
+              </Stack>
+              <Stack Id="rideInfoStack">
+                <TextView Text="From"   />
+                <TextView Text="@Item.From" Id="fromStationNameTextView"  Wrap="false" />
+                <TextView Text="To"  />
+                <TextView Text="@Item.To" Id="toStationNameTextView" Wrap="false"  />
+                <TextView Text="@Item.StartString" Wrap="false" />
+                <TextView Text="@GlobalSettings.City" Wrap="false" />
+                <Stack  Direction="Horizontal"  >
+                  <ImageView  Path="Images/myrides_ic_time.png" CssClass="image"/>
+                  <TextView  Text="@Item.Duration.ToString()" Wrap="false" />
+                  <ImageView  Path="Images/myrides_ic_distance.png"  CssClass="image"/>
+                  <TextView  Text="@Item.Distance.ToString()" Wrap="false" />
+                </Stack>
+              </Stack>
+            </Stack> 
+          </z-Component>
+        </ListView>
+      </Stack>
+      <Map Id="MapView" ZoomLevel="13" ZoomEnable="true" />
       <Stack  Id="selectedRowInfoStack" >
-        <Stack>
-        <TextView Id="txtDate" CssClass="date" />
-        <TextView Id="txtCity" CssClass="city" />
+        <Stack Id="selectedStack" Visible="false">
+          <TextView Text="From" CssClass="label" Style.Margin.Top="150" />
+          <TextView Id="fromSNSelectedRowTextView" CssClass="texbox"   Wrap="false" />
+          <TextView Text="To"  CssClass="label"    />
+          <TextView Id="toSNSelectedRowTextView" CssClass="texbox"  Wrap="false"  />
+          <TextView Id="dateSelectedRowTextView" Wrap="false" />
+          <TextView Text="@GlobalSettings.City" Wrap="false" />
         </Stack>
       </Stack>
     </Stack>

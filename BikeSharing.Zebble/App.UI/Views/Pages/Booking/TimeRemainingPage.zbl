@@ -11,7 +11,7 @@
       <Stack Id="stackTimer">
           <TextView Id="txtTimer" />
       </Stack>
-      <TextView Text="Time remaining"  CssClass="small" />
+      <TextView Text="Time remaining"  CssClass="label" />
       <Stack Id="stackBookId" Direction="Vertical">
          <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" TextTransform="Uppercase"/>
          <TextView Id="txtBookId" />

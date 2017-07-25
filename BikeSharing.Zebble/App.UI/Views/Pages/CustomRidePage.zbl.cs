@@ -9,7 +9,7 @@
     using Zebble.Framework;
     using Domain;
     using Zebble.Services;
-    using UI._Custom;
+    using UI;
     using Domain.Services;
     using System.Collections.ObjectModel;
     using Zebble.Plugin;

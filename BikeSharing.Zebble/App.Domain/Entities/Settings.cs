@@ -17,32 +17,54 @@
 
         
 
-        private const string UserIdKey = "user_id_key";
-        private static readonly int UserIdDefault = 0;
+       
+        private static  int UserIdKey = 1;
 
-        private const string ProfileIdKey = "profile_id_key";
-        private static readonly int ProfileIdDefault = 0;
+      
+        private static  int ProfileIdKey = 1;
 
-        private const string AccessTokenKey = "access_token_key";
-        private static readonly string AccessTokenDefault = string.Empty;
+    
+        private static  string AccessTokenKey = string.Empty;
 
-        private const string CurrentBookingIdKey = "current_booking_id";
-        private static readonly int CurrentBookingIdDefault = 0;
+      
+        private static  int CurrentBookingIdKey = 1;
 
 
 
 
         /* -------------------------- Properties -------------------------*/
+        public static int ProfileId
+        {
+            get
+            {
+                return ProfileIdKey;
+            }
+            set
+            {
+                ProfileIdKey= value;
+            }
+        }
+        public static string AccessToken
+        {
+            get
+            {
+                return AccessTokenKey;
+            }
+            set
+            {
+                AccessTokenKey= value;
+            }
+        }
 
         public static int CurrentBookingId
         {
             get
             {
-                return CurrentBookingIdDefault;//CurrentBookingIdKey.LacksValue() ?  CurrentBookingIdDefault : CurrentBookingIdKey;
+                return  CurrentBookingIdKey;
             }
             set
             {
-
+                CurrentBookingIdKey = value;
             }
         }
 
@@ -88,9 +110,19 @@
             }
         }
 
-        #region My setting 1 Property
+        #region UserId Property
 
-        public int MySetting1 { get; set; }
+        public static int UserId
+        {
+            get
+            {
+                return UserIdKey;
+            }
+            set
+            {
+                UserIdKey = value;
+            }
+        }
 
         #endregion
 
@@ -125,12 +157,7 @@
         protected override void ValidateProperties(ValidationResult result)
         {
             // Validate MySetting1 property:
-
-            if (this.MySetting1 < 0)
-            {
-                result.Add(nameof(MySetting1), "The value of My setting 1 must be 0 or more.");
-            }
-
+            
             // Validate Name property:
 
             if (this.Name.LacksValue())

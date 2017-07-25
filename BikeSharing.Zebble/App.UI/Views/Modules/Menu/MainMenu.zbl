@@ -11,7 +11,7 @@
       <IconButton Id="Home" Text="Home" IconPath="Images/Menu/Home.png" z-nav-forward="Pages.HomePage" />
       <IconButton Id="NewRide" Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-forward="Pages.CustomRidePage"   />
       <IconButton Id="MyRides" Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-forward="Pages.MyRidesPage" />
-      <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-forward="Pages.BookingPage" />
+      <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-forward="Pages.TimeRemainingPage" />
       <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" z-nav-forward="Pages.ReportIncidentPage" />
       <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" z-nav-forward="Pages.ProfilePage" />    
     </Stack>

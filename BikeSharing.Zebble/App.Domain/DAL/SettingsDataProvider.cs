@@ -99,7 +99,7 @@
 
             entity.Name = (string)values[1];
 
-            entity.MySetting1 =  values[2].ToStringOrEmpty().To<int>();
+          
         }
 
         public override void Save(IEntity record)
@@ -145,7 +145,7 @@
             result.Add(CreateParameter("OriginalId", item.OriginalId));
             result.Add(CreateParameter("Id", item.GetId()));
             result.Add(CreateParameter("Name", item.Name));
-            result.Add(CreateParameter("MySetting1", item.MySetting1));
+           
 
             return result.ToArray();
         }

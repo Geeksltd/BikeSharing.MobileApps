@@ -50,31 +50,35 @@ MyRidesPage #MyRidesModule { width: 30%; }
 
 MyRidesPage #MapView { width: 40%; }
 
-MyRidesPage #selectedRowInfoStack { width: 30%; background-image: "Images/city-gray.png"; background-size: cover; color: blue; height: 100%; }
+MyRidesPage #selectedRowInfoStack { width: 30%; background-image: "Images/myrides_placeholder_event.png"; background-size: cover; height: 100%; padding: 10px; /*#selectedStack{ margin-top : 100px;}*/ }
 
-MyRidesPage #selectedRowInfoStack TextView { color: white; margin: 7px; }
+MyRidesPage #selectedRowInfoStack TextView { color: white; margin: 7px; font-size: 14px; }
+
+MyRidesPage #selectedRowInfoStack .label { font-size: 12px; }
+
+MyRidesPage #selectedRowInfoStack .texbox { font-size: 16px; }
 
 MyRidesPage #txtDate { margin-top: 100px; }
 
-#MyRidesModule { height: 100%; }
+#MyRidesStack { height: 100%; }
 
-#MyRidesModule #List { height: 100%; }
+#MyRidesStack #List { height: 100%; }
 
-#MyRidesModule TextView { color: black; font-size: 12px; margin-top: 5px; }
+#MyRidesStack TextView { color: black; font-size: 12px; margin-top: 5px; }
 
-#MyRidesModule #iconStack { width: 40px; height: 100%; }
+#MyRidesStack #iconStack { width: 40px; height: 100%; }
 
-#MyRidesModule #iconStack #myRidesImage { margin-top: 10px; margin-left: 5px; height: 30px; }
+#MyRidesStack #iconStack #myRidesImage { margin-top: 10px; margin-left: 5px; height: 30px; }
 
-#MyRidesModule #rideInfoStack { width: 90%; height: 100%; padding: 10px; }
+#MyRidesStack #rideInfoStack { width: 90%; height: 100%; padding: 10px; }
 
-#MyRidesModule #rideInfoStack .image { height: 20px; width: 20px; }
+#MyRidesStack #rideInfoStack .image { height: 20px; width: 20px; margin-right: 5px; }
 
-#MyRidesModule #rideInfoStack #fromStationNameTextView { color: blue; }
+#MyRidesStack #rideInfoStack #fromStationNameTextView { color: blue; }
 
-#MyRidesModule #rideInfoStack #toStationNameTextView { color: red; }
+#MyRidesStack #rideInfoStack #toStationNameTextView { color: red; }
 
-#MyRidesModule #mainStack { width: 100%; height: 170px; border: 1px solid; border-color: gray; }
+#MyRidesStack #mainStack { width: 100%; height: 170px; border: 1px solid; border-color: gray; }
 
 CustomRidePage #Body { height: 100%; }
 
@@ -134,7 +138,29 @@ TimeRemainingPage #Body #stackBookId { background-image: "Images/booking_circle_
 
 TimeRemainingPage #Body .blacktext { color: black; font-size: 12px; }
 
-TimeRemainingPage #Body .small { font-size: 11px; }
+TimeRemainingPage #Body .label { font-size: 11px; }
 
 TimeRemainingPage #Body #txtBookId { color: aqua; }
+
+ReportIncidentPage { height: 100%; padding: 10px; }
+
+ReportIncidentPage #IncidentSelectorStack { padding: 10px; height: 200px; }
+
+ReportIncidentPage #IncidentSelectorStack TextView { font-size: 12px; text-align: center; }
+
+ReportIncidentPage #IncidentSelectorStack .image { margin: 10px; margin-top: 20px; width: 50px; height: 50px; }
+
+ReportIncidentPage #BotButtonStack { padding: 20px; border-bottom: 1px solid; border-color: gray; }
+
+ReportIncidentPage #BotButtonStack #BotButton { padding: 10px; width: 100%; background-color: blue; font-size: 20px; }
+
+ReportIncidentPage #BotButtonStack #Icon { margin-top: 0px; margin-left: 30px; height: 30px; }
+
+ReportIncidentPage .title { color: blue; margin: 10px 0px; }
+
+ReportIncidentPage TextInput { color: black; border-bottom: 1px solid; border-color: black; }
+
+ReportIncidentPage #ReportButtonStack { padding: 20px 0px; margin-top: 50px; }
+
+ReportIncidentPage #ReportButtonStack #ReportButton { padding: 10px; width: 100%; background-color: lightgray; font-size: 20px; }
 

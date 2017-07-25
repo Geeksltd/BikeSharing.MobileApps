@@ -9,20 +9,31 @@
     <Import_RootNamespace>Domain</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\AuthenticationRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\AuthenticationResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Booking.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Event.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\GeoLocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\ImageModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\OpenWeatherMapResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Payment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\ReportedIssue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Ride.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Station.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Suggestion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\UserAndProfileModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\UserProfile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Venue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\WeatherInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\ReportedIssueType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\RideType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\TempUnit.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Api.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\EventsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FeedbackService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\OpenWeatherMapService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ProfileService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RidesService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\AnonymousUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\Extensions.cs" />
