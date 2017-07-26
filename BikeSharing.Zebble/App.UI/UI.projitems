@@ -16,7 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Templates\Modal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\Components\MenuDisplayer.cs" />
     <None Include="$(MSBuildThisFileDirectory)Styles\App.scss" />
-    <None Include="$(MSBuildThisFileDirectory)Templates\Components\MainTabs.zbl" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Windows.scss" />
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json.defaults" />
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />
@@ -201,6 +200,9 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\myrides_placeholder_event.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\profile_placeholder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\progress.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -275,6 +277,7 @@
     </EmbeddedResource>
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\CustomPin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\GlobalSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)-Custom\LoginPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\ReportIncidentPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\StaticData.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />

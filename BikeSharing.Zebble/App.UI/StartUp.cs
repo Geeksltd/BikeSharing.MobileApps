@@ -4,7 +4,6 @@
     using System.Threading.Tasks;
     using Zebble;
     using Zebble.Services;
-
     public partial class StartUp : Zebble.StartUp
     {
         public override async Task Run()
@@ -13,7 +12,7 @@
 
             await InstallIfNeeded();
 
-            RegisterDataProvider(typeof(AppData.AdoDotNetDataProviderFactory));
+          //  RegisterDataProvider(typeof(AppData.AdoDotNetDataProviderFactory));
 
             CssStyles.LoadAll();
             ImageService.MemoryCacheFolder("Images");

@@ -1,7 +1,8 @@
 ﻿namespace Domain
 {
     using System;
-    using Zebble.Framework;
+    using Zebble.Data;
+   
 
     /// <summary>
     /// Provides the business logic for Settings class.

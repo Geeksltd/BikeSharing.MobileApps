@@ -16,6 +16,8 @@ namespace Domain.Entities
 
         public DateTime BirthDate { get; set; }
 
+        public string BirthDateString { get{ return BirthDate.ToString("dddd, MMMM dd"); }  }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

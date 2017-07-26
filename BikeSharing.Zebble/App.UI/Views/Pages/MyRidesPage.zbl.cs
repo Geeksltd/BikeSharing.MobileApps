@@ -6,7 +6,6 @@
     using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-    using Zebble.Framework;
     using Domain;
     using UI;
     using Zebble.Plugin;

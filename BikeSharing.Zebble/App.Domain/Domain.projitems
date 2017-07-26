@@ -20,7 +20,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\ReportedIssue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Ride.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Station.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Subscription.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Suggestion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Tenant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\UserAndProfileModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\UserProfile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Venue.cs" />
@@ -35,14 +38,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\OpenWeatherMapService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProfileService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RidesService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utilities\AnonymousUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Settings.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\@AdoDotNetDataProviderFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\SettingsDataProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\UserDataProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Logic\Settings.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)-Logic\User.cs" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,28 @@
 <?xml version="1.0"?>
 <z-Component z-type="ProfilePage" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
-    <!-- TODO: Add the page body here... -->
+    <Stack Direction="Horizontal" Id="mainStack">
+      <Stack>
+        <ImageView Id="userImageView" Path="@Item.PhotoUrl" on-Tapped="userImageTapped" />
+      </Stack>
+      <Stack>
+        <TextView  Text="First Name" CssClass="label"  />
+        <TextView Text="@Item.FirstName" CssClass="title"  Wrap="false"  />
+      
+        <TextView Text="Last Name" CssClass="label"  />
+        <TextView Text="@Item.LastName" CssClass="title"  Wrap="false"   />
+          
+        <TextView Text="Birhdate" CssClass="label"  />
+        <TextView Text="@Item.BirthDateString" CssClass="title"  Wrap="false"   />
+      </Stack>
+      <Stack>
+        <TextView   Text="Email" CssClass="label"  />
+        <TextView Text="@Item.Email" CssClass="title"   Wrap="false"  />
+      
+        <TextView   Text="Skype" CssClass="label"  />
+        <TextView Text="@Item.Skype" CssClass="title" Wrap="false"   />
+          
+      </Stack>
+    </Stack>
   </z-place>
 </z-Component>

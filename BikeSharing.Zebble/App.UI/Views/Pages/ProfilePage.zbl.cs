@@ -6,15 +6,71 @@
     using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-    using Zebble.Framework;
-    using Domain;
+
+    using Domain.Entities;
+    using Domain.Services;
+    using System.IO;
 
     partial class ProfilePage
     {
+        UserProfile Item;
         public override async Task OnInitializing()
         {
+            var _profileService = new ProfileService();
+            Item = await _profileService.GetCurrentProfileAsync();
+
+            //if (!string.IsNullOrEmpty(Item.PhotoUrl))
+            //{
+            //    // Force photo reload
+            //    Item.PhotoUrl += $"?t={DateTime.Now.Ticks}";
+            //}
+            //else
+                Item.PhotoUrl= "Images/profile_placeholder.png";
+            
             await base.OnInitializing();
             await InitializeComponents();
+
+          
+            
+        }
+
+
+        async Task userImageTapped()
+        {
+            FileInfo TempImage = new FileInfo("Images/profile_placeholder.png");
+            string base64Str = null;
+            try
+            {
+
+                if (Device.Permissions.Check(DevicePermission.Camera).Result == PermissionResult.Granted)              
+                    TempImage = await Device.Media.TakePhoto();
+                
+                if(TempImage == null || TempImage.FullName.Contains("profile_placeholder"))             
+                    TempImage = await Device.Media.PickPhoto();
+
+                if (TempImage != null)
+                {
+                    userImageView.Path = TempImage.FullName;
+                    using (Stream mediaStream = TempImage.OpenRead())
+                    using (MemoryStream memStream = new MemoryStream())
+                    {
+                        await mediaStream.CopyToAsync(memStream);
+                        base64Str = Convert.ToBase64String(memStream.ToArray());
+                    }
+
+                    if(base64Str.HasValue())
+                    {
+                        var _profileService = new ProfileService();
+                        await _profileService.UploadUserImageAsync( Item, base64Str);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                await Alert.Show(ex.Message);
+                return;
+            }
+            
         }
     }
 }

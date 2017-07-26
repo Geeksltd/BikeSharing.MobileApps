@@ -1,8 +1,7 @@
 ﻿namespace AppData
 {
     using System;
-    using Zebble.Framework;
-    using Zebble.Framework.Data;
+    using Zebble.Data;
 
     public class AdoDotNetDataProviderFactory : IDataProviderFactory
     {
@@ -18,8 +17,7 @@
         {
             IDataProvider result = null;
 
-            if (type == typeof(Domain.Settings)) result = new SettingsDataProvider();
-            else if (type == typeof(Domain.User)) result = new UserDataProvider();
+            if (type == typeof(Domain.Settings)) result = new SettingsDataProvider();          
             else if (result == null)
             {
                 throw new NotSupportedException(type + " is not a data-supported type.");

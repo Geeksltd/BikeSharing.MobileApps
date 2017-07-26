@@ -4,8 +4,7 @@
     using System.Linq;
     using System.Collections.Generic;
     using System.Data;
-    using Zebble.Framework;
-    using Zebble.Framework.Data;
+    using Zebble.Data;
 
     public class SettingsDataProvider : SQLiteDataProvider
     {
@@ -76,7 +75,7 @@
         {
             var queryBuilder = new SqlQueryBuilder<Domain.Settings>(criteria, options, PropertyColumnMappings);
 
-            return (int)ExecuteScalar(queryBuilder.GenerateCountQuery("[Settings] AS S"), System.Data.CommandType.Text, GenerateParameters(queryBuilder.Parameters));
+           return (int)ExecuteScalar(queryBuilder.GenerateCountQuery("[Settings] AS S"), System.Data.CommandType.Text, GenerateParameters(queryBuilder.Parameters));
         }
 
         public override IEnumerable<string> ReadManyToManyRelation(IEntity instance, string property)
@@ -88,7 +87,7 @@
         {
             var result = new Domain.Settings();
             FillData(reader, result);
-            EntityManager.SetSaved(result, reader[0].ToString().To<Guid>());
+           // EntityManager.SetSaved(result, reader[0].ToString().To<Guid>());
             return result;
         }
 
@@ -142,8 +141,8 @@
         {
             var result = new List<IDataParameter>();
 
-            result.Add(CreateParameter("OriginalId", item.OriginalId));
-            result.Add(CreateParameter("Id", item.GetId()));
+         //   result.Add(CreateParameter("OriginalId", item.OriginalId));
+         //   result.Add(CreateParameter("Id", item.GetId()));
             result.Add(CreateParameter("Name", item.Name));
            
 

@@ -10,7 +10,9 @@
     "System.Reflection": "4.3.0",
     "System.Security.Cryptography.Algorithms": "4.3.0",
     "System.Threading": "4.3.0",
-    "Zebble.Plugin.Map": "4.1.301"
+    "Zebble": "4.0.244",
+    "Zebble.Data": "4.2.174",
+    "Zebble.Plugin.Map": "4.1.306"
   },
   "frameworks": {
     "uap10.0": {}

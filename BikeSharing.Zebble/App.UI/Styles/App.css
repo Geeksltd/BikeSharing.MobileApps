@@ -164,3 +164,37 @@ ReportIncidentPage #ReportButtonStack { padding: 20px 0px; margin-top: 50px; }
 
 ReportIncidentPage #ReportButtonStack #ReportButton { padding: 10px; width: 100%; background-color: lightgray; font-size: 20px; }
 
+LoginPage { height: 100%; }
+
+LoginPage #Body { height: 100%; background-image: "Images/background.png"; height: 100%; background-size: cover; }
+
+LoginPage #Body #mainStack { height: 100%; padding: 20px 50px; }
+
+LoginPage #Body #signupTextView { color: yellow; font-weight: bold; }
+
+LoginPage #Body TextView { color: white; }
+
+LoginPage #Body TextInput { border-bottom: 1px solid; border-color: white; color: white; font-size: 20px; margin: 10px; padding: 10px 0px; }
+
+LoginPage #Body .label { font-size: 12px; margin: 10px; }
+
+LoginPage #Body #signinButtonStack { padding: 0px 40px; margin-top: 20px; }
+
+LoginPage #Body #signinButtonStack #signinButton { width: 100%; color: black; background-color: blue; padding: 20px; }
+
+SignUpPage { height: 100%; }
+
+SignUpPage #Body { height: 100%; background-image: "Images/background.png"; height: 100%; background-size: cover; }
+
+ProfilePage { height: 100%; }
+
+ProfilePage #Body { height: 100%; background-image: "Images/city-gray.png"; height: 100%; background-size: cover; }
+
+ProfilePage #Body #mainStack { height: 100%; padding: 100px 20px 20px 20px; }
+
+ProfilePage #Body #userImageView { width: 100%; height: 80px; background-position: center; }
+
+ProfilePage #Body .label { font-size: 12px; margin: 10px; color: blue; }
+
+ProfilePage #Body .title { font-size: 20px; margin: 10px; color: black; }
+

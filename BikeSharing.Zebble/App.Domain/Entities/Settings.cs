@@ -5,8 +5,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Xml.Serialization;
-    using Zebble.Framework;
-    using Zebble.Framework.Data;
+    using Zebble.Data;
 
     [SmallTable]
     public partial class Settings : GuidEntity

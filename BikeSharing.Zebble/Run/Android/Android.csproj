@@ -105,7 +105,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Zebble.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.4.0.226\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.4.0.244\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.Data.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.Data.4.2.174\lib\MonoAndroid10\Zebble.Data.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
