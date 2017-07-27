@@ -1,4 +1,5 @@
-﻿using Domain.Services;
+﻿using Domain;
+using Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -56,7 +57,6 @@ namespace UI.Pages
 
         private async void SignInAsync()
         {
-           
             IsValid = true;
             bool isValid = Validate();
             bool isAuthenticated = false;
@@ -80,6 +80,16 @@ namespace UI.Pages
             }
             else
             {
+                var file = Device.IO.File("Session.txt");
+                if (file.Exists())
+                {
+                    var data = file.ReadAllText();
+                    Settings.UserId = Convert.ToInt32(data);
+                    if (Settings.UserId != 0)
+                    isAuthenticated = true;
+                }
+
+
                 IsValid = false;
             }
 
@@ -92,8 +102,8 @@ namespace UI.Pages
         
         private bool Validate()
         {
-            _userName = usernameTextInput.Text;
-            _password = passwordTextInput.Text;
+            _userName =  usernameTextInput?.Text;
+            _password = passwordTextInput?.Text;
             bool isValidUser = _userName.HasValue();
             bool isValidPassword = _password.HasValue();
 

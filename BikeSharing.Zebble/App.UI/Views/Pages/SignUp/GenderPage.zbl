@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<z-Component z-type="GenderPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+  <z-place inside="Body">
+    <!-- TODO: Add the page body here... -->
+
+    <Stack Id="NextButtonStack">
+      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
+    </Stack>
+    
+  </z-place>
+</z-Component>

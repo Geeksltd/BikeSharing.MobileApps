@@ -13,10 +13,13 @@
     {
         public override async Task OnInitializing()
         {
+
+            SignInAsync();
+
             await base.OnInitializing();
             await InitializeComponents();
 
-             SignInAsync();
+            
         }
 
         async Task signinTapped()

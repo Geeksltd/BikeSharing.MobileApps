@@ -14,17 +14,17 @@
 
         const string COLUMNS_LIST = @"S.[ID] AS [Settings_Id],
         S.[Name] AS [Settings_Name],
-        S.[MySetting1] AS [Settings_MySetting1]";
+        S.[UserIdKey] AS [Settings_UserIdKey]";
 
         const string INSERT_COMMAND = @"INSERT INTO [Settings]
-        ([Id], [Name], [MySetting1])
+        ([Id], [Name], [UserIdKey])
         VALUES
-        (@Id, @Name, @MySetting1)";
+        (@Id, @Name, @UserIdKey)";
 
         const string UPDATE_COMMAND = @"UPDATE [Settings] SET
         [Id] = @Id,
         [Name] = @Name,
-        [MySetting1] = @MySetting1
+        [UserIdKey] = @UserIdKey
         WHERE [ID] = @OriginalId";
 
         const string DELETE_COMMAND = @"DELETE FROM [Settings] WHERE [ID] = @Id";
@@ -36,7 +36,7 @@
         internal static Dictionary<string, string> PropertyColumnMappings = new Dictionary<string, string> {
         { "ID", "S.[ID]" },
         { "Name", "S.[Name]" },
-        { "MySetting1", "S.[MySetting1]" }};
+        { "UserIdKey", "S.[UserIdKey]" }};
 
         #endregion
 

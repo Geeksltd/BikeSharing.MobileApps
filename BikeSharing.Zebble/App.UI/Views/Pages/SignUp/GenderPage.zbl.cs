@@ -8,13 +8,28 @@
     using Zebble;
      
     using Domain;
+    using Domain.Entities;
 
-    partial class GenrePage
+    partial class GenderPage
     {
+        UserAndProfileModel user;
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
+
+             user = Nav.Param<UserAndProfileModel>("UserAndProfileModel");
+
         }
+
+
+        async Task NextButtonTapped()
+        {
+         
+            user.Gender = "0";
+           
+            Nav.Forward<UserPage>(new { UserAndProfileModel = user });
+        }
+
     }
 }

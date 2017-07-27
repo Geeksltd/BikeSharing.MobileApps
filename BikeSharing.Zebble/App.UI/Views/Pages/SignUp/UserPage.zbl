@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <z-Component z-type="UserPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="UserPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <z-place inside="Body">
-    <!-- TODO: Add the page body here... -->
+    <TextView Text="First Name" CssClass="title"   />
+    <TextInput Id="firstNameInput" on-UserTextChanged="TextChanged" />
+
+    <TextView Text="Last Name" CssClass="title"    />
+    <TextInput Id="lastNameInput" on-UserTextChanged="TextChanged" />
+
+    <TextView Text="Birthdate" CssClass="title"   />
+    <DatePicker Id="birthdateInput"   />
+    
+    <Stack Id="NextButtonStack">
+      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
+    </Stack>
+    
   </z-place>
 </z-Component>

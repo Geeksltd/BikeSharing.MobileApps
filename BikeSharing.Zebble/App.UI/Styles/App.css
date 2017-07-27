@@ -1,4 +1,10 @@
-﻿MainMenu #Body { height: 100%; background-image: "Images/Menu/background.png"; }
+﻿MainMenu #Body { height: 100%; background-image: "Images/Menu/background.png"; background-size: cover; }
+
+MainMenu #Body TextView { color: blue; }
+
+MainMenu #Body #logoutButton { width: 100%; background-color: white; text-align: center; padding: 10px; }
+
+MainMenu #Body #UserProfile { margin-top: 100px; }
 
 HomePage #Body { height: 100%; }
 
@@ -197,4 +203,14 @@ ProfilePage #Body #userImageView { width: 100%; height: 80px; background-positio
 ProfilePage #Body .label { font-size: 12px; margin: 10px; color: blue; }
 
 ProfilePage #Body .title { font-size: 20px; margin: 10px; color: black; }
+
+SignUpPage { height: 100%; background-image: "Images/background.png"; background-size: cover; }
+
+SignUpPage #mainStack { height: 50%; width: 50%; margin-top: calc("View.Root.ActualHeight / 4"); margin-left: calc("View.Root.ActualWidth / 4"); padding: 10px; background-color: white; }
+
+SignUpPage TextView { color: white; }
+
+SignUpPage TextInput { border-bottom: 1px solid; border-color: white; color: white; font-size: 20px; margin: 10px; padding: 10px 0px; }
+
+SignUpPage .title { font-size: 12px; margin: 10px; color: blue; }
 

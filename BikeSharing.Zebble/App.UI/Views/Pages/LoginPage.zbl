@@ -2,7 +2,7 @@
 <z-Component z-type="LoginPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="LoginPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
    <Stack Id="mainStack">
-      <TextInput Placeholder="Username" Id="usernameTextInput" Text="scottgu"  Style.Margin.Top="100" on-UserTextChanged="TextChanged"/>
+      <TextInput Placeholder="Username" Id="usernameTextInput"  Style.Margin.Top="100" on-UserTextChanged="TextChanged"/>
       <TextInput Placeholder="Password" Id="passwordTextInput"  on-UserTextChanged="TextChanged" />
       <TextView Text="Forgot Password?" CssClass="label" Style.TextAlignment="Right"  />
    

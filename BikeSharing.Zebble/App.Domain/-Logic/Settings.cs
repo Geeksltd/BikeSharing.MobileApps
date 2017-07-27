@@ -1,6 +1,7 @@
 ﻿namespace Domain
 {
     using System;
+    using Zebble;
     using Zebble.Data;
    
 
@@ -20,6 +21,37 @@
 
             if (IsNew && Database.Any<Settings>())
                 throw new Exception("Settings is Singleton!");
+        }
+
+
+        public static void RemoveUserId()
+        {
+            UserId = 0;
+            Device.IO.File("Session.txt").Delete();
+        }
+
+        public static void RemoveProfileId()
+        {
+            ProfileId = 0;
+        }
+
+        public static void RemoveAccessToken()
+        {
+            AccessToken = "";
+        }
+
+        public static void RemoveCurrentBookingId()
+        {
+            CurrentBookingId = 0;
+        }
+
+        public static void LogoutUser()
+        {
+            Settings.RemoveUserId();
+            Settings.RemoveProfileId();
+            Settings.RemoveAccessToken();
+            Settings.RemoveCurrentBookingId();
+
         }
     }
 }

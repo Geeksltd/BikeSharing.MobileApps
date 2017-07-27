@@ -20,7 +20,14 @@ namespace Domain.Services
 
             var uri = builder.ToString();
 
-            return Api.Get<UserProfile>(uri);
+            var result=  Api.Get<UserProfile>(uri);
+            if (result.Result != null)
+            {
+                //   result.Result.PhotoUrl = string.IsNullOrEmpty(result.Result.PhotoUrl) ? "Images/profile_placeholder.png" : result.Result.PhotoUrl;
+                result.Result.PhotoUrl = "Images/profile_placeholder.png";
+                Settings.UserProfile = result.Result;
+            }
+            return result;
         }
 
         public Task<UserAndProfileModel> SignUp(UserAndProfileModel profile)

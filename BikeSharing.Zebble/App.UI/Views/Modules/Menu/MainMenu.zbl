@@ -7,16 +7,19 @@
   <Stack Id="Body">
       <!--<ImageView Id="LogoImage" Path="/Images/Logo.png" />-->
 
-    <Stack Id="Items">
-      <IconButton Id="Home" Text="Home" IconPath="Images/Menu/Home.png" z-nav-forward="Pages.HomePage" />
-      <IconButton Id="NewRide" Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-forward="Pages.CustomRidePage"   />
-      <IconButton Id="MyRides" Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-forward="Pages.MyRidesPage" />
-      <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-forward="Pages.TimeRemainingPage" />
-      <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" z-nav-forward="Pages.ReportIncidentPage" />
-      <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" z-nav-forward="Pages.ProfilePage" />    
+    <Stack Id="Items" Style.Height="100%">
+      <IconButton Id="Home" Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.HomePage" />
+      <IconButton Id="NewRide" Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRidePage"   />
+      <IconButton Id="MyRides" Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRidesPage" />
+      <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemainingPage" />
+      <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncidentPage" />
+      <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.ProfilePage" />
+
+      
+      <IconButton Id="UserProfile" Text="@Settings.UserProfile.FullName" IconPath="@Settings.UserProfile.PhotoUrl"  />
+
+      <Button Id="logoutButton" Text="Logout" on-Tapped="logoutButtonTapped" />
     </Stack>
-    <!--<Stack >
-      <Button Id="logout" Text="Logout"  />
-    </Stack>-->
+   
   </Stack>
 </z-Component>

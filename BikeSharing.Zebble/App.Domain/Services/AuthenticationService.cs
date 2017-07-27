@@ -8,7 +8,7 @@ using Zebble;
 
 namespace Domain.Services
 {
-    public class AuthenticationService : BaseApi
+    public class AuthenticationService : Api
     {
         public bool IsAuthenticated => !string.IsNullOrEmpty(Settings.AccessToken);
 
@@ -31,7 +31,10 @@ namespace Domain.Services
             Settings.UserId = authenticationInfo.UserId;
             Settings.ProfileId = authenticationInfo.ProfileId;
             Settings.AccessToken = authenticationInfo.AccessToken;
-
+            if (authenticationInfo.UserId != 0 )
+                  Device.IO.File("Session.txt").WriteAllText(authenticationInfo.UserId.ToString());
+            //   if (authenticationInfo.AccessToken.HasValue())
+            //           Device.IO.File("SessionToken.txt").WriteAllText(authenticationInfo.AccessToken);
             return true;
         }
 

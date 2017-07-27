@@ -10,23 +10,15 @@
     using Domain.Entities;
     using Domain.Services;
     using System.IO;
+    using Domain;
 
     partial class ProfilePage
     {
         UserProfile Item;
         public override async Task OnInitializing()
         {
-            var _profileService = new ProfileService();
-            Item = await _profileService.GetCurrentProfileAsync();
+            Item = Settings.UserProfile;
 
-            //if (!string.IsNullOrEmpty(Item.PhotoUrl))
-            //{
-            //    // Force photo reload
-            //    Item.PhotoUrl += $"?t={DateTime.Now.Ticks}";
-            //}
-            //else
-                Item.PhotoUrl= "Images/profile_placeholder.png";
-            
             await base.OnInitializing();
             await InitializeComponents();
 
