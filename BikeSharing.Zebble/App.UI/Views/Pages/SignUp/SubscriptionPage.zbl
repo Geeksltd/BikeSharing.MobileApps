@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
-<z-Component z-type="SubscriptionPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="SubscriptionPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <z-place inside="Body">
-    <!-- TODO: Add the page body here... -->
-  </z-place>
+<z-Component z-type="SubscriptionPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+  <Stack Id="mainStack">
+
+    <Stack Id="NextButtonStack">
+      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
+    </Stack>
+
+  </Stack>
+
 </z-Component>

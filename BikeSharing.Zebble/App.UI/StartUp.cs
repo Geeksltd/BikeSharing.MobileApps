@@ -17,13 +17,13 @@
             CssStyles.LoadAll();
             ImageService.MemoryCacheFolder("Images");
 
-            Device.System.ReceivedMemoryWarning.Handle(() => Alert.Toast("There is a shortage of memory. The application may crash."));
+            //Device.System.ReceivedMemoryWarning.Handle(() => Alert.Toast("There is a shortage of memory. The application may crash."));
 
             Services.PushNotificationListener.Setup();
 
             LoadFirstPage().RunInParallel();
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.HomePage());
+        public static Task LoadFirstPage() => Nav.Go(new Pages.GenderPage());
     }
 }

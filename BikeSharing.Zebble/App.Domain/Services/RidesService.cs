@@ -12,7 +12,7 @@ using Zebble;
 
 namespace Domain.Services
 {
-    class RidesService : BaseApi
+    class RidesService : Api
     {
         // private readonly IRequestProvider _requestProvider;
         // private readonly IAuthenticationService _authenticationService;

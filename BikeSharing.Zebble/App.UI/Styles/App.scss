@@ -1,6 +1,11 @@
 ﻿@import "_Settings";
 
-MainMenu { #Body{  height:100%; background-image: "Images/Menu/background.png"; }  }
+MainMenu { 
+    #Body{  height:100%; background-image: "Images/Menu/background.png"; background-size: cover;
+            TextView{ color: blue;}
+            #logoutButton {width:100%; background-color:white; text-align:center; padding: 10px; }
+            #UserProfile { margin-top:100px;}
+           }  }
 HomePage{  #Body{ height:100%; }}
 
 #WeatherInfoModule {
@@ -221,12 +226,33 @@ LoginPage {
     }
 }
 
-SignUpPage  {
+.SignupPages {
     height: 100%;
 
-    #Body {
-        height: 100%; background-image: "Images/background.png"; height: 100%; background-size: cover;
-        }
+    #mainStack {
+        height: 50%;
+        width: 50%;
+        margin-top: calc("View.Root.ActualHeight / 4");
+        margin-left: calc("View.Root.ActualWidth / 4");
+        padding: 10px;
+        background-color: white;
+    }
+
+
+    TextInput {
+        border-bottom: 1px solid;
+        border-color: black;
+        color: black;
+        font-size: 20px;
+        margin: 10px;
+        padding: 10px 0px;
+    }
+
+    .title {
+        font-size: 12px;
+        margin: 10px;
+        color: blue;
+    }
 }
 
 ProfilePage  {
@@ -242,4 +268,24 @@ ProfilePage  {
         .label{font-size:12px; margin:10px; color:blue;}
         .title{font-size:20px; margin:10px; color:black; }
       }
+}
+
+GenderPage {
+
+    #mainStack {
+        /*background-image: "Images/SignUp/building.png";
+        background-size: cover;*/
+
+        #womanImageView {
+            width: 100%;
+            height: 80px;
+            margin-left: 80px;
+        }
+
+        #manImageView {
+            width: 100%;
+            height: 80px;
+            margin-left: 10px;
+        }
+    }
 }

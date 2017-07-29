@@ -16,5 +16,9 @@
             await base.OnInitializing();
             await InitializeComponents();
         }
+
+        async Task NextButtonTapped()
+        {
+        }
     }
 }

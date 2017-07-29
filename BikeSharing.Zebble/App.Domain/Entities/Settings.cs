@@ -1,5 +1,6 @@
 ﻿namespace Domain
 {
+    using Domain.Entities;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -28,10 +29,23 @@
       
         private static  int CurrentBookingIdKey = 1;
 
-
+        private static UserProfile _userProfile = null;
 
 
         /* -------------------------- Properties -------------------------*/
+
+        public static UserProfile UserProfile
+        {
+            get
+            {
+                return _userProfile;
+            }
+            set
+            {
+                _userProfile = value;
+            }
+        }
+
         public static int ProfileId
         {
             get
@@ -67,25 +81,7 @@
             }
         }
 
-        public static void RemoveUserId()
-        {
-          //  AppSettings.Remove(UserIdKey);
-        }
-
-        public static void RemoveProfileId()
-        {
-          //  AppSettings.Remove(ProfileIdKey);
-        }
-
-        public static void RemoveAccessToken()
-        {
-          //  AppSettings.Remove(AccessTokenKey);
-        }
-
-        public static void RemoveCurrentBookingId()
-        {
-           // AppSettings.Remove(CurrentBookingIdKey);
-        }
+  
 
         public static Settings Current
         {

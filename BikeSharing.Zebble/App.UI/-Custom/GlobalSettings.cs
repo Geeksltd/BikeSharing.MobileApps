@@ -6,7 +6,7 @@ namespace UI
 {
     public static class GlobalSettings
     {
-        public const string AuthenticationEndpoint = "http://localhost:15858/";// "http://bikesharing-services-profilestgr242k3hirba.azurewebsites.net/";
+        public const string AuthenticationEndpoint = "http://localhost:84/";// "http://bikesharing-services-profilestgr242k3hirba.azurewebsites.net/";
         public const string EventsEndpoint = "http://localhost:82/";// "http://bikesharing-services-eventstgr242k3hirba.azurewebsites.net/";
         public const string IssuesEndpoint = "http://localhost:83/";// "http://bikesharing-services-feedbacktgr242k3hirba.azurewebsites.net/";
         public const string RidesEndpoint = "http://localhost:1337/";//"http://bikesharing-services-ridestgr242k3hirba.azurewebsites.net/";

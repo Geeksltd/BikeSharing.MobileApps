@@ -1,4 +1,10 @@
-﻿MainMenu #Body { height: 100%; background-image: "Images/Menu/background.png"; }
+﻿MainMenu #Body { height: 100%; background-image: "Images/Menu/background.png"; background-size: cover; }
+
+MainMenu #Body TextView { color: blue; }
+
+MainMenu #Body #logoutButton { width: 100%; background-color: white; text-align: center; padding: 10px; }
+
+MainMenu #Body #UserProfile { margin-top: 100px; }
 
 HomePage #Body { height: 100%; }
 
@@ -182,9 +188,13 @@ LoginPage #Body #signinButtonStack { padding: 0px 40px; margin-top: 20px; }
 
 LoginPage #Body #signinButtonStack #signinButton { width: 100%; color: black; background-color: blue; padding: 20px; }
 
-SignUpPage { height: 100%; }
+.SignupPages { height: 100%; }
 
-SignUpPage #Body { height: 100%; background-image: "Images/background.png"; height: 100%; background-size: cover; }
+.SignupPages #mainStack { height: 50%; width: 50%; margin-top: calc("View.Root.ActualHeight / 4"); margin-left: calc("View.Root.ActualWidth / 4"); padding: 10px; background-color: white; }
+
+.SignupPages TextInput { border-bottom: 1px solid; border-color: black; color: black; font-size: 20px; margin: 10px; padding: 10px 0px; }
+
+.SignupPages .title { font-size: 12px; margin: 10px; color: blue; }
 
 ProfilePage { height: 100%; }
 
@@ -197,4 +207,10 @@ ProfilePage #Body #userImageView { width: 100%; height: 80px; background-positio
 ProfilePage #Body .label { font-size: 12px; margin: 10px; color: blue; }
 
 ProfilePage #Body .title { font-size: 20px; margin: 10px; color: black; }
+
+GenderPage #mainStack { /*background-image: "Images/SignUp/building.png"; background-size: cover;*/ }
+
+GenderPage #mainStack #womanImageView { width: 100%; height: 80px; margin-left: 80px; }
+
+GenderPage #mainStack #manImageView { width: 100%; height: 80px; margin-left: 10px; }
 

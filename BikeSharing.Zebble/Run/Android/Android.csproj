@@ -16,8 +16,8 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -42,7 +42,7 @@
     <AotAssemblies>False</AotAssemblies>
     <EnableLLVM>False</EnableLLVM>
     <EnableProguard>False</EnableProguard>
-    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+    <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
     <NoWarn>1998</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -56,56 +56,35 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.5.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\HtmlAgilityPack.1.5.1\lib\netstandard1.6\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
-    <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="mscorlib" />
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\..\packages\HtmlAgilityPack.1.4.9.5\lib\portable-net45+netcore45+wp8+MonoAndroid+MonoTouch\HtmlAgilityPack.dll</HintPath>
-    </Reference>
     <Reference Include="Refractored.GifImageView, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Refractored.GifImageView.2.0.0\lib\monoandroid\Refractored.GifImageView.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.Portable, Version=4.0.0.0, Culture=neutral, PublicKeyToken=59e704a76bc4613a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\MonoAndroid\System.Data.Portable.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Net.Http" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Xamarin.Android.Support.Annotations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Xamarin.Android.Support.Annotations.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Base.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Xamarin.Android.Support.Compat.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Compat.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Basement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Gcm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Gcm.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Gcm.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Maps.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Measurement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Measurement.29.0.0.2\lib\MonoAndroid41\Xamarin.GooglePlayServices.Measurement.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Xamarin.Android.Support.Core.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Xamarin.Android.Support.Core.Utils.25.3.1\lib\MonoAndroid70\Xamarin.Android.Support.Core.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.4.0.244\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.4.0.247\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Data.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.Data.4.2.174\lib\MonoAndroid10\Zebble.Data.Android.dll</HintPath>
@@ -117,7 +96,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="SplashScreen.cs" />
-    <None Include="-READ-ME-NOW!!!!!!!!!!!!.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -126,7 +104,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PushNotificationStarted.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\layout\Main.axml">
       <SubType>Designer</SubType>
@@ -137,25 +114,23 @@
     <AndroidResource Include="Resources\drawable\Splash.webp" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable\splash_logo.png" />
     <Content Include="Zebble.exe" />
   </ItemGroup>
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />
   <Import Project="..\..\App.UI\UI.projitems" Label="Shared" Condition="Exists('..\..\App.UI\UI.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets" Condition="Exists('..\..\..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" />
-  <Target Name="EnsureMonoDataSqlitePortableImported" BeforeTargets="BeforeBuild" Condition="'$(MonoDataSqlitePortableImported)' == ''">
-    <Error Condition="!Exists('..\..\..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them." />
-    <Error Condition="Exists('..\..\..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build." />
-  </Target>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets'))" />
-    <Error Condition="!Exists('..\..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props'))" />
-    <Error Condition="!Exists('..\..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets'))" />
   </Target>
-  <Import Project="..\..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
   <Target Name="zebbleExe generate" BeforeTargets="BeforeBuild">
     <Exec Command="&quot;$(ProjectDir)Zebble.exe&quot; generate auto" />
   </Target>
@@ -163,4 +138,7 @@
     <Exec Command="&quot;$(ProjectDir)..\Android\Zebble&quot; update-schema auto" />
   </Target>
   <Import Project="..\..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\..\..\packages\Xamarin.Android.Support.Annotations.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\..\packages\Xamarin.Android.Support.Annotations.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\..\..\packages\Xamarin.Android.Support.Compat.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\..\..\packages\Xamarin.Android.Support.Compat.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\..\..\packages\Xamarin.Android.Support.Core.Utils.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\..\..\packages\Xamarin.Android.Support.Core.Utils.25.3.1\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets')" />
 </Project>

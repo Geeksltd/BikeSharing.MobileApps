@@ -141,7 +141,7 @@
                     IsValid = false;
                 }
             }
-            catch (Exception ex) when (ex is WebException || ex is HttpRequestException)
+            catch (Exception ex) when (ex is WebException )
             {
                 await Alert.Show("Error", "Communication error");
             }

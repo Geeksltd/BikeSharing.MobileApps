@@ -30,7 +30,7 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            MapView.ZoomLevel = 11;
+            //MapView.ZoomLevel = 11;
             RouteSelector.Y.Set(10);
             RouteSelected.Y.Set(Root.ActualHeight - 230);
             FromItemPicker.SelectionChanged.Handle(FSelectionChanged);
@@ -39,11 +39,11 @@
             var _stations = await _ridesService.GetNearestStations();
             if (_stations != null)
             {
-                await MapView.Add(new Map.Annotation
-                {
-                    Title = _stations.FirstOrDefault().Name,
-                    Location = new Zebble.Services.GeoLocation(_stations.FirstOrDefault().Latitude, _stations.FirstOrDefault().Longitude)
-                });
+                //await MapView.Add(new Map.Annotation
+                //{
+                //    Title = _stations.FirstOrDefault().Name,
+                //    Location = new Zebble.Services.GeoLocation(_stations.FirstOrDefault().Latitude, _stations.FirstOrDefault().Longitude)
+                //});
                 InitializePinsFromStations(_stations);
                 FromItemPicker.DataSource = CustomPins.ToList();
                 ToItemPicker.DataSource = CustomPins.ToList();

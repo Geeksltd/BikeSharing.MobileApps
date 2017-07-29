@@ -47,6 +47,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\city-gray.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\floating_action_button_disable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\floating_action_button_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\ic_distance_white.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -215,6 +221,99 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\report_open_bot.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\bike.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\building.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\card.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\cloud_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\cloud_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\cloud_card_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\cloud_card_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\fence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\floating_action_button_disable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\floating_action_button_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\ic_arrow_drop_down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\ic_close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_annual_active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_annual_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_boy_bike.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_buildings_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_cloud_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_cloud_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_man.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_man_select.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_monthly_active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_monthly_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_mountain_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_padlock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_quarterly_active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_quarterly_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_sun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_trees.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_woman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\signup_woman_select.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\SignUp\sun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Images\suggestion_beacon_hill.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -239,21 +338,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SampleVideo.wmv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\ContactContactTypes-Create.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\Contacts-Create.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\Contacts-Data.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\ContactTypes-Create.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\ContactTypes-Data.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\Settings-Create.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -261,12 +345,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\SyncTasks-Create.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\Users-Create.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Tables\Users-Data.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Videos\AboutUs.mp4">
@@ -313,8 +391,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\AccountPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\CredentialPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\CredentialPage.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenrePage.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenrePage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SignUpPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SignUpPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SubscriptionPage.zbl" />
