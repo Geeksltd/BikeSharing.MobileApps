@@ -9,6 +9,7 @@
      
     using Domain;
     using Domain.Entities;
+    using System.Text.RegularExpressions;
 
     partial class AccountPage
     {
@@ -24,10 +25,19 @@
 
         async Task NextButtonTapped()
         {
-           
-            user.Email = "";
-            user.Skype = "";
-            await Nav.Forward<GenderPage>(new { UserAndProfileModel = user });
+            if (emailInput.Text.HasValue() )
+            {
+                string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
+                Regex regexEmail = new Regex(patternEmail);
+                if (regexEmail.IsMatch(emailInput.Text))
+                {
+                    user.Email = emailInput.Text;
+                    user.Skype = skypeInput.Text;
+                    await Nav.Forward<GenderPage>(new { UserAndProfileModel = user });
+                }
+                else
+                    Alert.Toast("Email is incorrect");
+            }
         }
 
         async Task TextChanged()

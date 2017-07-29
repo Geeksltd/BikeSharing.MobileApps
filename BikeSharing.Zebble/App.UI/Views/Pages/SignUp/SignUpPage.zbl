@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<z-Component z-type="SignUpPage" z-base="Page" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+<z-Component z-type="SignUpPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
  
     <Stack Id="mainStack">
-      <Stack  BackgroundImagePath="Images/SignUp/signup_padlock.png">
+      <!--<Stack  BackgroundImagePath="Images/SignUp/signup_padlock.png">-->
   
         <TextView Text="Username" CssClass="title"    />
         <TextInput Id="usernameInput" on-UserTextChanged="TextChanged" />
@@ -16,7 +16,7 @@
         <Stack Id="NextButtonStack">
           <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
         </Stack>
-      </Stack>
+      <!--</Stack>-->
     </Stack>
   
 </z-Component>

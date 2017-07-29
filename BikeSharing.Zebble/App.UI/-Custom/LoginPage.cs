@@ -68,7 +68,7 @@ namespace UI.Pages
                     var _authenticationService = new AuthenticationService();
                     isAuthenticated = await _authenticationService.LoginAsync(UserName, Password);
                 }              
-                catch (Exception ex) when (ex is WebException || ex is HttpRequestException)
+                catch (Exception ex) when (ex is WebException )
                 {
                   //  Debug.WriteLine($"[SignIn] Error signing in: {ex}");
                     await Alert.Show("Error","Communication error");

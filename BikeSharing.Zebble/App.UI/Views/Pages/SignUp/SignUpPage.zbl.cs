@@ -22,10 +22,13 @@
 
         async Task NextButtonTapped()
         {
-            var user = new UserAndProfileModel();
-            user.UserName = "";
-            user.Password = "";
-          await   Nav.Forward<AccountPage>(new { UserAndProfileModel = user });
+            if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && passwordInput.Text == repeatPasswordInput.Text)
+            {
+                var user = new UserAndProfileModel();
+                user.UserName = usernameInput.Text;
+                user.Password = passwordInput.Text;
+                await Nav.Forward<AccountPage>(new { UserAndProfileModel = user });
+            }
         }
 
         async Task TextChanged()

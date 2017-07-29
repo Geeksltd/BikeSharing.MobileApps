@@ -17,8 +17,9 @@
         {
             IDataProvider result = null;
 
-            if (type == typeof(Domain.Settings)) result = new SettingsDataProvider();          
-            else if (result == null)
+            //  if (type == typeof(Domain.Settings)) result = new SettingsDataProvider();          
+            //  else
+            if (result == null)
             {
                 throw new NotSupportedException(type + " is not a data-supported type.");
             }
