@@ -25,7 +25,7 @@
             {
                 var weatherInfo = weather as WeatherInfo;
                 Location.Text = weatherInfo.LocationName;
-                Temp.Text = Math.Round(weatherInfo.Temp).ToString();
+                Temp.Text = string.Format("{0}˚{1}", Math.Round(weatherInfo.Temp).ToString(), weatherInfo.TempUnitShort);
 
                 Date.Text = DateTime.Now.ToString("dddd, MMMM dd");
             }

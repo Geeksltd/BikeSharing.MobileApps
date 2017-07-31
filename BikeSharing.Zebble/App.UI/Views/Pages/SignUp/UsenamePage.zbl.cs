@@ -6,71 +6,61 @@
     using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-
     using Domain;
     using Domain.Entities;
 
-    partial class UserPage
+    partial class UsenamePage
     {
-        string _firstName = string.Empty;
-        string _lastName = string.Empty;
-        DateTime _birthDate = new DateTime();
-        public string FirstName
+       string _userName = string.Empty;
+       string _password = string.Empty;
+
+        public string UserName
         {
             get
             {
-                return _firstName;
+                return _userName;
             }
             set
             {
-                _firstName = value;
+                _userName = value;
               
             }
         }
-        public string LastName
+
+        public string Password
         {
             get
             {
-                return _lastName;
+                return _password;
             }
             set
             {
-                _lastName = value;
-               
+                _password = value;
+              
             }
         }
-        public DateTime BirthDate
-        {
-            get
-            {
-                return _birthDate;
-            }
-            set
-            {
-                _birthDate = value;              
-            }
-        }
+
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
-
-            birthdateInput.SelectedValue = new DateTime(1970, 01, 01);
         }
         public SignUpPage signupPage => FindParent<SignUpPage>();
 
 
         async Task NextButtonTapped()
         {
-            FirstName = firstNameInput.Text;
-            LastName = lastNameInput.Text;
-            BirthDate = birthdateInput.SelectedValue.Value;
-            await signupPage.NextPage();
+            if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && passwordInput.Text == repeatPasswordInput.Text)
+            {
+                UserName = usernameInput.Text;
+                Password = passwordInput.Text;
+                await signupPage.NextPage();
+            }
         }
 
         async Task TextChanged()
         {
-            if (firstNameInput.Text.HasValue() && lastNameInput.Text.HasValue())
+            if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && repeatPasswordInput.Text == passwordInput.Text)
                 nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             else
                 nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");

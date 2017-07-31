@@ -27,25 +27,25 @@
             if (Items != null)
             {
                 var Item = Items.FirstOrDefault();
-                //await MapView.Add(new Map.Annotation
-                //{
-                //    Title = Item.From,
-                //    Location = new Zebble.Services.GeoLocation(Item.FromStation.Latitude, Item.FromStation.Longitude)
-                //});
-                //await MapView.Add(new Map.Annotation
-                //{
-                //    Title = Item.To,
-                //    Location = new Zebble.Services.GeoLocation(Item.ToStation.Latitude, Item.ToStation.Longitude)
-                //});
-                //MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
+                await MapView.Add(new Map.Annotation
+                {
+                    Title = Item.From,
+                    Location = new Zebble.Services.GeoLocation(Item.FromStation.Latitude, Item.FromStation.Longitude)
+                });
+                await MapView.Add(new Map.Annotation
+                {
+                    Title = Item.To,
+                    Location = new Zebble.Services.GeoLocation(Item.ToStation.Latitude, Item.ToStation.Longitude)
+                });
+                MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
             }
-            //else
-            //await MapView.Add(new Map.Annotation
-            //{
-            //    Title = GlobalSettings.City,
-            //    Location = new Zebble.Services.GeoLocation(GlobalSettings.EventLatitude, GlobalSettings.EventLongitude)
-            //});
-            
+            else
+                await MapView.Add(new Map.Annotation
+                {
+                    Title = GlobalSettings.City,
+                    Location = new Zebble.Services.GeoLocation(GlobalSettings.EventLatitude, GlobalSettings.EventLongitude)
+                });
+
         }
 
         Task Refresh(List<Ride> items) => WhenShown(() => List.UpdateSource(Items = items));

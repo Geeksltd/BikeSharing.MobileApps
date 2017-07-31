@@ -6,37 +6,93 @@
     using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-     
+
     using Domain;
     using Domain.Entities;
+    using Domain.Services;
 
     partial class SignUpPage
     {
+
+        UsenamePage usenamePage;
+        AccountPage accountPage;
+        GenderPage genderPage;
+        UserPage userPage;
+        SubscriptionPage subscriptionPage;
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
+            var user = new UserAndProfileModel();
+            usenamePage = new UsenamePage();
 
-
+            accountPage = new AccountPage();
+            genderPage = new GenderPage();
+            userPage = new UserPage();
+            subscriptionPage = new SubscriptionPage();
+            await MyCarousel.Slides.Add(usenamePage);
+            await MyCarousel.Slides.Add(accountPage);
+            await MyCarousel.Slides.Add(genderPage);
+            await MyCarousel.Slides.Add(userPage);
+            await MyCarousel.Slides.Add(subscriptionPage);            
         }
 
-        async Task NextButtonTapped()
+        public async Task NextPage()
         {
-            if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && passwordInput.Text == repeatPasswordInput.Text)
+            await MyCarousel.Next(true);
+        }
+
+        public async Task SaveUserData()
+        {
+            try
             {
-                var user = new UserAndProfileModel();
-                user.UserName = usernameInput.Text;
-                user.Password = passwordInput.Text;
-                await Nav.Forward<AccountPage>(new { UserAndProfileModel = user });
+                //var CreditCard = "01234567890";
+                //var CreditCardType = 0;
+                //var ExpirationDate = DateTime.Now.AddYears(1);
+
+                var userAndProfile = new UserAndProfileModel
+                {
+                    UserName = usenamePage.UserName,
+                    Password = usenamePage.Password,
+                    Gender = genderPage.Gender == false ?  "Male": "Female",
+                    BirthDate = userPage.BirthDate,
+                    FirstName = userPage.FirstName,
+                    LastName = userPage.LastName,
+                    Email = accountPage.Email,
+                    Skype = accountPage.Skype,
+                    TenantId = GlobalSettings.TenantId
+                };
+               
+
+                var _profileService = new ProfileService();
+
+                UserAndProfileModel result = await _profileService.SignUp(userAndProfile);
+
+                if (result != null)
+                {
+                    var _authenticationService = new AuthenticationService();
+                    bool isAuthenticated =
+                        await _authenticationService.LoginAsync(userAndProfile.UserName, userAndProfile.Password);
+
+                    if (isAuthenticated)
+                    {
+                        await Nav.Go<HomePage>();
+                    }
+                    else
+                    {
+                        Alert.Show("Invalid credentials", "Login failure");
+                    }
+                }
+                else
+                {
+                    Alert.Show("Invalid data", "Sign Up failure");
+                }
+            }
+            catch (Exception ex)
+            {
+                Alert.Show("Invalid data", "Sign Up failure");
             }
         }
 
-        async Task TextChanged()
-        {
-            if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && repeatPasswordInput.Text == passwordInput.Text)
-                nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
-            else
-                nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
-        }
     }
 }

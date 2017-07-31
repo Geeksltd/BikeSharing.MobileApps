@@ -13,26 +13,52 @@
 
     partial class AccountPage
     {
-        UserAndProfileModel user;
+        string _email = string.Empty;
+        string _skype = string.Empty;
+
+        public string Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                _email = value;
+              
+            }
+        }
+
+        public string Skype
+        {
+            get
+            {
+                return _skype;
+            }
+            set
+            {
+                _skype = value;
+               
+            }
+        }
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
 
-            user = Nav.Param<UserAndProfileModel>("UserAndProfileModel");
         }
-
+        public SignUpPage signupPage => FindParent<SignUpPage>();
 
         async Task NextButtonTapped()
-        {        
-                if (EmailValidation())
-                {
-                    user.Email = emailInput.Text;
-                    user.Skype = skypeInput.Text;
-                    await Nav.Forward<GenderPage>(new { UserAndProfileModel = user });
-                }
-                else
-                    Alert.Toast("Email is incorrect");
+        {
+            if (EmailValidation())
+            {
+                Email = emailInput.Text;
+                Skype = skypeInput.Text;
+                await signupPage.NextPage();
+            }
+            else
+                Alert.Toast("Email is incorrect");
         }
 
         async Task TextChanged()

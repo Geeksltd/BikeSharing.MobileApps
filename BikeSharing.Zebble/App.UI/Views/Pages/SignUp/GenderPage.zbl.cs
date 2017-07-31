@@ -12,29 +12,42 @@
 
     partial class GenderPage
     {
-        UserAndProfileModel user;
-        bool gender = false;
+        
+        bool _gender = false;
+        public bool Gender
+        {
+            get
+            {
+                return _gender;
+            }
+            set
+            {
+                _gender = value;
+
+            }
+        }
+
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
 
-            user = Nav.Param<UserAndProfileModel>("UserAndProfileModel");
-
+     
         }
+        public SignUpPage signupPage => FindParent<SignUpPage>();
 
         async Task ImageViewTapped()
         {
             nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
-            if (gender)
+            if (Gender)
             {
-                gender = false;
+                Gender = false;
                 womanImageView.Set(rec=> rec.BackgroundImagePath = "Images/SignUp/signup_woman_select.png");
                 manImageView.Set(rec=> rec.BackgroundImagePath = "Images/SignUp/signup_man.png");
             }
             else
             {
-                gender = true;
+                Gender = true;
                 womanImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_woman.png");
                 manImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_man_select.png");
             }
@@ -44,9 +57,8 @@
 
         async Task NextButtonTapped()
         {
-            user.Gender = gender ? "Female" : "Male";
 
-            await Nav.Forward<UserPage>(new { UserAndProfileModel = user });
+            await signupPage.NextPage();
         }
 
     }

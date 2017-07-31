@@ -18,19 +18,23 @@
         Suggestion[] Items;
         public override async Task OnInitializing()
         {
-              var _ridesService = new RidesService();
-              var rides = await _ridesService.GetSuggestions();
-              Items = rides.ToArray();
+             var _ridesService = new RidesService();
+             var rides = await _ridesService.GetSuggestions();
+             Items = rides.ToArray();
 
-       //     Items = await Api.Get<Suggestion[]>("api/v1/products",ApiResponseCache.PreferThenUpdate , refresher: Refresh);
+      
             await base.OnInitializing();
             await InitializeComponents();
 
-         //   List.Height.Set(Root.Height.CurrentValue / 3);
+        
         }
 
-      //  Task Refresh(Suggestion[] items) => WhenShown(() => List.UpdateSource(Items = items));
-
+        //  Task Refresh(Suggestion[] items) => WhenShown(() => List.UpdateSource(Items = items));
+        public override Task OnPreRender()
+        {
+            List.Width.Set(Length.AutoStartegy.Content);
+            return base.OnPreRender();
+        }
         partial class Row
         {
             public override async Task OnInitializing()

@@ -29,19 +29,19 @@
             fromText.Text = From.Label;
             toText.Text = To.Label;
             DateText.Text = DateTime.Now.ToString("dddd, MMMM dd");
-            CityText.Text = GlobalSettings.City; 
-            //await MapView.Add(new Map.Annotation
-            //{
-            //    Title = From.Label,
-            //    Location = new Zebble.Services.GeoLocation(From.Position.Latitude, From.Position.Longitude)
-            //});
+            CityText.Text = GlobalSettings.City;
+            await MapView.Add(new Map.Annotation
+            {
+                Title = From.Label,
+                Location = new Zebble.Services.GeoLocation(From.Position.Latitude, From.Position.Longitude)
+            });
 
-            //await MapView.Add(new Map.Annotation
-            //{
-            //    Title = To.Label,
-            //    Location = new Zebble.Services.GeoLocation(To.Position.Latitude, To.Position.Longitude)
-            //});
-            //MapView.ZoomLevel = 14;
+            await MapView.Add(new Map.Annotation
+            {
+                Title = To.Label,
+                Location = new Zebble.Services.GeoLocation(To.Position.Latitude, To.Position.Longitude)
+            });
+            MapView.ZoomLevel = 14;
         }
 
 

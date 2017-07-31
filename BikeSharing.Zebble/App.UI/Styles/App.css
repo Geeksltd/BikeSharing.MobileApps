@@ -16,11 +16,13 @@ HomePage #Body { height: 100%; }
 
 #WeatherInfoModule #infoDiv #Temp { font-size: 30px; }
 
+#WeatherInfoModule TextView { margin-top: 10px; }
+
 #EventSummaryModule { height: 35%; padding: 10px; }
 
 #EventSummaryModule #title { color: #484f63; margin: 10px; font-size: 20px; }
 
-#EventSummaryModule #List { height: 100%; }
+#EventSummaryModule #List { height: 900px; }
 
 #EventSummaryModule #List #Content { height: 100%; padding: 10px; }
 
@@ -56,7 +58,7 @@ MyRidesPage #MyRidesModule { width: 30%; }
 
 MyRidesPage #MapView { width: 40%; }
 
-MyRidesPage #selectedRowInfoStack { width: 30%; background-image: "Images/myrides_placeholder_event.png"; background-size: cover; height: 100%; padding: 10px; /*#selectedStack{ margin-top : 100px;}*/ }
+MyRidesPage #selectedRowInfoStack { width: 30%; background-image: "Images/myrides_placeholder_event.png"; background-size: cover; height: 100%; padding: 10px; }
 
 MyRidesPage #selectedRowInfoStack TextView { color: white; margin: 7px; font-size: 14px; }
 
@@ -210,15 +212,19 @@ ProfilePage #Body .label { font-size: 12px; margin: 10px; color: blue; }
 
 ProfilePage #Body .title { font-size: 20px; margin: 10px; color: black; }
 
-GenderPage #mainStack { /*background-image: "Images/SignUp/building.png"; background-size: cover;*/ }
-
 GenderPage #mainStack #womanImageView { width: 100%; height: 80px; margin-left: 80px; }
 
 GenderPage #mainStack #manImageView { width: 100%; height: 80px; margin-left: 10px; }
 
-AccountPage #NextButtonStack { height: 100px; background-image: "Images/SignUp/bike.png"; /*background-size: cover;*/ }
+AccountPage #NextButtonStack { /*height: 100px; background-image: "Images/SignUp/bike.png";*/ }
 
 AccountPage #NextButtonStack #nextButton { margin-top: 60px; height: 40px; }
 
 SubscriptionPage ImageView { width: 100%; height: 50px; margin-left: 20px; margin-top: 30px; }
+
+.slide-show { height: 100%; }
+
+SignUpPage { height: 100%; }
+
+SignUpPage #Body { background-image: "Images/background.png"; background-size: cover; height: 100%; }
 

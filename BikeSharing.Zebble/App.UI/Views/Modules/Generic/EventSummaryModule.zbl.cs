@@ -19,29 +19,27 @@
         List< Event> Items;
         public override async Task OnInitializing()
         {
-            try
-            {
-                // var _eventsService = new EventsService();
-                // var events = await _eventsService.GetEvents();
-                // Items = events.ToList();
-                UriBuilder builder = new UriBuilder(GlobalSettings.EventsEndpoint);
-                builder.Path = "api/Events";
+            // var _eventsService = new EventsService();
+            // var events = await _eventsService.GetEvents();
+            // Items = events.ToList();
+            UriBuilder builder = new UriBuilder(GlobalSettings.EventsEndpoint);
+            builder.Path = "api/Events";
 
-                string uri = builder.ToString();
+            string uri = builder.ToString();
 
-                Items = await Api.Get <List<Event>>(uri , cacheChoice:ApiResponseCache.PreferThenUpdate, refresher : Refresh);
+            Items = await Api.Get<List<Event>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
+        
 
-            }catch(Exception ex)
-            {
-
-
-            }
             await base.OnInitializing();
             await InitializeComponents();
-
-         
+          
         }
 
+        public override Task OnPreRender()
+        {
+            List.Width.Set(Length.AutoStartegy.Content);
+            return base.OnPreRender();
+        }
         Task Refresh(List<Event> items) => WhenShown(() => List.UpdateSource(Items = items));
 
         partial class Row

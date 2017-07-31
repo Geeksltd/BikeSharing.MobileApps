@@ -18,16 +18,18 @@ HomePage{  #Body{ height:100%; }}
         TextView{ color:white;}
         #Temp{ font-size:30px;}
     }
+    TextView{ margin-top:10px;}
 }
 
 #EventSummaryModule {   
     height: 35%;
+   
     padding: 10px; 
     #title { color: #484f63; margin:10px; font-size:20px; }
 
     #List {
-        height: 100%;       
-
+        height: 900px;     
+       
         #Content {
             height: 100%;
             padding: 10px; 
@@ -48,7 +50,7 @@ HomePage{  #Body{ height:100%; }}
 
     #List {
         height: 100%;       
-
+        
         #Content {
             height: 100%;
             padding: 10px; 
@@ -71,7 +73,6 @@ MyRidesPage{
      #MyRidesModule{ width:30%; }
      #MapView{ width:40%; }
      #selectedRowInfoStack{ width:30%; background-image: "Images/myrides_placeholder_event.png"; background-size: cover; height:100%; padding:10px;
-                    /*#selectedStack{ margin-top : 100px;}*/
                     TextView{ color:white; margin:7px; font-size:14px; } 
                     .label{font-size:12px;}
                     .texbox {font-size:16px;}
@@ -226,6 +227,9 @@ LoginPage {
     }
 }
 
+
+
+
 .SignupPages {
     height: 100%;
 
@@ -254,9 +258,9 @@ LoginPage {
         color: blue;
     }
 
-    #nextButton{
-        padding:10px;
-        margin-top:10px;
+    #nextButton {
+        padding: 10px;
+        margin-top: 10px;
     }
 }
 
@@ -278,9 +282,7 @@ ProfilePage  {
 GenderPage {
 
     #mainStack {
-        /*background-image: "Images/SignUp/building.png";
-        background-size: cover;*/
-
+      
         #womanImageView {
             width: 100%;
             height: 80px;
@@ -297,9 +299,9 @@ GenderPage {
 
 AccountPage {
     #NextButtonStack {
-        height: 100px;
-        background-image: "Images/SignUp/bike.png";
-        /*background-size: cover;*/
+        /*height: 100px;
+        background-image: "Images/SignUp/bike.png";*/
+     
 
         #nextButton {           
             margin-top: 60px;
@@ -314,5 +316,19 @@ SubscriptionPage {
         height: 50px;
         margin-left: 20px;
         margin-top:30px;
+    }
+}
+
+.slide-show{
+    height : 100%;
+}
+
+SignUpPage {
+    height: 100%;
+
+    #Body {
+        background-image: "Images/background.png";
+        background-size: cover;
+        height: 100%;
     }
 }

@@ -110,3 +110,15 @@ Picker { padding: 7px; border: 1px solid #eee;
     #Caret { background: url(Images/Icons/Caret.png); width: 20px; }
     #PlaceholderLabel { color: #ddd; height: 100%; }
 }
+
+Carousel {
+    #BulletsContainer { text-align: center; padding-bottom: 10px; }
+
+    Carousel-Bullet { border-radius: 8px; width: 16px; height: 16px; margin: 3px; background: #C8C8C8;
+
+    &:active {
+        background: #505050;
+    } }
+
+    Carousel-Slide { height: 100%; }   
+}

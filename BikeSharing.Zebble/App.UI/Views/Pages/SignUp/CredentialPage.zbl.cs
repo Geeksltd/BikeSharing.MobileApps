@@ -16,9 +16,11 @@
             await base.OnInitializing();
             await InitializeComponents();
         }
+        public SignUpPage signupPage => FindParent<SignUpPage>();
 
         async Task NextButtonTapped()
         {
+            await signupPage.NextPage();
         }
     }
 }
