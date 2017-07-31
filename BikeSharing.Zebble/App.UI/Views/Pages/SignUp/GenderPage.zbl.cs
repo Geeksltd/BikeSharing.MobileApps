@@ -19,23 +19,24 @@
             await base.OnInitializing();
             await InitializeComponents();
 
-           //  user = Nav.Param<UserAndProfileModel>("UserAndProfileModel");
+            user = Nav.Param<UserAndProfileModel>("UserAndProfileModel");
 
         }
 
         async Task ImageViewTapped()
         {
+            nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             if (gender)
             {
                 gender = false;
-                womanImageView.BackgroundImagePath = "Images/signup_woman_select.png";
-                manImageView.BackgroundImagePath = "Images/signup_man.png";
+                womanImageView.Set(rec=> rec.BackgroundImagePath = "Images/SignUp/signup_woman_select.png");
+                manImageView.Set(rec=> rec.BackgroundImagePath = "Images/SignUp/signup_man.png");
             }
             else
             {
                 gender = true;
-                womanImageView.BackgroundImagePath = "Images/signup_woman.png";
-                manImageView.BackgroundImagePath = "Images/signup_man_select.png";
+                womanImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_woman.png");
+                manImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_man_select.png");
             }
         }
 
@@ -43,9 +44,9 @@
 
         async Task NextButtonTapped()
         {
-            user.Gender = gender ? "1" : "0";
-           
-            Nav.Forward<UserPage>(new { UserAndProfileModel = user });
+            user.Gender = gender ? "Female" : "Male";
+
+            await Nav.Forward<UserPage>(new { UserAndProfileModel = user });
         }
 
     }

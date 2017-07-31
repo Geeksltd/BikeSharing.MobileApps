@@ -24,6 +24,6 @@
             LoadFirstPage().RunInParallel();
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.GenderPage());
+        public static Task LoadFirstPage() => Nav.Go(new Pages.SubscriptionPage());
     }
 }

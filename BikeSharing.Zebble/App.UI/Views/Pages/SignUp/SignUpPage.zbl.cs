@@ -34,9 +34,9 @@
         async Task TextChanged()
         {
             if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && repeatPasswordInput.Text == passwordInput.Text)
-                nextButton.Set(rec => rec.BackgroundImagePath = "Images/floating_action_button.png");
+                nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             else
-                nextButton.Set(rec => rec.BackgroundImagePath = "Images/floating_action_button_disable.png");
+                nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
         }
     }
 }

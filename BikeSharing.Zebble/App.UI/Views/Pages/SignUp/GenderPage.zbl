@@ -4,7 +4,7 @@
     <ImageView Path="Images/SignUp/signup_woman.png" Id="womanImageView" on-Tapped="ImageViewTapped"/>
     <ImageView Path="Images/SignUp/signup_man.png" Id="manImageView"  on-Tapped="ImageViewTapped"/>
     <Stack Id="NextButtonStack" >
-      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
+      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
     </Stack>
 
   </Stack>

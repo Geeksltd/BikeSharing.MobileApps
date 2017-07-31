@@ -2,8 +2,11 @@
 <z-Component z-type="SubscriptionPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="mainStack">
 
-    <Stack Id="NextButtonStack">
-      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
+    <ImageView Path="Images/SignUp/signup_monthly_normal.png" Id="monthlyImageView" on-Tapped="MonthlyImageViewTapped"/>
+    <ImageView Path="Images/SignUp/signup_quarterly_normal.png" Id="quarterlyImageView"  on-Tapped="ThreeMonthlyImageViewTapped"/>
+    <ImageView Path="Images/SignUp/signup_annual_normal.png" Id="annualImageView"  on-Tapped="AnnualImageViewTapped"/>
+    <Stack Id="NextButtonStack" >
+      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
     </Stack>
 
   </Stack>

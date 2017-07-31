@@ -8,10 +8,10 @@
     <TextInput Id="lastNameInput" on-UserTextChanged="TextChanged" />
 
     <TextView Text="Birthdate" CssClass="title"   />
-    <DatePicker Id="birthdateInput"   />
+    <DatePicker Id="birthdateInput"  YearFrom="1950"  />
 
     <Stack Id="NextButtonStack">
-      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
+      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
     </Stack>
 
   </Stack>

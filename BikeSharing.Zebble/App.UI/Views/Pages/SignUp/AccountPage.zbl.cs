@@ -24,12 +24,8 @@
 
 
         async Task NextButtonTapped()
-        {
-            if (emailInput.Text.HasValue() )
-            {
-                string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
-                Regex regexEmail = new Regex(patternEmail);
-                if (regexEmail.IsMatch(emailInput.Text))
+        {        
+                if (EmailValidation())
                 {
                     user.Email = emailInput.Text;
                     user.Skype = skypeInput.Text;
@@ -37,16 +33,27 @@
                 }
                 else
                     Alert.Toast("Email is incorrect");
-            }
         }
 
         async Task TextChanged()
         {
-            if (emailInput.Text.HasValue() && skypeInput.Text.HasValue() )
-                nextButton.Set(rec => rec.BackgroundImagePath = "Images/floating_action_button.png");
+            if ( skypeInput.Text.HasValue() && EmailValidation())
+                nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             else
-                nextButton.Set(rec => rec.BackgroundImagePath = "Images/floating_action_button_disable.png");
+                nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
         }
 
+
+        bool EmailValidation()
+        {
+            if (emailInput.Text.HasValue())
+            {
+                string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
+                Regex regexEmail = new Regex(patternEmail);
+                if (regexEmail.IsMatch(emailInput.Text))
+                    return true;
+            }
+            return false;
+        }
     }
 }

@@ -190,11 +190,13 @@ LoginPage #Body #signinButtonStack #signinButton { width: 100%; color: black; ba
 
 .SignupPages { height: 100%; }
 
-.SignupPages #mainStack { height: 50%; width: 50%; margin-top: calc("View.Root.ActualHeight / 4"); margin-left: calc("View.Root.ActualWidth / 4"); padding: 10px; background-color: white; }
+.SignupPages #mainStack { height: 60%; width: 50%; margin-top: calc("View.Root.ActualHeight / 4"); margin-left: calc("View.Root.ActualWidth / 4"); padding: 10px; background-color: white; }
 
 .SignupPages TextInput { border-bottom: 1px solid; border-color: black; color: black; font-size: 20px; margin: 10px; padding: 10px 0px; }
 
 .SignupPages .title { font-size: 12px; margin: 10px; color: blue; }
+
+.SignupPages #nextButton { padding: 10px; margin-top: 10px; }
 
 ProfilePage { height: 100%; }
 
@@ -213,4 +215,10 @@ GenderPage #mainStack { /*background-image: "Images/SignUp/building.png"; backgr
 GenderPage #mainStack #womanImageView { width: 100%; height: 80px; margin-left: 80px; }
 
 GenderPage #mainStack #manImageView { width: 100%; height: 80px; margin-left: 10px; }
+
+AccountPage #NextButtonStack { height: 100px; background-image: "Images/SignUp/bike.png"; /*background-size: cover;*/ }
+
+AccountPage #NextButtonStack #nextButton { margin-top: 60px; height: 40px; }
+
+SubscriptionPage ImageView { width: 100%; height: 50px; margin-left: 20px; margin-top: 30px; }
 

@@ -14,7 +14,7 @@
         <TextInput Id="repeatPasswordInput" on-UserTextChanged="TextChanged"   />
 
         <Stack Id="NextButtonStack">
-          <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>
+          <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
         </Stack>
       <!--</Stack>-->
     </Stack>
