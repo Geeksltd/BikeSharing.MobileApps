@@ -32,7 +32,6 @@
             }
             await base.OnInitializing();
             await InitializeComponents();
-            
         }
 
         private void NavToTimeRemaining(object state)

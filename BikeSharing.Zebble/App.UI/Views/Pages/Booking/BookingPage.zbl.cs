@@ -63,7 +63,7 @@
                 catch (Exception ex)
                 {
                     Console.Write(ex.Message);
-                    Alert.Show("No bike available", "We are sorry, there are no bikes in origin station");
+                   await Alert.Show("No bike available", "We are sorry, there are no bikes in origin station");
                 }
                 IsBusy = false;
             }

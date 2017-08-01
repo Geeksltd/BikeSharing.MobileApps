@@ -393,8 +393,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ReportIncidentPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\AccountPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\AccountPage.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\CredentialPage.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\CredentialPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SignUpPage.zbl" />

@@ -13,8 +13,6 @@
 
     partial class SubscriptionPage
     {
-      
-
         public enum Subscription
         {
             Monthly,
@@ -22,21 +20,14 @@
             Annual
         };
         Subscription _subscription;
-
-
-       
-
         public SignUpPage signupPage => FindParent<SignUpPage>();
-
 
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
-
         }
-
-
+        
         async Task NextButtonTapped()
         {
             await signupPage.SaveUserData();
@@ -83,6 +74,5 @@
                 annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_active.png");
             }            
         }
-
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <z-Component z-type="SignUpPage" z-base="Page" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="Body">
-    <Carousel Id="MyCarousel" CssClass="slide-show" Style.Height="100%"  />
-   
+    <Carousel Id="MyCarousel" CssClass="slide-show" Style.Height="100%" Enabled="false" />   
   </Stack>
 </z-Component>

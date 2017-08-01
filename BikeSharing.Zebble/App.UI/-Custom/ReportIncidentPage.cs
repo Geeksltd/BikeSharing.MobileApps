@@ -92,7 +92,7 @@ namespace UI.Pages
             }
         }
 
-        public string Title
+        public string ReportTitle
         {
             get
             {

@@ -5,7 +5,7 @@
     <Stack>
     <Button Text="Buy Ticket" Id="buyTicketButton" on-Tapped="buyTicketButtonTapped"/>
     <Modules.EventModule Style.Height="200" Id="eventModule" />
-    <Button Text="Book a Bike" Id="bookBikeButton" on-Tapped="bookBikeButtonTapped" on-Panning="pan" on-Swiped="Swiped" />
+    <Button Text="Book a Bike" Id="bookBikeButton" on-Tapped="bookBikeButtonTapped"  />
     <TextView Id="AvilableText" CssClass="small" Text="Avilable for 30 minutes" />
 
       <Stack Id="bookDetailStack" Direction="Horizontal">

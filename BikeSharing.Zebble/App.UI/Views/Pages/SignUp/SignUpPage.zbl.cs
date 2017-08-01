@@ -13,7 +13,6 @@
 
     partial class SignUpPage
     {
-
         UsenamePage usenamePage;
         AccountPage accountPage;
         GenderPage genderPage;
@@ -74,25 +73,26 @@
                     bool isAuthenticated =
                         await _authenticationService.LoginAsync(userAndProfile.UserName, userAndProfile.Password);
 
+            
                     if (isAuthenticated)
                     {
                         await Nav.Go<HomePage>();
                     }
                     else
                     {
-                        Alert.Show("Invalid credentials", "Login failure");
+                      await  Alert.Show("Invalid credentials", "Login failure");
                     }
                 }
                 else
                 {
-                    Alert.Show("Invalid data", "Sign Up failure");
+                  await  Alert.Show("Invalid data", "Sign Up failure");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error reporting incident in: {ex}");
 
-                Alert.Show("Invalid data", "Sign Up failure");
+              await  Alert.Show("Invalid data", "Sign Up failure");
             }
         }
 

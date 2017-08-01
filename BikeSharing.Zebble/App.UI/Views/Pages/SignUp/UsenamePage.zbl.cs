@@ -47,7 +47,6 @@
         }
         public SignUpPage signupPage => FindParent<SignUpPage>();
 
-
         async Task NextButtonTapped()
         {
             if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && passwordInput.Text == repeatPasswordInput.Text)
@@ -65,6 +64,5 @@
             else
                 nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
         }
-
     }
 }

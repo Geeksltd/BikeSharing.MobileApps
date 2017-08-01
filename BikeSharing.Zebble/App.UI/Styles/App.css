@@ -6,7 +6,7 @@
 }
 MainMenu #Body {
   height: 100%;
-  background-image: "Images/Menu/background.png";
+  background: url("Images/Menu/background.png");
   background-size: cover;
 }
 MainMenu #Body TextView {
@@ -30,7 +30,7 @@ HomePage .title {
   font-size: 20px;
 }
 #WeatherInfoModule {
-  background-image: "Images/background.png";
+  background: url("Images/background.png");
   background-size: cover;
   height: 25%;
 }
@@ -96,7 +96,7 @@ MyRidesPage #MapView {
 }
 MyRidesPage #selectedRowInfoStack {
   width: 30%;
-  background-image: "Images/myrides_placeholder_event.png";
+  background: url("Images/myrides_placeholder_event.png");
   background-size: cover;
   height: 100%;
   padding: 10px;
@@ -242,7 +242,7 @@ BookingPage #BookButton {
   margin-top: 20px;
 }
 .BookingDetailPage #Body {
-  background-image: "Images/booking_background.png";
+  background: url("Images/booking_background.png");
   height: 100%;
   background-size: cover;
 }
@@ -257,7 +257,7 @@ BookingPage #BookButton {
   font-size: 28px;
 }
 .BookingDetailPage #Body #bookingStack {
-  background-image: "Images/booking_circle_white.png";
+  background: url("Images/booking_circle_white.png");
   width: 90px;
   height: 90px;
   margin-top: 50px;
@@ -273,7 +273,7 @@ BookingPage #BookButton {
   color: aqua;
 }
 .BookingDetailPage #Body #timerStack {
-  background-image: "Images/progress.png";
+  background: url("Images/progress.png");
   width: 80px;
   height: 80px;
   margin-top: 50px;
@@ -340,7 +340,7 @@ LoginPage {
   height: 100%;
 }
 LoginPage #Body {
-  background-image: "Images/background.png";
+  background: url("Images/background.png");
   height: 100%;
   background-size: cover;
 }
@@ -409,7 +409,7 @@ ProfilePage {
   height: 100%;
 }
 ProfilePage #Body {
-  background-image: "Images/city-gray.png";
+  background: url("Images/city-gray.png");
   height: 100%;
   background-size: cover;
 }
@@ -444,7 +444,7 @@ GenderPage #mainStack #manImageView {
 }
 AccountPage #NextButtonStack {
   /*height: 100px;
-        background-image: "Images/SignUp/bike.png";*/
+        background: url("Images/SignUp/bike.png";*/
 }
 AccountPage #NextButtonStack #nextButton {
   margin-top: 60px;
@@ -463,7 +463,7 @@ SignUpPage {
   height: 100%;
 }
 SignUpPage #Body {
-  background-image: "Images/background.png";
+  background: url("Images/background.png");
   background-size: cover;
   height: 100%;
 }

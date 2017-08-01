@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App.Domain", "BikeSharing.Zebble\App.Domain\App.Domain.shproj", "{38E83E4D-F88C-40C0-9528-9C818B0EAF42}"
 EndProject
@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "BikeSharing.Zebb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "BikeSharing.Zebble\Run\iOS\iOS.csproj", "{3B21A769-F17C-4219-A595-27A34955228F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A70C3196-1B84-468A-8BC8-D905E60FB584}"
+	ProjectSection(SolutionItems) = preProject
+		GCop.json = GCop.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		BikeSharing.Zebble\App.Domain\Domain.projitems*{38e83e4d-f88c-40c0-9528-9c818b0eaf42}*SharedItemsImports = 13
@@ -22,8 +27,6 @@ Global
 		BikeSharing.Zebble\App.UI\UI.projitems*{3b21a769-f17c-4219-a595-27a34955228f}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.Domain\Domain.projitems*{51aeafb7-e02b-4f51-8ab0-aa90e034e684}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.UI\UI.projitems*{51aeafb7-e02b-4f51-8ab0-aa90e034e684}*SharedItemsImports = 4
-		BikeSharing.Zebble\App.Domain\Domain.projitems*{573f454c-6003-40c8-a09d-3304f28d5f10}*SharedItemsImports = 4
-		BikeSharing.Zebble\App.UI\UI.projitems*{573f454c-6003-40c8-a09d-3304f28d5f10}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.UI\UI.projitems*{cd40d45a-cffe-46fc-8a9d-055ef9ff9440}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

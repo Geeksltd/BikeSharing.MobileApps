@@ -75,14 +75,6 @@
             }
         }
 
-async Task pan()
-        {
 
-        }
-
-        async Task Swiped()
-        {
-
-        }
     }
 }
