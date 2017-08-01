@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<z-Component z-type="BookingDetailPage" z-base="Templates.Default" CssClass="BookingDetailPage" z-namespace="UI.Pages" z-partial="true" Title="" data-TopMenu="MainMenu" z-cache="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+  <z-place inside="Body">
+    <Stack Id="MainStack">
+      <TextView Text="THANK YOU FOR BOOKING" CssClass="title"  />     
+      <TextView Text="Your bike will be available for 30 minutes" />     
+      <TextView Text="@book.DueDateString" CssClass="date" />
+      <TextView Text="@GlobalSettings.City" CssClass="city" />
+
+
+      <Stack Id="bookingStack" Direction="Vertical">
+        <Stack>
+        <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" TextTransform="Uppercase"/>
+        <TextView Text="@book.BikeId.ToString()" CssClass="bluetext" />
+        </Stack>
+      </Stack>
+    </Stack>
+  </z-place>
+</z-Component>

@@ -16,14 +16,11 @@
     {
         Timer timer;
         TimeSpan timeSpanCounter = new TimeSpan(0, 3, 1);
-
+        Booking book;
 
         public override async Task OnInitializing()
         {
-            await base.OnInitializing();
-            await InitializeComponents();
-
-            var book = Nav.Param<Booking>("Booking");
+            book = Nav.Param<Booking>("Booking");
 
             if (book == null)
             {
@@ -46,20 +43,14 @@
                     }
                 }
             }
-            if (book != null)
-            {
-                txtDate.Text = book.DueDate.ToString("dddd, MMMM dd");
-                txtCity.Text = GlobalSettings.City;
-                txtFrom.Text = book.FromStation.Name;
-                txtTo.Text = book.ToStation.Name;
-                txtBookId.Text = book.BikeId.ToString();
-                timer = new Timer(CounterFunc, null, 1, 1000);
-            }
-            else
+            if (book == null)
             {
                 Alert.Show("Alert", "There is no available ride");
                 return;
             }
+            await base.OnInitializing();
+            await InitializeComponents();
+            timer = new Timer(CounterFunc, null, 1, 1000);
         }
 
 
@@ -70,7 +61,7 @@
           
             if (timeSpanCounter.TotalSeconds >= 0)
             {
-                txtTimer.Text = timeSpanCounter.ToString("m\\:ss");
+                timerText.Text = timeSpanCounter.ToString("m\\:ss");
             } 
             else
                 timer.Dispose();

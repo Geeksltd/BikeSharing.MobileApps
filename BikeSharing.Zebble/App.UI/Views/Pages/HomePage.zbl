@@ -7,10 +7,10 @@
   <z-place inside="Body">
     
     <Modules.WeatherInfoModule Id="WeatherInfoModule" />
-    
-    <Modules.EventSummaryModule Id="EventSummaryModule" />
-
-    <Modules.RecommendedModule Id="RecommendedModule" />
+    <TextView CssClass="title" Text="Event"   />
+    <Modules.EventsModule Id="EventsModule" CssClass="HomeModules"/>
+    <TextView CssClass="title" Text="Recommended"  />
+    <Modules.RecommendedModule Id="RecommendedModule" CssClass="HomeModules" />
 
   </z-place>
 

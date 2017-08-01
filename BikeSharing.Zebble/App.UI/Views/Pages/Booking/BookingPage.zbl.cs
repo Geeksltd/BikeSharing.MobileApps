@@ -58,11 +58,12 @@
                     var ToStation = await _ridesService.GetStation(To.Id);
                     Booking booking = await _ridesService.RequestBikeBooking(FromStation, ToStation);
                    
-                    await Nav.Forward<ThanksBookingPage>(new { ShowThanks = true, Booking = booking });
+                    await Nav.Forward<BookingDetailPage>(new { ShowThanks = true, Booking = booking });
                 }
                 catch (Exception ex)
                 {
-                    //  await DialogService.ShowAlertAsync("We are sorry, there are no bikes in origin station", "No bike available", "Ok");
+                    Console.Write(ex.Message);
+                    Alert.Show("No bike available", "We are sorry, there are no bikes in origin station");
                 }
                 IsBusy = false;
             }

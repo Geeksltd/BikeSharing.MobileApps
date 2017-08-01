@@ -90,6 +90,8 @@
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Error reporting incident in: {ex}");
+
                 Alert.Show("Invalid data", "Sign Up failure");
             }
         }

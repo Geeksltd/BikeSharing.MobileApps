@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<z-Component z-type="EventsModule"   z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+ 
+  <ScrollView  ShowHorizontalScrollBars="true" ShowScroll="true" Direction="Horizontal" > 
+    <ListView z-of="Event, Row" Id="List" EmptyText="Empty list" DataSource="@Items" Direction="Horizontal"    >
+      <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Event]" Style.Height="100%" on-Tapped="RowTapped">
+        <Stack Id ="rowStack" BackgroundImagePath="@Item.ImagePath">
+          <Modules.EventModule Style.Height="100%" Id="eventModule" />
+        </Stack>
+      </z-Component>
+    </ListView>   
+    </ScrollView>
+
+</z-Component>

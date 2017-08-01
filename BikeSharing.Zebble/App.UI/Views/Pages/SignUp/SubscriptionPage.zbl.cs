@@ -39,7 +39,7 @@
 
         async Task NextButtonTapped()
         {
-            signupPage.SaveUserData();
+            await signupPage.SaveUserData();
         }
 
         async Task AnnualImageViewTapped()

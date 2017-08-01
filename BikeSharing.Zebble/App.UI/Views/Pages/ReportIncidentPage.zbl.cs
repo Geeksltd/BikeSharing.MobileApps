@@ -31,7 +31,7 @@
             }
             catch (Exception ex)
             {
-
+                Console.Write(ex.Message);
                 await Alert.Show("Error", "Unable to launch Skype.", KeyValuePair.Of("Ok", true));
             }
         }
@@ -147,7 +147,7 @@
             }
             catch (Exception ex)
             {
-                //  Debug.WriteLine($"Error reporting incident in: {ex}");
+                  Console.WriteLine($"Error reporting incident in: {ex}");
             }
 
             // IsBusy = false;

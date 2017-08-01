@@ -58,7 +58,7 @@
                 await signupPage.NextPage();
             }
             else
-                Alert.Toast("Email is incorrect");
+                await Alert.Toast("Email is incorrect");
         }
 
         async Task TextChanged()

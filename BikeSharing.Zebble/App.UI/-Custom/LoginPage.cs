@@ -72,11 +72,7 @@ namespace UI.Pages
                 {
                   //  Debug.WriteLine($"[SignIn] Error signing in: {ex}");
                     await Alert.Show("Error","Communication error");
-                }
-                catch (Exception ex)
-                {
-                  //  Debug.WriteLine($"[SignIn] Error signing in: {ex}");
-                }
+                }               
             }
             else
             {

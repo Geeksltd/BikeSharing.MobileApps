@@ -22,5 +22,7 @@ namespace Domain.Entities
         public DateTime RegistrationDate { get; set; }
 
         public DateTime DueDate { get; set; }
+
+        public string DueDateString { get { return DueDate.ToString("dddd, MMMM dd"); } }
     }
 }

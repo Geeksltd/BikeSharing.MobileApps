@@ -113,12 +113,6 @@
   <ItemGroup>
     <Folder Include="Views\Pages\" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Zebble.UWP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Zebble\ZebbleSource-UWP\lib\Zebble.UWP.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <Import Project="..\..\App.UI\UI.projitems" Label="Shared" Condition="Exists('..\..\App.UI\UI.projitems')" />
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

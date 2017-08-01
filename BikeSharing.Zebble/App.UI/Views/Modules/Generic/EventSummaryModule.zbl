@@ -1,18 +1,27 @@
 <?xml version="1.0"?>
 <z-Component z-type="EventSummaryModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <TextView Id="title" Text="Event"   />
-  <ScrollView  ShowHorizontalScrollBars="true" Style.Height="200" ShowScroll="true" ShowVerticalScrollBars="true" Direction="Horizontal" > 
-  <ListView z-of="Event, Row" Id="List" EmptyText="Empty list" DataSource="@Items" Direction="Horizontal"    >
-    <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Event]" Style.Height="100%">
-      <Stack Id ="rowStack" BackgroundImagePath="@Item.ImagePath" Direction="Vertical">      
-        <Stack>  
-            <TextView Text="@Item.Name" Id="EventName"  />
-            <TextView Text="@Item.Venue.Name"/>
-            <TextView Text="@Item.StartTimeString"/>
-            <TextView Text="GlobalSettings.City"/>
+
+  <Stack Id ="mainStack" BackgroundImagePath="@Item.ImagePath">
+    <Stack>
+    <Button Text="Buy Ticket" Id="buyTicketButton" on-Tapped="buyTicketButtonTapped"/>
+    <Modules.EventModule Style.Height="200" Id="eventModule" />
+    <Button Text="Book a Bike" Id="bookBikeButton" on-Tapped="bookBikeButtonTapped" on-Panning="pan" on-Swiped="Swiped" />
+    <TextView Id="AvilableText" CssClass="small" Text="Avilable for 30 minutes" />
+
+      <Stack Id="bookDetailStack" Direction="Horizontal">
+        <Stack Style.Width="60">
+          <ImageView Path="Images/bike.png"/>
+        </Stack>
+        <Stack >         
+            <TextView Text="From"  />
+            <TextView Id="fromText" Text="@FromStation.Name"  />
+            <TextView Text="Empty bike docks 0 Avilable bikes 7" Id="FromPSText" />
+            <TextView CssClass="splitor" />
+            <TextView Text="To"  />
+            <TextView Id="toText" Text="@ToStation.Name"    />
+            <TextView  Text="Empty bike docks 0 Avilable bikes 7" Id="FromPSText" />          
+        </Stack>
       </Stack>
-      </Stack>
-    </z-Component>
-  </ListView>
-    </ScrollView>
+    </Stack>
+  </Stack>
 </z-Component>

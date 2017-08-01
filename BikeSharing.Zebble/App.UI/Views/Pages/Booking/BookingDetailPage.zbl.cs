@@ -11,7 +11,7 @@
     using System.Threading;
     using Domain.Entities;
 
-    partial class ThanksBookingPage
+    partial class BookingDetailPage
     {
         Timer timer ;
         Booking book ;
@@ -19,22 +19,20 @@
         DateTime dueDate = DateTime.Now;
         public override async Task OnInitializing()
         {
-            await base.OnInitializing();
-            await InitializeComponents();
-
             var ShowThanks = Nav.Param<bool>("ShowThanks");
             if (ShowThanks)
             {
-                book = Nav.Param<Booking>("Booking"); 
-                
-
-                txtDate.Text =book.DueDate.ToString("dddd, MMMM dd");
-                txtCity.Text = GlobalSettings.City;
-
-                txtBookId.Text =  book.BikeId.ToString();
-
-                timer= new Timer(NavToTimeRemaining,null, 1, 4000);          
+                book = Nav.Param<Booking>("Booking");
+                timer = new Timer(NavToTimeRemaining, null, 1, 4000);
             }
+            else
+            {
+                Alert.Show("Alert", "Booking was not success");
+                Nav.Go<HomePage>();
+            }
+            await base.OnInitializing();
+            await InitializeComponents();
+            
         }
 
         private void NavToTimeRemaining(object state)

@@ -24,6 +24,6 @@
             LoadFirstPage().RunInParallel();
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.LoginPage());
+        public static Task LoadFirstPage() => Nav.Go(new Pages.HomePage());
     }
 }

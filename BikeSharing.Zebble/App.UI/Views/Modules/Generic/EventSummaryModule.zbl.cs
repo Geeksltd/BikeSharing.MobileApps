@@ -6,61 +6,83 @@
     using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-     
     using Domain;
     using Domain.Services;
+    using System.Net;
+    using System.Net.Http;
     using Domain.Entities;
     using UI.Pages;
-    using UI;
 
     partial class EventSummaryModule
     {
-
-        List< Event> Items;
+        public Event Item;
+        Station FromStation, ToStation;
+        EventsService _eventsService;
+        RidesService _ridesService ;
         public override async Task OnInitializing()
         {
-            // var _eventsService = new EventsService();
-            // var events = await _eventsService.GetEvents();
-            // Items = events.ToList();
-            UriBuilder builder = new UriBuilder(GlobalSettings.EventsEndpoint);
-            builder.Path = "api/Events";
+            try
+            {
+                
+                var Id = Nav.Param<int>("Id");
+                _eventsService = new EventsService();
+                Item = await _eventsService.GetEventById(Id);
 
-            string uri = builder.ToString();
-
-            Items = await Api.Get<List<Event>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
-        
-
+                var toGeoLocation = new Domain.GeoLocation(Item.Venue.Latitude, Item.Venue.Longitude);
+                _ridesService = new RidesService();
+                FromStation = await _ridesService.GetInfoForNearestStation();
+                ToStation = await _ridesService.GetInfoForNearestStationTo(toGeoLocation);
+            }
+            catch (Exception ex) when (ex is WebException)
+            {
+                await Alert.Show("Error", "Communication error");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading data in: {ex}");
+            }
             await base.OnInitializing();
             await InitializeComponents();
-          
+            eventModule.Item = Item;
         }
 
-        public override Task OnPreRender()
+
+        async Task buyTicketButtonTapped()
         {
-            List.Width.Set(Length.AutoStartegy.Content);
-            return base.OnPreRender();
-        }
-        Task Refresh(List<Event> items) => WhenShown(() => List.UpdateSource(Items = items));
 
-        partial class Row
+        }
+
+
+        async Task bookBikeButtonTapped()
         {
-            public override async Task OnInitializing()
+            try
             {
-                await base.OnInitializing();
-                await InitializeComponents();               
-                this.Width.Set(300);
+                Booking booking = await _ridesService.RequestBikeBooking(FromStation, ToStation, Item);
+                await Nav.Forward<BookingDetailPage>(new { ShowThanks = true, Booking = booking });
+
             }
-
-            public Task RowTapped()
+            //catch (NoAvailableBikesException)
+            //{
+            //    await DialogService.ShowAlertAsync("We are sorry, there are no bikes in origin station", "No bike available", "Ok");
+            //}
+            catch (Exception ex) when (ex is WebException )
             {
-                Nav.Forward<EventSummaryPage>(new
-                {
-                   
-                });
-
-                return Task.CompletedTask;
+                await Alert.Show("Error","Communication error");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading data in: {ex}");
             }
         }
 
+async Task pan()
+        {
+
+        }
+
+        async Task Swiped()
+        {
+
+        }
     }
 }

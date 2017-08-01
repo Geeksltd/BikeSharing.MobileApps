@@ -198,8 +198,7 @@ namespace Domain.Services
             try
             {
                 const int count = 10;
-                var userId =1 ;// _authenticationService.GetCurrentUserId();
-
+              
                 UriBuilder builder = new UriBuilder(GlobalSettings.RidesEndpoint);
                 builder.Path = $"/api/stations/nearto?latitude={location.Latitude.ToString(CultureInfo.InvariantCulture)}&longitude={location.Longitude.ToString(CultureInfo.InvariantCulture)}&count={count}";
 

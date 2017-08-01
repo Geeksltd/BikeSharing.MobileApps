@@ -7,14 +7,14 @@
     using System.Threading.Tasks;
     using Zebble;
      
-    using Domain;
-
+  
     partial class EventSummaryPage
     {
+       
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+            await InitializeComponents();          
         }
     }
 }
