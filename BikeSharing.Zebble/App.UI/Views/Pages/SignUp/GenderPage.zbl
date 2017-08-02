@@ -1,15 +1,27 @@
 <?xml version="1.0"?>
 <z-Component z-type="GenderPage" z-base="Page" z-namespace="UI.Pages" CssClass="SignupPages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="mainStack">
-    <Stack Style.Height="10">
-      <Button  Id="closeButton" BackgroundImagePath="Images/SignUp/ic_close.png" BackgroundImageStretch="Fill"  on-Tapped="CloseButtonTapped"/>
+    <Stack Id="backgroundStack" >
+      <Stack Style.Padding="10" Style.Height="20%">
+        <ImageView  Path="Images/SignUp/signup_cloud_1.png" Style.Margin.Left="40" Style.Width="50"  />
+      </Stack>
+      <Stack Style.Height="80%">
+        <ImageView Style.Height="100%" Path="Images/SignUp/building.png" />
+      </Stack>
     </Stack>
-    <Stack Id="detailStack">
-      <ImageView Path="Images/SignUp/signup_woman.png" Id="womanImageView" on-Tapped="ImageViewTapped"/>
-      <ImageView Path="Images/SignUp/signup_man.png" Id="manImageView"  on-Tapped="ImageViewTapped"/>
-    </Stack>
-    <Stack Id="NextButtonStack" >
-      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+    <Stack Id="foregroundStack">
+      
+      <Stack Style.Height="10">
+        <Button  Id="closeButton" BackgroundImagePath="Images/SignUp/ic_close.png" BackgroundImageStretch="Fill"  on-Tapped="CloseButtonTapped"/>
+      </Stack>
+      <Stack Id="detailStack">
+        <ImageView Path="Images/SignUp/signup_woman.png" Id="womanImageView" on-Tapped="ImageViewTapped"/>
+        <ImageView Path="Images/SignUp/signup_man.png" Id="manImageView"  on-Tapped="ImageViewTapped"/>
+      </Stack>
+      <Stack Id="NextButtonStack"  Direction="Horizontal">
+        <TextView Text="Skip" Style.Font.Bold="true" Style.Font.Size="20" on-Tapped="SkipTapped" Style.Width="60"  Style.Margin.Top="10"/>
+        <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+      </Stack>
     </Stack>
   </Stack>
 </z-Component>

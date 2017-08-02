@@ -45,16 +45,18 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-
+            foregroundStack.Y.Set(10);
+           // bikeImageView.Y.Set(200);
         }
+     
         public SignUpPage signupPage => FindParent<SignUpPage>();
 
         async Task NextButtonTapped()
         {
             if (EmailValidation())
             {
-             //   Email = emailInput.Text;
-              //  Skype = skypeInput.Text;
+                Email = emailInput.Text;
+                Skype = skypeInput.Text;
                 await signupPage.NextPage();
             }
             else
@@ -67,22 +69,22 @@
 
         async Task TextChanged()
         {
-        //    if ( skypeInput.Text.HasValue() && EmailValidation())
-         //       nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
-         //   else
-         //       nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
+            if (skypeInput.Text.HasValue() && EmailValidation())
+                nextButton1.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            else
+                nextButton1.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
         }
 
 
         bool EmailValidation()
         {
-          //  if (emailInput.Text.HasValue())
-          //  {
-          //      string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
-          //      Regex regexEmail = new Regex(patternEmail);
-           //     if (regexEmail.IsMatch(emailInput.Text))
-           //         return true;
-            //}
+            if (emailInput.Text.HasValue())
+            {
+                string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
+                Regex regexEmail = new Regex(patternEmail);
+                if (regexEmail.IsMatch(emailInput.Text))
+                    return true;
+            }
             return false;
         }
     }

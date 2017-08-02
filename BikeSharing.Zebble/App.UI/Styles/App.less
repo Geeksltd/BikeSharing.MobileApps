@@ -202,13 +202,15 @@ LoginPage {
 
 .SignupPages {
     height: 100%;
-    #mainStack { height: 60%; width: 50%;  margin-top: calc("View.Root.ActualHeight / 5");  margin-left: calc("View.Root.ActualWidth / 4");  padding: 10px;  background-color: white;  }
+    #mainStack { height: 50%; width: 50%;  margin-top: calc("View.Root.ActualHeight / 5");  margin-left: calc("View.Root.ActualWidth / 4");  padding: 10px;  background-color: white;  }
     TextInput {  border-bottom: 1px solid;  border-color: black;  color: black;   font-size: 20px;  margin: 10px;  }
     .title {  font-size: 12px;  margin: 10px; margin-bottom:0px;  color: blue;  }
-    #detailStack { height: calc("(view.Parent.Parent.ActualHeight - 160)"); }
-    #NextButtonStack {height:150px;  background-size: contain;}
-    #nextButton {  padding: 10px 0px; height:50px;margin-top:100px;  margin-left: calc("view.Parent.ActualWidth - 50 "); }
+    #detailStack { height: calc("(view.Parent.Parent.ActualHeight - 75)"); }
+    #NextButtonStack {height:60px;  background-size: contain;}
+    #nextButton {  padding: 10px 0px; height:50px; width:50px; margin-top:10px;  margin-left: calc("view.Parent.ActualWidth - 50"); }
     #closeButton{ width:10px; padding:0px; height:10px;}
+    #backgroundStack{ height:100%; }
+
 }
 
 ProfilePage  {
@@ -220,10 +222,12 @@ ProfilePage  {
     .title{font-size:20px; margin:10px; color:black; }
 }
 
+AccountPage{   #nextButton1 {   padding: 10px 0px; height:50px; width:50px; margin-top:10px;  margin-left: calc("view.Parent.ActualWidth - 130 "); }}
 GenderPage {
     #mainStack {      
         #womanImageView { width: 100%; height: 80px; margin-left: 80px; }
         #manImageView {  width: 100%;  height: 80px; margin-left: 10px;  }
+        #nextButton {   margin-left: calc("view.Parent.ActualWidth - 110 "); }
     }
 }
 

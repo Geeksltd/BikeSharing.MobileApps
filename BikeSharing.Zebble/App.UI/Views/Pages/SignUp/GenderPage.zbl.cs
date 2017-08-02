@@ -31,8 +31,8 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
+            foregroundStack.Y.Set(10);
 
-     
         }
         public SignUpPage signupPage => FindParent<SignUpPage>();
 
@@ -60,7 +60,11 @@
 
         async Task NextButtonTapped()
         {
+            await signupPage.NextPage();
+        }
 
+        async Task SkipTapped()
+        {
             await signupPage.NextPage();
         }
 

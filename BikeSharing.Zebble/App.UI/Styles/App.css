@@ -383,7 +383,7 @@ LoginPage #signinButtonStack #signinButton {
   height: 100%;
 }
 .SignupPages #mainStack {
-  height: 60%;
+  height: 50%;
   width: 50%;
   margin-top: calc("View.Root.ActualHeight / 5");
   margin-left: calc("View.Root.ActualWidth / 4");
@@ -404,22 +404,26 @@ LoginPage #signinButtonStack #signinButton {
   color: blue;
 }
 .SignupPages #detailStack {
-  height: calc("(view.Parent.Parent.ActualHeight - 160)");
+  height: calc("(view.Parent.Parent.ActualHeight - 75)");
 }
 .SignupPages #NextButtonStack {
-  height: 150px;
+  height: 60px;
   background-size: contain;
 }
 .SignupPages #nextButton {
   padding: 10px 0px;
   height: 50px;
-  margin-top: 100px;
-  margin-left: calc("view.Parent.ActualWidth - 50 ");
+  width: 50px;
+  margin-top: 10px;
+  margin-left: calc("view.Parent.ActualWidth - 50");
 }
 .SignupPages #closeButton {
   width: 10px;
   padding: 0px;
   height: 10px;
+}
+.SignupPages #backgroundStack {
+  height: 100%;
 }
 ProfilePage #Body {
   height: 100%;
@@ -447,6 +451,13 @@ ProfilePage .title {
   margin: 10px;
   color: black;
 }
+AccountPage #nextButton1 {
+  padding: 10px 0px;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: calc("view.Parent.ActualWidth - 130 ");
+}
 GenderPage #mainStack #womanImageView {
   width: 100%;
   height: 80px;
@@ -456,6 +467,9 @@ GenderPage #mainStack #manImageView {
   width: 100%;
   height: 80px;
   margin-left: 10px;
+}
+GenderPage #mainStack #nextButton {
+  margin-left: calc("view.Parent.ActualWidth - 110 ");
 }
 SubscriptionPage ImageView {
   width: 100%;

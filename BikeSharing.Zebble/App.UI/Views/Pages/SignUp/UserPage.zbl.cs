@@ -54,7 +54,7 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-
+            foregroundStack.Y.Set(10);
             birthdateInput.SelectedValue = new DateTime(1970, 01, 01);
         }
         public SignUpPage signupPage => FindParent<SignUpPage>();
