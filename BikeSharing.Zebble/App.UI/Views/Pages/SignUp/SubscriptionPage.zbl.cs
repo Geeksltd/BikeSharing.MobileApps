@@ -34,6 +34,10 @@
         {
             await signupPage.SaveUserData();
         }
+        async Task CloseButtonTapped()
+        {
+            await Nav.Go<LoginPage>();
+        }
 
         async Task AnnualImageViewTapped()
         {

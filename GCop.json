@@ -47,7 +47,7 @@
     "ProjectInfoInterval": 30
   },
   "Logging": {
-    "LogExceptionsToFile": false,
+    "LogExceptionsToFile": true,
     "LogExceptionsToOutputWindow": false
   }
 }

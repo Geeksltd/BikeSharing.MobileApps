@@ -53,32 +53,36 @@
         {
             if (EmailValidation())
             {
-                Email = emailInput.Text;
-                Skype = skypeInput.Text;
+             //   Email = emailInput.Text;
+              //  Skype = skypeInput.Text;
                 await signupPage.NextPage();
             }
             else
                 await Alert.Toast("Email is incorrect");
         }
+        async Task CloseButtonTapped()
+        {
+            await Nav.Go<LoginPage>();
+        }
 
         async Task TextChanged()
         {
-            if ( skypeInput.Text.HasValue() && EmailValidation())
-                nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
-            else
-                nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
+        //    if ( skypeInput.Text.HasValue() && EmailValidation())
+         //       nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+         //   else
+         //       nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
         }
 
 
         bool EmailValidation()
         {
-            if (emailInput.Text.HasValue())
-            {
-                string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
-                Regex regexEmail = new Regex(patternEmail);
-                if (regexEmail.IsMatch(emailInput.Text))
-                    return true;
-            }
+          //  if (emailInput.Text.HasValue())
+          //  {
+          //      string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
+          //      Regex regexEmail = new Regex(patternEmail);
+           //     if (regexEmail.IsMatch(emailInput.Text))
+           //         return true;
+            //}
             return false;
         }
     }

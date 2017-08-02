@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 <z-Component z-type="UserPage" z-base="Page" z-namespace="UI.Pages" CssClass="SignupPages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="mainStack">
-    <TextView Text="First Name" CssClass="title"   />
-    <TextInput Id="firstNameInput" on-UserTextChanged="TextChanged" />
+    <Stack Style.Height="10">
+      <Button  Id="closeButton" BackgroundImagePath="Images/SignUp/ic_close.png" BackgroundImageStretch="Fill"  on-Tapped="CloseButtonTapped"/>
+    </Stack>
+    <Stack Id="detailStack">
+      <TextView Text="First Name" CssClass="title"   />
+      <TextInput Id="firstNameInput" on-UserTextChanged="TextChanged" />
 
-    <TextView Text="Last Name" CssClass="title"    />
-    <TextInput Id="lastNameInput" on-UserTextChanged="TextChanged" />
+      <TextView Text="Last Name" CssClass="title"    />
+      <TextInput Id="lastNameInput" on-UserTextChanged="TextChanged" />
 
-    <TextView Text="Birthdate" CssClass="title"   />
-    <DatePicker Id="birthdateInput"  YearFrom="1950"  />
-
+      <TextView Text="Birthdate" CssClass="title"   />
+      <DatePicker Id="birthdateInput"  YearFrom="1950"  />
+    </Stack>
     <Stack Id="NextButtonStack">
       <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
     </Stack>
-
   </Stack>
 </z-Component>

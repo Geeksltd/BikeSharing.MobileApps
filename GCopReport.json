@@ -9,7 +9,7 @@
     },
     {
       "Analyzer": "LongMethodAnalyzer",
-      "OccurrenceCount": 1,
+      "OccurrenceCount": 3,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"

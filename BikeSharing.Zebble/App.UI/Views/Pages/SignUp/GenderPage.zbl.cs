@@ -53,7 +53,10 @@
             }
         }
 
-       
+        async Task CloseButtonTapped()
+        {
+            await Nav.Go<LoginPage>();
+        }
 
         async Task NextButtonTapped()
         {

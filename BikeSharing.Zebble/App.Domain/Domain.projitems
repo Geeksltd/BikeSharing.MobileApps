@@ -40,7 +40,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\RidesService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Settings.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DAL\@AdoDotNetDataProviderFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)-Logic\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)-Logic\" />
   </ItemGroup>
 </Project>

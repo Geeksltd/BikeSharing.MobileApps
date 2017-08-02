@@ -6,18 +6,13 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Xml.Serialization;
-    using Zebble.Data;
-
-    [SmallTable]
-    public partial class Settings : GuidEntity
+    using Zebble;
+  
+  
+    public partial class Settings
     {
         /* -------------------------- Fields -------------------------*/
 
-        private static Settings current;
-
-        
-
-       
         private static  int UserIdKey = 1;
 
       
@@ -83,28 +78,7 @@
 
   
 
-        public static Settings Current
-        {
-            get
-            {
-                var result = current;
-
-                if (result == null)
-                {
-                    current = result = Parse("Current");
-
-                    if (result != null)
-                    {
-                        result.Saving += (o, e) => current = null;
-                        result.Saved += (o, e) => current = null;
-                        Database.CacheRefreshed += (o, e) => current = null;
-                    }
-                }
-
-                return result;
-            }
-        }
-
+     
         #region UserId Property
 
         public static int UserId
@@ -129,41 +103,40 @@
 
         /* -------------------------- Methods ----------------------------*/
 
-        public static Settings Parse(string text)
-        {
-            if (text.LacksValue())
-            {
-                throw new ArgumentNullException(nameof(text));
-            }
-
-            return Database.Find<Settings>(s => s.Name == text);
-        }
-
         public override string ToString()
         {
             return this.Name;
         }
 
-        public new Settings Clone()
+      
+        public static void RemoveUserId()
         {
-            return (Settings)base.Clone();
+            UserId = 0;
+            Device.IO.File("Session.txt").Delete();
         }
 
-        protected override void ValidateProperties(ValidationResult result)
+        public static void RemoveProfileId()
         {
-            // Validate MySetting1 property:
-            
-            // Validate Name property:
+            ProfileId = 0;
+        }
 
-            if (this.Name.LacksValue())
-            {
-                result.Add(nameof(Name), "Name cannot be empty.");
-            }
+        public static void RemoveAccessToken()
+        {
+            AccessToken = "";
+        }
 
-            if (this.Name != null && this.Name.Length > 200)
-            {
-                result.Add(nameof(Name), "The provided Name is too long. A maximum of 200 characters is acceptable.");
-            }
+        public static void RemoveCurrentBookingId()
+        {
+            CurrentBookingId = 0;
+        }
+
+        public static void LogoutUser()
+        {
+            Settings.RemoveUserId();
+            Settings.RemoveProfileId();
+            Settings.RemoveAccessToken();
+            Settings.RemoveCurrentBookingId();
+
         }
     }
 }

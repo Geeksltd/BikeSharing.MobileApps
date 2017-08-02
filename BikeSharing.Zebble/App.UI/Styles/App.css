@@ -7,11 +7,8 @@
 MainMenu #Body {
   height: 100%;
 }
-MainMenu #Body {
-  background: url("Images/Menu/background.png");
-}
 MainMenu TextView {
-  color: blue;
+  color: darkblue;
 }
 MainMenu #logoutButton {
   width: 100%;
@@ -19,8 +16,14 @@ MainMenu #logoutButton {
   text-align: center;
   padding: 10px;
 }
-MainMenu #UserProfile {
-  margin-top: 100px;
+MainMenu #ItemsStack {
+  height: calc("(View.Root.ActualHeight- 45- 50)");
+  background: url("Images/Menu/background.png");
+  background-size: cover;
+  width: 300px;
+}
+MainMenu #MenuItemsStack {
+  height: calc("(view.Parent.ActualHeight - 50)");
 }
 HomePage #Body {
   height: 100%;
@@ -247,6 +250,7 @@ BookingPage #BookButton {
 }
 .BookingDetailPage #Body {
   background: url("Images/booking_background.png");
+  background-size: cover;
 }
 .BookingDetailPage TextView {
   color: white;
@@ -381,7 +385,7 @@ LoginPage #signinButtonStack #signinButton {
 .SignupPages #mainStack {
   height: 60%;
   width: 50%;
-  margin-top: calc("View.Root.ActualHeight / 4");
+  margin-top: calc("View.Root.ActualHeight / 5");
   margin-left: calc("View.Root.ActualWidth / 4");
   padding: 10px;
   background-color: white;
@@ -392,22 +396,37 @@ LoginPage #signinButtonStack #signinButton {
   color: black;
   font-size: 20px;
   margin: 10px;
-  padding: 10px 0px;
 }
 .SignupPages .title {
   font-size: 12px;
   margin: 10px;
+  margin-bottom: 0px;
   color: blue;
 }
+.SignupPages #detailStack {
+  height: calc("(view.Parent.Parent.ActualHeight - 160)");
+}
+.SignupPages #NextButtonStack {
+  height: 150px;
+  background-size: contain;
+}
 .SignupPages #nextButton {
-  padding: 10px;
-  margin-top: 10px;
+  padding: 10px 0px;
+  height: 50px;
+  margin-top: 100px;
+  margin-left: calc("view.Parent.ActualWidth - 50 ");
+}
+.SignupPages #closeButton {
+  width: 10px;
+  padding: 0px;
+  height: 10px;
 }
 ProfilePage #Body {
   height: 100%;
 }
 ProfilePage #Body {
   background: url("Images/city-gray.png");
+  background-size: cover;
 }
 ProfilePage #mainStack {
   height: 100%;
@@ -438,10 +457,6 @@ GenderPage #mainStack #manImageView {
   height: 80px;
   margin-left: 10px;
 }
-AccountPage #NextButtonStack #nextButton {
-  margin-top: 60px;
-  height: 40px;
-}
 SubscriptionPage ImageView {
   width: 100%;
   height: 50px;
@@ -451,11 +466,13 @@ SubscriptionPage ImageView {
 .slide-show {
   height: 100%;
 }
-SignUpPage #Body {
+SignUpPage {
   height: 100%;
 }
 SignUpPage #Body {
+  height: 100%;
   background: url("Images/background.png");
+  background-size: cover;
 }
 EventSummaryPage #Body {
   height: 100%;

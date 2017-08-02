@@ -57,6 +57,10 @@
             }
         }
 
+        async Task CloseButtonTapped()
+        {
+          await  Nav.Go<LoginPage>();
+        }
         async Task TextChanged()
         {
             if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && repeatPasswordInput.Text == passwordInput.Text)

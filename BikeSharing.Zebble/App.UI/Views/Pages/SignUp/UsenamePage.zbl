@@ -1,20 +1,28 @@
 <?xml version="1.0"?>
 <z-Component z-type="UsenamePage" z-base="Page" CssClass="SignupPages"  z-namespace="UI.Pages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="mainStack">
-    <!--<Stack  BackgroundImagePath="Images/SignUp/signup_padlock.png">-->
-
-    <TextView Text="Username" CssClass="title"    />
-    <TextInput Id="usernameInput" on-UserTextChanged="TextChanged" />
-
-    <TextView Text="Password" CssClass="title"  />
-    <TextInput Id="passwordInput" on-UserTextChanged="TextChanged"    />
-
-    <TextView Text="RepeatPassword" CssClass="title"  />
-    <TextInput Id="repeatPasswordInput" on-UserTextChanged="TextChanged"   />
-
-    <Stack Id="NextButtonStack">
-      <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+    <Stack>
+    <Stack Style.Height="10">
+      <Button  Id="closeButton" BackgroundImagePath="Images/SignUp/ic_close.png" BackgroundImageStretch="Fill"  on-Tapped="CloseButtonTapped"/>
     </Stack>
-    <!--</Stack>-->
+    <Stack Id="detailStack">
+      <TextView Text="Username" CssClass="title"    />
+      <TextInput Id="usernameInput" on-UserTextChanged="TextChanged" />
+
+      <TextView Text="Password" CssClass="title"  />
+      <TextInput Id="passwordInput" on-UserTextChanged="TextChanged"    />
+
+      <TextView Text="RepeatPassword" CssClass="title"  />
+      <TextInput Id="repeatPasswordInput" on-UserTextChanged="TextChanged"   />
+    </Stack>
+    <Stack Id="NextButtonStack"  >
+      <!--<Stack>
+        <ImageView  Path="Images/SignUp/signup_padlock.png"/>
+      </Stack>-->
+      <Stack>
+        <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+      </Stack>
+    </Stack>
+  </Stack>   
   </Stack>
 </z-Component>

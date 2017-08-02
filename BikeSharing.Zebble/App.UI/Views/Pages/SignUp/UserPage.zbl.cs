@@ -67,7 +67,10 @@
             BirthDate = birthdateInput.SelectedValue.Value;
             await signupPage.NextPage();
         }
-
+        async Task CloseButtonTapped()
+        {
+            await Nav.Go<LoginPage>();
+        }
         async Task TextChanged()
         {
             if (firstNameInput.Text.HasValue() && lastNameInput.Text.HasValue())
