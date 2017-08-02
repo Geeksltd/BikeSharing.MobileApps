@@ -27,6 +27,8 @@ Global
 		BikeSharing.Zebble\App.UI\UI.projitems*{3b21a769-f17c-4219-a595-27a34955228f}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.Domain\Domain.projitems*{51aeafb7-e02b-4f51-8ab0-aa90e034e684}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.UI\UI.projitems*{51aeafb7-e02b-4f51-8ab0-aa90e034e684}*SharedItemsImports = 4
+		BikeSharing.Zebble\App.Domain\Domain.projitems*{573f454c-6003-40c8-a09d-3304f28d5f10}*SharedItemsImports = 4
+		BikeSharing.Zebble\App.UI\UI.projitems*{573f454c-6003-40c8-a09d-3304f28d5f10}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.UI\UI.projitems*{cd40d45a-cffe-46fc-8a9d-055ef9ff9440}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

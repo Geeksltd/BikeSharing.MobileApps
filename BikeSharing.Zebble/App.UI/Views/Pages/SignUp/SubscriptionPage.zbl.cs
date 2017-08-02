@@ -19,7 +19,9 @@
             ThreeMonthly,
             Annual
         };
+#pragma warning disable CS0414 // The field 'SubscriptionPage._subscription' is assigned but its value is never used
         Subscription _subscription;
+#pragma warning restore CS0414 // The field 'SubscriptionPage._subscription' is assigned but its value is never used
         public SignUpPage signupPage => FindParent<SignUpPage>();
 
         public override async Task OnInitializing()

@@ -1,3 +1,18 @@
 {
-  "Items": []
+  "Items": [
+    {
+      "Analyzer": "StringFormatArgumentsAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "LongMethodAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    }
+  ]
 }

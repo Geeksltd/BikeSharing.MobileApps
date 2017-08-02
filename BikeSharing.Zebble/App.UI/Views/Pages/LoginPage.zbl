@@ -1,19 +1,17 @@
 <?xml version="1.0"?>
-<z-Component z-type="LoginPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="LoginPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-  <z-place inside="Body">
-   <Stack Id="mainStack">
+<z-Component z-type="LoginPage" z-base="Page" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+  <Stack Id="mainStack">
+    <Stack>
       <TextInput Placeholder="Username" Id="usernameTextInput"  Style.Margin.Top="100" on-UserTextChanged="TextChanged"/>
       <TextInput Placeholder="Password" Id="passwordTextInput"  on-UserTextChanged="TextChanged" />
       <TextView Text="Forgot Password?" CssClass="label" Style.TextAlignment="Right"  />
-   
-   <Stack Id="signinButtonStack">
-     <Button   Text="Sign in" Id="signinButton" on-Tapped="signinTapped" Enabled="false"/>
-   </Stack>
-
-     <Stack Direction="Horizontal" Style.Margin.Top="200">
-       <TextView   Text="Don't have an account?" Wrap="false"  CssClass="label" />
-       <TextView Text="Sign up" z-nav-forward="Pages.SignUpPage" Id="signupTextView" CssClass="label"/>
-     </Stack>
+      <Stack Id="signinButtonStack">
+        <Button   Text="Sign in" Id="signinButton" on-Tapped="signinTapped" Enabled="false"/>
+      </Stack>
+      <Stack Direction="Horizontal" Style.Margin.Top="200">
+        <TextView   Text="Don't have an account?" Wrap="false"  CssClass="label" />
+        <TextView Text="Sign up" z-nav-forward="Pages.SignUpPage" Id="signupTextView" CssClass="label"/>
+      </Stack>
+    </Stack>
   </Stack>
-  </z-place>
 </z-Component>

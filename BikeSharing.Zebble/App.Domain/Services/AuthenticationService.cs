@@ -10,7 +10,7 @@ namespace Domain.Services
 {
     public class AuthenticationService : Api
     {
-        public bool IsAuthenticated => !string.IsNullOrEmpty(Settings.AccessToken);
+        public bool IsAuthenticated => Settings.AccessToken.HasValue();
 
       
         public async Task<bool> LoginAsync(string userName, string password)
@@ -22,20 +22,22 @@ namespace Domain.Services
                 GrantType = "password"
             };
 
-            UriBuilder builder = new UriBuilder(GlobalSettings.AuthenticationEndpoint);
-            builder.Path = "api/login";
-
+            var builder = new UriBuilder(string.Format("{0}{1}", GlobalSettings.AuthenticationEndpoint, "api/login"));
             string uri = builder.ToString();
 
-            AuthenticationResponse authenticationInfo = await Api.Post<AuthenticationResponse>(uri, auth);
+            var authenticationInfo = await Api.Post<AuthenticationResponse>(uri, auth);
             Settings.UserId = authenticationInfo.UserId;
             Settings.ProfileId = authenticationInfo.ProfileId;
             Settings.AccessToken = authenticationInfo.AccessToken;
-            if (authenticationInfo.UserId != 0 )
-                  Device.IO.File("Session.txt").WriteAllText(authenticationInfo.UserId.ToString());
+            if (authenticationInfo.UserId != 0)
+            {
+                Device.IO.File("Session.txt").WriteAllText(authenticationInfo.UserId.ToString());
+                return true;
+            }
+            return false;
             //   if (authenticationInfo.AccessToken.HasValue())
             //           Device.IO.File("SessionToken.txt").WriteAllText(authenticationInfo.AccessToken);
-            return true;
+
         }
 
         public Task LogoutAsync()
@@ -45,12 +47,9 @@ namespace Domain.Services
             Settings.RemoveAccessToken();
             Settings.RemoveCurrentBookingId();
 
-            return Task.FromResult(false);
+            return Task.CompletedTask;
         }
 
-        public int GetCurrentUserId()
-        {
-            return Settings.UserId;
-        }
+        public int GetCurrentUserId() => Settings.UserId;
     }
 }

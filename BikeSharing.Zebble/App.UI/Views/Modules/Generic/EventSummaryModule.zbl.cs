@@ -47,13 +47,13 @@
         }
 
 
-        async Task buyTicketButtonTapped()
+        async Task BuyTicketButtonTapped()
         {
 
         }
 
 
-        async Task bookBikeButtonTapped()
+        async Task BookBikeButtonTapped()
         {
             try
             {

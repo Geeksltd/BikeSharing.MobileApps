@@ -3,9 +3,9 @@
 
   <Stack Id ="mainStack" BackgroundImagePath="@Item.ImagePath">
     <Stack>
-    <Button Text="Buy Ticket" Id="buyTicketButton" on-Tapped="buyTicketButtonTapped"/>
+    <Button Text="Buy Ticket" Id="buyTicketButton" on-Tapped="BuyTicketButtonTapped"/>
     <Modules.EventModule Style.Height="200" Id="eventModule" />
-    <Button Text="Book a Bike" Id="bookBikeButton" on-Tapped="bookBikeButtonTapped"  />
+    <Button Text="Book a Bike" Id="bookBikeButton" on-Tapped="BookBikeButtonTapped"  />
     <TextView Id="AvilableText" CssClass="small" Text="Avilable for 30 minutes" />
 
       <Stack Id="bookDetailStack" Direction="Horizontal">

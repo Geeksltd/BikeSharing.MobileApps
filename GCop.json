@@ -2,7 +2,7 @@
   "ReadMe": "To learn how to configure this, see:http://gcop.co/doc/config",
   "Projects": [],
   "DomainProjectNames": "",
-  "General": [   
+  "General": [
     {
       "Path": "*.g.i.cs",
       "Exclude": "*"

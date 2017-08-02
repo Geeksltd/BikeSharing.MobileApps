@@ -27,8 +27,8 @@
             }
             else
             {
-                Alert.Show("Alert", "Booking was not success");
-                Nav.Go<HomePage>();
+                await Alert.Show("Alert", "Booking was not success");
+                await Nav.Go<HomePage>();
             }
             await base.OnInitializing();
             await InitializeComponents();

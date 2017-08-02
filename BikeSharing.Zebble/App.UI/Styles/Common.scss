@@ -67,15 +67,6 @@ Switch {
     #Toggle { }
 }
 
-OptionsList {
-    &:vertical {
-        OptionsList-Option { margin-top: 6px; }
-    }
-    OptionsList-Option { 
-        #Label { color: $text-color; }
-        &:checked #Label { color: $primary-color; }
-    }
-}
 
 Picker { padding: $input-padding; border-color: $very-light-grey;
     #Caret { background: url(Images/Icons/Caret.png); }
