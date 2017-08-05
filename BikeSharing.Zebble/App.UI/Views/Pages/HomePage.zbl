@@ -4,14 +4,12 @@
     z-partial="true" Title="Home" data-TopMenu="MainMenu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
 
-  <z-place inside="Body">
-    
+  <z-place inside="Body">    
     <Modules.WeatherInfoModule Id="WeatherInfoModule" />
     <TextView CssClass="title" Text="Event"   />
     <Modules.EventsModule Id="EventsModule" CssClass="HomeModules"/>
     <TextView CssClass="title" Text="Recommended"  />
     <Modules.RecommendedModule Id="RecommendedModule" CssClass="HomeModules" />
-
   </z-place>
 
 </z-Component>

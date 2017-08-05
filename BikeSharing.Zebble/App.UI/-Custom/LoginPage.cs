@@ -2,18 +2,16 @@
 using Domain.Services;
 using System;
 using System.Net;
+using System.Threading.Tasks;
 using Zebble;
 
 namespace UI.Pages
 {
     partial class LoginPage
     {
-
-
         private string _userName;
         private string _password;
         private bool _isValid;
-
 
 
         public string UserName
@@ -52,7 +50,7 @@ namespace UI.Pages
             }
         }
 
-        private async void SignInAsync()
+        private async Task SignInAsync()
         {
             IsValid = true;
             bool isValid = Validate();
@@ -62,12 +60,11 @@ namespace UI.Pages
             {
                 try
                 {
-                    var _authenticationService = new AuthenticationService();
-                    isAuthenticated = await _authenticationService.LoginAsync(UserName, Password);
+                    isAuthenticated = await new AuthenticationService().LoginAsync(UserName, Password);
                 }
                 catch (Exception ex) when (ex is WebException)
                 {
-                    //  Debug.WriteLine($"[SignIn] Error signing in: {ex}");
+                    Console.WriteLine($"[SignIn] Error signing in: {ex}");
                     await Alert.Show("Error", "Communication error");
                 }
             }
@@ -90,7 +87,6 @@ namespace UI.Pages
             {
                 await Nav.Go<HomePage>();
             }
-
         }
 
         private bool Validate()
@@ -99,17 +95,8 @@ namespace UI.Pages
             _password = passwordTextInput?.Text;
             bool isValidUser = _userName.HasValue();
             bool isValidPassword = _password.HasValue();
-
             return isValidUser && isValidPassword;
         }
-
-
-
-        // private void AddValidations()
-        // {
-        //   _userName.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Username should not be empty" });
-        //   _password.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Password should not be empty" });
-        // }
     }
 
 }

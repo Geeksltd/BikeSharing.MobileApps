@@ -5,26 +5,21 @@
     xsi:noNamespaceSchemaLocation="./../../.zebble-schema.xml">
 
   <Stack Id="Body">
-    <!--<ImageView Id="LogoImage" Path="/Images/Logo.png" />-->
-   
-      
            <Stack Id="ItemsStack" >
            <Stack Style.Height="100%">
             <Stack Id="MenuItemsStack">
-              <IconButton Id="Home" Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.HomePage" />
-              <IconButton Id="NewRide" Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRidePage"   />
-              <IconButton Id="MyRides" Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRidesPage" />
-              <IconButton Id="Upcomingride" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemainingPage" />
-              <IconButton Id="Report" Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncidentPage" />
-              <IconButton Id="Profile" Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.ProfilePage" />
+              <IconButton  Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.HomePage" />
+              <IconButton  Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRidePage"   />
+              <IconButton  Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRidesPage" />
+              <IconButton  Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemainingPage" />
+              <IconButton  Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncidentPage" />
+              <IconButton  Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.ProfilePage" />
             </Stack>
-            <IconButton Id="UserProfile" Text="@Settings.UserProfile.FullName" IconPath="@Settings.UserProfile.PhotoUrl"  />
+            <IconButton  Text="@Settings.UserProfile.FullName" IconPath="@Settings.UserProfile.PhotoUrl"  />
            </Stack>
         </Stack>
         <Stack Style.Height="50">
-          <Button Id="logoutButton" Text="Logout" on-Tapped="logoutButtonTapped" />
+          <Button Id="logoutButton" Text="Logout" on-Tapped="LogoutButtonTapped" />
         </Stack>
-     
-   
   </Stack>
 </z-Component>

@@ -13,15 +13,11 @@
         Suggestion[] Items;
         public override async Task OnInitializing()
         {
-            var _ridesService = new RidesService();
-            var rides = await _ridesService.GetSuggestions();
+            var rides = await new RidesService().GetSuggestions();
             Items = rides.ToArray();
-
 
             await base.OnInitializing();
             await InitializeComponents();
-
-
         }
 
         //  Task Refresh(Suggestion[] items) => WhenShown(() => List.UpdateSource(Items = items));
@@ -43,9 +39,8 @@
             {
                 Nav.Forward<CustomRidePage>(new
                 {
-
+                    Id = Item.Id
                 });
-
                 return Task.CompletedTask;
             }
         }

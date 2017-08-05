@@ -1,6 +1,5 @@
 ﻿namespace UI.Services
 {
-    using Domain;
     using System.Threading.Tasks;
     using Zebble;
 

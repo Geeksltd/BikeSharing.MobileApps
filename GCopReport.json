@@ -9,7 +9,7 @@
     },
     {
       "Analyzer": "LongMethodAnalyzer",
-      "OccurrenceCount": 9,
+      "OccurrenceCount": 11,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -72,14 +72,14 @@
     },
     {
       "Analyzer": "ConstantVariableAnalyzer",
-      "OccurrenceCount": 4,
+      "OccurrenceCount": 5,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "MeaningfulNameForVariablesAnalyzer",
-      "OccurrenceCount": 2,
+      "OccurrenceCount": 6,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -94,10 +94,15 @@
     {
       "Analyzer": "BooleanParameterAnalyzer",
       "OccurrenceCount": 1,
-      "Exceptions": {
-        "ArgumentException": "Syntax node is not within syntax tree\r\n\r\nSource:\r\n"
-      },
-      "SentToServer": false,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "EmptyCatchClauseAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     }
   ]

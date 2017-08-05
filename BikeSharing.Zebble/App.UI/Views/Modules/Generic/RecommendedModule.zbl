@@ -3,7 +3,7 @@
   <ScrollView  ShowHorizontalScrollBars="true" ShowScroll="true" Direction="Horizontal" >
     <ListView z-of="Suggestion, Row" Id="List" EmptyText="Empty list" DataSource="@Items" Direction="Horizontal"   >
       <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Suggestion]" Style.Height="100%">
-        <Stack Id ="rowStack" BackgroundImagePath="@Item.ImagePath" Direction="Vertical">
+        <Stack BackgroundImagePath="@Item.ImagePath" BackgroundImageStretch="AspectFill" Direction="Vertical" on-Tapped="RowTapped">
           <Stack >
             <Stack >
               <TextView Text="Ride In" CssClass="titleRow"  />

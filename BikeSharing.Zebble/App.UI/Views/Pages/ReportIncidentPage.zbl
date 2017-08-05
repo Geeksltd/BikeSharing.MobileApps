@@ -2,7 +2,7 @@
 <z-Component z-type="ReportIncidentPage" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="Report" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Stack Id="BotButtonStack">
-      <IconButton Id="BotButton" IconLocation="Left" IconPath="Images/report_open_bot.png"  Text="Customer service"  AutoFlash="true" on-Tapped="OpenBot"/>
+      <IconButton IconLocation="Left" IconPath="Images/report_open_bot.png"  Text="Customer service"  AutoFlash="true" on-Tapped="OpenBot"/>
     </Stack>
     <Stack Direction="Horizontal" Id="IncidentSelectorStack">
       <Stack >

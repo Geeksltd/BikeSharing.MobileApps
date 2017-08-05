@@ -12,9 +12,6 @@ namespace Domain.Services
     public class OpenWeatherMapService : BaseApi
     {
         private const int OkResponseCode = 200;
-        private readonly string openWeatherMapEndpoint = "http://api.openweathermap.org/";
-
-        public string OpenWeatherMapEndpoint => openWeatherMapEndpoint;
 
         public async Task<WeatherInfo> GetWeatherInfoAsync()
         {
@@ -25,7 +22,7 @@ namespace Domain.Services
                 var latitude = location.Latitude;
                 var longitude = location.Longitude;
 
-                var builder = new UriBuilder(string.Format("{0}data/2.5/weather", OpenWeatherMapEndpoint))
+                var builder = new UriBuilder(string.Format("{0}data/2.5/weather", GlobalSettings.OpenWeatherMapEndpoint))
                 {
                     Query = $"lat={latitude}&lon={longitude}&units=imperial&appid={GlobalSettings.OpenWeatherMapAPIKey}"
                 };
@@ -63,7 +60,7 @@ namespace Domain.Services
             var latitude = geolocation.Latitude.ToString("0.0000", CultureInfo.InvariantCulture);
             var longitude = geolocation.Longitude.ToString("0.0000", CultureInfo.InvariantCulture);
 
-            var builder = new UriBuilder(string.Format("{0}data/2.5/weather", OpenWeatherMapEndpoint))
+            var builder = new UriBuilder(string.Format("{0}data/2.5/weather", GlobalSettings.OpenWeatherMapEndpoint))
             {
                 Query = $"lat={latitude}&lon={longitude}&units=imperial&appid={GlobalSettings.OpenWeatherMapAPIKey}"
             };

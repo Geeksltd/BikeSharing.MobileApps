@@ -38,14 +38,14 @@ HomePage .title {
   background-size: cover;
   height: 25%;
 }
-#WeatherInfoModule #infoDiv {
+#WeatherInfoModule Stack {
   margin: 20px;
   margin-top: 90px;
 }
-#WeatherInfoModule #infoDiv TextView {
+#WeatherInfoModule Stack TextView {
   color: white;
 }
-#WeatherInfoModule #infoDiv #Temp {
+#WeatherInfoModule Stack #Temp {
   font-size: 30px;
 }
 #WeatherInfoModule TextView {
@@ -184,7 +184,7 @@ CustomRidePage #GoButtonStack {
   height: 40px;
   width: 100%;
 }
-CustomRidePage #GoButton {
+CustomRidePage #GoButtonStack Button {
   width: 60px;
   margin-left: calc("view.Parent.ActualWidth - 60");
   padding: 10px;
@@ -318,7 +318,7 @@ ReportIncidentPage #BotButtonStack {
   border-bottom: 1px solid;
   border-color: gray;
 }
-ReportIncidentPage #BotButtonStack #BotButton {
+ReportIncidentPage #BotButtonStack IconButton {
   padding: 10px;
   width: 100%;
   background-color: blue;
@@ -342,7 +342,7 @@ ReportIncidentPage #ReportButtonStack {
   padding: 20px 0px;
   margin-top: 50px;
 }
-ReportIncidentPage #ReportButtonStack #ReportButton {
+ReportIncidentPage #ReportButtonStack Button {
   padding: 10px;
   width: 100%;
   background-color: lightgray;
@@ -379,7 +379,7 @@ LoginPage #signinButtonStack {
   padding: 0px 40px;
   margin-top: 20px;
 }
-LoginPage #signinButtonStack #signinButton {
+LoginPage #signinButtonStack Button {
   width: 100%;
   color: black;
   background-color: blue;

@@ -5,15 +5,14 @@
     <Stack Id="RouteSelector">
       <Stack Id="InnerStack">
         <TextView Text="From"  CssClass="TextView"/>
-        <ItemPicker  Id="FromItemPicker" DataSource=""   />    <!--      <FormField z-of="ItemPicker" Id="ToItemPicker"  Direction="Vertical"   />-->
+        <ItemPicker  Id="FromItemPicker"  />  
         <TextView Text="To"  CssClass="TextView"/>
         <ItemPicker  Id="ToItemPicker"   />
         <Stack Id="GoButtonStack" >
-           <Button Id="GoButton" Text="Go" on-Tapped="GoClicked" AutoFlash="true" />
+           <Button Text="Go" on-Tapped="GoClicked" AutoFlash="true" />
         </Stack>
       </Stack>
     </Stack>
-
     <Stack Id="RouteSelected" Visible="false">
       <Stack Id="FromPS">
         <TextView  Text="From"  />
@@ -26,6 +25,5 @@
         <TextView  Text="Empty bike docks 0 Avilable bikes 7" Id="FromPSText" />
       </Stack>
     </Stack>
-
   </z-place>
 </z-Component>

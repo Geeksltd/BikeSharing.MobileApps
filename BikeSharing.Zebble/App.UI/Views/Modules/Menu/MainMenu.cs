@@ -20,10 +20,9 @@ namespace UI.Modules
         }
 
 
-        async Task logoutButtonTapped()
+        async Task LogoutButtonTapped()
         {
             Settings.LogoutUser();
-
             await Nav.Go<Pages.LoginPage>();
         }
 

@@ -20,8 +20,7 @@
         <TextView Text="@Item.Email" CssClass="title"   Wrap="false"  />
       
         <TextView   Text="Skype" CssClass="label"  />
-        <TextView Text="@Item.Skype" CssClass="title" Wrap="false"   />
-          
+        <TextView Text="@Item.Skype" CssClass="title" Wrap="false"   />          
       </Stack>
     </Stack>
   </z-place>

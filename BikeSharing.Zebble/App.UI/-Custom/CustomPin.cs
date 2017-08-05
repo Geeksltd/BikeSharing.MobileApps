@@ -23,9 +23,6 @@ namespace UI
 
         public AnnotationType Type { get; set; }
 
-        public override string ToString()
-        {
-            return Label;
-        }
+        public override string ToString() => Label;
     }
 }

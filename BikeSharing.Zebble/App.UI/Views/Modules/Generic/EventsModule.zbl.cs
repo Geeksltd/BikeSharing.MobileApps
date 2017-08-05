@@ -2,7 +2,6 @@
 {
     using Domain;
     using System;
-    using System.Collections.Generic;
     using System.Threading.Tasks;
     using UI;
     using UI.Pages;
@@ -10,8 +9,7 @@
 
     partial class EventsModule
     {
-
-        List<Event> Items;
+        Event[] Items;
         public override async Task OnInitializing()
         {
             // var _eventsService = new EventsService();
@@ -22,7 +20,7 @@
 
             string uri = builder.ToString();
 
-            Items = await BaseApi.Get<List<Event>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
+            Items = await BaseApi.Get<Event[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
 
 
             await base.OnInitializing();
@@ -35,7 +33,7 @@
             List.Width.Set(Length.AutoStartegy.Content);
             return base.OnPreRender();
         }
-        Task Refresh(List<Event> items) => WhenShown(() => List.UpdateSource(Items = items));
+        Task Refresh(Event[] items) => WhenShown(() => List.UpdateSource(Items = items));
 
         partial class Row
         {
@@ -49,7 +47,7 @@
 
             public Task RowTapped()
             {
-                Nav.Forward<EventSummaryPage>(new
+                Nav.Go<EventSummaryPage>(new
                 {
                     Id = Item.Id,
                 });

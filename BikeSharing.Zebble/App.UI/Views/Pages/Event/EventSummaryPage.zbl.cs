@@ -5,7 +5,6 @@
 
     partial class EventSummaryPage
     {
-
         public override async Task OnInitializing()
         {
             await base.OnInitializing();

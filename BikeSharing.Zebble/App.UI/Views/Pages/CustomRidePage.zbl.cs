@@ -32,16 +32,14 @@
             RouteSelected.Y.Set(Root.ActualHeight - 230);
             FromItemPicker.SelectionChanged.Handle(FSelectionChanged);
             ToItemPicker.SelectionChanged.Handle(TSelectionChanged);
-            var _ridesService = new RidesService();
-            var _stations = await _ridesService.GetNearestStations();
-            if (_stations != null)
+            if (await new RidesService().GetNearestStations() != null)
             {
                 await MapView.Add(new Map.Annotation
                 {
-                    Title = _stations.FirstOrDefault().Name,
-                    Location = new Zebble.Services.GeoLocation(_stations.FirstOrDefault().Latitude, _stations.FirstOrDefault().Longitude)
+                    Title = (await new RidesService().GetNearestStations()).FirstOrDefault().Name,
+                    Location = new Zebble.Services.GeoLocation((await new RidesService().GetNearestStations()).FirstOrDefault().Latitude, (await new RidesService().GetNearestStations()).FirstOrDefault().Longitude)
                 });
-                InitializePinsFromStations(_stations);
+                InitializePinsFromStations(await new RidesService().GetNearestStations());
                 FromItemPicker.DataSource = CustomPins.ToList();
                 ToItemPicker.DataSource = CustomPins.ToList();
             }
@@ -78,7 +76,6 @@
         }
 
 
-
         private void InitializePinsFromStations(IEnumerable<Station> allStations)
         {
             if (allStations != null)
@@ -101,9 +98,7 @@
                 }
 
                 CustomPins = new ObservableCollection<CustomPin>(tempStations);
-
             }
         }
-
     }
 }

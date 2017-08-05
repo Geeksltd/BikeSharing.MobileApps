@@ -12,8 +12,7 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            var _weatherService = new OpenWeatherMapService();
-            var weather = await _weatherService.GetDemoWeatherInfoAsync();
+            var weather = await new OpenWeatherMapService().GetDemoWeatherInfoAsync();
 
             if (weather is WeatherInfo)
             {

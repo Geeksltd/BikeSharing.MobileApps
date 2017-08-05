@@ -16,8 +16,7 @@ namespace UI.Pages
         private string _title;
         private string _description;
         private bool _isValid;
-        //  private IFeedbackService _feedbackService;
-
+      
         public bool Handlebar
         {
             get
@@ -99,7 +98,6 @@ namespace UI.Pages
             set
             {
                 _title = value;
-
             }
         }
 

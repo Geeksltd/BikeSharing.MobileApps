@@ -2,34 +2,28 @@
 {
     using Domain;
     using Domain.Services;
-    using System;
-    using System.Collections.Generic;
-    using System.Net;
     using System.Threading.Tasks;
     using Zebble;
 
     partial class ReportIncidentPage
     {
-
-
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
         }
 
-
         async Task OpenBot()
         {
-            try
-            {
-                await Device.OS.OpenBrowser(GlobalSettings.SkypeBotAccount);
-            }
-            catch (Exception ex)
-            {
-                Console.Write(ex.Message);
-                await Alert.Show("Error", "Unable to launch Skype.", KeyValuePair.Of("Ok", true));
-            }
+            // try
+            //  {
+            await Device.OS.OpenBrowser(GlobalSettings.SkypeBotAccount);
+            //  }
+            //   catch (Exception ex)
+            //   {
+            //       Console.Write(ex.Message);
+            //       await Alert.Show("Error", "Unable to launch Skype.", KeyValuePair.Of("Ok", true));
+            //   }
         }
 
         async Task HandlebarTapped()
@@ -37,26 +31,16 @@
             SetReportType(ReportedIssueType.Handlebar);
             //   handlebarImageView.Set(x => x.Style.BackgroundColor = "Red"); 
         }
-        async Task ChainTapped()
-        {
-            SetReportType(ReportedIssueType.Chain);
-        }
-        async Task FlatTireTapped()
-        {
-            SetReportType(ReportedIssueType.FlatTire);
-        }
-        async Task ForkTapped()
-        {
-            SetReportType(ReportedIssueType.Fork);
-        }
-        async Task PedalsTapped()
-        {
-            SetReportType(ReportedIssueType.Pedals);
-        }
-        async Task LossTapped()
-        {
-            SetReportType(ReportedIssueType.Stolen);
-        }
+        async Task ChainTapped() => SetReportType(ReportedIssueType.Chain);
+
+        async Task FlatTireTapped() => SetReportType(ReportedIssueType.FlatTire);
+
+        async Task ForkTapped() => SetReportType(ReportedIssueType.Fork);
+
+        async Task PedalsTapped() => SetReportType(ReportedIssueType.Pedals);
+
+        async Task LossTapped() => SetReportType(ReportedIssueType.Stolen);
+
         private void SetReportType(ReportedIssueType type)
         {
             chainImageView.BackgroundImagePath = "Images/ic_report_chain.png";
@@ -107,45 +91,44 @@
         {
             // IsBusy = true;
             FillData();
-            try
+            //try
+            //{
+            IsValid = true;
+
+            bool isValid = Validate();
+
+            if (isValid)
             {
-                IsValid = true;
-
-                bool isValid = Validate();
-
-                if (isValid)
+                var incident = new ReportedIssue
                 {
-                    var incident = new ReportedIssue
-                    {
-                        Type = _reportIncidentType,
-                        Title = Title,
-                        Description = Description
-                    };
+                    Type = _reportIncidentType,
+                    Title = Title,
+                    Description = Description
+                };
 
-                    var _feedbackService = new FeedbackService();
-                    if (await _feedbackService.SendIssueAsync(incident))
-                    {
-                        await Alert.Toast("Received");
-                        ResetData();
-                    }
-                    else
-                        await Alert.Toast("Error on save");
-
+                var _feedbackService = new FeedbackService();
+                if (await _feedbackService.SendIssueAsync(incident))
+                {
+                    await Alert.Toast("Received");
+                    ResetData();
                 }
                 else
-                {
-                    IsValid = false;
-                }
-            }
-            catch (Exception ex) when (ex is WebException)
-            {
-                await Alert.Show("Error", "Communication error");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error reporting incident in: {ex}");
-            }
+                    await Alert.Toast("Error on save");
 
+            }
+            else
+            {
+                IsValid = false;
+            }
+            //}
+            //catch (Exception ex) when (ex is WebException)
+            //{
+            //    await Alert.Show("Error", "Communication error");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Error reporting incident in: {ex}");
+            //}
             // IsBusy = false;
         }
 

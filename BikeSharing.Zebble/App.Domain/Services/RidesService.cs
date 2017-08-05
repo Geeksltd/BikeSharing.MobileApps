@@ -183,7 +183,7 @@ namespace Domain.Services
             try
             {
                 const int count = 10;
-                var builder = new UriBuilder(string.Format("{0}/api/stations/nearto?latitude={{1}}&longitude={{2}}&count={{3}}", GlobalSettings.RidesEndpoint, location.Latitude.ToString(CultureInfo.InvariantCulture), location.Longitude.ToString(CultureInfo.InvariantCulture), count));
+                var builder = new UriBuilder(string.Format("{0}/api/stations/nearto?latitude={1}&longitude={2}&count={3}", GlobalSettings.RidesEndpoint, location.Latitude.ToString(CultureInfo.InvariantCulture), location.Longitude.ToString(CultureInfo.InvariantCulture), count));
 
                 string uri = builder.ToString();
 

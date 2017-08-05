@@ -8,7 +8,6 @@ namespace UI.Pages
         {
             await base.OnInitializing();
             await InitializeComponents();
-
         }
     }
 }

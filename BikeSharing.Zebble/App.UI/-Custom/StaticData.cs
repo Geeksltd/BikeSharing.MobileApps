@@ -7,7 +7,7 @@ namespace UI
     {
         public static List<Suggestion> GetSuggestions()
         {
-            var suggestions = new List<Suggestion>()
+            return new List<Suggestion>
             {
                 new Suggestion
                 {
@@ -34,8 +34,6 @@ namespace UI
                     Longitude = -122.8429737f
                 }
             };
-
-            return suggestions;
         }
     }
 }

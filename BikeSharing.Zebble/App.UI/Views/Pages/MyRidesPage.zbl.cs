@@ -2,7 +2,6 @@
 {
     using Domain;
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using UI;
@@ -11,14 +10,13 @@
 
     partial class MyRidesPage
     {
-        public List<Ride> Items;
+        public Ride[] Items;
         public override async Task OnInitializing()
         {
-
             UriBuilder builder = new UriBuilder(GlobalSettings.RidesEndpoint);
-            builder.Path = $"api/rides/user/1";
+            builder.Path = $"api/rides/user/" + Settings.UserId.ToString();
             string uri = builder.ToString();
-            Items = await BaseApi.Get<List<Ride>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
+            Items = await BaseApi.Get<Ride[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
 
             await base.OnInitializing();
             await InitializeComponents();
@@ -47,9 +45,7 @@
 
         }
 
-        Task Refresh(List<Ride> items) => WhenShown(() => List.UpdateSource(Items = items));
-
-
+        Task Refresh(Ride[] items) => WhenShown(() => List.UpdateSource(Items = items));
 
         partial class Row
         {
@@ -59,29 +55,27 @@
             {
                 await base.OnInitializing();
                 await InitializeComponents();
-
             }
 
             public async Task RowTapped()
             {
+                Module.MapView.ZoomLevel--;
+                Module.MapView.Annotations.Clear();
 
-                //Module.MapView.ZoomLevel--;
-                //Module.MapView.Annotations.Clear();
+                await Module.MapView.Add(new Map.Annotation
+                {
+                    Title = Item.From,
+                    Location = new Zebble.Services.GeoLocation(Item.FromStation.Latitude, Item.FromStation.Longitude)
+                });
+                await Module.MapView.Add(new Map.Annotation
+                {
+                    Title = Item.To,
+                    Location = new Zebble.Services.GeoLocation(Item.ToStation.Latitude, Item.ToStation.Longitude)
+                });
 
-                //await Module.MapView.Add(new Map.Annotation
-                //{
-                //    Title = Item.From,
-                //    Location = new Zebble.Services.GeoLocation(Item.FromStation.Latitude, Item.FromStation.Longitude)
-                //});
-                //await Module.MapView.Add(new Map.Annotation
-                //{
-                //    Title = Item.To,
-                //    Location = new Zebble.Services.GeoLocation(Item.ToStation.Latitude, Item.ToStation.Longitude)
-                //});
-
-                //await Task.Delay(500);
-                //Module.MapView.ZoomLevel ++;
-                //Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) /2),(( Item.ToStation.Longitude + Item.FromStation.Longitude)/2));
+                await Task.Delay(500);
+                Module.MapView.ZoomLevel++;
+                Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
 
                 Module.fromSNSelectedRowTextView.Text = Item.From;
                 Module.toSNSelectedRowTextView.Text = Item.To;
