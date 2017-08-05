@@ -1,11 +1,8 @@
-﻿using Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Domain
 {
-    public class Ride 
+    public class Ride
     {
         private bool _isSelected;
 
@@ -43,7 +40,7 @@ namespace Domain
             set
             {
                 _isSelected = value;
-             //   RaisePropertyChanged(() => IsSelected);
+                //   RaisePropertyChanged(() => IsSelected);
             }
         }
     }

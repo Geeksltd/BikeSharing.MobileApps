@@ -1,7 +1,5 @@
 ﻿using Domain.Entities;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using UI;
 using Zebble;
@@ -12,15 +10,10 @@ namespace Domain.Services
     {
         public Task<UserProfile> GetCurrentProfileAsync()
         {
-            var _authenticationService = new AuthenticationService();
-            var userId = _authenticationService.GetCurrentUserId();
-
-            var builder = new UriBuilder(GlobalSettings.AuthenticationEndpoint);
-            builder.Path = $"api/Profiles/{userId}";
-
+            var userId = new AuthenticationService().GetCurrentUserId();
+            var builder = new UriBuilder(string.Format("{0}api/Profiles/{1}", GlobalSettings.AuthenticationEndpoint, userId));
             var uri = builder.ToString();
-
-            var result=  Api.Get<UserProfile>(uri);
+            var result = BaseApi.Get<UserProfile>(uri);
             if (result.Result != null)
             {
                 //   result.Result.PhotoUrl = string.IsNullOrEmpty(result.Result.PhotoUrl) ? "Images/profile_placeholder.png" : result.Result.PhotoUrl;
@@ -32,20 +25,14 @@ namespace Domain.Services
 
         public Task<UserAndProfileModel> SignUp(UserAndProfileModel profile)
         {
-            var builder = new UriBuilder(GlobalSettings.AuthenticationEndpoint);
-            builder.Path = $"api/Profiles/";
+            var builder = new UriBuilder(string.Format("{0}api/Profiles/", GlobalSettings.AuthenticationEndpoint));
             var uri = builder.ToString();
-
-            return Api.Post<UserAndProfileModel>(uri, profile);
+            return BaseApi.Post<UserAndProfileModel>(uri, profile);
         }
 
-        public async Task UploadUserImageAsync(UserProfile profile, string imageAsBase64)
+        public async Task UploadUserImageAsync(string imageAsBase64, UserProfile profile)
         {
-            var _authenticationService = new AuthenticationService();
-            var userId = _authenticationService.GetCurrentUserId();
-
-            var builder = new UriBuilder(GlobalSettings.AuthenticationEndpoint);
-            builder.Path = $"api/Profiles/image/{userId}";
+            var builder = new UriBuilder(string.Format("{0}api/Profiles/image/{1}", GlobalSettings.AuthenticationEndpoint, profile.UserId));
             var uri = builder.ToString();
 
             var imageModel = new ImageModel
@@ -53,7 +40,7 @@ namespace Domain.Services
                 Data = imageAsBase64
             };
 
-            await Api.Put(uri, imageModel);
+            await BaseApi.Put(uri, imageModel);
             //await CacheHelper.RemoveFromCache(profile.PhotoUrl);
         }
     }

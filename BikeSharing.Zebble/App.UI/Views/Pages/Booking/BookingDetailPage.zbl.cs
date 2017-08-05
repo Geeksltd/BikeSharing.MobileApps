@@ -1,20 +1,15 @@
 ﻿namespace UI.Pages
 {
+    using Domain.Entities;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
     using Zebble;
-     
-    using Domain;
-    using System.Threading;
-    using Domain.Entities;
 
     partial class BookingDetailPage
     {
-        Timer timer ;
-        Booking book ;
+        Timer timer;
+        Booking book;
         bool isFirst = true;
         DateTime dueDate = DateTime.Now;
         public override async Task OnInitializing()

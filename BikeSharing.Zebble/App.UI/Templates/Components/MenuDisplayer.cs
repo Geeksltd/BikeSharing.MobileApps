@@ -1,6 +1,5 @@
 ﻿namespace UI.Templates
 {
-    using System.Threading.Tasks;
     using Modules;
     using Zebble;
 

@@ -1,15 +1,9 @@
 ﻿namespace UI.Pages
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
+    using System.Text.RegularExpressions;
     using System.Threading.Tasks;
     using Zebble;
-     
-    using Domain;
-    using Domain.Entities;
-    using System.Text.RegularExpressions;
 
     partial class AccountPage
     {
@@ -25,7 +19,7 @@
             set
             {
                 _email = value;
-              
+
             }
         }
 
@@ -38,7 +32,7 @@
             set
             {
                 _skype = value;
-               
+
             }
         }
         public override async Task OnInitializing()
@@ -46,9 +40,16 @@
             await base.OnInitializing();
             await InitializeComponents();
             foregroundStack.Y.Set(10);
-           // bikeImageView.Y.Set(200);
+
+
+            await sunBox.Animate(new Animation
+            {
+                Duration = 100000.Milliseconds(),
+                Change = () => sunBox.Rotation(360),
+                Repeats = 60
+            });
         }
-     
+
         public SignUpPage signupPage => FindParent<SignUpPage>();
 
         async Task NextButtonTapped()
@@ -61,10 +62,6 @@
             }
             else
                 await Alert.Toast("Email is incorrect");
-        }
-        async Task CloseButtonTapped()
-        {
-            await Nav.Go<LoginPage>();
         }
 
         async Task TextChanged()

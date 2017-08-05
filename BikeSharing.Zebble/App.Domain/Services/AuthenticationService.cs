@@ -1,18 +1,16 @@
 ﻿using Domain.Entities;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using UI;
 using Zebble;
 
 namespace Domain.Services
 {
-    public class AuthenticationService : Api
+    public class AuthenticationService : BaseApi
     {
         public bool IsAuthenticated => Settings.AccessToken.HasValue();
 
-      
+
         public async Task<bool> LoginAsync(string userName, string password)
         {
             var auth = new AuthenticationRequest
@@ -25,7 +23,7 @@ namespace Domain.Services
             var builder = new UriBuilder(string.Format("{0}{1}", GlobalSettings.AuthenticationEndpoint, "api/login"));
             string uri = builder.ToString();
 
-            var authenticationInfo = await Api.Post<AuthenticationResponse>(uri, auth);
+            var authenticationInfo = await BaseApi.Post<AuthenticationResponse>(uri, auth);
             Settings.UserId = authenticationInfo.UserId;
             Settings.ProfileId = authenticationInfo.ProfileId;
             Settings.AccessToken = authenticationInfo.AccessToken;

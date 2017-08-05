@@ -4,13 +4,13 @@
     <Map Id="MapView" />   
     <Stack Id="MainStack">
         <TextView  Text="From"  />
-        <TextView Id="fromText" CssClass="title" />
+        <TextView Text="@From.Label" CssClass="title" />
         <TextView Text="To" />
-        <TextView Id="toText" CssClass="title" />
+        <TextView Text="@To.Label" CssClass="title" />
         <TextView Id="DateText" CssClass="date" />
-        <TextView Id="CityText" CssClass="city" />
-        <Button Id="BookButton" Text="Book a bike" on-Tapped="BookClicked" AutoFlash="true" />
-        <TextView Id="AvilableText" CssClass="small" Text="Avilable for 30 minutes" />
+        <TextView Text="@GlobalSettings.City" CssClass="city" />
+        <Button Text="Book a bike" on-Tapped="BookClicked" AutoFlash="true" />
+        <TextView CssClass="small" Text="Avilable for 30 minutes" />
       </Stack>
   </z-place>
 </z-Component>

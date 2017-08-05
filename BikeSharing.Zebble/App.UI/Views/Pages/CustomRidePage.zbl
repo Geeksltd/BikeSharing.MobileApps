@@ -3,13 +3,14 @@
   <z-place inside="Body">
     <Map Id="MapView"/> 
     <Stack Id="RouteSelector">
-      <Stack Id="MainStack">
+      <Stack Id="InnerStack">
         <TextView Text="From"  CssClass="TextView"/>
         <ItemPicker  Id="FromItemPicker" DataSource=""   />    <!--      <FormField z-of="ItemPicker" Id="ToItemPicker"  Direction="Vertical"   />-->
         <TextView Text="To"  CssClass="TextView"/>
         <ItemPicker  Id="ToItemPicker"   />
-        
-        <Button Id="GoButton" Text="Go" on-Tapped="GoClicked" AutoFlash="true" />
+        <Stack Id="GoButtonStack" >
+           <Button Id="GoButton" Text="Go" on-Tapped="GoClicked" AutoFlash="true" />
+        </Stack>
       </Stack>
     </Stack>
 

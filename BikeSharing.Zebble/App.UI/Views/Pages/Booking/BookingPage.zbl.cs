@@ -1,15 +1,11 @@
 ﻿namespace UI.Pages
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;   
-    using Domain;
-    using UI;
     using Domain.Entities;
     using Domain.Services;
+    using System;
+    using System.Threading.Tasks;
+    using UI;
+    using Zebble;
     using Zebble.Plugin;
 
     partial class BookingPage
@@ -19,17 +15,14 @@
         bool IsBusy = false;
         public override async Task OnInitializing()
         {
+            From = Nav.Param<CustomPin>("from");
+            To = Nav.Param<CustomPin>("to");
+
             await base.OnInitializing();
             await InitializeComponents();
             MainStack.Y.Set((float)0);
-
-             From = Nav.Param<CustomPin>("from");
-             To = Nav.Param<CustomPin>("to");
-
-            fromText.Text = From.Label;
-            toText.Text = To.Label;
             DateText.Text = DateTime.Now.ToString("dddd, MMMM dd");
-            CityText.Text = GlobalSettings.City;
+
             await MapView.Add(new Map.Annotation
             {
                 Title = From.Label,
@@ -57,13 +50,13 @@
                     var FromStation = await _ridesService.GetStation(From.Id);
                     var ToStation = await _ridesService.GetStation(To.Id);
                     Booking booking = await _ridesService.RequestBikeBooking(FromStation, ToStation);
-                   
+
                     await Nav.Forward<BookingDetailPage>(new { ShowThanks = true, Booking = booking });
                 }
                 catch (Exception ex)
                 {
                     Console.Write(ex.Message);
-                   await Alert.Show("No bike available", "We are sorry, there are no bikes in origin station");
+                    await Alert.Show("No bike available", "We are sorry, there are no bikes in origin station");
                 }
                 IsBusy = false;
             }

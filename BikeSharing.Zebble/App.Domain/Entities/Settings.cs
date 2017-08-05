@@ -1,28 +1,23 @@
 ﻿namespace Domain
 {
     using Domain.Entities;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Xml.Serialization;
     using Zebble;
-  
-  
+
+
     public partial class Settings
     {
         /* -------------------------- Fields -------------------------*/
 
-        private static  int UserIdKey = 1;
+        private static int UserIdKey = 1;
 
-      
-        private static  int ProfileIdKey = 1;
 
-    
-        private static  string AccessTokenKey = string.Empty;
+        private static int ProfileIdKey = 1;
 
-      
-        private static  int CurrentBookingIdKey = 1;
+
+        private static string AccessTokenKey = string.Empty;
+
+
+        private static int CurrentBookingIdKey = 1;
 
         private static UserProfile _userProfile = null;
 
@@ -49,7 +44,7 @@
             }
             set
             {
-                ProfileIdKey= value;
+                ProfileIdKey = value;
             }
         }
         public static string AccessToken
@@ -60,7 +55,7 @@
             }
             set
             {
-                AccessTokenKey= value;
+                AccessTokenKey = value;
             }
         }
 
@@ -68,7 +63,7 @@
         {
             get
             {
-                return  CurrentBookingIdKey;
+                return CurrentBookingIdKey;
             }
             set
             {
@@ -76,9 +71,9 @@
             }
         }
 
-  
 
-     
+
+
         #region UserId Property
 
         public static int UserId
@@ -108,7 +103,7 @@
             return this.Name;
         }
 
-      
+
         public static void RemoveUserId()
         {
             UserId = 0;

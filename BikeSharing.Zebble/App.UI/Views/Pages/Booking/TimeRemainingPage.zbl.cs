@@ -1,16 +1,12 @@
 ﻿namespace UI.Pages
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;
-     
-    using Domain;
-    using System.Threading;
     using Domain.Entities;
     using Domain.Services;
+    using System;
+    using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Zebble;
 
     partial class TimeRemainingPage
     {
@@ -29,7 +25,7 @@
                 if (_rides != null)
                 {
                     var ride = _rides.Where(rec => rec.Start > DateTime.Now).OrderBy(rec => rec.Start).FirstOrDefault();
-                    if(ride != null)
+                    if (ride != null)
                     {
                         book = new Booking();
                         book.BikeId = ride.BikeId;
@@ -39,7 +35,7 @@
                         book.Id = ride.Id;
                         book.RegistrationDate = ride.Start;
                         book.RideType = ride.RideType;
-                        book.ToStation = ride.ToStation;                       
+                        book.ToStation = ride.ToStation;
                     }
                 }
             }
@@ -58,13 +54,13 @@
 
         private void CounterFunc(object state)
         {
-            TimeSpan tp = new TimeSpan(0, 0, 1);
-            timeSpanCounter= timeSpanCounter.Subtract(tp);
-          
+            var tp = new TimeSpan(0, 0, 1);
+            timeSpanCounter = timeSpanCounter.Subtract(tp);
+
             if (timeSpanCounter.TotalSeconds >= 0)
             {
                 timerText.Text = timeSpanCounter.ToString("m\\:ss");
-            } 
+            }
             else
                 timer.Dispose();
 

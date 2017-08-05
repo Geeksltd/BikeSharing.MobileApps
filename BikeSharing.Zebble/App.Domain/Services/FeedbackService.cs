@@ -1,11 +1,9 @@
 ﻿using Domain.Entities;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using UI;
 using Zebble;
- 
+
 
 namespace Domain.Services
 {
@@ -16,11 +14,11 @@ namespace Domain.Services
             await AddUserAndBikeIdsToIssue(issue);
             await AddLocationToIssue(issue);
 
-            UriBuilder builder = new UriBuilder(GlobalSettings.IssuesEndpoint);
-            builder.Path = "api/Issues";
+            var builder = new UriBuilder(string.Format("{0}api/Issues", GlobalSettings.IssuesEndpoint));
+
 
             string uri = builder.ToString();
-            if (await Api.Post(uri, issue))
+            if (await BaseApi.Post(uri, issue))
                 return true;
             return false;
         }
@@ -36,8 +34,7 @@ namespace Domain.Services
             {
                 throw new InvalidOperationException("CurrentBookingId is not saved");
             }
-            var _ridesService = new RidesService();
-            Booking currentBooking = await _ridesService.GetBooking(Settings.CurrentBookingId);
+            var currentBooking = await new RidesService().GetBooking(Settings.CurrentBookingId);
 
             issue.BikeId = currentBooking.BikeId;
             issue.UserId = Settings.UserId;
@@ -45,7 +42,6 @@ namespace Domain.Services
 
         private async Task AddLocationToIssue(ReportedIssue issue)
         {
-
             var location = await Device.Location.GetCurrentPosition();
 
             if (location != null)

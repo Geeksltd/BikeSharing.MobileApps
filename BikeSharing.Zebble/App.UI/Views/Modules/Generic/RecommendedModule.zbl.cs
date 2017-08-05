@@ -1,32 +1,27 @@
 ﻿namespace UI.Modules
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;
-     
     using Domain;
     using Domain.Services;
-    using Domain.Entities;
-    using System.Collections.ObjectModel;
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
     using UI.Pages;
+    using Zebble;
 
     partial class RecommendedModule
     {
         Suggestion[] Items;
         public override async Task OnInitializing()
         {
-             var _ridesService = new RidesService();
-             var rides = await _ridesService.GetSuggestions();
-             Items = rides.ToArray();
+            var _ridesService = new RidesService();
+            var rides = await _ridesService.GetSuggestions();
+            Items = rides.ToArray();
 
-      
+
             await base.OnInitializing();
             await InitializeComponents();
 
-        
+
         }
 
         //  Task Refresh(Suggestion[] items) => WhenShown(() => List.UpdateSource(Items = items));

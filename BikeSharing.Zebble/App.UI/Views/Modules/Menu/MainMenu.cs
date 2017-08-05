@@ -1,23 +1,18 @@
 namespace UI.Modules
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Domain;
-    using Zebble;
     using Domain.Services;
+    using System.Threading.Tasks;
+    using UI.Pages;
+    using Zebble;
 
     partial class MainMenu
     {
 
         public override async Task OnInitializing()
         {
-            var _profileService = new ProfileService();
-            var x = await _profileService.GetCurrentProfileAsync();
-           
-           
+            if (await new ProfileService().GetCurrentProfileAsync() == null)
+                await Nav.Go<LoginPage>();
 
             await base.OnInitializing();
             await InitializeComponents();

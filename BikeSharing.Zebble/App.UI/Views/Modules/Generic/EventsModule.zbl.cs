@@ -1,22 +1,17 @@
 ﻿namespace UI.Modules
 {
+    using Domain;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
-    using Zebble;
-     
-    using Domain;
-    using Domain.Services;
-    using Domain.Entities;
-    using UI.Pages;
     using UI;
+    using UI.Pages;
+    using Zebble;
 
     partial class EventsModule
     {
 
-        List< Event> Items;
+        List<Event> Items;
         public override async Task OnInitializing()
         {
             // var _eventsService = new EventsService();
@@ -27,12 +22,12 @@
 
             string uri = builder.ToString();
 
-            Items = await Api.Get<List<Event>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
-        
+            Items = await BaseApi.Get<List<Event>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
+
 
             await base.OnInitializing();
             await InitializeComponents();
-          
+
         }
 
         public override Task OnPreRender()
@@ -40,7 +35,7 @@
             List.Width.Set(Length.AutoStartegy.Content);
             return base.OnPreRender();
         }
-       Task Refresh(List<Event> items) => WhenShown(() => List.UpdateSource(Items = items));
+        Task Refresh(List<Event> items) => WhenShown(() => List.UpdateSource(Items = items));
 
         partial class Row
         {

@@ -87,61 +87,17 @@ MyRidesPage{
 
 CustomRidePage {
      .form-pages();
-
-        #RouteSelector {
-            height: 250px;
-            width: 90%;
-            background-color: white;
-            opacity: 0.4;
-            margin: 20px;
+        #RouteSelector {  height: 220px;  width: 90%; background-color: white;  opacity: 0.4;  margin: 20px;    }
+        #InnerStack { margin: 20px; padding: 10px; background-color: white; height: 85%; opacity: 1;  }
+        #GoButtonStack{ margin-top: 20px; background-color: gainsboro; height:40px; width:100%;}
+        #GoButton { width: 60px;  margin-left: calc("view.Parent.ActualWidth - 60");  padding: 10px;   background-color: blue; color: white;   }
+        #RouteSelected { 
+            height: 180px; width: 90%; background-color: gray; opacity: 0.4; padding: 20px; margin: 20px;
+            TextView {  color: white; font-size: 12px;  }
+            .title {  font-size: 16px; }
         }
-
-        #MainStack {
-            margin: 20px;
-            padding: 10px;
-            background-color: white;
-            height: 85%;
-            opacity: 1;
-        }
-
-        #GoButton {
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            background-color: blue;
-            color: white;
-        }
-
-        #RouteSelected {
-            height: 180px;
-            width: 90%;
-            background-color: gray;
-            opacity: 0.4;
-            padding: 20px;
-            margin: 20px;
-
-            TextView {
-                color: white;
-                font-size: 12px;
-            }
-
-            .title {
-                font-size: 16px;
-            }
-        }
-
-        #FromPS {
-            background-color: blue;
-            padding: 10px;
-            visibility: hidden;
-        }
-
-        #ToPS {
-            background-color: orangered;
-            padding: 10px;
-            visibility: hidden;
-            margin-top: 10px;
-        }    
+        #FromPS { background-color: blue; padding: 10px; visibility: hidden;  }
+        #ToPS {  background-color: orangered; padding: 10px; visibility: hidden; margin-top: 10px; }    
 }
 
 BookingPage {
@@ -208,7 +164,7 @@ LoginPage {
     #detailStack { height: calc("(view.Parent.Parent.ActualHeight - 75)"); }
     #NextButtonStack {height:60px;  background-size: contain;}
     #nextButton {  padding: 10px 0px; height:50px; width:50px; margin-top:10px;  margin-left: calc("view.Parent.ActualWidth - 50"); }
-    #closeButton{ width:10px; padding:0px; height:10px;}
+    #closeButton{ width:10px; padding:0px; height:10px; background: url('Images/SignUp/ic_close.png');}
     #backgroundStack{ height:100%; }
 
 }
@@ -222,20 +178,42 @@ ProfilePage  {
     .title{font-size:20px; margin:10px; color:black; }
 }
 
-AccountPage{   #nextButton1 {   padding: 10px 0px; height:50px; width:50px; margin-top:10px;  margin-left: calc("view.Parent.ActualWidth - 130 "); }}
+AccountPage{   #nextButton1 {   padding: 10px 0px; height:50px; width:50px; margin-top:10px;  margin-left: calc("view.Parent.ActualWidth - 130 "); }
+               #sunBox{ margin-left:20px; width:60px; height:60px; background: url('Images/SignUp/signup_sun.png')}
+               #bikeImageView{ width:80px; height:50px;}
+               #sunBoxStack{ padding:60px; height:40%;}
+               #buildingImageView{ height:100%; background: url("Images/SignUp/signup_buildings_2.png"); }
+               #fenceImageView{ height:8%; background:url('Images/SignUp/fence.png'); }
+}
 GenderPage {
     #mainStack {      
         #womanImageView { width: 100%; height: 80px; margin-left: 80px; }
         #manImageView {  width: 100%;  height: 80px; margin-left: 10px;  }
         #nextButton {   margin-left: calc("view.Parent.ActualWidth - 110 "); }
+        #cloudBox{ margin-left:40px; width:40px;  height:40px;   background: url('Images/SignUp/signup_cloud_1.png');}
+        #cloudBoxStack{padding:10px; height:20%;}
+        #skipTextView{ font-weight:bold; font-size:20px; width:60px;  margin-top:10px;}
     }
 }
 
 SubscriptionPage {
-    ImageView {  width: 100%; height: 50px; margin-left: 20px;  margin-top:30px; }
+    ImageView {  width: 100%; height: 75px; margin-left: 20px;  margin-top:10px; }
+    #skyBoxStack{ padding:10px; height:30%;}
+    #cloudBox{ margin-left:50px; width:40px;  height:40px; background: url('Images/SignUp/signup_cloud_1.png');}
+    #sunBox{ margin-left:70px; margin-top:30px; width:60px; height:60px; background: url('Images/SignUp/signup_sun.png')}
+
 }
 
-.slide-show{ height : 100%;}
+UserPage {
+    #designStack{ height:22%; padding-top:10px; }
+    #fenceImageView{ height:8%; background:url('Images/SignUp/fence.png'); }
+    #bikeImageView{ height:40px;  background:url('Images/SignUp/bike.png'); margin-top:20px; margin-left: calc("view.Parent.ActualWidth - 140");}
+    #signupTreesImageView{ height:60px; background:url('Images/SignUp/signup_trees.png');}
+}
+
+.slide-show {
+    height: 100%;
+}
 
 SignUpPage {
    height:100%;
@@ -260,4 +238,10 @@ EventSummaryPage {
         #toText{ font-size:20px; color : red;}
         .splitor {  border-bottom: 1px solid; margin:10px; margin-left:0px;}
     }    
+}
+
+IdentityPage {
+    #leftCloudBox{margin-left:10px;  width:60px;  height:60px;  background: url("Images/SignUp/signup_cloud_2.png"); }
+    #RightCloudBox{margin-top:-10px; margin-left:100px; width:40px;  height:40px;   background: url("Images/SignUp/signup_cloud_1.png"); }
+    #padlockImageView{margin-top:-20px; margin-left:40px; width:80px; height:80px; background: url("Images/SignUp/signup_padlock.png"); }
 }

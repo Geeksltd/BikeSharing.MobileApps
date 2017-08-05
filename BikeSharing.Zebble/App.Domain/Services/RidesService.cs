@@ -1,27 +1,22 @@
 ﻿using Domain.Entities;
-using Domain;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using UI;
-
 using Zebble;
 
 namespace Domain.Services
 {
-    class RidesService : Api
+    class RidesService : BaseApi
     {
-        // private readonly IRequestProvider _requestProvider;
-        // private readonly IAuthenticationService _authenticationService;
 
         private static List<Suggestion> suggestions = StaticData.GetSuggestions();
 
         private static int StationsCounter = 0;
 
-        private static List<Station> stations = new List<Station>
+        private static Station[] stations = new Station[]
         {
             new Station
             {
@@ -60,10 +55,10 @@ namespace Domain.Services
                 Stop = DateTime.Now.AddDays(-7),
                 Duration = 3600,
                 Distance = 19,
-                From = stations[0].Name,
-                FromStation = stations[0],
-                To = stations[2].Name,
-                ToStation = stations[2]
+                From = Stations[0].Name,
+                FromStation = Stations[0],
+                To = Stations[2].Name,
+                ToStation = Stations[2]
             },
             new Ride
             {
@@ -72,10 +67,10 @@ namespace Domain.Services
                 Stop = DateTime.Now.AddDays(-14),
                 Duration = 2500,
                 Distance = 8900,
-                From = stations[1].Name,
-                FromStation = stations[1],
-                To = stations[0].Name,
-                ToStation = stations[0]
+                From = Stations[1].Name,
+                FromStation = Stations[1],
+                To = Stations[0].Name,
+                ToStation = Stations[0]
             },
             new Ride
             {
@@ -84,19 +79,17 @@ namespace Domain.Services
                 Stop = DateTime.Now.AddDays(-14),
                 Duration = 1800,
                 Distance = 10100,
-                From = stations[2].Name,
-                FromStation = stations[2],
-                To = stations[1].Name,
-                ToStation = stations[1]
+                From = Stations[2].Name,
+                FromStation = Stations[2],
+                To = Stations[1].Name,
+                ToStation = Stations[1]
             }
         };
 
-        //public RidesService(IRequestProvider requestProvider, IAuthenticationService authenticationService)
-        //{
-        //    _requestProvider = requestProvider;
-        //    _authenticationService = authenticationService;
-        //}
-
+        public static List<Suggestion> Suggestions { get => Suggestions1; set => Suggestions1 = value; }
+        public static List<Suggestion> Suggestions1 { get => suggestions; set => suggestions = value; }
+        public static Station[] Stations { get => stations; set => stations = value; }
+        public static List<Ride> Rides { get => rides; set => rides = value; }
         public Task<Booking> RequestBikeBooking(Station station, Event @event)
         {
             return BikeBooking(station, RideType.Event, @event.Id);
@@ -120,7 +113,7 @@ namespace Domain.Services
             {
                 Id = 222,
                 FromStation = station,
-                ToStation = stations[0],
+                ToStation = Stations[0],
                 RegistrationDate = DateTime.UtcNow,
                 DueDate = DateTime.UtcNow.AddMinutes(3),
                 EventId = id,
@@ -137,24 +130,23 @@ namespace Domain.Services
         {
             await Task.Delay(500);
 
-            var booking = new Booking
+
+            return new Booking
             {
                 Id = bookingId,
-                FromStation = stations[0],
-                ToStation = stations[1],
+                FromStation = Stations[0],
+                ToStation = Stations[1],
                 RegistrationDate = DateTime.UtcNow,
                 DueDate = DateTime.UtcNow.AddMinutes(3),
                 EventId = 1,
                 BikeId = 2332,
                 RideType = RideType.Event
             };
-
-            return booking;
         }
 
         public Task<Station> GetNearestStationTo(GeoLocation location)
         {
-            var station = stations[StationsCounter++ % stations.Count()];
+            var station = Stations[StationsCounter++ % Stations.Count()];
 
             return Task.FromResult(station);
         }
@@ -163,22 +155,15 @@ namespace Domain.Services
         {
             await Task.Delay(200);
 
-            return suggestions;
+            return Suggestions;
         }
 
-        public async Task<IEnumerable<Ride>> GetUserRides()
+        public async Task<Ride[]> GetUserRides()
         {
-            var _authenticationService = new AuthenticationService();
-            var userId =  _authenticationService.GetCurrentUserId();
-
-            UriBuilder builder = new UriBuilder(GlobalSettings.RidesEndpoint);
-            builder.Path = $"api/rides/user/{userId}";
-
+            var userId = new AuthenticationService().GetCurrentUserId();
+            var builder = new UriBuilder(string.Format("{0}api/rides/user/{1}", GlobalSettings.RidesEndpoint, userId));
             string uri = builder.ToString();
-
-            IEnumerable<Ride> rides = await Api.Get<List<Ride>>(uri, cacheChoice: Zebble.ApiResponseCache.Refuse);
-
-            return rides;
+            return await BaseApi.Get<Ride[]>(uri, cacheChoice: Zebble.ApiResponseCache.Refuse);
         }
 
         public void RemoveCurrentBooking()
@@ -190,29 +175,25 @@ namespace Domain.Services
         {
             await Task.Delay(200);
 
-            return stations;
+            return Stations;
         }
 
-        public async Task<IEnumerable<Station>> GetNearestStationsTo(GeoLocation location)
+        public async Task<Station[]> GetNearestStationsTo(GeoLocation location)
         {
             try
             {
                 const int count = 10;
-              
-                UriBuilder builder = new UriBuilder(GlobalSettings.RidesEndpoint);
-                builder.Path = $"/api/stations/nearto?latitude={location.Latitude.ToString(CultureInfo.InvariantCulture)}&longitude={location.Longitude.ToString(CultureInfo.InvariantCulture)}&count={count}";
+                var builder = new UriBuilder(string.Format("{0}/api/stations/nearto?latitude={{1}}&longitude={{2}}&count={{3}}", GlobalSettings.RidesEndpoint, location.Latitude.ToString(CultureInfo.InvariantCulture), location.Longitude.ToString(CultureInfo.InvariantCulture), count));
 
                 string uri = builder.ToString();
 
-                IEnumerable<Station> stations = await Api.Get<IEnumerable<Station>>(uri);
-
-                return stations;
+                return Stations = await BaseApi.Get<Station[]>(uri);
             }
             catch
             {
                 await Task.Delay(200);
 
-                return stations;
+                return Stations;
             }
         }
 
@@ -220,21 +201,21 @@ namespace Domain.Services
         {
             await Task.Delay(500);
 
-            return stations.FirstOrDefault();
+            return Stations.FirstOrDefault();
         }
 
         public async Task<Station> GetInfoForNearestStationTo(GeoLocation toGeoLocation)
         {
             await Task.Delay(500);
 
-            return stations.FirstOrDefault();
+            return Stations.FirstOrDefault();
         }
 
         public async Task<Station> GetStation(int stationId)
         {
             await Task.Delay(500);
 
-            return stations.FirstOrDefault();
+            return Stations[stationId > 3 ? 0 : stationId];
         }
 
         public Task<Booking> RequestBikeBooking(Station fromStation, Station toStation, Event @event)

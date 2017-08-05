@@ -2,16 +2,102 @@
   "Items": [
     {
       "Analyzer": "StringFormatArgumentsAnalyzer",
-      "OccurrenceCount": 1,
+      "OccurrenceCount": 13,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "LongMethodAnalyzer",
+      "OccurrenceCount": 9,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "UseMaxOrNullInsteadOfMaxOrDefaultWithStructsAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "UseMaxMinInsteadOfWithMaxMinAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "RepeatedExpressionAnalyzer",
       "OccurrenceCount": 3,
       "Exceptions": null,
       "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "UseIsAInsteadOfIsAssignableFromAnalyzer",
+      "OccurrenceCount": 2,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "OrderByWhereLinqAnalyzer",
+      "OccurrenceCount": 5,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "AsyncAwaitMethodAnalyzer",
+      "OccurrenceCount": 468,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "ImmutableMethodsAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "RemoveUnnecessaryBracesAnalyzer",
+      "OccurrenceCount": 2,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "ConstantVariableAnalyzer",
+      "OccurrenceCount": 4,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "MeaningfulNameForVariablesAnalyzer",
+      "OccurrenceCount": 2,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "UseStringCollectionIntersectsAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "BooleanParameterAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": {
+        "ArgumentException": "Syntax node is not within syntax tree\r\n\r\nSource:\r\n"
+      },
+      "SentToServer": false,
       "InstallationName": "DESKTOP-R7QIUKI"
     }
   ]

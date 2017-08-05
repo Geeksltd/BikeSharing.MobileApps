@@ -2,16 +2,17 @@
 <z-Component z-type="AccountPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="mainStack">
     <Stack Id="backgroundStack" >
-      <Stack Style.Padding="60" Style.Height="40%">
-         <ImageView  Path="Images/SignUp/signup_sun.png" Style.Margin.Left="20" Style.Width="70"  />
+      <Stack Id="sunBoxStack" >
+        <Canvas Id="sunBox" />       
       </Stack>
-      <Stack Style.Height="60%">
-        <ImageView Id ="buildingImageView" Style.Height="100%" Path="Images/SignUp/signup_buildings_2.png" />   
+      <Stack Style.Height="52%">
+        <ImageView Id="buildingImageView" />   
       </Stack>
+      <ImageView Id="fenceImageView"/>
     </Stack>
     <Stack Id="foregroundStack">
         <Stack Style.Height="10">
-          <Button  Id="closeButton" BackgroundImagePath="Images/SignUp/ic_close.png" BackgroundImageStretch="Fill"  on-Tapped="CloseButtonTapped"/>
+          <Button  z-nav-go="Pages.LoginPage"/>
         </Stack>
         <Stack Id="detailStack">
           <TextView Text="Email" CssClass="title"   />
@@ -20,7 +21,7 @@
           <TextInput Id="skypeInput" on-UserTextChanged="TextChanged"  />
         </Stack>
         <Stack Id="NextButtonStack" Direction="Horizontal">
-            <ImageView Id="bikeImageView" Style.Width="80" Style.Height="50" Path="Images/SignUp/bike.png" />
+            <ImageView Id="bikeImageView" Path="Images/SignUp/bike.png" />
             <Button  Id="nextButton1" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>          
         </Stack>
       </Stack>

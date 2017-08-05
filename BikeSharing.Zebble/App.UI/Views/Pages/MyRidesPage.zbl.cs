@@ -1,13 +1,12 @@
 ﻿namespace UI.Pages
 {
+    using Domain;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
-    using Zebble;
-    using Domain;
     using UI;
+    using Zebble;
     using Zebble.Plugin;
 
     partial class MyRidesPage
@@ -19,7 +18,7 @@
             UriBuilder builder = new UriBuilder(GlobalSettings.RidesEndpoint);
             builder.Path = $"api/rides/user/1";
             string uri = builder.ToString();
-            Items = await Api.Get<List<Ride>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
+            Items = await BaseApi.Get<List<Ride>>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
 
             await base.OnInitializing();
             await InitializeComponents();
@@ -50,7 +49,7 @@
 
         Task Refresh(List<Ride> items) => WhenShown(() => List.UpdateSource(Items = items));
 
-       
+
 
         partial class Row
         {
@@ -60,12 +59,12 @@
             {
                 await base.OnInitializing();
                 await InitializeComponents();
-                
+
             }
 
             public async Task RowTapped()
             {
-             
+
                 //Module.MapView.ZoomLevel--;
                 //Module.MapView.Annotations.Clear();
 

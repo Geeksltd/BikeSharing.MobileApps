@@ -1,16 +1,12 @@
 ﻿namespace UI.Pages
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;
-     
     using Domain;
     using Domain.Services;
+    using System;
+    using System.Collections.Generic;
     using System.Net;
-    using System.Net.Http;
+    using System.Threading.Tasks;
+    using Zebble;
 
     partial class ReportIncidentPage
     {
@@ -21,7 +17,7 @@
             await base.OnInitializing();
             await InitializeComponents();
         }
-        
+
 
         async Task OpenBot()
         {
@@ -39,7 +35,7 @@
         async Task HandlebarTapped()
         {
             SetReportType(ReportedIssueType.Handlebar);
-         //   handlebarImageView.Set(x => x.Style.BackgroundColor = "Red"); 
+            //   handlebarImageView.Set(x => x.Style.BackgroundColor = "Red"); 
         }
         async Task ChainTapped()
         {
@@ -141,13 +137,13 @@
                     IsValid = false;
                 }
             }
-            catch (Exception ex) when (ex is WebException )
+            catch (Exception ex) when (ex is WebException)
             {
                 await Alert.Show("Error", "Communication error");
             }
             catch (Exception ex)
             {
-                  Console.WriteLine($"Error reporting incident in: {ex}");
+                Console.WriteLine($"Error reporting incident in: {ex}");
             }
 
             // IsBusy = false;

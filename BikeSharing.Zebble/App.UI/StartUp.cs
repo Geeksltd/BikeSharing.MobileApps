@@ -12,7 +12,7 @@
 
             await InstallIfNeeded();
 
-          //  RegisterDataProvider(typeof(AppData.AdoDotNetDataProviderFactory));
+            //  RegisterDataProvider(typeof(AppData.AdoDotNetDataProviderFactory));
 
             CssStyles.LoadAll();
             ImageService.MemoryCacheFolder("Images");
@@ -24,6 +24,6 @@
             LoadFirstPage().RunInParallel();
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.LoginPage());
+        public static Task LoadFirstPage() => Nav.Go(new Pages.HomePage());
     }
 }

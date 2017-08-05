@@ -31,7 +31,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Enums\ReportedIssueType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\RideType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enums\TempUnit.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Api.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\EventsService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\FeedbackService.cs" />

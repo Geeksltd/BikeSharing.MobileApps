@@ -1,7 +1,5 @@
 ﻿using Domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UI.Pages
 {
@@ -18,7 +16,7 @@ namespace UI.Pages
         private string _title;
         private string _description;
         private bool _isValid;
-      //  private IFeedbackService _feedbackService;
+        //  private IFeedbackService _feedbackService;
 
         public bool Handlebar
         {
@@ -28,7 +26,7 @@ namespace UI.Pages
             }
             set
             {
-                _handlebar = value;              
+                _handlebar = value;
             }
         }
 
@@ -40,7 +38,7 @@ namespace UI.Pages
             }
             set
             {
-                _fork = value;               
+                _fork = value;
             }
         }
 
@@ -52,7 +50,7 @@ namespace UI.Pages
             }
             set
             {
-                _pedals = value;              
+                _pedals = value;
             }
         }
 
@@ -64,7 +62,7 @@ namespace UI.Pages
             }
             set
             {
-                _flatTire = value;              
+                _flatTire = value;
             }
         }
 
@@ -88,7 +86,7 @@ namespace UI.Pages
             }
             set
             {
-                _loss = value;            
+                _loss = value;
             }
         }
 
@@ -101,7 +99,7 @@ namespace UI.Pages
             set
             {
                 _title = value;
-              
+
             }
         }
 
@@ -113,7 +111,7 @@ namespace UI.Pages
             }
             set
             {
-                _description = value;               
+                _description = value;
             }
         }
 
@@ -125,7 +123,7 @@ namespace UI.Pages
             }
             set
             {
-                _isValid = value;             
+                _isValid = value;
             }
         }
 

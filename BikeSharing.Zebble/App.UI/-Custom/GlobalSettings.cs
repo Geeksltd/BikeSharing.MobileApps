@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UI
 {
@@ -22,7 +20,7 @@ namespace UI
 
 
         public static string City => "Redmond";
-
+        public static float Temp = 56;
         public static int TenantId = 1;
 
         public static DateTime EventDate = new DateTime(2017, 03, 07);

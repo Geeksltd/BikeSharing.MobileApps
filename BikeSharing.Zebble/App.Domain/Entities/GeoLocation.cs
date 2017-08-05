@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Domain
+﻿namespace Domain
 {
-    public class GeoLocation 
+    public class GeoLocation
     {
-        public GeoLocation( double latitude, double longitude)
+        public GeoLocation(double latitude, double longitude)
         {
             Latitude = latitude;
             Longitude = longitude;

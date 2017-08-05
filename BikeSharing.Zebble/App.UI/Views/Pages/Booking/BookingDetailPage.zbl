@@ -6,8 +6,6 @@
       <TextView Text="Your bike will be available for 30 minutes" />     
       <TextView Text="@book.DueDateString" CssClass="date" />
       <TextView Text="@GlobalSettings.City" CssClass="city" />
-
-
       <Stack Id="bookingStack" Direction="Vertical">
         <Stack>
         <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" TextTransform="Uppercase"/>

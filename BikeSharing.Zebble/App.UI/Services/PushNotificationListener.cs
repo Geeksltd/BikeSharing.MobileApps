@@ -1,10 +1,8 @@
 ﻿namespace UI.Services
 {
-    using System;
     using Domain;
-    using Zebble;
-    using Newtonsoft.Json.Linq;
     using System.Threading.Tasks;
+    using Zebble;
 
     public class PushNotificationListener
     {
@@ -28,7 +26,7 @@
         {
             var userId = "???";
 
-            await Api.Post("v1/authentication/push-notification/register",
+            await BaseApi.Post("v1/authentication/push-notification/register",
                 new
                 {
                     User = userId,
@@ -40,7 +38,7 @@
 
         static async Task OnUnRegistered()
         {
-            await Api.Post("v1/authentication/push-notification/unregister",
+            await BaseApi.Post("v1/authentication/push-notification/unregister",
                 new { InstallationToken = UIRuntime.GetInstallationToken() });
         }
     }

@@ -1,7 +1,5 @@
 ﻿using Domain;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace UI
 {
@@ -36,7 +34,7 @@ namespace UI
                     Longitude = -122.8429737f
                 }
             };
-         
+
             return suggestions;
         }
     }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Domain
 {
@@ -14,7 +12,7 @@ namespace Domain
 
         public DateTime StartTime { get; set; }
 
-        public string StartTimeString { get {  return StartTime.ToString("dddd, MMMM dd"); }  } 
+        public string StartTimeString { get { return StartTime.ToString("dddd, MMMM dd"); } }
 
         public string ExternalId { get; set; }
 

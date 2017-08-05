@@ -1,20 +1,15 @@
 ﻿namespace UI.Pages
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
-    using Zebble;
-     
-  
+
+
     partial class EventSummaryPage
     {
-       
+
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();          
+            await InitializeComponents();
         }
     }
 }

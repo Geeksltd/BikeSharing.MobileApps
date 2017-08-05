@@ -165,23 +165,29 @@ CustomRidePage #Body {
   height: 100%;
 }
 CustomRidePage #RouteSelector {
-  height: 250px;
+  height: 220px;
   width: 90%;
   background-color: white;
   opacity: 0.4;
   margin: 20px;
 }
-CustomRidePage #MainStack {
+CustomRidePage #InnerStack {
   margin: 20px;
   padding: 10px;
   background-color: white;
   height: 85%;
   opacity: 1;
 }
-CustomRidePage #GoButton {
-  width: 100%;
-  padding: 10px;
+CustomRidePage #GoButtonStack {
   margin-top: 20px;
+  background-color: gainsboro;
+  height: 40px;
+  width: 100%;
+}
+CustomRidePage #GoButton {
+  width: 60px;
+  margin-left: calc("view.Parent.ActualWidth - 60");
+  padding: 10px;
   background-color: blue;
   color: white;
 }
@@ -421,6 +427,7 @@ LoginPage #signinButtonStack #signinButton {
   width: 10px;
   padding: 0px;
   height: 10px;
+  background: url('Images/SignUp/ic_close.png');
 }
 .SignupPages #backgroundStack {
   height: 100%;
@@ -458,6 +465,28 @@ AccountPage #nextButton1 {
   margin-top: 10px;
   margin-left: calc("view.Parent.ActualWidth - 130 ");
 }
+AccountPage #sunBox {
+  margin-left: 20px;
+  width: 60px;
+  height: 60px;
+  background: url('Images/SignUp/signup_sun.png');
+}
+AccountPage #bikeImageView {
+  width: 80px;
+  height: 50px;
+}
+AccountPage #sunBoxStack {
+  padding: 60px;
+  height: 40%;
+}
+AccountPage #buildingImageView {
+  height: 100%;
+  background: url("Images/SignUp/signup_buildings_2.png");
+}
+AccountPage #fenceImageView {
+  height: 8%;
+  background: url('Images/SignUp/fence.png');
+}
 GenderPage #mainStack #womanImageView {
   width: 100%;
   height: 80px;
@@ -471,11 +500,62 @@ GenderPage #mainStack #manImageView {
 GenderPage #mainStack #nextButton {
   margin-left: calc("view.Parent.ActualWidth - 110 ");
 }
+GenderPage #mainStack #cloudBox {
+  margin-left: 40px;
+  width: 40px;
+  height: 40px;
+  background: url('Images/SignUp/signup_cloud_1.png');
+}
+GenderPage #mainStack #cloudBoxStack {
+  padding: 10px;
+  height: 20%;
+}
+GenderPage #mainStack #skipTextView {
+  font-weight: bold;
+  font-size: 20px;
+  width: 60px;
+  margin-top: 10px;
+}
 SubscriptionPage ImageView {
   width: 100%;
-  height: 50px;
+  height: 75px;
   margin-left: 20px;
+  margin-top: 10px;
+}
+SubscriptionPage #skyBoxStack {
+  padding: 10px;
+  height: 30%;
+}
+SubscriptionPage #cloudBox {
+  margin-left: 50px;
+  width: 40px;
+  height: 40px;
+  background: url('Images/SignUp/signup_cloud_1.png');
+}
+SubscriptionPage #sunBox {
+  margin-left: 70px;
   margin-top: 30px;
+  width: 60px;
+  height: 60px;
+  background: url('Images/SignUp/signup_sun.png');
+}
+UserPage #designStack {
+  height: 22%;
+  padding-top: 10px;
+}
+UserPage #fenceImageView {
+  height: 8%;
+  background: url('Images/SignUp/fence.png');
+}
+UserPage #bikeImageView {
+  height: 40px;
+  background: url('Images/SignUp/bike.png');
+  margin-top: 20px;
+  margin-left: calc("view.Parent.ActualWidth - 140");
+}
+UserPage #signupTreesImageView {
+  height: 60px;
+  background: url('Images/SignUp/signup_trees.png');
 }
 .slide-show {
   height: 100%;
@@ -549,4 +629,24 @@ EventSummaryPage #bookDetailStack .splitor {
   border-bottom: 1px solid;
   margin: 10px;
   margin-left: 0px;
+}
+IdentityPage #leftCloudBox {
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  background: url("Images/SignUp/signup_cloud_2.png");
+}
+IdentityPage #RightCloudBox {
+  margin-top: -10px;
+  margin-left: 100px;
+  width: 40px;
+  height: 40px;
+  background: url("Images/SignUp/signup_cloud_1.png");
+}
+IdentityPage #padlockImageView {
+  margin-top: -20px;
+  margin-left: 40px;
+  width: 80px;
+  height: 80px;
+  background: url("Images/SignUp/signup_padlock.png");
 }

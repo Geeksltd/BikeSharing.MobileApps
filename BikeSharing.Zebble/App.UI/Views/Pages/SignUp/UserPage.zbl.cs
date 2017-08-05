@@ -1,14 +1,8 @@
 ﻿namespace UI.Pages
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-
-    using Domain;
-    using Domain.Entities;
 
     partial class UserPage
     {
@@ -24,7 +18,6 @@
             set
             {
                 _firstName = value;
-              
             }
         }
         public string LastName
@@ -36,7 +29,6 @@
             set
             {
                 _lastName = value;
-               
             }
         }
         public DateTime BirthDate
@@ -47,7 +39,7 @@
             }
             set
             {
-                _birthDate = value;              
+                _birthDate = value;
             }
         }
         public override async Task OnInitializing()
@@ -57,7 +49,8 @@
             foregroundStack.Y.Set(10);
             birthdateInput.SelectedValue = new DateTime(1970, 01, 01);
         }
-        public SignUpPage signupPage => FindParent<SignUpPage>();
+        public SignUpPage SignupPage => FindParent<SignUpPage>();
+
 
 
         async Task NextButtonTapped()
@@ -65,12 +58,9 @@
             FirstName = firstNameInput.Text;
             LastName = lastNameInput.Text;
             BirthDate = birthdateInput.SelectedValue.Value;
-            await signupPage.NextPage();
+            await SignupPage.NextPage();
         }
-        async Task CloseButtonTapped()
-        {
-            await Nav.Go<LoginPage>();
-        }
+
         async Task TextChanged()
         {
             if (firstNameInput.Text.HasValue() && lastNameInput.Text.HasValue())

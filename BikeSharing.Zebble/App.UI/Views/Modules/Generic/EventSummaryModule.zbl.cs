@@ -1,29 +1,25 @@
 ﻿namespace UI.Modules
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;
     using Domain;
-    using Domain.Services;
-    using System.Net;
-    using System.Net.Http;
     using Domain.Entities;
+    using Domain.Services;
+    using System;
+    using System.Net;
+    using System.Threading.Tasks;
     using UI.Pages;
+    using Zebble;
 
     partial class EventSummaryModule
     {
         public Event Item;
         Station FromStation, ToStation;
         EventsService _eventsService;
-        RidesService _ridesService ;
+        RidesService _ridesService;
         public override async Task OnInitializing()
         {
             try
             {
-                
+
                 var Id = Nav.Param<int>("Id");
                 _eventsService = new EventsService();
                 Item = await _eventsService.GetEventById(Id);
@@ -65,9 +61,9 @@
             //{
             //    await DialogService.ShowAlertAsync("We are sorry, there are no bikes in origin station", "No bike available", "Ok");
             //}
-            catch (Exception ex) when (ex is WebException )
+            catch (Exception ex) when (ex is WebException)
             {
-                await Alert.Show("Error","Communication error");
+                await Alert.Show("Error", "Communication error");
             }
             catch (Exception ex)
             {

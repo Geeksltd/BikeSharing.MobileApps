@@ -1,17 +1,14 @@
 ﻿namespace UI.Pages
 {
+    using Domain;
+    using Domain.Services;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;
-     
-    using Domain;
-    using Zebble.Services;
-    using UI;
-    using Domain.Services;
     using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using UI;
+    using Zebble;
     using Zebble.Plugin;
 
     partial class CustomRidePage
@@ -22,7 +19,7 @@
             get { return _customPins; }
             set
             {
-                _customPins = value;              
+                _customPins = value;
             }
         }
 
@@ -50,7 +47,7 @@
             }
         }
 
-        private async Task FSelectionChanged( )
+        private async Task FSelectionChanged()
         {
             var selected = (CustomPin)FromItemPicker.SelectedValue;
             var _ridesService = new RidesService();
@@ -63,7 +60,7 @@
 
         private async Task TSelectionChanged()
         {
-            var selected =(CustomPin) ToItemPicker.SelectedValue;
+            var selected = (CustomPin)ToItemPicker.SelectedValue;
             var _ridesService = new RidesService();
             var _stations = await _ridesService.GetStation(selected.Id);
             RouteSelected.Visible = true;
@@ -80,7 +77,7 @@
             await Nav.Forward<BookingPage>(new { from = fromStation, to = toStation });
         }
 
-     
+
 
         private void InitializePinsFromStations(IEnumerable<Station> allStations)
         {

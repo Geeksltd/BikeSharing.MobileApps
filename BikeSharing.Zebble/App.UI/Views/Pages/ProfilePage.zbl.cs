@@ -1,16 +1,12 @@
 ﻿namespace UI.Pages
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Zebble;
-
+    using Domain;
     using Domain.Entities;
     using Domain.Services;
+    using System;
     using System.IO;
-    using Domain;
+    using System.Threading.Tasks;
+    using Zebble;
 
     partial class ProfilePage
     {
@@ -22,8 +18,8 @@
             await base.OnInitializing();
             await InitializeComponents();
 
-          
-            
+
+
         }
 
 
@@ -34,10 +30,10 @@
             try
             {
 
-                if (Device.Permissions.Check(DevicePermission.Camera).Result == PermissionResult.Granted)              
+                if (Device.Permissions.Check(DevicePermission.Camera).Result == PermissionResult.Granted)
                     TempImage = await Device.Media.TakePhoto();
-                
-                if(TempImage == null || TempImage.FullName.Contains("profile_placeholder"))             
+
+                if (TempImage == null || TempImage.FullName.Contains("profile_placeholder"))
                     TempImage = await Device.Media.PickPhoto();
 
                 if (TempImage != null)
@@ -50,10 +46,10 @@
                         base64Str = Convert.ToBase64String(memStream.ToArray());
                     }
 
-                    if(base64Str.HasValue())
+                    if (base64Str.HasValue())
                     {
                         var _profileService = new ProfileService();
-                        await _profileService.UploadUserImageAsync( Item, base64Str);
+                        await _profileService.UploadUserImageAsync(base64Str, Item);
                     }
                 }
             }
@@ -62,7 +58,7 @@
                 await Alert.Show(ex.Message);
                 return;
             }
-            
+
         }
     }
 }

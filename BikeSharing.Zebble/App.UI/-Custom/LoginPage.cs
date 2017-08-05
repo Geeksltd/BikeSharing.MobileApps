@@ -1,10 +1,7 @@
 ﻿using Domain;
 using Domain.Services;
 using System;
-using System.Collections.Generic;
 using System.Net;
-using System.Net.Http;
-using System.Text;
 using Zebble;
 
 namespace UI.Pages
@@ -16,8 +13,8 @@ namespace UI.Pages
         private string _userName;
         private string _password;
         private bool _isValid;
-      
-       
+
+
 
         public string UserName
         {
@@ -27,7 +24,7 @@ namespace UI.Pages
             }
             set
             {
-                _userName = value;             
+                _userName = value;
             }
         }
 
@@ -67,12 +64,12 @@ namespace UI.Pages
                 {
                     var _authenticationService = new AuthenticationService();
                     isAuthenticated = await _authenticationService.LoginAsync(UserName, Password);
-                }              
-                catch (Exception ex) when (ex is WebException )
+                }
+                catch (Exception ex) when (ex is WebException)
                 {
-                  //  Debug.WriteLine($"[SignIn] Error signing in: {ex}");
-                    await Alert.Show("Error","Communication error");
-                }               
+                    //  Debug.WriteLine($"[SignIn] Error signing in: {ex}");
+                    await Alert.Show("Error", "Communication error");
+                }
             }
             else
             {
@@ -82,7 +79,7 @@ namespace UI.Pages
                     var data = file.ReadAllText();
                     Settings.UserId = Convert.ToInt32(data);
                     if (Settings.UserId != 0)
-                    isAuthenticated = true;
+                        isAuthenticated = true;
                 }
 
 
@@ -93,12 +90,12 @@ namespace UI.Pages
             {
                 await Nav.Go<HomePage>();
             }
-            
+
         }
-        
+
         private bool Validate()
         {
-            _userName =  usernameTextInput?.Text;
+            _userName = usernameTextInput?.Text;
             _password = passwordTextInput?.Text;
             bool isValidUser = _userName.HasValue();
             bool isValidPassword = _password.HasValue();
@@ -106,13 +103,13 @@ namespace UI.Pages
             return isValidUser && isValidPassword;
         }
 
-      
 
-       // private void AddValidations()
-       // {
-         //   _userName.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Username should not be empty" });
-         //   _password.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Password should not be empty" });
-       // }
+
+        // private void AddValidations()
+        // {
+        //   _userName.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Username should not be empty" });
+        //   _password.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Password should not be empty" });
+        // }
     }
 
 }

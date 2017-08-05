@@ -1,18 +1,11 @@
 ﻿namespace UI.Pages
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-     
-    using Domain;
-    using Domain.Entities;
 
     partial class GenderPage
     {
-        
         bool _gender = false;
         public bool Gender
         {
@@ -23,7 +16,6 @@
             set
             {
                 _gender = value;
-
             }
         }
 
@@ -33,8 +25,43 @@
             await InitializeComponents();
             foregroundStack.Y.Set(10);
 
+            await cloudBox.Animate(new Animation
+            {
+                Change = () => cloudBox.Animate(2.Seconds(), x => x.Margin(left: 70), x => x.Visible = false),
+                Repeats = 100
+            });
         }
-        public SignUpPage signupPage => FindParent<SignUpPage>();
+
+        async Task CloudBoxVisibilityChanged()
+        {
+            if (cloudBox.Visible == false)
+                if (cloudBox.Margin.Left.CurrentValue == 70)
+                {
+                    cloudBox.Visible = true;
+                    await Task.Delay(1000);
+
+
+                    await cloudBox.Animate(new Animation
+                    {
+                        Duration = 1.Seconds(),
+                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 1))
+                    });
+                    cloudBox.Visible = false;
+                }
+                else if (cloudBox.Margin.Left.CurrentValue == 1)
+                {
+                    cloudBox.Visible = true;
+                    await Task.Delay(1000);
+                    await cloudBox.Animate(new Animation
+                    {
+                        Duration = 1.Seconds(),
+                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 70))
+                    });
+                    cloudBox.Visible = false;
+                }
+        }
+
+        public SignUpPage SignupPage => FindParent<SignUpPage>();
 
         async Task ImageViewTapped()
         {
@@ -42,8 +69,8 @@
             if (Gender)
             {
                 Gender = false;
-                womanImageView.Set(rec=> rec.BackgroundImagePath = "Images/SignUp/signup_woman_select.png");
-                manImageView.Set(rec=> rec.BackgroundImagePath = "Images/SignUp/signup_man.png");
+                womanImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_woman_select.png");
+                manImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_man.png");
             }
             else
             {
@@ -53,20 +80,6 @@
             }
         }
 
-        async Task CloseButtonTapped()
-        {
-            await Nav.Go<LoginPage>();
-        }
-
-        async Task NextButtonTapped()
-        {
-            await signupPage.NextPage();
-        }
-
-        async Task SkipTapped()
-        {
-            await signupPage.NextPage();
-        }
-
+        async Task NextButtonTapped() => await SignupPage.NextPage();
     }
 }

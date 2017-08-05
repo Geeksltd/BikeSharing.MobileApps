@@ -395,12 +395,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\AccountPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\IdentityPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\IdentityPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SignUpPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SignUpPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SubscriptionPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SubscriptionPage.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\UsenamePage.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\UsenamePage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\UserPage.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\UserPage.zbl.cs" />
   </ItemGroup>

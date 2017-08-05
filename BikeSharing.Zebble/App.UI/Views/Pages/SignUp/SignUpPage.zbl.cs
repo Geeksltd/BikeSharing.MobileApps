@@ -1,99 +1,95 @@
 ﻿namespace UI.Pages
 {
+    using Domain.Entities;
+    using Domain.Services;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
     using Zebble;
 
-    using Domain;
-    using Domain.Entities;
-    using Domain.Services;
-
     partial class SignUpPage
     {
-        UsenamePage usenamePage;
+        IdentityPage identityPage;
         AccountPage accountPage;
         GenderPage genderPage;
         UserPage userPage;
         SubscriptionPage subscriptionPage;
+
+        public SubscriptionPage SubscriptionPage { get => subscriptionPage; set => subscriptionPage = value; }
+        public UserPage UserPage { get => userPage; set => userPage = value; }
+        public GenderPage GenderPage { get => genderPage; set => genderPage = value; }
+        public AccountPage AccountPage { get => accountPage; set => accountPage = value; }
+        public IdentityPage IdentityPage { get => identityPage; set => identityPage = value; }
+
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
             var user = new UserAndProfileModel();
-            usenamePage = new UsenamePage();
+            IdentityPage = new IdentityPage();
 
-            accountPage = new AccountPage();
-            genderPage = new GenderPage();
-            userPage = new UserPage();
-            subscriptionPage = new SubscriptionPage();
-            await MyCarousel.Slides.Add(usenamePage);
-            await MyCarousel.Slides.Add(accountPage);
-            await MyCarousel.Slides.Add(genderPage);
-            await MyCarousel.Slides.Add(userPage);
-            await MyCarousel.Slides.Add(subscriptionPage);            
+            AccountPage = new AccountPage();
+            GenderPage = new GenderPage();
+            UserPage = new UserPage();
+            SubscriptionPage = new SubscriptionPage();
+            await MyCarousel.Slides.Add(IdentityPage);
+            await MyCarousel.Slides.Add(AccountPage);
+            await MyCarousel.Slides.Add(GenderPage);
+            await MyCarousel.Slides.Add(UserPage);
+            await MyCarousel.Slides.Add(SubscriptionPage);
         }
 
-        public async Task NextPage()
-        {
-            await MyCarousel.Next(true);
-        }
+        public async Task NextPage() => await MyCarousel.Next(animate: true);
 
         public async Task SaveUserData()
         {
-            try
+            //   try
+            //  {
+            //var CreditCard = "01234567890";
+            //var CreditCardType = 0;
+            //var ExpirationDate = DateTime.Now.AddYears(1);
+
+            var userAndProfile = new UserAndProfileModel
             {
-                //var CreditCard = "01234567890";
-                //var CreditCardType = 0;
-                //var ExpirationDate = DateTime.Now.AddYears(1);
+                UserName = IdentityPage.UserName,
+                Password = IdentityPage.Password,
+                Gender = GenderPage.Gender == false ? "Male" : "Female",
+                BirthDate = UserPage.BirthDate,
+                FirstName = UserPage.FirstName,
+                LastName = UserPage.LastName,
+                Email = AccountPage.Email,
+                Skype = AccountPage.Skype,
+                TenantId = GlobalSettings.TenantId
+            };
 
-                var userAndProfile = new UserAndProfileModel
+
+
+            var result = await new ProfileService().SignUp(userAndProfile);
+
+            if (result != null)
+            {
+                bool isAuthenticated =
+                    await new AuthenticationService().LoginAsync(userAndProfile.UserName, userAndProfile.Password);
+
+
+                if (isAuthenticated)
                 {
-                    UserName = usenamePage.UserName,
-                    Password = usenamePage.Password,
-                    Gender = genderPage.Gender == false ?  "Male": "Female",
-                    BirthDate = userPage.BirthDate,
-                    FirstName = userPage.FirstName,
-                    LastName = userPage.LastName,
-                    Email = accountPage.Email,
-                    Skype = accountPage.Skype,
-                    TenantId = GlobalSettings.TenantId
-                };
-               
-
-                var _profileService = new ProfileService();
-
-                UserAndProfileModel result = await _profileService.SignUp(userAndProfile);
-
-                if (result != null)
-                {
-                    var _authenticationService = new AuthenticationService();
-                    bool isAuthenticated =
-                        await _authenticationService.LoginAsync(userAndProfile.UserName, userAndProfile.Password);
-
-            
-                    if (isAuthenticated)
-                    {
-                        await Nav.Go<HomePage>();
-                    }
-                    else
-                    {
-                      await  Alert.Show("Invalid credentials", "Login failure");
-                    }
+                    await Nav.Go<HomePage>();
                 }
                 else
                 {
-                  await  Alert.Show("Invalid data", "Sign Up failure");
+                    await Alert.Show("Invalid credentials", "Login failure");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"Error reporting incident in: {ex}");
-
-              await  Alert.Show("Invalid data", "Sign Up failure");
+                await Alert.Show("Invalid data", "Sign Up failure");
             }
+            // }
+            // catch (Exception ex)
+            // {
+            //    Console.WriteLine($"Error reporting incident in: {ex}");
+            //    await Alert.Show("Invalid data", "Sign Up failure");
+            // }
         }
 
     }

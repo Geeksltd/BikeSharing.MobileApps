@@ -1,15 +1,8 @@
 ﻿namespace UI.Pages
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
     using Zebble;
-     
-    using Domain;
-    using Domain.Entities;
-    using Domain.Services;
 
     partial class SubscriptionPage
     {
@@ -22,22 +15,58 @@
 #pragma warning disable CS0414 // The field 'SubscriptionPage._subscription' is assigned but its value is never used
         Subscription _subscription;
 #pragma warning restore CS0414 // The field 'SubscriptionPage._subscription' is assigned but its value is never used
-        public SignUpPage signupPage => FindParent<SignUpPage>();
+        public SignUpPage SignupPage => FindParent<SignUpPage>();
 
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
             await InitializeComponents();
+            foregroundStack.Y.Set(10);
+
+            await sunBox.Animate(new Animation
+            {
+                Duration = 100000.Milliseconds(),
+                Change = () => sunBox.Rotation(360),
+                Repeats = 600
+            });
+
+            await cloudBox.Animate(new Animation
+            {
+                Change = () => cloudBox.Animate(2.Seconds(), x => x.Margin(left: 150), x => x.Visible = false),
+                Repeats = 100
+            });
         }
-        
-        async Task NextButtonTapped()
+
+        async Task CloudBoxVisibilityChanged()
         {
-            await signupPage.SaveUserData();
+            if (cloudBox.Visible == false)
+                if (cloudBox.Margin.Left.CurrentValue == 150)
+                {
+                    cloudBox.Visible = true;
+                    await Task.Delay(1000);
+
+
+                    await cloudBox.Animate(new Animation
+                    {
+                        Duration = 1.Seconds(),
+                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 50))
+                    });
+                    cloudBox.Visible = false;
+                }
+                else if (cloudBox.Margin.Left.CurrentValue == 50)
+                {
+                    cloudBox.Visible = true;
+                    await Task.Delay(1000);
+                    await cloudBox.Animate(new Animation
+                    {
+                        Duration = 1.Seconds(),
+                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 150))
+                    });
+                    cloudBox.Visible = false;
+                }
         }
-        async Task CloseButtonTapped()
-        {
-            await Nav.Go<LoginPage>();
-        }
+
+        async Task NextButtonTapped() => await SignupPage.SaveUserData();
 
         async Task AnnualImageViewTapped()
         {
@@ -57,28 +86,29 @@
 
         void SetSubscription(Subscription item)
         {
-          if (item == Subscription.Monthly)
+            switch (item)
             {
-                _subscription = Subscription.Monthly;           
-                monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_active.png");
-                quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_normal.png");
-                annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_normal.png");
+                case Subscription.Monthly:
+                    _subscription = Subscription.Monthly;
+                    monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_active.png");
+                    quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_normal.png");
+                    annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_normal.png");
+                    break;
+                case Subscription.ThreeMonthly:
+                    _subscription = Subscription.ThreeMonthly;
+                    monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_normal.png");
+                    quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_active.png");
+                    annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_normal.png");
+                    break;
+                case Subscription.Annual:
+                    _subscription = Subscription.Annual;
+                    monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_normal.png");
+                    quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_normal.png");
+                    annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_active.png");
+                    break;
+                default:
+                    break;
             }
-            else if (item == Subscription.ThreeMonthly)
-            {
-                _subscription = Subscription.ThreeMonthly;
-                 monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_normal.png");
-                quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_active.png");
-                annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_normal.png");
-
-            }
-            else if (item == Subscription.Annual)
-            {
-                _subscription = Subscription.Annual;
-                monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_normal.png");
-                quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_normal.png");
-                annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_active.png");
-            }            
         }
     }
 }
