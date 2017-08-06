@@ -14,7 +14,8 @@
         public override async Task OnInitializing()
         {
             var rides = await new RidesService().GetSuggestions();
-            Items = rides.ToArray();
+            if(rides != null)
+               Items = rides.ToArray();
 
             await base.OnInitializing();
             await InitializeComponents();

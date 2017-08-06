@@ -14,18 +14,21 @@
         TimeSpan timeSpanCounter = new TimeSpan(0, 3, 1);
         Booking book;
 
+        public Booking Book { get => book; set => book = value; }
+        public TimeSpan TimeSpanCounter { get => timeSpanCounter; set => timeSpanCounter = value; }
+
         public override async Task OnInitializing()
         {
-            book = Nav.Param<Booking>("Booking");
+            Book = Nav.Param<Booking>("Booking");
 
-            if (book == null)
+            if (Book == null)
             {
                 if (await new RidesService().GetUserRides() != null)
                 {
-                    var ride = (await new RidesService().GetUserRides()).Where(rec => rec.Start > DateTime.Now).OrderBy(rec => rec.Start).FirstOrDefault();
+                    var ride = (await new RidesService().GetUserRides()).Where(rec => rec.Start > LocalTime.Now).OrderBy(rec => rec.Start).FirstOrDefault();
                     if (ride != null)
                     {
-                        book = new Booking()
+                        Book = new Booking()
                         {
                             BikeId = ride.BikeId,
                             DueDate = ride.Start.AddMinutes(ride.Duration),
@@ -39,7 +42,7 @@
                     }
                 }
             }
-            if (book == null)
+            if (Book == null)
             {
                 await Alert.Show("Alert", "There is no available ride");
                 return;
@@ -53,11 +56,11 @@
         private void CounterFunc(object state)
         {
             var tp = new TimeSpan(0, 0, 1);
-            timeSpanCounter = timeSpanCounter.Subtract(tp);
+            TimeSpanCounter = TimeSpanCounter.Subtract(tp);
 
-            if (timeSpanCounter.TotalSeconds >= 0)
+            if (TimeSpanCounter.TotalSeconds >= 0)
             {
-                timerText.Text = timeSpanCounter.ToString("m\\:ss");
+                timerText.Text = TimeSpanCounter.ToString("m\\:ss");
             }
             else
                 timer.Dispose();

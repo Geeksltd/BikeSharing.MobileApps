@@ -11,12 +11,8 @@ namespace UI.Modules
 
         public override async Task OnInitializing()
         {
-            if (await new ProfileService().GetCurrentProfileAsync() == null)
-                await Nav.Go<LoginPage>();
-
             await base.OnInitializing();
             await InitializeComponents();
-
         }
 
 

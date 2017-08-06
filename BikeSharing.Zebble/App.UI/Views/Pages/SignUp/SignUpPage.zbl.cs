@@ -62,7 +62,7 @@
 
 
 
-            var result = await new ProfileService().SignUp(userAndProfile);
+            var result = await new ProfileService().SignUpAsync(userAndProfile);
 
             if (result != null)
             {

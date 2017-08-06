@@ -5,9 +5,9 @@ namespace UI
 {
     public class StaticData
     {
-        public static List<Suggestion> GetSuggestions()
+        public static Suggestion[] GetSuggestions()
         {
-            return new List<Suggestion>
+            return new Suggestion[]
             {
                 new Suggestion
                 {

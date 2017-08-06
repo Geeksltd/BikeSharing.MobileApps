@@ -9,35 +9,35 @@
     },
     {
       "Analyzer": "LongMethodAnalyzer",
-      "OccurrenceCount": 11,
+      "OccurrenceCount": 14,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "UseMaxOrNullInsteadOfMaxOrDefaultWithStructsAnalyzer",
-      "OccurrenceCount": 1,
+      "OccurrenceCount": 8,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "UseMaxMinInsteadOfWithMaxMinAnalyzer",
-      "OccurrenceCount": 1,
-      "Exceptions": null,
-      "SentToServer": true,
-      "InstallationName": "DESKTOP-R7QIUKI"
-    },
-    {
-      "Analyzer": "RepeatedExpressionAnalyzer",
       "OccurrenceCount": 3,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
+      "Analyzer": "RepeatedExpressionAnalyzer",
+      "OccurrenceCount": 4,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
       "Analyzer": "UseIsAInsteadOfIsAssignableFromAnalyzer",
-      "OccurrenceCount": 2,
+      "OccurrenceCount": 5,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -51,7 +51,7 @@
     },
     {
       "Analyzer": "AsyncAwaitMethodAnalyzer",
-      "OccurrenceCount": 468,
+      "OccurrenceCount": 557,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -101,6 +101,34 @@
     {
       "Analyzer": "EmptyCatchClauseAnalyzer",
       "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "UnusedMethodsAnalyzer",
+      "OccurrenceCount": 14,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "IEnumerableMultipleEvaluationsAnalyzer",
+      "OccurrenceCount": 4,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "ObjectInitializerAnalyzer",
+      "OccurrenceCount": 2,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-R7QIUKI"
+    },
+    {
+      "Analyzer": "ExceptAnalyzer",
+      "OccurrenceCount": 2,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"

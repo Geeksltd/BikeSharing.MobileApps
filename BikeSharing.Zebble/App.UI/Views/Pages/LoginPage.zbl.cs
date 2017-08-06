@@ -8,8 +8,6 @@
     {
         public override async Task OnInitializing()
         {
-            await SignInAsync();
-
             await base.OnInitializing();
             await InitializeComponents();
         }

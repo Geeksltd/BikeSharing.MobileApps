@@ -41,7 +41,7 @@ HomePage .title {
   padding: 10px;
 }
 #WeatherInfoModule Stack {
-  margin-top: 90px;
+  /*margin-top: calc("view.Parent.ActualHeight /4");*/
 }
 #WeatherInfoModule Stack TextView {
   color: #ffffff;

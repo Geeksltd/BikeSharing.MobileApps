@@ -3,7 +3,7 @@
   <z-place inside="Body">
     <Stack Direction="Horizontal" Id="mainStack">
       <Stack>
-        <ImageView Id="userImageView" Path="@Item.PhotoUrl" on-Tapped="userImageTapped" />
+        <ImageView Id="userImageView" Path="@Item.PhotoUrl" on-Tapped="UserImageTapped" />
       </Stack>
       <Stack>
         <TextView  Text="First Name" CssClass="label"  />

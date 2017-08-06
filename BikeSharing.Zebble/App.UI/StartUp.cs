@@ -1,5 +1,6 @@
 ﻿namespace UI
 {
+    using Domain.Services;
     using System;
     using System.Threading.Tasks;
     using Zebble;
@@ -21,9 +22,15 @@
 
             Services.PushNotificationListener.Setup();
 
-            LoadFirstPage().RunInParallel();
+            LoadFirstPageAsync().RunInParallel();
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.HomePage());
+        public static async Task LoadFirstPageAsync()
+        {
+            if (await new ProfileService().GetCurrentProfileAsync() == null)
+                await Nav.Go<Pages.LoginPage>();
+            else
+                await Nav.Go(new Pages.HomePage());
+        }
     }
 }

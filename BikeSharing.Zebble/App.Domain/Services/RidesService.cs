@@ -11,8 +11,7 @@ namespace Domain.Services
 {
     class RidesService : BaseApi
     {
-
-        private static List<Suggestion> suggestions = StaticData.GetSuggestions();
+        private static Suggestion[] suggestions = StaticData.GetSuggestions();
 
         private static int StationsCounter = 0;
 
@@ -44,7 +43,7 @@ namespace Domain.Services
             }
         };
 
-        private static List<Ride> rides = new List<Ride>
+        private static Ride[] rides = new Ride[]
         {
             new Ride
             {
@@ -86,10 +85,10 @@ namespace Domain.Services
             }
         };
 
-        public static List<Suggestion> Suggestions { get => Suggestions1; set => Suggestions1 = value; }
-        public static List<Suggestion> Suggestions1 { get => suggestions; set => suggestions = value; }
+        public static Suggestion[] Suggestions { get => suggestions; set => suggestions = value; }
+
         public static Station[] Stations { get => stations; set => stations = value; }
-        public static List<Ride> Rides { get => rides; set => rides = value; }
+        public static Ride[] Rides { get => rides; set => rides = value; }
         public Task<Booking> RequestBikeBooking(Station station, Event @event)
         {
             return BikeBooking(station, RideType.Event, @event.Id);
@@ -171,9 +170,9 @@ namespace Domain.Services
             Settings.RemoveCurrentBookingId();
         }
 
-        public async Task<IEnumerable<Station>> GetNearestStations()
+        public async Task<Station[]> GetNearestStations()
         {
-            await Task.Delay(200);
+            await Task.Delay(100);
 
             return Stations;
         }

@@ -17,8 +17,8 @@
             // TODO: Process the message.
             await Alert.Show("I received a push notification! " + message.Data);
 
-            if (true /* TODO: Increment the app icon badge number?*/)
-                message.ConfirmNewData();
+            //if (true /* TODO: Increment the app icon badge number?*/)
+            //    message.ConfirmNewData();
         }
 
         static async Task OnRegistered(string token)

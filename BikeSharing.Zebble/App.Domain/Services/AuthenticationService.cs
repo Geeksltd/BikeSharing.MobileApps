@@ -24,6 +24,8 @@ namespace Domain.Services
             string uri = builder.ToString();
 
             var authenticationInfo = await BaseApi.Post<AuthenticationResponse>(uri, auth);
+            if (authenticationInfo == null)
+                return false;
             Settings.UserId = authenticationInfo.UserId;
             Settings.ProfileId = authenticationInfo.ProfileId;
             Settings.AccessToken = authenticationInfo.AccessToken;
