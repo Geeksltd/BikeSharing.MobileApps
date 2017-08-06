@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Templates\Modal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Templates\Components\MenuDisplayer.cs" />
     <None Include="$(MSBuildThisFileDirectory)Styles\App.less" />
+    <None Include="$(MSBuildThisFileDirectory)Styles\Variables.less" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Windows.scss" />
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json.defaults" />
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />

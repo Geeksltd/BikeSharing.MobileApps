@@ -1,4 +1,6 @@
-﻿.form-pages {
+﻿@import "Variables.less";
+
+.form-pages {
     #Body {
         height: 100%;
     }
@@ -12,12 +14,12 @@ MainMenu {
     .form-pages();
 
     TextView {
-        color: darkblue;
+        color: @BlueColor;
     }
 
     #logoutButton {
         width: 100%;
-        background-color: white;
+        background-color: @WhiteColor;
         text-align: center;
         padding: 10px;
     }
@@ -38,27 +40,28 @@ HomePage {
     .form-pages();
 
     .title {
-        color: #484f63;
+        color: @BlueColor;
         margin: 10px;
+        margin-bottom: 0px;
         font-size: 20px;
     }
 }
 
 #WeatherInfoModule {
     background: url("Images/background.png");
-    background-size: cover;
+    background-size: auto;
     height: 25%;
+    padding: 10px;
 
     Stack {
-        margin: 20px;
         margin-top: 90px;
 
         TextView {
-            color: white;
+            color: @WhiteColor;
         }
 
         #Temp {
-            font-size: 30px;
+            font-size: 36px;
         }
     }
 
@@ -68,8 +71,8 @@ HomePage {
 }
 
 .HomeModules {
-    height: 31%;
-    padding: 10px 10px 10px 0px;
+    height: 32%;
+    padding: 10px;
 
     ScrollView {
         height: 100%;
@@ -77,38 +80,42 @@ HomePage {
 
     #List {
         height: 100%;
+    }
 
-        #Content {
-            height: 100%;
-            padding: 10px;
+    Stack {
+        height: 100%;
+    }
 
-            #rowStack {
-                background-size: cover;
-                height: 100%;
+    #Content {
+        padding: 10px;
+        padding-left: 0px;
+    }
 
-                .splitor {
-                    border-bottom: 1px solid;
-                    border-color: white;
-                    margin: 10px;
-                }
+    .splitor {
+        border-bottom: 1px solid;
+        border-color: @WhiteColor;
+        margin: 10px;
+    }
 
-                ImageView {
-                    width: 25px;
-                    margin-left: 10px;
-                }
-            }
-        }
+    ImageView {
+        width: 25px;
+        margin-left: 10px;
     }
 
     TextView {
         margin-left: 10px;
-        color: white;
+        color: @WhiteColor;
     }
 
     .titleRow {
         font-size: 26px;
         margin-top: 10px;
     }
+}
+
+#EventsModule {
+    border-bottom: 1px;
+    border-color: @GrayColor;
 }
 
 MyRidesPage {
@@ -134,7 +141,7 @@ MyRidesPage {
         padding: 10px;
 
         TextView {
-            color: white;
+            color: @WhiteColor;
             margin: 7px;
             font-size: 14px;
         }
@@ -161,7 +168,7 @@ MyRidesPage {
     }
 
     TextView {
-        color: black;
+        color: @BlackColor;
         font-size: 12px;
         margin-top: 5px;
     }
@@ -189,11 +196,11 @@ MyRidesPage {
         }
 
         #fromStationNameTextView {
-            color: blue;
+            color: @BlueColor;
         }
 
         #toStationNameTextView {
-            color: red;
+            color: @OrangeColor;
         }
     }
 
@@ -201,7 +208,7 @@ MyRidesPage {
         width: 100%;
         height: 170px;
         border: 1px solid;
-        border-color: gray;
+        border-color: @GrayColor;
     }
 }
 
@@ -210,23 +217,25 @@ CustomRidePage {
 
     #RouteSelector {
         height: 220px;
-        width: 90%;
-        background-color: white;
+        width: calc("View.Root.ActualWidth - 60");
+        background-color: @WhiteColor;
         opacity: 0.4;
         margin: 20px;
     }
 
     #InnerStack {
-        margin: 20px;
+        margin-left: 40px;
         padding: 10px;
-        background-color: white;
-        height: 85%;
-        opacity: 1;
+        background-color: @WhiteColor;
+        height: 180px;
+        width: calc("View.Root.ActualWidth - 100");
+        position: absolute;
+        top: 30px;
     }
 
     #GoButtonStack {
         margin-top: 20px;
-        background-color: gainsboro;
+        background-color: @ProfileGrayColor;
         height: 40px;
         width: 100%;
 
@@ -234,57 +243,92 @@ CustomRidePage {
             width: 60px;
             margin-left: calc("view.Parent.ActualWidth - 60");
             padding: 10px;
-            background-color: blue;
-            color: white;
+            background-color: @BlueColor;
+            color: @WhiteColor;
+            height: 100%;
         }
     }
 
     #RouteSelected {
-        height: 180px;
-        width: 90%;
-        background-color: gray;
+        width: calc("View.Root.ActualWidth - 60");
+        height: 150px;
+        background-color: @GrayColor;
         opacity: 0.4;
         padding: 20px;
         margin: 20px;
-
-        TextView {
-            color: white;
-            font-size: 12px;
-        }
-
-        .title {
-            font-size: 16px;
-        }
+        position: absolute;
+        top: calc("View.Root.ActualHeight - 230");
     }
 
+
+
+    .title {
+        font-size: 16px;
+    }
+
+
     #FromPS {
-        background-color: blue;
+        margin-left: 40px;
+        background-color: @BlueColor;
         padding: 10px;
         visibility: hidden;
+        width: calc("View.Root.ActualWidth - 100");
+        position: absolute;
+        top: calc("View.Root.ActualHeight - 220");
+
+        TextView {
+            color: @WhiteColor;
+            font-size: 12px;
+        }
     }
 
     #ToPS {
-        background-color: orangered;
+        margin-left: 40px;
+        background-color: @OrangeColor;
         padding: 10px;
         visibility: hidden;
         margin-top: 10px;
+        width: calc("View.Root.ActualWidth - 100");
+        position: absolute;
+        top: calc("View.Root.ActualHeight - 150");
+
+        TextView {
+            color: @WhiteColor;
+            font-size: 12px;
+        }
     }
 }
 
 BookingPage {
     .form-pages();
 
-    #MainStack {
-        padding: 20px;
-        padding-top: 150px;
-        background-color: blue;
+    #overlayStack {
+        background-color: @BlueColor;
         height: 100%;
         opacity: 0.4;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+    }
+
+    #MainStack {
+        padding: 20px;
+        padding-top: 50px;
+        background-color: transparent;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 2;
     }
 
     TextView {
-        color: white;
+        color: @WhiteColor;
         margin-top: 10px;
+    }
+
+    .small {
+        font-size: 12px;
+        color: @BrightYellowColor;
     }
 
     .title {
@@ -300,16 +344,52 @@ BookingPage {
     }
 
     .avilable {
-        color: yellow;
+        color: @BrightYellowColor;
         font-size: 11px;
     }
 
-    #BookButton {
-        border: 3px solid;
-        border-color: white;
+    Button {
+        border: 4px solid;
+        border-color: @WhiteColor;
         width: 200px;
         padding: 20px;
         margin-top: 20px;
+    }
+
+    #bookDetailStack {
+        margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
+        padding: 5px;
+        height: 180px;
+        background-color: @WhiteColor;
+
+        TextView {
+            color: @GrayColor;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        ImageView {
+            width: 40px;
+            height: 40px;
+            border-color: @BlueColor;
+            border: 2px;
+        }
+
+        #fromText {
+            font-size: 20px;
+            color: @BlueColor;
+        }
+
+        #toText {
+            font-size: 20px;
+            color: @OrangeColor;
+        }
+
+        .splitor {
+            border-bottom: 1px solid;
+            margin: 5px;
+            margin-left: 0px;
+        }
     }
 }
 
@@ -318,11 +398,11 @@ BookingPage {
 
     #Body {
         background: url("Images/booking_background.png");
-        background-size: cover;
+        background-size: auto;
     }
 
     TextView {
-        color: white;
+        color: @WhiteColor;
         text-align: center;
         margin-top: 10px;
         font-size: 18px;
@@ -343,13 +423,13 @@ BookingPage {
     }
 
     .blacktext {
-        color: black;
+        color: @BlackColor;
         font-size: 12px;
         margin-top: 15px;
     }
 
     .bluetext {
-        color: aqua;
+        color: @BlueColor;
     }
 
     #timerStack {
@@ -363,6 +443,7 @@ BookingPage {
 
     .label {
         font-size: 11px;
+        margin-top: 0px;
     }
 }
 
@@ -390,12 +471,12 @@ ReportIncidentPage {
     #BotButtonStack {
         padding: 20px;
         border-bottom: 1px solid;
-        border-color: gray;
+        border-color: @GrayColor;
 
         IconButton {
             padding: 10px;
             width: 100%;
-            background-color: blue;
+            background-color: @BlueColor;
             font-size: 20px;
         }
 
@@ -407,14 +488,14 @@ ReportIncidentPage {
     }
 
     .title {
-        color: blue;
+        color: @BlueColor;
         margin: 10px 0px;
     }
 
     TextInput {
-        color: black;
+        color: @BlackColor;
         border-bottom: 1px solid;
-        border-color: black;
+        border-color: @BlackColor;
     }
 
     #ReportButtonStack {
@@ -424,7 +505,7 @@ ReportIncidentPage {
         Button {
             padding: 10px;
             width: 100%;
-            background-color: lightgray;
+            background-color: @BackgroundGrayColor;
             font-size: 20px;
         }
     }
@@ -440,18 +521,18 @@ LoginPage {
     }
 
     #signupTextView {
-        color: yellow;
+        color: @BrightYellowColor;
         font-weight: bold;
     }
 
     TextView {
-        color: white;
+        color: @WhiteColor;
     }
 
     TextInput {
         border-bottom: 1px solid;
-        border-color: white;
-        color: white;
+        border-color: @WhiteColor;
+        color: @WhiteColor;
         font-size: 20px;
         margin: 10px;
         padding: 10px 0px;
@@ -468,8 +549,8 @@ LoginPage {
 
         Button {
             width: 100%;
-            color: black;
-            background-color: blue;
+            color: @BlackColor;
+            background-color: @BlueColor;
             padding: 20px;
         }
     }
@@ -484,13 +565,13 @@ LoginPage {
         margin-top: calc("View.Root.ActualHeight / 5");
         margin-left: calc("View.Root.ActualWidth / 4");
         padding: 10px;
-        background-color: white;
+        background-color: @WhiteColor;
     }
 
     TextInput {
         border-bottom: 1px solid;
-        border-color: black;
-        color: black;
+        border-color: @BlackColor;
+        color: @BlackColor;
         font-size: 20px;
         margin: 10px;
     }
@@ -499,7 +580,7 @@ LoginPage {
         font-size: 12px;
         margin: 10px;
         margin-bottom: 0px;
-        color: blue;
+        color: @BlueColor;
     }
 
     #detailStack {
@@ -553,13 +634,13 @@ ProfilePage {
     .label {
         font-size: 12px;
         margin: 10px;
-        color: blue;
+        color: @BlueColor;
     }
 
     .title {
         font-size: 20px;
         margin: 10px;
-        color: black;
+        color: @BlackColor;
     }
 }
 
@@ -710,73 +791,81 @@ EventSummaryPage {
     .form-pages();
 
     #mainStack {
-        background-size: cover;
+        background-size: auto;
         height: 100%;
-        padding: 20px 30px;
+        padding: 20px 30px 10px 30px;
     }
 
     TextView {
-        color: white;
+        color: @WhiteColor;
         font-size: 18px;
         margin-top: 5px;
     }
 
     .titleRow {
-        font-size: 38px;
-        margin-top: 20px;
+        font-size: 36px;
+        margin-top: 10px;
     }
 
     .small {
-        font-size: 14px;
-        color: yellow;
+        font-size: 12px;
+        color: @BrightYellowColor;
     }
 
-    Button {
-        border: 4px solid;
-        border-color: white;
-        margin-top: 30px;
-        font-weight: bold;
+    #venueNameTextView {
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
     #buyTicketButton {
-        width: 150px;
-        padding: 10px;
+        margin-top: 70px;
+        font-size: 14px;
+        width: 120px;
+        border: 3px solid;
+        border-color: @WhiteColor;
+        font-weight: bold;
     }
 
     #bookBikeButton {
+        margin-top: 50px;
         width: 200px;
-        padding: 15px;
+        padding: 8px;
+        border: 4px solid;
+        border-color: @WhiteColor;
+        font-weight: bold;
     }
 
     #bookDetailStack {
-        margin-top: 20px;
-        padding: 10px;
-        height: 190px;
-        background-color: white;
+        margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
+        padding: 5px;
+        height: 170px;
+        background-color: @WhiteColor;
 
         TextView {
-            color: darkgray;
+            color: @GrayColor;
             font-size: 12px;
         }
 
         ImageView {
             width: 40px;
             height: 40px;
+            border-color: @BlueColor;
+            border: 1px;
         }
 
         #fromText {
             font-size: 20px;
-            color: blue;
+            color: @BlueColor;
         }
 
         #toText {
             font-size: 20px;
-            color: red;
+            color: @OrangeColor;
         }
 
         .splitor {
             border-bottom: 1px solid;
-            margin: 10px;
+            margin: 5px;
             margin-left: 0px;
         }
     }

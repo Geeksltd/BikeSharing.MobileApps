@@ -13,11 +13,11 @@
         </Stack>
         <Stack >
           <TextView Text="From"  />
-          <TextView Text="@FromStation.Name"  />
+          <TextView Text="@FromStation.Name"  Id="fromText"/>
           <TextView Text="Empty bike docks 0 Avilable bikes 7"  />
           <TextView CssClass="splitor" />
           <TextView Text="To"  />
-          <TextView Text="@ToStation.Name"    />
+          <TextView Text="@ToStation.Name" Id="toText"   />
           <TextView Text="Empty bike docks 0 Avilable bikes 7"  />
         </Stack>
       </Stack>

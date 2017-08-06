@@ -70,7 +70,7 @@ Toast { background: black; border-radius: 7px; margin: 20px; padding: 20px;
 Grid, ListView {
     & > #EmptyTextLabel { text-align: center; }
 }
-ListViewItem { border-top: 1px; }
+
 ListView:lazy-loaded OptionsList-Option { height: 30px; }
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<z-Component z-type="TimeRemainingPage" z-base="Templates.Default" CssClass="BookingDetailPage" z-namespace="UI.Pages" z-partial="true" Title="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+<z-Component z-type="TimeRemainingPage" z-base="Templates.Default" CssClass="BookingDetailPage" data-TopMenu="MainMenu" z-namespace="UI.Pages" z-partial="true" Title="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Stack Id="MainStack">
       <TextView Text="From" Style.Margin.Top="100" />

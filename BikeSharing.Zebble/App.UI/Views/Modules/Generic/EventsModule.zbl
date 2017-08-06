@@ -4,7 +4,7 @@
   <ScrollView  ShowHorizontalScrollBars="true" ShowScroll="true" Direction="Horizontal" > 
     <ListView z-of="Event, Row" Id="List" EmptyText="Empty list" DataSource="@Items" Direction="Horizontal"    >
       <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Event]" Style.Height="100%" on-Tapped="RowTapped">
-        <Stack Id ="rowStack" BackgroundImagePath="@Item.ImagePath">
+        <Stack Id ="rowStack" BackgroundImagePath="@Item.ImagePath"  BackgroundImageStretch="AspectFill">
           <Modules.EventModule Style.Height="100%" Id="eventModule" />
         </Stack>
       </z-Component>

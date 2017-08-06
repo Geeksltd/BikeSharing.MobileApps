@@ -5,6 +5,7 @@
     using System;
     using System.Threading.Tasks;
     using UI;
+    using UI.Modules;
     using Zebble;
     using Zebble.Plugin;
 
@@ -46,11 +47,11 @@
                 IsBusy = true;
                 try
                 {
-                    var _ridesService = new RidesService();
-                    var FromStation = await _ridesService.GetStation(From.Id);
-                    var ToStation = await _ridesService.GetStation(To.Id);
-                    Booking booking = await _ridesService.RequestBikeBooking(FromStation, ToStation);
-
+                    var FromStation = await new RidesService().GetStation(From.Id);
+                    var ToStation = await new RidesService().GetStation(To.Id);
+                    Booking booking = await new RidesService().RequestBikeBooking(FromStation, ToStation);
+                    // if (booking != null)
+                    //    FindParent<MainMenu>().upcomingRideButton.Enabled = true;
                     await Nav.Forward<BookingDetailPage>(new { ShowThanks = true, Booking = booking });
                 }
                 catch (Exception ex)
