@@ -4,11 +4,11 @@
   <Stack Id ="mainStack" BackgroundImagePath="@Item.ImagePath" >
     <Stack>
       <Button Text="Buy Ticket" Id="buyTicketButton" />
-      <Modules.EventModule Style.Height="200" Id="eventModule" />
+      <Modules.EventModule Id="eventModule"/>
       <Button Text="Book a Bike" Id="bookBikeButton" on-Tapped="BookBikeButtonTapped"  />
       <TextView CssClass="small" Text="Avilable for 30 minutes" />
       <Stack Id="bookDetailStack" Direction="Horizontal">
-        <Stack Style.Width="60">
+        <Stack Id="bikeStack">
           <ImageView Path="Images/bike.png"/>
         </Stack>
         <Stack >

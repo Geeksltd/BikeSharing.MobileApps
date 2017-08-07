@@ -53,8 +53,8 @@ namespace Domain.Services
                 EventId = 1,
                 RideType = RideType.Event,
                 Name = "Ride Cultural",
-                Start = DateTime.Now.AddDays(-7),
-                Stop = DateTime.Now.AddDays(-7),
+                Start = LocalTime.Now.AddDays(-7),
+                Stop = LocalTime.Now.AddDays(-7),
                 Duration = 3600,
                 Distance = 19,
                 From = Stations[0].Name,
@@ -65,8 +65,8 @@ namespace Domain.Services
             new Ride
             {
                 RideType = RideType.Custom,
-                Start = DateTime.Now.AddDays(-14),
-                Stop = DateTime.Now.AddDays(-14),
+                Start = LocalTime.Now.AddDays(-14),
+                Stop = LocalTime.Now.AddDays(-14),
                 Duration = 2500,
                 Distance = 8900,
                 From = Stations[1].Name,
@@ -77,8 +77,8 @@ namespace Domain.Services
             new Ride
             {
                 RideType = RideType.Suggestion,
-                Start = DateTime.Now.AddDays(-14),
-                Stop = DateTime.Now.AddDays(-14),
+                Start = LocalTime.Now.AddDays(-14),
+                Stop = LocalTime.Now.AddDays(-14),
                 Duration = 1800,
                 Distance = 10100,
                 From = Stations[2].Name,
@@ -160,12 +160,12 @@ namespace Domain.Services
                 return Suggestions;
             }
 
-            public static async Task<Ride[]> GetUserRides()
+            public static async Task<Ride[]> GetUserRides(Func<Ride[], Task> refresher = null)
             {
-                var userId =  AuthenticationService.GetCurrentUserId();
+                var userId = AuthenticationService.GetCurrentUserId();
 
                 string uri = $"{GlobalSettings.RidesEndpoint}api/rides/user/{userId}";
-                return await BaseApi.Get<Ride[]>(uri, cacheChoice: Zebble.ApiResponseCache.Refuse);
+                return await BaseApi.Get<Ride[]>(uri, cacheChoice: Zebble.ApiResponseCache.PreferThenUpdate, refresher: refresher);
             }
 
             public static void RemoveCurrentBooking()

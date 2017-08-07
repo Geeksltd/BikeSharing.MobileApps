@@ -6,32 +6,10 @@
 
     partial class IdentityPage
     {
-        string _userName = string.Empty;
-        string _password = string.Empty;
+        string userName = string.Empty;
+        string password = string.Empty;
 
-        public string UserName
-        {
-            get
-            {
-                return _userName;
-            }
-            set
-            {
-                _userName = value;
-            }
-        }
 
-        public string Password
-        {
-            get
-            {
-                return _password;
-            }
-            set
-            {
-                _password = value;
-            }
-        }
 
         public override async Task OnInitializing()
         {
@@ -50,6 +28,9 @@
             });
         }
         public SignUpPage SignupPage => FindParent<SignUpPage>();
+
+        public string UserName { get => userName; set => userName = value; }
+        public string Password { get => password; set => password = value; }
 
         async Task NextButtonTapped()
         {

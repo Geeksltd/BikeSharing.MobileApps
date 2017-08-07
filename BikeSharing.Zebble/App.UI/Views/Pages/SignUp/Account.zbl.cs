@@ -7,34 +7,9 @@
 
     partial class AccountPage
     {
-        string _email = string.Empty;
-        string _skype = string.Empty;
+        string email = string.Empty;
+        string skype = string.Empty;
 
-        public string Email
-        {
-            get
-            {
-                return _email;
-            }
-            set
-            {
-                _email = value;
-
-            }
-        }
-
-        public string Skype
-        {
-            get
-            {
-                return _skype;
-            }
-            set
-            {
-                _skype = value;
-
-            }
-        }
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
@@ -50,7 +25,10 @@
             });
         }
 
-        public SignUpPage signupPage => FindParent<SignUpPage>();
+        public SignUpPage SignupPage => FindParent<SignUpPage>();
+
+        public string Email { get => email; set => email = value; }
+        public string Skype { get => skype; set => skype = value; }
 
         async Task NextButtonTapped()
         {
@@ -58,7 +36,7 @@
             {
                 Email = emailInput.Text;
                 Skype = skypeInput.Text;
-                await signupPage.NextPage();
+                await SignupPage.NextPage();
             }
             else
                 await Alert.Toast("Email is incorrect");
@@ -78,7 +56,7 @@
             if (emailInput.Text.HasValue())
             {
                 string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
-                Regex regexEmail = new Regex(patternEmail);
+                var regexEmail = new Regex(patternEmail);
                 if (regexEmail.IsMatch(emailInput.Text))
                     return true;
             }

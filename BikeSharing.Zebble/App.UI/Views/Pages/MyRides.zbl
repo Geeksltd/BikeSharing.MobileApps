@@ -31,7 +31,7 @@
       <!--<MapBox  />-->
       <Stack  Id="selectedRowInfoStack" >
         <Stack Id="selectedStack" Visible="false">
-          <TextView Text="From" CssClass="label" Style.Margin.Top="150" />
+          <TextView Text="From" CssClass="label" Id="fromTexView" />
           <TextView Id="fromSNSelectedRowTextView" CssClass="texbox"   Wrap="false" />
           <TextView Text="To"  CssClass="label"    />
           <TextView Id="toSNSelectedRowTextView" CssClass="texbox"  Wrap="false"  />

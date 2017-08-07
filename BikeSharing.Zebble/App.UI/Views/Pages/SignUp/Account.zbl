@@ -5,14 +5,14 @@
       <Stack Id="sunBoxStack" >
         <Canvas Id="sunBox" />       
       </Stack>
-      <Stack Style.Height="52%">
+      <Stack Id="buildingStack" >
         <ImageView Id="buildingImageView" />   
       </Stack>
       <ImageView Id="fenceImageView"/>
     </Stack>
     <Stack Id="foregroundStack">
-        <Stack Style.Height="10">
-          <Button  z-nav-go="Pages.LoginPage"/>
+        <Stack Id="closeStack" >
+          <Button  z-nav-go="LoginPage"/>
         </Stack>
         <Stack Id="detailStack">
           <TextView Text="Email" CssClass="title"   />
@@ -22,7 +22,7 @@
         </Stack>
         <Stack Id="NextButtonStack" Direction="Horizontal">
             <ImageView Id="bikeImageView" Path="Images/SignUp/bike.png" />
-            <Button  Id="nextButton1" BackgroundImagePath="Images/floating_action_button_disable.png" on-Tapped="NextButtonTapped"/>          
+            <Button  Id="nextButton1" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>          
         </Stack>
       </Stack>
   </Stack>

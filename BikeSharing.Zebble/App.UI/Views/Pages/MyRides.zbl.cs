@@ -7,23 +7,20 @@
     using UI;
     using Zebble;
     using Zebble.Plugin;
-
+    using static Domain.Services.Api;
     partial class MyRidesPage
     {
         public Ride[] Items;
         public override async Task OnInitializing()
         {
-            UriBuilder builder = new UriBuilder(GlobalSettings.RidesEndpoint);
-            builder.Path = $"api/rides/user/" + Settings.UserId.ToString();
-            string uri = builder.ToString();
-            Items = await BaseApi.Get<Ride[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
+            Items = await RidesService.GetUserRides(refresher: Refresh);
 
             await base.OnInitializing();
             await InitializeComponents();
 
             if (Items != null)
             {
-                var Item = Items.FirstOrDefault();
+                //var Item = Items.FirstOrDefault();
                 //await MapView.Add(new Map.Annotation
                 //{
                 //    Title = Item.From,

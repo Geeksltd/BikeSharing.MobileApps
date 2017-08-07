@@ -2,7 +2,7 @@
 <z-Component z-type="UserPage" z-base="Page" z-namespace="UI.Pages" CssClass="SignupPages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="mainStack">
     <Stack Id="backgroundStack" >
-      <Stack  Style.Height="70%"/>
+      <Stack Id="tempStack" />
       <Stack Direction="Horizontal" Id="designStack" >
           <ImageView Id="signupTreesImageView"/>
           <ImageView Id="bikeImageView"/>     
@@ -10,7 +10,7 @@
       <ImageView Id="fenceImageView"/>
     </Stack>
     <Stack Id="foregroundStack">
-      <Stack Style.Height="10">
+      <Stack Id="closeStack" >
         <Button  Id="closeButton" z-nav-go="Pages.LoginPage"/>
       </Stack>
       <Stack Id="detailStack">

@@ -9,7 +9,7 @@
     },
     {
       "Analyzer": "LongMethodAnalyzer",
-      "OccurrenceCount": 15,
+      "OccurrenceCount": 21,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -23,14 +23,14 @@
     },
     {
       "Analyzer": "UseMaxMinInsteadOfWithMaxMinAnalyzer",
-      "OccurrenceCount": 3,
+      "OccurrenceCount": 4,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "RepeatedExpressionAnalyzer",
-      "OccurrenceCount": 4,
+      "OccurrenceCount": 5,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -44,14 +44,14 @@
     },
     {
       "Analyzer": "OrderByWhereLinqAnalyzer",
-      "OccurrenceCount": 5,
+      "OccurrenceCount": 6,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "AsyncAwaitMethodAnalyzer",
-      "OccurrenceCount": 562,
+      "OccurrenceCount": 874,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -72,14 +72,14 @@
     },
     {
       "Analyzer": "ConstantVariableAnalyzer",
-      "OccurrenceCount": 5,
+      "OccurrenceCount": 7,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "MeaningfulNameForVariablesAnalyzer",
-      "OccurrenceCount": 6,
+      "OccurrenceCount": 7,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -135,7 +135,7 @@
     },
     {
       "Analyzer": "UseDirectIdPropertyAnalyzer",
-      "OccurrenceCount": 1,
+      "OccurrenceCount": 2,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"

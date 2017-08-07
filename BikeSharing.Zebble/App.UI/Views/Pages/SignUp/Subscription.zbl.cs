@@ -88,21 +88,21 @@
             {
                 case Subscription.Monthly:
                     _subscription = Subscription.Monthly;
-                    monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_active.png");
-                    quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_normal.png");
-                    annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_normal.png");
+                    monthlyImageView.Path("Images/SignUp/signup_monthly_active.png");
+                    quarterlyImageView.Path("Images/SignUp/signup_quarterly_normal.png");
+                    annualImageView.Path("Images/SignUp/signup_annual_normal.png");
                     break;
                 case Subscription.ThreeMonthly:
                     _subscription = Subscription.ThreeMonthly;
-                    monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_normal.png");
-                    quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_active.png");
-                    annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_normal.png");
+                    monthlyImageView.Path("Images/SignUp/signup_monthly_normal.png");
+                    quarterlyImageView.Path("Images/SignUp/signup_quarterly_active.png");
+                    annualImageView.Path("Images/SignUp/signup_annual_normal.png");
                     break;
                 case Subscription.Annual:
                     _subscription = Subscription.Annual;
-                    monthlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_monthly_normal.png");
-                    quarterlyImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_quarterly_normal.png");
-                    annualImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_annual_active.png");
+                    monthlyImageView.Path("Images/SignUp/signup_monthly_normal.png");
+                    quarterlyImageView.Path("Images/SignUp/signup_quarterly_normal.png");
+                    annualImageView.Path("Images/SignUp/signup_annual_active.png");
                     break;
                 default:
                     break;

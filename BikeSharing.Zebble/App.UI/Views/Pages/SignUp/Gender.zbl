@@ -5,13 +5,12 @@
       <Stack Id="cloudBoxStack" >
         <Canvas Id="cloudBox" on-VisibilityChanged="CloudBoxVisibilityChanged" />
    </Stack>
-      <Stack Style.Height="80%">
-        <ImageView Style.Height="100%" Path="Images/SignUp/building.png" />
+      <Stack Id="buildingStack" >
+        <ImageView  Path="Images/SignUp/building.png" />
       </Stack>
     </Stack>
     <Stack Id="foregroundStack">
-      
-      <Stack Style.Height="10">
+      <Stack Id="closeStack" >
         <Button  Id="closeButton" z-nav-go="Pages.LoginPage"/>
       </Stack>
       <Stack Id="detailStack">

@@ -154,7 +154,7 @@ MainMenu {background-color:white;
           
     Button { height: 50px; }
     #LogoImage { height: 90px; width: 100%; margin-bottom: 10px; margin-top: 10px; }
-    IconButton { height: 60px;  color: deepskyblue;
+    IconButton { height: 60px;  color: deepskyblue; padding: 10px;
         #TextView { color: deepskyblue;  text-align:left; font-size:16px; margin-left:50px; }
         #Icon { background-size: contain; margin-top: 10px; height: 25px; width: 30px; margin-left: 10px; }
     }

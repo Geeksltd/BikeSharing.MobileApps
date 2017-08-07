@@ -10,19 +10,25 @@ MainMenu #Body {
 MainMenu TextView {
   color: #3063f5;
 }
-MainMenu #logoutButton {
+MainMenu #logoutStack {
+  height: 50px;
+}
+MainMenu #logoutStack Button {
   width: 100%;
   background-color: #ffffff;
   text-align: center;
   padding: 10px;
 }
-MainMenu #ItemsStack {
+MainMenu Stack {
+  height: 100%;
+}
+MainMenu #itemsStack {
   height: calc("(View.Root.ActualHeight- 45- 50)");
   background: url("Images/Menu/background.png");
   background-size: cover;
   width: 300px;
 }
-MainMenu #MenuItemsStack {
+MainMenu #menuItemsStack {
   height: calc("(view.Parent.ActualHeight - 50)");
 }
 HomePage #Body {
@@ -46,8 +52,11 @@ HomePage .title {
 #WeatherInfoModule Stack TextView {
   color: #ffffff;
 }
-#WeatherInfoModule Stack #Temp {
+#WeatherInfoModule Stack #tempText {
   font-size: 36px;
+}
+#WeatherInfoModule Stack #dateText {
+  height: 30px;
 }
 #WeatherInfoModule TextView {
   margin-top: 10px;
@@ -63,6 +72,9 @@ HomePage .title {
   height: 100%;
 }
 .HomeModules Stack {
+  height: 100%;
+}
+.HomeModules ListViewItem {
   height: 100%;
 }
 .HomeModules #Content {
@@ -85,6 +97,12 @@ HomePage .title {
 .HomeModules .titleRow {
   font-size: 26px;
   margin-top: 10px;
+}
+.HomeModules #infoStack {
+  height: 80%;
+}
+.HomeModules #recommendedTitleText {
+  font-size: 30px;
 }
 #EventsModule {
   border-bottom: 1px;
@@ -119,6 +137,9 @@ MyRidesPage #selectedRowInfoStack .label {
 }
 MyRidesPage #selectedRowInfoStack .texbox {
   font-size: 16px;
+}
+MyRidesPage #fromTexView {
+  margin-top: 150px;
 }
 MyRidesPage #txtDate {
   margin-top: 100px;
@@ -292,6 +313,9 @@ BookingPage #bookDetailStack {
   height: 180px;
   background-color: #ffffff;
 }
+BookingPage #bookDetailStack #bikeStack {
+  width: 60px;
+}
 BookingPage #bookDetailStack TextView {
   color: #484f63;
   font-size: 12px;
@@ -329,6 +353,9 @@ BookingPage #bookDetailStack .splitor {
   margin-top: 10px;
   font-size: 18px;
 }
+.BookingDetailPage #fromText {
+  margin-top: 50px;
+}
 .BookingDetailPage .title {
   margin-top: 150px;
   font-size: 28px;
@@ -345,6 +372,7 @@ BookingPage #bookDetailStack .splitor {
   color: #000000;
   font-size: 12px;
   margin-top: 15px;
+  text-transform: uppercase;
 }
 .BookingDetailPage .bluetext {
   color: #3063f5;
@@ -441,6 +469,12 @@ LoginPage .label {
   font-size: 12px;
   margin: 10px;
 }
+LoginPage #usernameTextInput {
+  margin-top: 100px;
+}
+LoginPage #signUpStack {
+  margin-top: 200px;
+}
 LoginPage #signinButtonStack {
   padding: 0px 40px;
   margin-top: 20px;
@@ -461,6 +495,9 @@ LoginPage #signinButtonStack Button {
   margin-left: calc("View.Root.ActualWidth / 4");
   padding: 10px;
   background-color: #ffffff;
+}
+.SignupPages #closeStack {
+  height: 10px;
 }
 .SignupPages TextInput {
   border-bottom: 1px solid;
@@ -545,6 +582,9 @@ AccountPage #sunBoxStack {
   padding: 60px;
   height: 40%;
 }
+AccountPage #buildingStack {
+  height: 25%;
+}
 AccountPage #buildingImageView {
   height: 100%;
   background: url("Images/SignUp/signup_buildings_2.png");
@@ -557,6 +597,12 @@ GenderPage #mainStack #womanImageView {
   width: 100%;
   height: 80px;
   margin-left: 80px;
+}
+GenderPage #mainStack #buildingStack {
+  height: 80%;
+}
+GenderPage #mainStack #buildingStack ImageView {
+  height: 100%;
 }
 GenderPage #mainStack #manImageView {
   width: 100%;
@@ -598,6 +644,9 @@ SubscriptionPage #cloudBox {
   height: 40px;
   background: url('Images/SignUp/signup_cloud_1.png');
 }
+SubscriptionPage #cloudBoxStack {
+  height: 70%;
+}
 SubscriptionPage #sunBox {
   margin-left: 70px;
   margin-top: 30px;
@@ -608,6 +657,9 @@ SubscriptionPage #sunBox {
 UserPage #designStack {
   height: 22%;
   padding-top: 10px;
+}
+UserPage #tempStack {
+  height: 70%;
 }
 UserPage #fenceImageView {
   height: 8%;
@@ -634,7 +686,13 @@ SignUpPage #Body {
   background: url("Images/background.png");
   background-size: cover;
 }
+SignUpPage #Body #MyCarousel {
+  height: 100%;
+}
 EventSummaryPage #Body {
+  height: 100%;
+}
+EventSummaryPage #EventSummaryModule {
   height: 100%;
 }
 EventSummaryPage #mainStack {
@@ -703,6 +761,12 @@ EventSummaryPage #bookDetailStack .splitor {
   border-bottom: 1px solid;
   margin: 5px;
   margin-left: 0px;
+}
+EventSummaryPage #bikeStack {
+  width: 60px;
+}
+IdentityPage #backgroundStack Stack {
+  height: 50%;
 }
 IdentityPage #leftCloudBox {
   margin-left: 10px;

@@ -17,21 +17,25 @@ MainMenu {
         color: @BlueColor;
     }
 
-    #logoutButton {
+    #logoutStack{
+        height:50px;
+        Button {
         width: 100%;
         background-color: @WhiteColor;
         text-align: center;
         padding: 10px;
     }
+    }
+    Stack{ height:100%;}
 
-    #ItemsStack {
+    #itemsStack {
         height: calc("(View.Root.ActualHeight- 45- 50)");
         background: url("Images/Menu/background.png");
         background-size: cover;
         width: 300px;
     }
 
-    #MenuItemsStack {
+    #menuItemsStack {
         height: calc("(view.Parent.ActualHeight - 50)");
     }
 }
@@ -55,13 +59,16 @@ HomePage {
 
     Stack {
         /*margin-top: calc("view.Parent.ActualHeight /4");*/
-
         TextView {
             color: @WhiteColor;
         }
 
-        #Temp {
+        #tempText {
             font-size: 36px;
+        }
+
+        #dateText{
+            height:30px;
         }
     }
 
@@ -83,6 +90,10 @@ HomePage {
     }
 
     Stack {
+        height: 100%;
+    }
+
+    ListViewItem {
         height: 100%;
     }
 
@@ -111,6 +122,12 @@ HomePage {
         font-size: 26px;
         margin-top: 10px;
     }
+
+    #infoStack {
+        height: 80%;
+    }
+
+    #recommendedTitleText{ font-size:30px;}
 }
 
 #EventsModule {
@@ -155,6 +172,9 @@ MyRidesPage {
         }
     }
 
+    #fromTexView{
+        margin-top:150px;
+    }
     #txtDate {
         margin-top: 100px;
     }
@@ -362,6 +382,10 @@ BookingPage {
         height: 180px;
         background-color: @WhiteColor;
 
+        #bikeStack {
+            width:60px;
+        }
+
         TextView {
             color: @GrayColor;
             font-size: 12px;
@@ -408,6 +432,10 @@ BookingPage {
         font-size: 18px;
     }
 
+    #fromText {
+        margin-top: 50px;
+    }
+
     .title {
         margin-top: 150px;
         font-size: 28px;
@@ -425,7 +453,8 @@ BookingPage {
     .blacktext {
         color: @BlackColor;
         font-size: 12px;
-        margin-top: 15px;
+        margin-top: 15px;        
+        text-transform: uppercase;
     }
 
     .bluetext {
@@ -543,6 +572,14 @@ LoginPage {
         margin: 10px;
     }
 
+    #usernameTextInput {
+        margin-top: 100px;
+    }
+
+    #signUpStack {
+        margin-top: 200px;
+    }
+
     #signinButtonStack {
         padding: 0px 40px;
         margin-top: 20px;
@@ -568,6 +605,10 @@ LoginPage {
         background-color: @WhiteColor;
     }
 
+    #closeStack
+    {
+        height:10px;
+    }
     TextInput {
         border-bottom: 1px solid;
         border-color: @BlackColor;
@@ -645,6 +686,7 @@ ProfilePage {
 }
 
 AccountPage {
+
     #nextButton1 {
         padding: 10px 0px;
         height: 50px;
@@ -670,6 +712,10 @@ AccountPage {
         height: 40%;
     }
 
+    #buildingStack{
+        height:25%;
+    } 
+    
     #buildingImageView {
         height: 100%;
         background: url("Images/SignUp/signup_buildings_2.png");
@@ -679,6 +725,7 @@ AccountPage {
         height: 8%;
         background: url('Images/SignUp/fence.png');
     }
+    
 }
 
 GenderPage {
@@ -687,6 +734,14 @@ GenderPage {
             width: 100%;
             height: 80px;
             margin-left: 80px;
+        }
+
+        #buildingStack {
+            height: 80%;
+
+            ImageView {
+                height: 100%;
+            }
         }
 
         #manImageView {
@@ -740,6 +795,9 @@ SubscriptionPage {
         background: url('Images/SignUp/signup_cloud_1.png');
     }
 
+    #cloudBoxStack{
+        height:70%;
+    }
     #sunBox {
         margin-left: 70px;
         margin-top: 30px;
@@ -753,6 +811,10 @@ UserPage {
     #designStack {
         height: 22%;
         padding-top: 10px;
+    }
+
+    #tempStack {
+        height: 70%;
     }
 
     #fenceImageView {
@@ -784,12 +846,16 @@ SignUpPage {
         height: 100%;
         background: url("Images/background.png");
         background-size: cover;
+
+        #MyCarousel {
+            height: 100%;
+        }
     }
 }
 
 EventSummaryPage {
     .form-pages();
-
+    #EventSummaryModule{ height:100%;}
     #mainStack {
         background-size: auto;
         height: 100%;
@@ -869,9 +935,19 @@ EventSummaryPage {
             margin-left: 0px;
         }
     }
+
+    #bikeStack{
+        width: 60px;
+    }
+    
 }
 
 IdentityPage {
+    #backgroundStack{
+        Stack{
+            height:50%;
+        }
+    }
     #leftCloudBox {
         margin-left: 10px;
         width: 60px;

@@ -6,18 +6,7 @@
 
     partial class GenderPage
     {
-        bool _gender = false;
-        public bool Gender
-        {
-            get
-            {
-                return _gender;
-            }
-            set
-            {
-                _gender = value;
-            }
-        }
+        bool gender = false;
 
         public override async Task OnInitializing()
         {
@@ -63,20 +52,22 @@
 
         public SignUpPage SignupPage => FindParent<SignUpPage>();
 
+        public bool Gender { get => gender; set => gender = value; }
+
         async Task ImageViewTapped()
         {
             nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             if (Gender)
             {
                 Gender = false;
-                womanImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_woman_select.png");
-                manImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_man.png");
+                womanImageView.Path("Images/SignUp/signup_woman_select.png");
+                manImageView.Path("Images/SignUp/signup_man.png");
             }
             else
             {
                 Gender = true;
-                womanImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_woman.png");
-                manImageView.Set(rec => rec.BackgroundImagePath = "Images/SignUp/signup_man_select.png");
+                womanImageView.Path("Images/SignUp/signup_woman.png");
+                manImageView.Path("Images/SignUp/signup_man_select.png");
             }
         }
 

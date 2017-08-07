@@ -8,17 +8,16 @@ namespace UI.Pages
 
     partial class BookingDetailPage
     {
-        Timer timer;
-        Booking book;
+        Timer timerControl;
+        Booking bookRequest;
         bool isFirst = true;
-        DateTime dueDate = DateTime.Now;
+        DateTime dueDate = LocalTime.Now;
         public override async Task OnInitializing()
         {
-            var ShowThanks = Nav.Param<bool>("ShowThanks");
-            if (ShowThanks)
+            if (Nav.Param<bool>("ShowThanks"))
             {
-                book = Nav.Param<Booking>("Booking");
-                timer = new Timer(NavToTimeRemaining, null, 1, 4000);
+                bookRequest = Nav.Param<Booking>("Booking");
+                timerControl = new Timer(NavToTimeRemaining, null, 1, 4000);
             }
             else
             {
@@ -33,9 +32,9 @@ namespace UI.Pages
         {
             if (!isFirst)
             {
-                timer.Dispose();
+                timerControl.Dispose();
                 isFirst = false;
-                Nav.Forward<TimeRemainingPage>(new { Booking = book });
+                Nav.Forward<TimeRemainingPage>(new { Booking = bookRequest });
             }
             else
                 isFirst = false;

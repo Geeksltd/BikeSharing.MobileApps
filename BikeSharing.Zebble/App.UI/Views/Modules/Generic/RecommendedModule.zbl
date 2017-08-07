@@ -2,15 +2,14 @@
 <z-Component z-type="RecommendedModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <ScrollView  ShowHorizontalScrollBars="true" ShowScroll="true" Direction="Horizontal" >
     <ListView z-of="Suggestion, Row" Id="List" DataSource="@Items" Direction="Horizontal"   >
-      <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Suggestion]" Style.Height="100%">
-        <Stack Id="rowStack" BackgroundImagePath="@Item.ImagePath" BackgroundImageStretch="AspectFill" Direction="Vertical" on-Tapped="RowTapped">
-          
-            <Stack Style.Height="80%" >
+      <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Suggestion]" >
+        <Stack Id="rowStack" BackgroundImagePath="@Item.ImagePath" BackgroundImageStretch="AspectFill" Direction="Vertical" on-Tapped="RowTapped">          
+            <Stack Id="infoStack" >
               <TextView Text="Ride In" CssClass="titleRow"  />
-              <TextView Text="@Item.Name" Style.Font.Size="30"/>
+              <TextView Text="@Item.Name" Id="recommendedTitleText"/>
               <TextView CssClass="splitor" />
             </Stack>
-            <Stack Style.Height="20%" Direction="Horizontal">
+            <Stack Direction="Horizontal">
               <ImageView  Path="Images/ic_distance_white.png"/>
               <TextView  Text="@Item.Distance.ToString()" />
             </Stack>         

@@ -11,24 +11,25 @@ namespace UI.Pages
 
     partial class TimeRemainingPage
     {
-        Timer timer;
-        TimeSpan TimeSpanCounter = new TimeSpan(0, 3, 1);
-        Booking Book;
+        Timer timerControl;
+        TimeSpan timeSpanCounter = new TimeSpan(0, 3, 1);
+        Booking bookRequest;
 
 
 
         public override async Task OnInitializing()
         {
-            Book = Nav.Param<Booking>("Booking");
+            bookRequest = Nav.Param<Booking>("Booking");
 
-            if (Book == null)
+            if (bookRequest == null)
             {
-                if (await RidesService.GetUserRides() != null)
+                var userRides = await RidesService.GetUserRides();
+                if (userRides != null)
                 {
-                    var ride = (await RidesService.GetUserRides()).Where(rec => rec.Start > LocalTime.Now).OrderBy(rec => rec.Start).FirstOrDefault();
+                    var ride = userRides.Where(rec => rec.Start > LocalTime.Now).OrderBy(rec => rec.Start).FirstOrDefault();
                     if (ride != null)
                     {
-                        Book = new Booking()
+                        bookRequest = new Booking
                         {
                             BikeId = ride.BikeId,
                             DueDate = ride.Start.AddMinutes(ride.Duration),
@@ -42,28 +43,28 @@ namespace UI.Pages
                     }
                 }
             }
-            if (Book == null)
+            if (bookRequest == null)
             {
                 await Alert.Show("Alert", "There is no available ride");
                 return;
             }
             await base.OnInitializing();
             await InitializeComponents();
-            timer = new Timer(CounterFunc, null, 1, 1000);
+            timerControl = new Timer(CounterFunc, null, 1, 1000);
         }
 
 
         void CounterFunc(object state)
         {
             var tp = new TimeSpan(0, 0, 1);
-            TimeSpanCounter = TimeSpanCounter.Subtract(tp);
+            timeSpanCounter = timeSpanCounter.Subtract(tp);
 
-            if (TimeSpanCounter.TotalSeconds >= 0)
+            if (timeSpanCounter.TotalSeconds >= 0)
             {
-                timerText.Text = TimeSpanCounter.ToString("m\\:ss");
+                timerText.Text = timeSpanCounter.ToString("m\\:ss");
             }
             else
-                timer.Dispose();
+                timerControl.Dispose();
 
         }
     }
