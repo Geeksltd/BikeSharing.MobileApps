@@ -40,7 +40,4 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Settings.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)-Logic\" />
-  </ItemGroup>
 </Project>

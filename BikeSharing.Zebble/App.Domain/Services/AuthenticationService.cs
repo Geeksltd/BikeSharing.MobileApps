@@ -10,7 +10,6 @@ namespace Domain.Services
     {
         public bool IsAuthenticated => Settings.AccessToken.HasValue();
 
-
         public async Task<bool> LoginAsync(string userName, string password)
         {
             var auth = new AuthenticationRequest
@@ -21,9 +20,9 @@ namespace Domain.Services
             };
 
             var builder = new UriBuilder(string.Format("{0}{1}", GlobalSettings.AuthenticationEndpoint, "api/login"));
-            string uri = builder.ToString();
+            var uri = builder.ToString();
 
-            var authenticationInfo = await BaseApi.Post<AuthenticationResponse>(uri, auth);
+            var authenticationInfo = await Post<AuthenticationResponse>(uri, auth);
             Settings.UserId = authenticationInfo.UserId;
             Settings.ProfileId = authenticationInfo.ProfileId;
             Settings.AccessToken = authenticationInfo.AccessToken;

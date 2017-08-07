@@ -14,26 +14,21 @@ namespace Domain.Services
 
             var builder = new UriBuilder(string.Format("{0}api/Issues", GlobalSettings.IssuesEndpoint));
 
-
-            string uri = builder.ToString();
-            if (await BaseApi.Post(uri, issue))
+            if (await Post(builder.ToString(), issue))
                 return true;
             return false;
         }
 
-        private async Task AddUserAndBikeIdsToIssue(ReportedIssue issue)
+        async Task AddUserAndBikeIdsToIssue(ReportedIssue issue)
         {
             if (Settings.UserId == 0)
-            {
                 throw new InvalidOperationException("UserId is not saved");
-            }
+
 
             if (Settings.CurrentBookingId == 0)
-            {
                 throw new InvalidOperationException("CurrentBookingId is not saved");
-            }
-            var currentBooking = await new RidesService().GetBooking(Settings.CurrentBookingId);
 
+            var currentBooking = await new RidesService().GetBooking(Settings.CurrentBookingId);
             issue.BikeId = currentBooking.BikeId;
             issue.UserId = Settings.UserId;
         }

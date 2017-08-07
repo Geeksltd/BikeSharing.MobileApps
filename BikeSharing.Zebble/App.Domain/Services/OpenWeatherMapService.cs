@@ -18,12 +18,9 @@ namespace Domain.Services
 
             if (location != null)
             {
-                var latitude = location.Latitude;
-                var longitude = location.Longitude;
-
                 var builder = new UriBuilder(string.Format("{0}data/2.5/weather", GlobalSettings.OpenWeatherMapEndpoint))
                 {
-                    Query = $"lat={latitude}&lon={longitude}&units=imperial&appid={GlobalSettings.OpenWeatherMapAPIKey}"
+                    Query = $"lat={location.Latitude}&lon={location.Longitude}&units=imperial&appid={GlobalSettings.OpenWeatherMapAPIKey}"
                 };
                 var uri = builder.ToString();
 
@@ -40,7 +37,7 @@ namespace Domain.Services
                     return weatherInfo;
                 }
 
-                Debug.WriteLine("OpenWeatherMap API answered with: " + ((response != null) ? $"Error code = {response.cod}." : "Invalid response."));
+                Device.Log.Error("OpenWeatherMap API answered with: " + ((response != null) ? $"Error code = {response.cod}." : "Invalid response."));
             }
 
             // Default data for demo
@@ -79,7 +76,7 @@ namespace Domain.Services
                 return weatherInfo;
             }
 
-            Debug.WriteLine("OpenWeatherMap API answered with: " + ((response != null) ? $"Error code = {response.cod}." : "Invalid response."));
+            Device.Log.Error("OpenWeatherMap API answered with: " + ((response != null) ? $"Error code = {response.cod}." : "Invalid response."));
 
             // Default data for demo
             return new WeatherInfo
