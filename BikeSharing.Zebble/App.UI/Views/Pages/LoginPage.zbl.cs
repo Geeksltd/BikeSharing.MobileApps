@@ -19,13 +19,12 @@
 
         async Task TextChanged()
         {
-            if (usernameTextInput.Text.HasValue() && passwordTextInput.Text.HasValue())
-                signinButton.Set(x => x.Style.BackgroundColor = Colors.White).Set(rec => rec.Style.TextColor = Colors.Blue).Set(rec => rec.Enabled = true);
+            signinButton.Enabled = usernameTextInput.Text.HasValue() && passwordTextInput.Text.HasValue();
+
+            if (signinButton.Enabled)
+                signinButton.Background(Colors.White).TextColor(Colors.Blue);
             else
-                signinButton.Set(x => x.Style.BackgroundColor = Colors.Blue).Set(rec => rec.Style.TextColor = Colors.Black).Set(rec => rec.Enabled = false);
+                signinButton.Background(Colors.Blue).TextColor(Colors.Black);
         }
-
-
-
     }
 }
