@@ -11,7 +11,6 @@ namespace Domain.Services
 {
     class RidesService : BaseApi
     {
-
         static List<Suggestion> suggestions = StaticData.GetSuggestions();
 
         static int StationsCounter = 0;

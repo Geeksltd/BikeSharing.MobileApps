@@ -22,12 +22,12 @@
 
         async Task userImageTapped()
         {
-            FileInfo TempImage = new FileInfo("Images/profile_placeholder.png");
+            var TempImage = new FileInfo("Images/profile_placeholder.png");
             string base64Str = null;
             // try
             // {
 
-            if (Device.Permissions.Check(DevicePermission.Camera).Result == PermissionResult.Granted)
+            if (await DevicePermission.Camera.IsGranted())
                 TempImage = await Device.Media.TakePhoto();
 
             if (TempImage == null || TempImage.FullName.Contains("profile_placeholder"))
@@ -36,8 +36,8 @@
             if (TempImage != null)
             {
                 userImageView.Path = TempImage.FullName;
-                using (Stream mediaStream = TempImage.OpenRead())
-                using (MemoryStream memStream = new MemoryStream())
+                using (var mediaStream = TempImage.OpenRead())
+                using (var memStream = new MemoryStream())
                 {
                     await mediaStream.CopyToAsync(memStream);
                     base64Str = Convert.ToBase64String(memStream.ToArray());

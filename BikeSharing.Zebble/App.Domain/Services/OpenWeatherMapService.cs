@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Globalization;
 using System.Threading.Tasks;
 using Domain.Entities;
@@ -27,14 +26,12 @@ namespace Domain.Services
                 var response = await BaseApi.Get<OpenWeatherMapResponse>(uri);
                 if (response?.cod == OkResponseCode)
                 {
-                    var weatherInfo = new WeatherInfo
+                    return new WeatherInfo
                     {
                         LocationName = response.name,
                         Temp = response.main.temp,
                         TempUnit = TempUnit.Fahrenheit
                     };
-
-                    return weatherInfo;
                 }
 
                 Device.Log.Error("OpenWeatherMap API answered with: " + ((response != null) ? $"Error code = {response.cod}." : "Invalid response."));
