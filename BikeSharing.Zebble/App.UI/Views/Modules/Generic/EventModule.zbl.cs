@@ -5,7 +5,10 @@
 
     partial class EventModule
     {
-        public Event Item;
+        private Event item;
+
+        public Event Item { get => item; set => item = value; }
+
         public override async Task OnInitializing()
         {
             await base.OnInitializing();

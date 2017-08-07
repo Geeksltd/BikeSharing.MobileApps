@@ -10,8 +10,10 @@
 
     partial class EventSummaryModule
     {
-        public Event Item;
+        private Event item;
         Station FromStation, ToStation;
+
+        public Event Item { get => item; set => item = value; }
 
         public override async Task OnInitializing()
         {
@@ -24,7 +26,7 @@
             }
             await base.OnInitializing();
             await InitializeComponents();
-            eventModule.Item = Item;
+            EventModule.Item = Item;
         }
 
         async Task BookBikeButtonTapped()

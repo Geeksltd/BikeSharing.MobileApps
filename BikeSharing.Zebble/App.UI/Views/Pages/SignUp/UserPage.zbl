@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 <z-Component z-type="UserPage" z-base="Page" z-namespace="UI.Pages" CssClass="SignupPages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <Stack Id="mainStack">
-    <Stack Id="backgroundStack" >
-      <Stack Id="tempStack" />
-      <Stack Direction="Horizontal" Id="designStack" >
-          <ImageView Id="signupTreesImageView"/>
-          <ImageView Id="bikeImageView"/>     
+  <Stack Id="MainStack">
+    <Stack Id="BackgroundStack" >
+      <Stack Id="TempStack" />
+      <Stack Direction="Horizontal" Id="DesignStack" >
+          <ImageView Id="SignupTreesImageView"/>
+          <ImageView Id="BikeImageView"/>     
       </Stack>
-      <ImageView Id="fenceImageView"/>
+      <ImageView Id="FenceImageView"/>
     </Stack>
-    <Stack Id="foregroundStack">
-      <Stack Id="closeStack" >
-        <Button  Id="closeButton" z-nav-go="Pages.Login"/>
+    <Stack Id="ForegroundStack">
+      <Stack Id="CloseStack" >
+        <Button  Id="CloseButton" z-nav-go="Pages.Login"/>
       </Stack>
-      <Stack Id="detailStack">
+      <Stack Id="DetailStack">
         <TextView Text="First Name" CssClass="title"   />
-        <TextInput Id="firstNameInput" on-UserTextChanged="TextChanged" />
+        <TextInput Id="FirstNameInput" on-UserTextChanged="TextChanged" />
 
         <TextView Text="Last Name" CssClass="title"    />
-        <TextInput Id="lastNameInput" on-UserTextChanged="TextChanged" />
+        <TextInput Id="LastNameInput" on-UserTextChanged="TextChanged" />
 
         <TextView Text="Birthdate" CssClass="title"   />
-        <DatePicker Id="birthdateInput"  YearFrom="1950"  />
+        <DatePicker Id="BirthdateInput"  YearFrom="1950"  />
       </Stack>
       <Stack Id="NextButtonStack">
-        <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <Button  Id="NextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
       </Stack>
     </Stack>
   </Stack>

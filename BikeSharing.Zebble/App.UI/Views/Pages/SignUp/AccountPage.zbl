@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <z-Component z-type="AccountPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <Stack Id="mainStack">
-    <Stack Id="backgroundStack" >
-      <Stack Id="sunBoxStack" >
-        <Canvas Id="sunBox" />       
+  <Stack Id="MainStack">
+    <Stack Id="BackgroundStack" >
+      <Stack Id="SunBoxStack" >
+        <Canvas Id="SunBox" />       
       </Stack>
-      <Stack Id="buildingStack" >
-        <ImageView Id="buildingImageView" />   
+      <Stack Id="BuildingStack" >
+        <ImageView Id="BuildingImageView" />   
       </Stack>
-      <ImageView Id="fenceImageView"/>
+      <ImageView Id="FenceImageView"/>
     </Stack>
-    <Stack Id="foregroundStack">
-        <Stack Id="closeStack" >
+    <Stack Id="ForegroundStack">
+        <Stack Id="CloseStack" >
           <Button  z-nav-go="Login"/>
         </Stack>
-        <Stack Id="detailStack">
+        <Stack Id="DetailStack">
           <TextView Text="Email" CssClass="title"   />
-          <TextInput Id="emailInput" on-UserTextChanged="TextChanged"  />
+          <TextInput Id="EmailInput" on-UserTextChanged="TextChanged"  />
           <TextView Text="Skype" CssClass="title"   />
-          <TextInput Id="skypeInput" on-UserTextChanged="TextChanged"  />
+          <TextInput Id="SkypeInput" on-UserTextChanged="TextChanged"  />
         </Stack>
         <Stack Id="NextButtonStack" Direction="Horizontal">
-            <ImageView Id="bikeImageView" Path="Images/SignUp/bike.png" />
-            <Button  Id="nextButton1" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>          
+            <ImageView Id="BikeImageView" Path="Images/SignUp/bike.png" />
+            <Button  Id="ButtonNext" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>          
         </Stack>
       </Stack>
   </Stack>

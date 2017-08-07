@@ -15,8 +15,8 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            foregroundStack.Y.Set(10);
-            birthdateInput.SelectedValue = new DateTime(1970, 01, 01);
+            ForegroundStack.Y.Set(10);
+            BirthdateInput.SelectedValue = new DateTime(1970, 01, 01);
         }
         public SignUp SignupPage => FindParent<SignUp>();
 
@@ -26,18 +26,18 @@
 
         async Task NextButtonTapped()
         {
-            FirstName = firstNameInput.Text;
-            LastName = lastNameInput.Text;
-            BirthDate = birthdateInput.SelectedValue.Value;
+            FirstName = FirstNameInput.Text;
+            LastName = LastNameInput.Text;
+            BirthDate = BirthdateInput.SelectedValue.Value;
             await SignupPage.NextPage();
         }
 
         async Task TextChanged()
         {
-            if (firstNameInput.Text.HasValue() && lastNameInput.Text.HasValue())
-                nextButton.Set(rec => rec.Enabled = true).Background("Images/SignUp/floating_action_button_normal.png");
+            if (FirstNameInput.Text.HasValue() && LastNameInput.Text.HasValue())
+                NextButton.Set(rec => rec.Enabled = true).Background("Images/SignUp/floating_action_button_normal.png");
             else
-                nextButton.Set(rec => rec.Enabled = false).Background("Images/SignUp/floating_action_button_disable.png");
+                NextButton.Set(rec => rec.Enabled = false).Background("Images/SignUp/floating_action_button_disable.png");
         }
 
     }

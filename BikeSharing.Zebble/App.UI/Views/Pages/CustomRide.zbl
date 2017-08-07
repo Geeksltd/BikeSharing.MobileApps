@@ -2,26 +2,26 @@
 <z-Component z-type="CustomRide" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="New Ride" data-TopMenu="MainMenu" z-cache="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <!--<Map Id="MapView"/>-->
-    <Stack Id="routeSelector" />
-    <Stack Id="innerStack">
+    <Stack Id="RouteSelector" />
+    <Stack Id="InnerStack">
       <TextView Text="From"  CssClass="TextView"/>
-      <ItemPicker  Id="fromItemPicker"  />
+      <ItemPicker  Id="FromItemPicker"  />
       <TextView Text="To"  CssClass="TextView"/>
-      <ItemPicker  Id="toItemPicker"   />
-      <Stack Id="goButtonStack" >
+      <ItemPicker  Id="ToItemPicker"   />
+      <Stack Id="GoButtonStack" >
         <Button Text="Go" on-Tapped="GoClicked" AutoFlash="true" />
       </Stack>
     </Stack>   
-    <Stack Id="routeSelected" Visible="false" />
-    <Stack Id="fromPS" >
+    <Stack Id="RouteSelected" Visible="false" />
+    <Stack Id="FromPS" >
       <TextView  Text="From"  />
-      <TextView Id="fromText" CssClass="title" />
-      <TextView Id="fromPSText" Text="Empty bike docks 0 Avilable bikes 7" />
+      <TextView Id="FromText" CssClass="title" />
+      <TextView Id="FromPSText" Text="Empty bike docks 0 Avilable bikes 7" />
     </Stack>
-    <Stack Id="toPS">
+    <Stack Id="ToPS">
       <TextView  Text="To"  />
-      <TextView Id="toText" CssClass="title" />
-      <TextView Id="toPSText" Text="Empty bike docks 0 Avilable bikes 7"  />
+      <TextView Id="ToText" CssClass="title" />
+      <TextView Id="ToPSText" Text="Empty bike docks 0 Avilable bikes 7"  />
     </Stack>
   </z-place>
 </z-Component>

@@ -13,10 +13,15 @@ namespace Domain.Services
     {
         public static class EventsService
         {
-            public static async Task<Event[]> GetEvents(Func<Event[], Task> refresher = null)
+            public static async Task<Event[]> GetEvents(Func<Event[], Task> refresher)
             {
                 string uri = $"{GlobalSettings.EventsEndpoint}api/Events/";
                 return await BaseApi.Get<Event[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: refresher);
+            }
+            public static async Task<Event[]> GetEvents()
+            {
+                string uri = $"{GlobalSettings.EventsEndpoint}api/Events/";
+                return await BaseApi.Get<Event[]>(uri);
             }
 
             public static async Task<Event> GetEventById(int eventId)

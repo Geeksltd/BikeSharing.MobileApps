@@ -4,26 +4,26 @@
     <Stack Id="backgroundStack" >
       <Stack />
       <Stack >
-        <Canvas Id="leftCloudBox" on-VisibilityChanged="LeftCloudBoxVisibilityChanged" />
-        <ImageView Id="padlockImageView"   />
+        <Canvas Id="LeftCloudBox" on-VisibilityChanged="LeftCloudBoxVisibilityChanged" />
+        <ImageView Id="PadlockImageView"   />
         <Canvas Id="RightCloudBox" on-VisibilityChanged="RightCloudBoxVisibilityChanged" />
       </Stack>
     </Stack>
-    <Stack Id="foregroundStack">
-      <Stack Id="closeStack" >
-        <Button  Id="closeButton" z-nav-go="Pages.Login"/>
+    <Stack Id="ForegroundStack">
+      <Stack Id="CloseStack" >
+        <Button  Id="CloseButton" z-nav-go="Pages.Login"/>
       </Stack>
-      <Stack Id="detailStack">
+      <Stack Id="DetailStack">
         <TextView Text="Username" CssClass="title"    />
-        <TextInput Id="usernameInput" on-UserTextChanged="TextChanged" />
+        <TextInput Id="UsernameInput" on-UserTextChanged="TextChanged" />
         <TextView Text="Password" CssClass="title"  />
-        <TextInput Id="passwordInput" on-UserTextChanged="TextChanged"    />
+        <TextInput Id="PasswordInput" on-UserTextChanged="TextChanged"    />
         <TextView Text="RepeatPassword" CssClass="title"  />
-        <TextInput Id="repeatPasswordInput" on-UserTextChanged="TextChanged"   />
+        <TextInput Id="RepeatPasswordInput" on-UserTextChanged="TextChanged"   />
       </Stack>
       <Stack Id="NextButtonStack"  >
         <Stack>
-          <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+          <Button  Id="NextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
         </Stack>
       </Stack>
     </Stack>

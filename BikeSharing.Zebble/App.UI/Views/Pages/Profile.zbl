@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <z-Component z-type="Profile" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
-    <Stack Direction="Horizontal" Id="mainStack">
+    <Stack Direction="Horizontal" Id="MainStack">
       <Stack>
-        <ImageView Id="userImageView" Path="@Item.PhotoUrl" on-Tapped="UserImageTapped" />
+        <ImageView Id="UserImageView" Path="@Item.PhotoUrl" on-Tapped="UserImageTapped" />
       </Stack>
       <Stack>
         <TextView  Text="First Name" CssClass="label"  />

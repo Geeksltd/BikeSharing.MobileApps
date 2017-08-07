@@ -17,12 +17,12 @@
 
         async Task TextChanged()
         {
-            signinButton.Enabled = usernameTextInput.Text.HasValue() && passwordTextInput.Text.HasValue();
+            SigninButton.Enabled = UsernameTextInput.Text.HasValue() && PasswordTextInput.Text.HasValue();
 
-            if (signinButton.Enabled)
-                signinButton.Background(Colors.White).TextColor(Colors.Blue);
+            if (SigninButton.Enabled)
+                SigninButton.Background(Colors.White).TextColor(Colors.Blue);
             else
-                signinButton.Background(Colors.Blue).TextColor(Colors.Black);
+                SigninButton.Background(Colors.Blue).TextColor(Colors.Black);
         }
     }
 }

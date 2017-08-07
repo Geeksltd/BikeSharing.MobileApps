@@ -21,10 +21,10 @@
             await base.OnInitializing();
             await InitializeComponents();
             // MapView.ZoomLevel = 11;
-            routeSelector.Y.Set(10);
-            routeSelected.Y.Set(Root.ActualHeight - 230);
-            fromItemPicker.SelectionChanged.Handle(FSelectionChanged);
-            toItemPicker.SelectionChanged.Handle(TSelectionChanged);
+            RouteSelector.Y.Set(10);
+            RouteSelected.Y.Set(Root.ActualHeight - 230);
+            FromItemPicker.SelectionChanged.Handle(FSelectionChanged);
+            ToItemPicker.SelectionChanged.Handle(TSelectionChanged);
             if (await RidesService.GetNearestStations() != null)
             {
                 //await MapView.Add(new Map.Annotation
@@ -33,35 +33,35 @@
                 //    Location = new Zebble.Services.GeoLocation((await new RidesService().GetNearestStations()).FirstOrDefault().Latitude, (await new RidesService().GetNearestStations()).FirstOrDefault().Longitude)
                 //});
                 InitializePinsFromStations(await RidesService.GetNearestStations());
-                fromItemPicker.DataSource = CustomPins.ToList();
-                toItemPicker.DataSource = CustomPins.ToList();
+                FromItemPicker.DataSource = CustomPins.ToList();
+                ToItemPicker.DataSource = CustomPins.ToList();
             }
         }
 
         private async Task FSelectionChanged()
         {
-            var selected = (CustomPin)fromItemPicker.SelectedValue;
+            var selected = (CustomPin)FromItemPicker.SelectedValue;
             var station = await RidesService.GetStation(selected.Id);
-            routeSelected.Visible = true;
-            fromPS.Visible = true;
-            fromText.Text = selected.Label;
-            fromPSText.Text = $"Empty bike docks {station.EmptyDocks} Avilable bikes {station.Occupied}";
+            RouteSelected.Visible = true;
+            FromPS.Visible = true;
+            FromText.Text = selected.Label;
+            FromPSText.Text = $"Empty bike docks {station.EmptyDocks} Avilable bikes {station.Occupied}";
         }
 
         private async Task TSelectionChanged()
         {
-            var selected = (CustomPin)toItemPicker.SelectedValue;
+            var selected = (CustomPin)ToItemPicker.SelectedValue;
             var station = await RidesService.GetStation(selected.Id);
-            routeSelected.Visible = true;
-            toPS.Visible = true;
-            toText.Text = selected.Label;
-            toPSText.Text = $"Empty bike docks {station.EmptyDocks} Avilable bikes {station.Occupied}";
+            RouteSelected.Visible = true;
+            ToPS.Visible = true;
+            ToText.Text = selected.Label;
+            ToPSText.Text = $"Empty bike docks {station.EmptyDocks} Avilable bikes {station.Occupied}";
         }
 
         public async Task GoClicked()
         {
-            var fromStation = fromItemPicker.SelectedValue;
-            var toStation = toItemPicker.SelectedValue;
+            var fromStation = FromItemPicker.SelectedValue;
+            var toStation = ToItemPicker.SelectedValue;
 
             await Nav.Forward<BookingPage>(new { from = fromStation, to = toStation });
         }

@@ -19,48 +19,48 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            foregroundStack.Y.Set(10);
+            ForegroundStack.Y.Set(10);
 
-            await sunBox.Animate(new Animation
+            await SunBox.Animate(new Animation
             {
                 Duration = 100000.Milliseconds(),
-                Change = () => sunBox.Rotation(360),
+                Change = () => SunBox.Rotation(360),
                 Repeats = 600
             });
 
-            await cloudBox.Animate(new Animation
+            await CloudBox.Animate(new Animation
             {
-                Change = () => cloudBox.Animate(2.Seconds(), x => x.Margin(left: 150), x => x.Visible = false),
+                Change = () => CloudBox.Animate(2.Seconds(), x => x.Margin(left: 150), x => x.Visible = false),
                 Repeats = 100
             });
         }
 
         async Task CloudBoxVisibilityChanged()
         {
-            if (cloudBox.Visible == false)
-                if (cloudBox.Margin.Left.CurrentValue == 150)
+            if (CloudBox.Visible == false)
+                if (CloudBox.Margin.Left.CurrentValue == 150)
                 {
-                    cloudBox.Visible = true;
+                    CloudBox.Visible = true;
                     await Task.Delay(1000);
 
 
-                    await cloudBox.Animate(new Animation
+                    await CloudBox.Animate(new Animation
                     {
                         Duration = 1.Seconds(),
-                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 50))
+                        Change = () => CloudBox.Animate(10.Seconds(), x => x.Margin(left: 50))
                     });
-                    cloudBox.Visible = false;
+                    CloudBox.Visible = false;
                 }
-                else if (cloudBox.Margin.Left.CurrentValue == 50)
+                else if (CloudBox.Margin.Left.CurrentValue == 50)
                 {
-                    cloudBox.Visible = true;
+                    CloudBox.Visible = true;
                     await Task.Delay(1000);
-                    await cloudBox.Animate(new Animation
+                    await CloudBox.Animate(new Animation
                     {
                         Duration = 1.Seconds(),
-                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 150))
+                        Change = () => CloudBox.Animate(10.Seconds(), x => x.Margin(left: 150))
                     });
-                    cloudBox.Visible = false;
+                    CloudBox.Visible = false;
                 }
         }
 
@@ -68,17 +68,17 @@
 
         async Task AnnualImageViewTapped()
         {
-            nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             SetSubscription(Subscription.Annual);
         }
         async Task MonthlyImageViewTapped()
         {
-            nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             SetSubscription(Subscription.Monthly);
         }
         async Task ThreeMonthlyImageViewTapped()
         {
-            nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             SetSubscription(Subscription.ThreeMonthly);
         }
 

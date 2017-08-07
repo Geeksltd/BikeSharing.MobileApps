@@ -14,13 +14,13 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            foregroundStack.Y.Set(10);
+            ForegroundStack.Y.Set(10);
 
 
-            await sunBox.Animate(new Animation
+            await SunBox.Animate(new Animation
             {
                 Duration = 100000.Milliseconds(),
-                Change = () => sunBox.Rotation(360),
+                Change = () => SunBox.Rotation(360),
                 Repeats = 60
             });
         }
@@ -34,8 +34,8 @@
         {
             if (EmailValidation())
             {
-                Email = emailInput.Text;
-                Skype = skypeInput.Text;
+                Email = EmailInput.Text;
+                Skype = SkypeInput.Text;
                 await SignupPage.NextPage();
             }
             else
@@ -44,20 +44,20 @@
 
         async Task TextChanged()
         {
-            if (skypeInput.Text.HasValue() && EmailValidation())
-                nextButton1.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            if (SkypeInput.Text.HasValue() && EmailValidation())
+                ButtonNext.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             else
-                nextButton1.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
+                ButtonNext.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
         }
 
 
         bool EmailValidation()
         {
-            if (emailInput.Text.HasValue())
+            if (EmailInput.Text.HasValue())
             {
                 string patternEmail = @"(?<email>\w+@\w+\.[a-z]{0,3})";
                 var regexEmail = new Regex(patternEmail);
-                if (regexEmail.IsMatch(emailInput.Text))
+                if (regexEmail.IsMatch(EmailInput.Text))
                     return true;
             }
             return false;

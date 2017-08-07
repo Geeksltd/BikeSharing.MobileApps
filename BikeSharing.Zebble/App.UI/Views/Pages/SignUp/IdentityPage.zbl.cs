@@ -15,10 +15,10 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            foregroundStack.Y.Set(10);
-            await leftCloudBox.Animate(new Animation
+            ForegroundStack.Y.Set(10);
+            await LeftCloudBox.Animate(new Animation
             {
-                Change = () => leftCloudBox.Animate(2.Seconds(), x => x.Margin(left: 70), x => x.Visible = false),
+                Change = () => LeftCloudBox.Animate(2.Seconds(), x => x.Margin(left: 70), x => x.Visible = false),
                 Repeats = 100
             });
             await RightCloudBox.Animate(new Animation
@@ -34,20 +34,20 @@
 
         async Task NextButtonTapped()
         {
-            if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && passwordInput.Text == repeatPasswordInput.Text)
+            if (UsernameInput.Text.HasValue() && PasswordInput.Text.HasValue() && RepeatPasswordInput.Text.HasValue() && PasswordInput.Text == RepeatPasswordInput.Text)
             {
-                UserName = usernameInput.Text;
-                Password = passwordInput.Text;
+                UserName = UsernameInput.Text;
+                Password = PasswordInput.Text;
                 await SignupPage.NextPage();
             }
         }
 
         async Task TextChanged()
         {
-            if (usernameInput.Text.HasValue() && passwordInput.Text.HasValue() && repeatPasswordInput.Text.HasValue() && repeatPasswordInput.Text == passwordInput.Text)
-                nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            if (UsernameInput.Text.HasValue() && PasswordInput.Text.HasValue() && RepeatPasswordInput.Text.HasValue() && RepeatPasswordInput.Text == PasswordInput.Text)
+                NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             else
-                nextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
+                NextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
         }
 
         async Task RightCloudBoxVisibilityChanged()
@@ -81,30 +81,30 @@
 
         async Task LeftCloudBoxVisibilityChanged()
         {
-            if (leftCloudBox.Visible == false)
-                if (leftCloudBox.Margin.Left.CurrentValue == 70)
+            if (LeftCloudBox.Visible == false)
+                if (LeftCloudBox.Margin.Left.CurrentValue == 70)
                 {
-                    leftCloudBox.Visible = true;
+                    LeftCloudBox.Visible = true;
                     await Task.Delay(1000);
 
 
-                    await leftCloudBox.Animate(new Animation
+                    await LeftCloudBox.Animate(new Animation
                     {
                         Duration = 1.Seconds(),
-                        Change = () => leftCloudBox.Animate(10.Seconds(), x => x.Margin(left: 1))
+                        Change = () => LeftCloudBox.Animate(10.Seconds(), x => x.Margin(left: 1))
                     });
-                    leftCloudBox.Visible = false;
+                    LeftCloudBox.Visible = false;
                 }
-                else if (leftCloudBox.Margin.Left.CurrentValue == 1)
+                else if (LeftCloudBox.Margin.Left.CurrentValue == 1)
                 {
-                    leftCloudBox.Visible = true;
+                    LeftCloudBox.Visible = true;
                     await Task.Delay(1000);
-                    await leftCloudBox.Animate(new Animation
+                    await LeftCloudBox.Animate(new Animation
                     {
                         Duration = 1.Seconds(),
-                        Change = () => leftCloudBox.Animate(10.Seconds(), x => x.Margin(left: 70))
+                        Change = () => LeftCloudBox.Animate(10.Seconds(), x => x.Margin(left: 70))
                     });
-                    leftCloudBox.Visible = false;
+                    LeftCloudBox.Visible = false;
                 }
         }
 

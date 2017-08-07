@@ -61,11 +61,10 @@ namespace UI.Pages
 
             if (timeSpanCounter.TotalSeconds >= 0)
             {
-                timerText.Text = timeSpanCounter.ToString("m\\:ss");
+                TimerText.Text = timeSpanCounter.ToString("m\\:ss");
             }
             else
                 timerControl.Dispose();
-
         }
     }
 }

@@ -5,20 +5,20 @@
     xsi:noNamespaceSchemaLocation="./../../.zebble-schema.xml">
 
   <Stack Id="Body">
-    <Stack Id="itemsStack" >
+    <Stack Id="ItemsStack" >
       <Stack >
-        <Stack Id="menuItemsStack">
+        <Stack Id="MenuItemsStack">
           <IconButton  Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.Home" />
           <IconButton  Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRide"   />
           <IconButton  Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRides" />
-          <IconButton  Id="upcomingRideButton" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemaining" Enabled="false"  />
+          <IconButton  Id="UpcomingRideButton" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemaining" Enabled="false"  />
           <IconButton  Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncident" />
           <IconButton  Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.Profile" />
         </Stack>
         <IconButton  Text="@Settings.UserProfile.FullName" IconPath="@Settings.UserProfile.PhotoUrl"  />
       </Stack>
     </Stack>
-    <Stack Id="logoutStack">
+    <Stack Id="LogoutStack">
       <Button Text="Logout" on-Tapped="LogoutButtonTapped" />
     </Stack>
   </Stack>

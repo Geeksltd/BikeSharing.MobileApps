@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
-<z-Component z-type="TimeRemaining" z-base="Templates.Default" CssClass="BookingDetailPage" data-TopMenu="MainMenu" z-namespace="UI.Pages" z-partial="true" Title="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+<z-Component z-type="TimeRemaining" z-base="Templates.Default" CssClass="BookingDetail" data-TopMenu="MainMenu" z-namespace="UI.Pages" z-partial="true" Title="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Stack >
-      <TextView Text="From" Id="fromText" />
+      <TextView Text="From" Id="FromText" />
       <TextView Text="@bookRequest.FromStation.Name" />
       <TextView Text="To" />
       <TextView Text="@bookRequest.ToStation.Name" />
       <TextView Text="@bookRequest.DueDateString" CssClass="date" />
       <TextView Text="@GlobalSettings.City" CssClass="city" />
-      <Stack Id="timerStack">
-          <TextView Id="timerText" />
+      <Stack Id="TimerStack">
+          <TextView Id="TimerText" />
       </Stack>
       <TextView Text="Time remaining"  CssClass="label" />
-      <Stack Id="bookingStack" Direction="Vertical">
+      <Stack Id="BookingStack" Direction="Vertical">
         <Stack>
            <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" />
            <TextView Text="@bookRequest.BikeId.ToString()" CssClass="bluetext" />

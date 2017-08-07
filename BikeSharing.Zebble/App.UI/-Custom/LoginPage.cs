@@ -55,8 +55,8 @@ namespace UI.Pages
 
         private bool Validate()
         {
-            UserName = usernameTextInput?.Text;
-            Password = passwordTextInput?.Text;
+            UserName = UsernameTextInput?.Text;
+            Password = PasswordTextInput?.Text;
             bool isValidUser = UserName.HasValue();
             bool isValidPassword = Password.HasValue();
             return isValidUser && isValidPassword;

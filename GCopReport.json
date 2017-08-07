@@ -9,7 +9,7 @@
     },
     {
       "Analyzer": "LongMethodAnalyzer",
-      "OccurrenceCount": 21,
+      "OccurrenceCount": 23,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -44,14 +44,14 @@
     },
     {
       "Analyzer": "OrderByWhereLinqAnalyzer",
-      "OccurrenceCount": 6,
+      "OccurrenceCount": 7,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
     },
     {
       "Analyzer": "AsyncAwaitMethodAnalyzer",
-      "OccurrenceCount": 1013,
+      "OccurrenceCount": 1126,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -114,7 +114,7 @@
     },
     {
       "Analyzer": "IEnumerableMultipleEvaluationsAnalyzer",
-      "OccurrenceCount": 4,
+      "OccurrenceCount": 5,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -135,7 +135,7 @@
     },
     {
       "Analyzer": "UseDirectIdPropertyAnalyzer",
-      "OccurrenceCount": 2,
+      "OccurrenceCount": 3,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"

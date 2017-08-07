@@ -12,41 +12,41 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            foregroundStack.Y.Set(10);
+            ForegroundStack.Y.Set(10);
 
-            await cloudBox.Animate(new Animation
+            await CloudBox.Animate(new Animation
             {
-                Change = () => cloudBox.Animate(2.Seconds(), x => x.Margin(left: 70), x => x.Visible = false),
+                Change = () => CloudBox.Animate(2.Seconds(), x => x.Margin(left: 70), x => x.Visible = false),
                 Repeats = 100
             });
         }
 
         async Task CloudBoxVisibilityChanged()
         {
-            if (cloudBox.Visible == false)
-                if (cloudBox.Margin.Left.CurrentValue == 70)
+            if (CloudBox.Visible == false)
+                if (CloudBox.Margin.Left.CurrentValue == 70)
                 {
-                    cloudBox.Visible = true;
+                    CloudBox.Visible = true;
                     await Task.Delay(1000);
 
 
-                    await cloudBox.Animate(new Animation
+                    await CloudBox.Animate(new Animation
                     {
                         Duration = 1.Seconds(),
-                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 1))
+                        Change = () => CloudBox.Animate(10.Seconds(), x => x.Margin(left: 1))
                     });
-                    cloudBox.Visible = false;
+                    CloudBox.Visible = false;
                 }
-                else if (cloudBox.Margin.Left.CurrentValue == 1)
+                else if (CloudBox.Margin.Left.CurrentValue == 1)
                 {
-                    cloudBox.Visible = true;
+                    CloudBox.Visible = true;
                     await Task.Delay(1000);
-                    await cloudBox.Animate(new Animation
+                    await CloudBox.Animate(new Animation
                     {
                         Duration = 1.Seconds(),
-                        Change = () => cloudBox.Animate(10.Seconds(), x => x.Margin(left: 70))
+                        Change = () => CloudBox.Animate(10.Seconds(), x => x.Margin(left: 70))
                     });
-                    cloudBox.Visible = false;
+                    CloudBox.Visible = false;
                 }
         }
 
@@ -56,18 +56,18 @@
 
         async Task ImageViewTapped()
         {
-            nextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
             if (Gender)
             {
                 Gender = false;
-                womanImageView.Path("Images/SignUp/signup_woman_select.png");
-                manImageView.Path("Images/SignUp/signup_man.png");
+                WomanImageView.Path("Images/SignUp/signup_woman_select.png");
+                ManImageView.Path("Images/SignUp/signup_man.png");
             }
             else
             {
                 Gender = true;
-                womanImageView.Path("Images/SignUp/signup_woman.png");
-                manImageView.Path("Images/SignUp/signup_man_select.png");
+                WomanImageView.Path("Images/SignUp/signup_woman.png");
+                ManImageView.Path("Images/SignUp/signup_man_select.png");
             }
         }
 

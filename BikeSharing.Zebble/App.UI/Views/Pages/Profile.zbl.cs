@@ -36,7 +36,7 @@
 
             if (tempImage != null)
             {
-                userImageView.Path = tempImage.FullName;
+                UserImageView.Path = tempImage.FullName;
                 using (Stream mediaStream = tempImage.OpenRead())
                 using (MemoryStream memStream = new MemoryStream())
                 {

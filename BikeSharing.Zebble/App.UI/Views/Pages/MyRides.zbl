@@ -2,19 +2,19 @@
 <z-Component z-type="MyRides" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="My Rides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Modules.WeatherInfoModule Id="WeatherInfoModule" />
-    <Stack Direction="Horizontal" Id="infoStack">
+    <Stack Direction="Horizontal" Id="InfoStack">
       <Stack Id="MyRidesStack" >
         <ListView z-of="Ride, Row" Id="List" EmptyText="Empty list" DataSource="@Items" >
           <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Ride]" >
-            <Stack Direction="Horizontal" Id="mainStack" on-Tapped="@RowTapped">
-              <Stack Id="iconStack">
-                <ImageView Path="Images/myrides_ic_custom_ride.png" Id="myRidesImage" />
+            <Stack Direction="Horizontal" Id="MainStack" on-Tapped="@RowTapped">
+              <Stack Id="IconStack">
+                <ImageView Path="Images/myrides_ic_custom_ride.png" Id="MyRidesImage" />
               </Stack>
-              <Stack Id="rideInfoStack">
+              <Stack Id="RideInfoStack">
                 <TextView Text="From"   />
-                <TextView Text="@Item.From" Id="fromStationNameTextView"  Wrap="false" />
+                <TextView Text="@Item.From" Id="FromStationNameTextView"  Wrap="false" />
                 <TextView Text="To"  />
-                <TextView Text="@Item.To" Id="toStationNameTextView" Wrap="false"  />
+                <TextView Text="@Item.To" Id="ToStationNameTextView" Wrap="false"  />
                 <TextView Text="@Item.StartString" Wrap="false" />
                 <TextView Text="@GlobalSettings.City" Wrap="false" />
                 <Stack  Direction="Horizontal"  >
@@ -29,13 +29,13 @@
         </ListView>
       </Stack>
       <!--<MapBox  />-->
-      <Stack  Id="selectedRowInfoStack" >
-        <Stack Id="selectedStack" Visible="false">
-          <TextView Text="From" CssClass="label" Id="fromTexView" />
-          <TextView Id="fromSNSelectedRowTextView" CssClass="texbox"   Wrap="false" />
+      <Stack  Id="SelectedRowInfoStack" >
+        <Stack Id="SelectedStack" Visible="false">
+          <TextView Text="From" CssClass="label" Id="FromTexView" />
+          <TextView Id="FromSNSelectedRowTextView" CssClass="texbox"   Wrap="false" />
           <TextView Text="To"  CssClass="label"    />
-          <TextView Id="toSNSelectedRowTextView" CssClass="texbox"  Wrap="false"  />
-          <TextView Id="dateSelectedRowTextView" Wrap="false" />
+          <TextView Id="ToSNSelectedRowTextView" CssClass="texbox"  Wrap="false"  />
+          <TextView Id="DateSelectedRowTextView" Wrap="false" />
           <TextView Text="@GlobalSettings.City" Wrap="false" />
         </Stack>
       </Stack>

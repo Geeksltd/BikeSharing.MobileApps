@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <z-Component z-type="GenderPage" z-base="Page" z-namespace="UI.Pages" CssClass="SignupPages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <Stack Id="mainStack">
-    <Stack Id="backgroundStack" >
-      <Stack Id="cloudBoxStack" >
-        <Canvas Id="cloudBox" on-VisibilityChanged="CloudBoxVisibilityChanged" />
+  <Stack Id="MainStack">
+    <Stack Id="BackgroundStack" >
+      <Stack Id="CloudBoxStack" >
+        <Canvas Id="CloudBox" on-VisibilityChanged="CloudBoxVisibilityChanged" />
    </Stack>
-      <Stack Id="buildingStack" >
+      <Stack Id="BuildingStack" >
         <ImageView  Path="Images/SignUp/building.png" />
       </Stack>
     </Stack>
-    <Stack Id="foregroundStack">
-      <Stack Id="closeStack" >
-        <Button  Id="closeButton" z-nav-go="Pages.Login"/>
+    <Stack Id="ForegroundStack">
+      <Stack Id="CloseStack" >
+        <Button  Id="CloseButton" z-nav-go="Pages.Login"/>
       </Stack>
-      <Stack Id="detailStack">
-        <ImageView Path="Images/SignUp/signup_woman.png" Id="womanImageView" on-Tapped="ImageViewTapped"/>
-        <ImageView Path="Images/SignUp/signup_man.png" Id="manImageView"  on-Tapped="ImageViewTapped"/>
+      <Stack Id="DetailStack">
+        <ImageView Path="Images/SignUp/signup_woman.png" Id="WomanImageView" on-Tapped="ImageViewTapped"/>
+        <ImageView Path="Images/SignUp/signup_man.png" Id="ManImageView"  on-Tapped="ImageViewTapped"/>
       </Stack>
       <Stack Id="NextButtonStack"  Direction="Horizontal">
-        <TextView Text="Skip" Id="skipTextView" on-Tapped="NextButtonTapped" />
-        <Button  Id="nextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <TextView Text="Skip" Id="SkipTextView" on-Tapped="NextButtonTapped" />
+        <Button  Id="NextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
       </Stack>
     </Stack>
   </Stack>

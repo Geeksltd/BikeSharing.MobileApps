@@ -17,9 +17,9 @@
             if (weather is WeatherInfo)
             {
                 var weatherInfo = weather as WeatherInfo;
-                locationText.Text = weatherInfo.LocationName;
-                tempText.Text = $"{Math.Round(weatherInfo.Temp)}˚{weatherInfo.TempUnitShort}";
-                dateText.Text = LocalTime.Now.ToString("dddd, MMMM dd");
+                LocationText.Text = weatherInfo.LocationName;
+                TempText.Text = $"{Math.Round(weatherInfo.Temp)}˚{weatherInfo.TempUnitShort}";
+                DateText.Text = LocalTime.Now.ToString("dddd, MMMM dd");
             }
         }
     }

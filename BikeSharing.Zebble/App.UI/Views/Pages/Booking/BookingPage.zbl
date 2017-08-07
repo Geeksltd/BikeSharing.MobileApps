@@ -2,7 +2,7 @@
 <z-Component z-type="BookingPage" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="New Ride" data-TopMenu="MainMenu" z-cache="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body"> 
     <!--<Map Id="MapView" />-->
-    <Stack Id="overlayStack"/>
+    <Stack Id="OverlayStack"/>
     <Stack Id="MainStack">
         <TextView Text="From"  />
         <TextView Text="@fromPin.Label" CssClass="title" />
@@ -13,17 +13,17 @@
         <Button Text="Book a bike" on-Tapped="BookClicked" AutoFlash="true" />
         <TextView CssClass="small" Text="Avilable for 30 minutes" />
     
-    <Stack Id="bookDetailStack" Direction="Horizontal">
-      <Stack Id="bikeStack">
+    <Stack Id="BookDetailStack" Direction="Horizontal">
+      <Stack Id="BikeStack">
         <ImageView Path="Images/bike.png"/>
       </Stack>
       <Stack >
         <TextView Text="From"  />
-        <TextView Text="@fromPin.Label"  Id="fromText"/>
+        <TextView Text="@fromPin.Label"  Id="FromText"/>
         <TextView Text="Empty bike docks 0 Avilable bikes 7"  />
         <TextView CssClass="splitor" />
         <TextView Text="To"  />
-        <TextView Text="@toPin.Label" Id="toText"   />
+        <TextView Text="@toPin.Label" Id="ToText"   />
         <TextView Text="Empty bike docks 0 Avilable bikes 7"  />
       </Stack>
     </Stack>

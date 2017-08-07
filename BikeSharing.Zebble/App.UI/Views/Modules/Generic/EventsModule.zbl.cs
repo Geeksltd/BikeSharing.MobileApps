@@ -33,7 +33,7 @@
                 await base.OnInitializing();
                 await InitializeComponents();
                 this.Width.Set(300);
-                eventModule.Item = Item;
+                EventModule.Item = Item;
             }
 
             public Task RowTapped()

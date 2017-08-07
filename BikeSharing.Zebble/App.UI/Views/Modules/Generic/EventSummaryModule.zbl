@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <z-Component z-type="EventSummaryModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
 
-  <Stack Id ="mainStack" BackgroundImagePath="@Item.ImagePath" >
+  <Stack Id ="MainStack" BackgroundImagePath="@Item.ImagePath" >
     <Stack>
-      <Button Text="Buy Ticket" Id="buyTicketButton" />
-      <Modules.EventModule Id="eventModule"/>
-      <Button Text="Book a Bike" Id="bookBikeButton" on-Tapped="BookBikeButtonTapped"  />
+      <Button Text="Buy Ticket" Id="BuyTicketButton" />
+      <Modules.EventModule Id="EventModule"/>
+      <Button Text="Book a Bike" Id="BookBikeButton" on-Tapped="BookBikeButtonTapped"  />
       <TextView CssClass="small" Text="Avilable for 30 minutes" />
-      <Stack Id="bookDetailStack" Direction="Horizontal">
-        <Stack Id="bikeStack">
+      <Stack Id="BookDetailStack" Direction="Horizontal">
+        <Stack Id="BikeStack">
           <ImageView Path="Images/bike.png"/>
         </Stack>
         <Stack >
           <TextView Text="From"  />
-          <TextView Text="@FromStation.Name"  Id="fromText"/>
+          <TextView Text="@FromStation.Name"  Id="FromText"/>
           <TextView Text="Empty bike docks 0 Avilable bikes 7"  />
           <TextView CssClass="splitor" />
           <TextView Text="To"  />
-          <TextView Text="@ToStation.Name" Id="toText"   />
+          <TextView Text="@ToStation.Name" Id="ToText"   />
           <TextView Text="Empty bike docks 0 Avilable bikes 7"  />
         </Stack>
       </Stack>

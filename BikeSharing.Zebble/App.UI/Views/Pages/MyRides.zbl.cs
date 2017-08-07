@@ -74,10 +74,10 @@
                 // Module.MapView.ZoomLevel++;
                 // Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
 
-                Module.fromSNSelectedRowTextView.Text = Item.From;
-                Module.toSNSelectedRowTextView.Text = Item.To;
-                Module.dateSelectedRowTextView.Text = Item.StartString;
-                Module.selectedStack.Visible = true;
+                Module.FromSNSelectedRowTextView.Text = Item.From;
+                Module.ToSNSelectedRowTextView.Text = Item.To;
+                Module.DateSelectedRowTextView.Text = Item.StartString;
+                Module.SelectedStack.Visible = true;
             }
         }
 

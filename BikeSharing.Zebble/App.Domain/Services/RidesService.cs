@@ -160,12 +160,19 @@ namespace Domain.Services
                 return Suggestions;
             }
 
-            public static async Task<Ride[]> GetUserRides(Func<Ride[], Task> refresher = null)
+            public static async Task<Ride[]> GetUserRides(Func<Ride[], Task> refresher)
             {
                 var userId = AuthenticationService.GetCurrentUserId();
 
                 string uri = $"{GlobalSettings.RidesEndpoint}api/rides/user/{userId}";
                 return await BaseApi.Get<Ride[]>(uri, cacheChoice: Zebble.ApiResponseCache.PreferThenUpdate, refresher: refresher);
+            }
+            public static async Task<Ride[]> GetUserRides()
+            {
+                var userId = AuthenticationService.GetCurrentUserId();
+
+                string uri = $"{GlobalSettings.RidesEndpoint}api/rides/user/{userId}";
+                return await BaseApi.Get<Ride[]>(uri);
             }
 
             public static void RemoveCurrentBooking()
