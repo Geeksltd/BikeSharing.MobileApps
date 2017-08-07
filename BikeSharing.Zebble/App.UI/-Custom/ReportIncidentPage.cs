@@ -3,7 +3,7 @@ using Domain;
 
 namespace UI.Pages
 {
-    partial class ReportIncidentPage
+    partial class ReportIncident
     {
 
         bool _handlebar;

@@ -6,7 +6,7 @@
     using Zebble;
     using static Domain.Services.Api;
 
-    partial class SignUpPage
+    partial class SignUp
     {
         IdentityPage IdentityPage;
         AccountPage AccountPage;
@@ -67,7 +67,7 @@
 
                 if (isAuthenticated)
                 {
-                    await Nav.Go<HomePage>();
+                    await Nav.Go<Home>();
                 }
                 else
                 {

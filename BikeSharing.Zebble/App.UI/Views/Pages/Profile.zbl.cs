@@ -9,7 +9,7 @@
     using Zebble;
     using static Domain.Services.Api;
 
-    partial class ProfilePage
+    partial class Profile
     {
         UserProfile Item;
         public override async Task OnInitializing()

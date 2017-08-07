@@ -27,7 +27,7 @@
                 Repeats = 100
             });
         }
-        public SignUpPage SignupPage => FindParent<SignUpPage>();
+        public SignUp SignupPage => FindParent<SignUp>();
 
         public string UserName { get => userName; set => userName = value; }
         public string Password { get => password; set => password = value; }

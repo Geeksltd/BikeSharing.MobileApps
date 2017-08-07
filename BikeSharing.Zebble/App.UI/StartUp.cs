@@ -30,9 +30,9 @@
         public static async Task LoadFirstPageAsync()
         {
             if (await ProfileService.GetCurrentProfileAsync() == null)
-                await Nav.Go<Pages.LoginPage>();
+                await Nav.Go<Pages.Login>();
             else
-                await Nav.Go(new Pages.HomePage());
+                await Nav.Go(new Pages.Home());
         }
     }
 }

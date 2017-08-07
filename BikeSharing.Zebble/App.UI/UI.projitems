@@ -372,10 +372,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\WeatherInfoModule.zbl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Menu\MainMenu.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Menu\MainMenu.zbl" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\Booking.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\Booking.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\BookingDetail.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\BookingDetail.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\BookingPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\BookingPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\TimeRemaining.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Booking\TimeRemaining.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\CustomRide.zbl" />
@@ -392,18 +392,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\Profile.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ReportIncident.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ReportIncident.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Account.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Account.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Gender.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Gender.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Identity.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Identity.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\AccountPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\AccountPage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\GenderPage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\IdentityPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\IdentityPage.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SignUp.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SignUp.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Subscription.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\Subscription.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\User.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\User.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SubscriptionPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\SubscriptionPage.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\UserPage.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\SignUp\UserPage.zbl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Styles\Android.css" />

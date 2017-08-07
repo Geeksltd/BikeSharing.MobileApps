@@ -39,7 +39,7 @@
 
             public Task RowTapped()
             {
-                Nav.Forward<CustomRidePage>(new
+                Nav.Forward<CustomRide>(new
                 {
                     Id = Item.Id
                 });

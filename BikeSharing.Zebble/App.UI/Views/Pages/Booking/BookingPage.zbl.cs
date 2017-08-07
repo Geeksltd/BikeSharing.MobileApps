@@ -13,7 +13,7 @@
     {
         CustomPin fromPin;
         CustomPin toPin;
-        bool IsBusy = false;
+
         public override async Task OnInitializing()
         {
             fromPin = Nav.Param<CustomPin>("from");
@@ -50,7 +50,7 @@
             var booking = await RidesService.RequestBikeBooking(fromStation, toStation);
             // if (booking != null)
             //    FindParent<MainMenu>().upcomingRideButton.Enabled = true;
-            await Nav.Forward<BookingDetailPage>(new { ShowThanks = true, Booking = booking });
+            await Nav.Forward<BookingDetail>(new { ShowThanks = true, Booking = booking });
             //}
             //catch (Exception ex)
             //{

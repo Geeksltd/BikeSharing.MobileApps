@@ -50,7 +50,7 @@
                 }
         }
 
-        public SignUpPage SignupPage => FindParent<SignUpPage>();
+        public SignUp SignupPage => FindParent<SignUp>();
 
         public bool Gender { get => gender; set => gender = value; }
 

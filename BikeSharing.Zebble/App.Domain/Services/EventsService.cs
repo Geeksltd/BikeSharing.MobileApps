@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using UI;
@@ -10,10 +13,10 @@ namespace Domain.Services
     {
         public static class EventsService
         {
-            public static async Task<Event[]> GetEvents()
+            public static async Task<Event[]> GetEvents(Func<Event[], Task> refresher = null)
             {
                 string uri = $"{GlobalSettings.EventsEndpoint}api/Events/";
-                return await BaseApi.Get<Event[]>(uri);
+                return await BaseApi.Get<Event[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: refresher);
             }
 
             public static async Task<Event> GetEventById(int eventId)

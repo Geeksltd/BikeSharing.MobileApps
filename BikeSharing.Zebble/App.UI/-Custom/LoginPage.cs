@@ -8,7 +8,7 @@ using static Domain.Services.Api;
 
 namespace UI.Pages
 {
-    partial class LoginPage
+    partial class Login
     {
         private string UserName;
         private string Password;
@@ -49,7 +49,7 @@ namespace UI.Pages
 
             if (isAuthenticated)
             {
-                await Nav.Go<HomePage>();
+                await Nav.Go<Home>();
             }
         }
 

@@ -6,7 +6,7 @@ namespace UI.Pages
     using Domain.Entities;
     using Zebble;
 
-    partial class BookingDetailPage
+    partial class BookingDetail
     {
         Timer timerControl;
         Booking bookRequest;
@@ -22,7 +22,7 @@ namespace UI.Pages
             else
             {
                 await Alert.Show("Alert", "Booking was not success");
-                await Nav.Go<HomePage>();
+                await Nav.Go<Home>();
             }
             await base.OnInitializing();
             await InitializeComponents();
@@ -34,7 +34,7 @@ namespace UI.Pages
             {
                 timerControl.Dispose();
                 isFirst = false;
-                Nav.Forward<TimeRemainingPage>(new { Booking = bookRequest });
+                Nav.Forward<TimeRemaining>(new { Booking = bookRequest });
             }
             else
                 isFirst = false;

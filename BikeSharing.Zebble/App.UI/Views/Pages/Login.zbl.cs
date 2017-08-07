@@ -4,7 +4,7 @@
     using System.Threading.Tasks;
     using Zebble;
 
-    partial class LoginPage
+    partial class Login
     {
         public override async Task OnInitializing()
         {

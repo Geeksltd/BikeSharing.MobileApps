@@ -2,7 +2,7 @@ namespace UI.Pages
 {
     using System.Threading.Tasks;
 
-    partial class HomePage
+    partial class Home
     {
         public override async Task OnInitializing()
         {

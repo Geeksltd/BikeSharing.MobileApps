@@ -13,7 +13,7 @@
             Annual
         };
         Subscription _subscription;
-        public SignUpPage SignupPage => FindParent<SignUpPage>();
+        public SignUp SignupPage => FindParent<SignUp>();
 
         public override async Task OnInitializing()
         {

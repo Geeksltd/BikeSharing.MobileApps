@@ -6,26 +6,17 @@
     using UI;
     using UI.Pages;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class EventsModule
     {
         Event[] Items;
         public override async Task OnInitializing()
         {
-            // var _eventsService = new EventsService();
-            // var events = await _eventsService.GetEvents();
-            // Items = events.ToList();
-            UriBuilder builder = new UriBuilder(GlobalSettings.EventsEndpoint);
-            builder.Path = "api/Events";
-
-            string uri = builder.ToString();
-
-            Items = await BaseApi.Get<Event[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
-
+            Items = await EventsService.GetEvents(refresher: Refresh); // BaseApi.Get<Event[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
 
             await base.OnInitializing();
             await InitializeComponents();
-
         }
 
         public override Task OnPreRender()
@@ -47,7 +38,7 @@
 
             public Task RowTapped()
             {
-                Nav.Go<EventSummaryPage>(new
+                Nav.Go<EventSummary>(new
                 {
                     Id = Item.Id,
                 });
@@ -55,6 +46,5 @@
                 return Task.CompletedTask;
             }
         }
-
     }
 }

@@ -8,12 +8,12 @@
     <Stack Id="itemsStack" >
       <Stack >
         <Stack Id="menuItemsStack">
-          <IconButton  Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.HomePage" />
-          <IconButton  Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRidePage"   />
-          <IconButton  Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRidesPage" />
-          <IconButton  Id="upcomingRideButton" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemainingPage" Enabled="false"  />
-          <IconButton  Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncidentPage" />
-          <IconButton  Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.ProfilePage" />
+          <IconButton  Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.Home" />
+          <IconButton  Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRide"   />
+          <IconButton  Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRides" />
+          <IconButton  Id="upcomingRideButton" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemaining" Enabled="false"  />
+          <IconButton  Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncident" />
+          <IconButton  Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.Profile" />
         </Stack>
         <IconButton  Text="@Settings.UserProfile.FullName" IconPath="@Settings.UserProfile.PhotoUrl"  />
       </Stack>

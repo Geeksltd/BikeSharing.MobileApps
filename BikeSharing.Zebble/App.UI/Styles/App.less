@@ -40,7 +40,7 @@ MainMenu {
     }
 }
 
-HomePage {
+Home {
     .form-pages();
 
     .title {
@@ -135,7 +135,7 @@ HomePage {
     border-color: @GrayColor;
 }
 
-MyRidesPage {
+MyRides {
     .form-pages();
 
     #infoStack {
@@ -232,7 +232,7 @@ MyRidesPage {
     }
 }
 
-CustomRidePage {
+CustomRide {
     .form-pages();
 
     #RouteSelector {
@@ -417,7 +417,7 @@ BookingPage {
     }
 }
 
-.BookingDetailPage {
+.BookingDetail {
     .form-pages();
 
     #Body {
@@ -476,7 +476,7 @@ BookingPage {
     }
 }
 
-ReportIncidentPage {
+ReportIncident {
     height: 100%;
     padding: 10px;
 
@@ -540,7 +540,99 @@ ReportIncidentPage {
     }
 }
 
-LoginPage {
+EventSummary {
+    .form-pages();
+
+    #EventSummaryModule {
+        height: 100%;
+    }
+
+    #mainStack {
+        background-size: auto;
+        height: 100%;
+        padding: 20px 30px 10px 30px;
+    }
+
+    TextView {
+        color: @WhiteColor;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .titleRow {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    .small {
+        font-size: 12px;
+        color: @BrightYellowColor;
+    }
+
+    #venueNameTextView {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #buyTicketButton {
+        margin-top: 70px;
+        font-size: 14px;
+        width: 120px;
+        border: 3px solid;
+        border-color: @WhiteColor;
+        font-weight: bold;
+    }
+
+    #bookBikeButton {
+        margin-top: 50px;
+        width: 200px;
+        padding: 8px;
+        border: 4px solid;
+        border-color: @WhiteColor;
+        font-weight: bold;
+    }
+
+    #bookDetailStack {
+        margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
+        padding: 5px;
+        height: 170px;
+        background-color: @WhiteColor;
+
+        TextView {
+            color: @GrayColor;
+            font-size: 12px;
+        }
+
+        ImageView {
+            width: 40px;
+            height: 40px;
+            border-color: @BlueColor;
+            border: 1px;
+        }
+
+        #fromText {
+            font-size: 20px;
+            color: @BlueColor;
+        }
+
+        #toText {
+            font-size: 20px;
+            color: @OrangeColor;
+        }
+
+        .splitor {
+            border-bottom: 1px solid;
+            margin: 5px;
+            margin-left: 0px;
+        }
+    }
+
+    #bikeStack {
+        width: 60px;
+    }
+}
+
+Login {
     height: 100%;
 
     #mainStack {
@@ -591,6 +683,24 @@ LoginPage {
             padding: 20px;
         }
     }
+}
+
+SignUp {
+    height: 100%;
+
+    #Body {
+        height: 100%;
+        background: url("Images/background.png");
+        background-size: cover;
+
+        #MyCarousel {
+            height: 100%;
+        }
+    }
+}
+
+.slide-show {
+    height: 100%;
 }
 
 .SignupPages {
@@ -653,7 +763,7 @@ LoginPage {
     }
 }
 
-ProfilePage {
+Profile {
     .form-pages();
 
     #Body {
@@ -833,113 +943,6 @@ UserPage {
         height: 60px;
         background: url('Images/SignUp/signup_trees.png');
     }
-}
-
-.slide-show {
-    height: 100%;
-}
-
-SignUpPage {
-    height: 100%;
-
-    #Body {
-        height: 100%;
-        background: url("Images/background.png");
-        background-size: cover;
-
-        #MyCarousel {
-            height: 100%;
-        }
-    }
-}
-
-EventSummaryPage {
-    .form-pages();
-    #EventSummaryModule{ height:100%;}
-    #mainStack {
-        background-size: auto;
-        height: 100%;
-        padding: 20px 30px 10px 30px;
-    }
-
-    TextView {
-        color: @WhiteColor;
-        font-size: 18px;
-        margin-top: 5px;
-    }
-
-    .titleRow {
-        font-size: 36px;
-        margin-top: 10px;
-    }
-
-    .small {
-        font-size: 12px;
-        color: @BrightYellowColor;
-    }
-
-    #venueNameTextView {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    #buyTicketButton {
-        margin-top: 70px;
-        font-size: 14px;
-        width: 120px;
-        border: 3px solid;
-        border-color: @WhiteColor;
-        font-weight: bold;
-    }
-
-    #bookBikeButton {
-        margin-top: 50px;
-        width: 200px;
-        padding: 8px;
-        border: 4px solid;
-        border-color: @WhiteColor;
-        font-weight: bold;
-    }
-
-    #bookDetailStack {
-        margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
-        padding: 5px;
-        height: 170px;
-        background-color: @WhiteColor;
-
-        TextView {
-            color: @GrayColor;
-            font-size: 12px;
-        }
-
-        ImageView {
-            width: 40px;
-            height: 40px;
-            border-color: @BlueColor;
-            border: 1px;
-        }
-
-        #fromText {
-            font-size: 20px;
-            color: @BlueColor;
-        }
-
-        #toText {
-            font-size: 20px;
-            color: @OrangeColor;
-        }
-
-        .splitor {
-            border-bottom: 1px solid;
-            margin: 5px;
-            margin-left: 0px;
-        }
-    }
-
-    #bikeStack{
-        width: 60px;
-    }
-    
 }
 
 IdentityPage {

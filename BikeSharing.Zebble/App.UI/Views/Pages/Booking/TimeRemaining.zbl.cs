@@ -9,7 +9,7 @@ namespace UI.Pages
     using Zebble;
     using static Domain.Services.Api;
 
-    partial class TimeRemainingPage
+    partial class TimeRemaining
     {
         Timer timerControl;
         TimeSpan timeSpanCounter = new TimeSpan(0, 3, 1);

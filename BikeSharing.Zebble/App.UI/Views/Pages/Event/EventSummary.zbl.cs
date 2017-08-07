@@ -2,7 +2,7 @@ namespace UI.Pages
 {
     using System.Threading.Tasks;
 
-    partial class EventSummaryPage
+    partial class EventSummary
     {
         public override async Task OnInitializing()
         {

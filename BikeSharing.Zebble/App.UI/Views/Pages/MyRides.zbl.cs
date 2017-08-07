@@ -8,7 +8,7 @@
     using Zebble;
     using Zebble.Plugin;
     using static Domain.Services.Api;
-    partial class MyRidesPage
+    partial class MyRides
     {
         public Ride[] Items;
         public override async Task OnInitializing()
@@ -46,7 +46,7 @@
 
         partial class Row
         {
-            public MyRidesPage Module => FindParent<MyRidesPage>();
+            public MyRides Module => FindParent<MyRides>();
 
             public override async Task OnInitializing()
             {

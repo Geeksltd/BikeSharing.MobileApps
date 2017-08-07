@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<z-Component z-type="HomePage" z-base="Templates.Default" z-namespace="UI.Pages"
+<z-Component z-type="Home" z-base="Templates.Default" z-namespace="UI.Pages"
     z-partial="true" Title="Home" data-TopMenu="MainMenu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
 

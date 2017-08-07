@@ -30,7 +30,7 @@
         async Task BookBikeButtonTapped()
         {
             var booking = await RidesService.RequestBikeBooking(FromStation, ToStation, Item);
-            await Nav.Go<BookingDetailPage>(new { ShowThanks = true, Booking = booking });
+            await Nav.Go<BookingDetail>(new { ShowThanks = true, Booking = booking });
         }
     }
 }

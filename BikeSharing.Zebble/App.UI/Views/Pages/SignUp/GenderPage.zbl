@@ -11,7 +11,7 @@
     </Stack>
     <Stack Id="foregroundStack">
       <Stack Id="closeStack" >
-        <Button  Id="closeButton" z-nav-go="Pages.LoginPage"/>
+        <Button  Id="closeButton" z-nav-go="Pages.Login"/>
       </Stack>
       <Stack Id="detailStack">
         <ImageView Path="Images/SignUp/signup_woman.png" Id="womanImageView" on-Tapped="ImageViewTapped"/>

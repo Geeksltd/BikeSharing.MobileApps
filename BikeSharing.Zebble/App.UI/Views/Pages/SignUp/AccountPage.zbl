@@ -12,7 +12,7 @@
     </Stack>
     <Stack Id="foregroundStack">
         <Stack Id="closeStack" >
-          <Button  z-nav-go="LoginPage"/>
+          <Button  z-nav-go="Login"/>
         </Stack>
         <Stack Id="detailStack">
           <TextView Text="Email" CssClass="title"   />

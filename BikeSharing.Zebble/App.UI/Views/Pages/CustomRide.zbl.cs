@@ -12,7 +12,7 @@
     using Zebble.Plugin;
     using static Domain.Services.Api;
 
-    partial class CustomRidePage
+    partial class CustomRide
     {
         public ObservableCollection<CustomPin> CustomPins;
 

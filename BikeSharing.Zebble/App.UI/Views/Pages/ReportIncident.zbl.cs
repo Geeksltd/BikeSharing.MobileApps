@@ -6,7 +6,7 @@ namespace UI.Pages
     using Zebble;
     using static Domain.Services.Api;
 
-    partial class ReportIncidentPage
+    partial class ReportIncident
     {
         public override async Task OnInitializing()
         {
@@ -83,6 +83,7 @@ namespace UI.Pages
                     Pedals = true;
                     pedalsImageView.BackgroundImagePath = "Images/ic_report_pedals_selec.png";
                     break;
+                default:break;
             }
 
             _reportIncidentType = type;
@@ -107,7 +108,7 @@ namespace UI.Pages
                     Description = Description
                 };
 
-               
+
                 if (await FeedbackService.SendIssueAsync(incident))
                 {
                     await Alert.Toast("Received");

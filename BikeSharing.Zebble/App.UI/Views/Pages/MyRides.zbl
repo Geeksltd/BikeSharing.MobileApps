@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<z-Component z-type="MyRidesPage" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="My Rides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+<z-Component z-type="MyRides" z-base="Templates.Default" data-TopMenu="MainMenu" z-cache="true" z-namespace="UI.Pages" z-partial="true" Title="My Rides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Modules.WeatherInfoModule Id="WeatherInfoModule" />
     <Stack Direction="Horizontal" Id="infoStack">

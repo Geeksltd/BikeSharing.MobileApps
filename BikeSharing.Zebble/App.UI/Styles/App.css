@@ -31,10 +31,10 @@ MainMenu #itemsStack {
 MainMenu #menuItemsStack {
   height: calc("(view.Parent.ActualHeight - 50)");
 }
-HomePage #Body {
+Home #Body {
   height: 100%;
 }
-HomePage .title {
+Home .title {
   color: #3063f5;
   margin: 10px;
   margin-bottom: 0px;
@@ -108,40 +108,40 @@ HomePage .title {
   border-bottom: 1px;
   border-color: #484f63;
 }
-MyRidesPage #Body {
+MyRides #Body {
   height: 100%;
 }
-MyRidesPage #infoStack {
+MyRides #infoStack {
   height: 75%;
 }
-MyRidesPage #MyRidesModule {
+MyRides #MyRidesModule {
   width: 30%;
 }
-MyRidesPage #MapView {
+MyRides #MapView {
   width: 40%;
 }
-MyRidesPage #selectedRowInfoStack {
+MyRides #selectedRowInfoStack {
   width: 30%;
   background: url("Images/myrides_placeholder_event.png");
   background-size: cover;
   height: 100%;
   padding: 10px;
 }
-MyRidesPage #selectedRowInfoStack TextView {
+MyRides #selectedRowInfoStack TextView {
   color: #ffffff;
   margin: 7px;
   font-size: 14px;
 }
-MyRidesPage #selectedRowInfoStack .label {
+MyRides #selectedRowInfoStack .label {
   font-size: 12px;
 }
-MyRidesPage #selectedRowInfoStack .texbox {
+MyRides #selectedRowInfoStack .texbox {
   font-size: 16px;
 }
-MyRidesPage #fromTexView {
+MyRides #fromTexView {
   margin-top: 150px;
 }
-MyRidesPage #txtDate {
+MyRides #txtDate {
   margin-top: 100px;
 }
 #MyRidesStack {
@@ -186,17 +186,17 @@ MyRidesPage #txtDate {
   border: 1px solid;
   border-color: #484f63;
 }
-CustomRidePage #Body {
+CustomRide #Body {
   height: 100%;
 }
-CustomRidePage #RouteSelector {
+CustomRide #RouteSelector {
   height: 220px;
   width: calc("View.Root.ActualWidth - 60");
   background-color: #ffffff;
   opacity: 0.4;
   margin: 20px;
 }
-CustomRidePage #InnerStack {
+CustomRide #InnerStack {
   margin-left: 40px;
   padding: 10px;
   background-color: #ffffff;
@@ -205,13 +205,13 @@ CustomRidePage #InnerStack {
   position: absolute;
   top: 30px;
 }
-CustomRidePage #GoButtonStack {
+CustomRide #GoButtonStack {
   margin-top: 20px;
   background-color: #afb3be;
   height: 40px;
   width: 100%;
 }
-CustomRidePage #GoButtonStack Button {
+CustomRide #GoButtonStack Button {
   width: 60px;
   margin-left: calc("view.Parent.ActualWidth - 60");
   padding: 10px;
@@ -219,7 +219,7 @@ CustomRidePage #GoButtonStack Button {
   color: #ffffff;
   height: 100%;
 }
-CustomRidePage #RouteSelected {
+CustomRide #RouteSelected {
   width: calc("View.Root.ActualWidth - 60");
   height: 150px;
   background-color: #484f63;
@@ -229,10 +229,10 @@ CustomRidePage #RouteSelected {
   position: absolute;
   top: calc("View.Root.ActualHeight - 230");
 }
-CustomRidePage .title {
+CustomRide .title {
   font-size: 16px;
 }
-CustomRidePage #FromPS {
+CustomRide #FromPS {
   margin-left: 40px;
   background-color: #3063f5;
   padding: 10px;
@@ -241,11 +241,11 @@ CustomRidePage #FromPS {
   position: absolute;
   top: calc("View.Root.ActualHeight - 220");
 }
-CustomRidePage #FromPS TextView {
+CustomRide #FromPS TextView {
   color: #ffffff;
   font-size: 12px;
 }
-CustomRidePage #ToPS {
+CustomRide #ToPS {
   margin-left: 40px;
   background-color: #ff5e4d;
   padding: 10px;
@@ -255,7 +255,7 @@ CustomRidePage #ToPS {
   position: absolute;
   top: calc("View.Root.ActualHeight - 150");
 }
-CustomRidePage #ToPS TextView {
+CustomRide #ToPS TextView {
   color: #ffffff;
   font-size: 12px;
 }
@@ -340,27 +340,27 @@ BookingPage #bookDetailStack .splitor {
   margin: 5px;
   margin-left: 0px;
 }
-.BookingDetailPage #Body {
+.BookingDetail #Body {
   height: 100%;
 }
-.BookingDetailPage #Body {
+.BookingDetail #Body {
   background: url("Images/booking_background.png");
   background-size: auto;
 }
-.BookingDetailPage TextView {
+.BookingDetail TextView {
   color: #ffffff;
   text-align: center;
   margin-top: 10px;
   font-size: 18px;
 }
-.BookingDetailPage #fromText {
+.BookingDetail #fromText {
   margin-top: 50px;
 }
-.BookingDetailPage .title {
+.BookingDetail .title {
   margin-top: 150px;
   font-size: 28px;
 }
-.BookingDetailPage #bookingStack {
+.BookingDetail #bookingStack {
   background: url("Images/booking_circle_white.png");
   width: 90px;
   height: 90px;
@@ -368,16 +368,16 @@ BookingPage #bookDetailStack .splitor {
   margin-left: calc("(View.Root.ActualWidth/ 2)- 45");
   background-size: cover;
 }
-.BookingDetailPage .blacktext {
+.BookingDetail .blacktext {
   color: #000000;
   font-size: 12px;
   margin-top: 15px;
   text-transform: uppercase;
 }
-.BookingDetailPage .bluetext {
+.BookingDetail .bluetext {
   color: #3063f5;
 }
-.BookingDetailPage #timerStack {
+.BookingDetail #timerStack {
   background: url("Images/progress.png");
   width: 80px;
   height: 80px;
@@ -385,79 +385,155 @@ BookingPage #bookDetailStack .splitor {
   margin-left: calc("(View.Root.ActualWidth/ 2)- 40");
   background-size: cover;
 }
-.BookingDetailPage .label {
+.BookingDetail .label {
   font-size: 11px;
   margin-top: 0px;
 }
-ReportIncidentPage {
+ReportIncident {
   height: 100%;
   padding: 10px;
 }
-ReportIncidentPage #IncidentSelectorStack {
+ReportIncident #IncidentSelectorStack {
   padding: 10px;
   height: 200px;
 }
-ReportIncidentPage #IncidentSelectorStack TextView {
+ReportIncident #IncidentSelectorStack TextView {
   font-size: 12px;
   text-align: center;
 }
-ReportIncidentPage #IncidentSelectorStack .image {
+ReportIncident #IncidentSelectorStack .image {
   margin: 10px;
   margin-top: 20px;
   width: 50px;
   height: 50px;
 }
-ReportIncidentPage #BotButtonStack {
+ReportIncident #BotButtonStack {
   padding: 20px;
   border-bottom: 1px solid;
   border-color: #484f63;
 }
-ReportIncidentPage #BotButtonStack IconButton {
+ReportIncident #BotButtonStack IconButton {
   padding: 10px;
   width: 100%;
   background-color: #3063f5;
   font-size: 20px;
 }
-ReportIncidentPage #BotButtonStack #Icon {
+ReportIncident #BotButtonStack #Icon {
   margin-top: 0px;
   margin-left: 30px;
   height: 30px;
 }
-ReportIncidentPage .title {
+ReportIncident .title {
   color: #3063f5;
   margin: 10px 0px;
 }
-ReportIncidentPage TextInput {
+ReportIncident TextInput {
   color: #000000;
   border-bottom: 1px solid;
   border-color: #000000;
 }
-ReportIncidentPage #ReportButtonStack {
+ReportIncident #ReportButtonStack {
   padding: 20px 0px;
   margin-top: 50px;
 }
-ReportIncidentPage #ReportButtonStack Button {
+ReportIncident #ReportButtonStack Button {
   padding: 10px;
   width: 100%;
   background-color: #f4f6fa;
   font-size: 20px;
 }
-LoginPage {
+EventSummary #Body {
   height: 100%;
 }
-LoginPage #mainStack {
+EventSummary #EventSummaryModule {
+  height: 100%;
+}
+EventSummary #mainStack {
+  background-size: auto;
+  height: 100%;
+  padding: 20px 30px 10px 30px;
+}
+EventSummary TextView {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 5px;
+}
+EventSummary .titleRow {
+  font-size: 36px;
+  margin-top: 10px;
+}
+EventSummary .small {
+  font-size: 12px;
+  color: #ffed00;
+}
+EventSummary #venueNameTextView {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+EventSummary #buyTicketButton {
+  margin-top: 70px;
+  font-size: 14px;
+  width: 120px;
+  border: 3px solid;
+  border-color: #ffffff;
+  font-weight: bold;
+}
+EventSummary #bookBikeButton {
+  margin-top: 50px;
+  width: 200px;
+  padding: 8px;
+  border: 4px solid;
+  border-color: #ffffff;
+  font-weight: bold;
+}
+EventSummary #bookDetailStack {
+  margin-top: 30px;
+  padding: 5px;
+  height: 170px;
+  background-color: #ffffff;
+}
+EventSummary #bookDetailStack TextView {
+  color: #484f63;
+  font-size: 12px;
+}
+EventSummary #bookDetailStack ImageView {
+  width: 40px;
+  height: 40px;
+  border-color: #3063f5;
+  border: 1px;
+}
+EventSummary #bookDetailStack #fromText {
+  font-size: 20px;
+  color: #3063f5;
+}
+EventSummary #bookDetailStack #toText {
+  font-size: 20px;
+  color: #ff5e4d;
+}
+EventSummary #bookDetailStack .splitor {
+  border-bottom: 1px solid;
+  margin: 5px;
+  margin-left: 0px;
+}
+EventSummary #bikeStack {
+  width: 60px;
+}
+Login {
+  height: 100%;
+}
+Login #mainStack {
   height: 100%;
   padding: 20px 50px;
   background: url("Images/background.png");
 }
-LoginPage #signupTextView {
+Login #signupTextView {
   color: #ffed00;
   font-weight: bold;
 }
-LoginPage TextView {
+Login TextView {
   color: #ffffff;
 }
-LoginPage TextInput {
+Login TextInput {
   border-bottom: 1px solid;
   border-color: #ffffff;
   color: #ffffff;
@@ -465,25 +541,39 @@ LoginPage TextInput {
   margin: 10px;
   padding: 10px 0px;
 }
-LoginPage .label {
+Login .label {
   font-size: 12px;
   margin: 10px;
 }
-LoginPage #usernameTextInput {
+Login #usernameTextInput {
   margin-top: 100px;
 }
-LoginPage #signUpStack {
+Login #signUpStack {
   margin-top: 200px;
 }
-LoginPage #signinButtonStack {
+Login #signinButtonStack {
   padding: 0px 40px;
   margin-top: 20px;
 }
-LoginPage #signinButtonStack Button {
+Login #signinButtonStack Button {
   width: 100%;
   color: #000000;
   background-color: #3063f5;
   padding: 20px;
+}
+SignUp {
+  height: 100%;
+}
+SignUp #Body {
+  height: 100%;
+  background: url("Images/background.png");
+  background-size: cover;
+}
+SignUp #Body #MyCarousel {
+  height: 100%;
+}
+.slide-show {
+  height: 100%;
 }
 .SignupPages {
   height: 100%;
@@ -535,28 +625,28 @@ LoginPage #signinButtonStack Button {
 .SignupPages #backgroundStack {
   height: 100%;
 }
-ProfilePage #Body {
+Profile #Body {
   height: 100%;
 }
-ProfilePage #Body {
+Profile #Body {
   background: url("Images/city-gray.png");
   background-size: cover;
 }
-ProfilePage #mainStack {
+Profile #mainStack {
   height: 100%;
   padding: 100px 20px 20px 20px;
 }
-ProfilePage #userImageView {
+Profile #userImageView {
   width: 100%;
   height: 80px;
   background-position: center;
 }
-ProfilePage .label {
+Profile .label {
   font-size: 12px;
   margin: 10px;
   color: #3063f5;
 }
-ProfilePage .title {
+Profile .title {
   font-size: 20px;
   margin: 10px;
   color: #000000;
@@ -674,96 +764,6 @@ UserPage #bikeImageView {
 UserPage #signupTreesImageView {
   height: 60px;
   background: url('Images/SignUp/signup_trees.png');
-}
-.slide-show {
-  height: 100%;
-}
-SignUpPage {
-  height: 100%;
-}
-SignUpPage #Body {
-  height: 100%;
-  background: url("Images/background.png");
-  background-size: cover;
-}
-SignUpPage #Body #MyCarousel {
-  height: 100%;
-}
-EventSummaryPage #Body {
-  height: 100%;
-}
-EventSummaryPage #EventSummaryModule {
-  height: 100%;
-}
-EventSummaryPage #mainStack {
-  background-size: auto;
-  height: 100%;
-  padding: 20px 30px 10px 30px;
-}
-EventSummaryPage TextView {
-  color: #ffffff;
-  font-size: 18px;
-  margin-top: 5px;
-}
-EventSummaryPage .titleRow {
-  font-size: 36px;
-  margin-top: 10px;
-}
-EventSummaryPage .small {
-  font-size: 12px;
-  color: #ffed00;
-}
-EventSummaryPage #venueNameTextView {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-EventSummaryPage #buyTicketButton {
-  margin-top: 70px;
-  font-size: 14px;
-  width: 120px;
-  border: 3px solid;
-  border-color: #ffffff;
-  font-weight: bold;
-}
-EventSummaryPage #bookBikeButton {
-  margin-top: 50px;
-  width: 200px;
-  padding: 8px;
-  border: 4px solid;
-  border-color: #ffffff;
-  font-weight: bold;
-}
-EventSummaryPage #bookDetailStack {
-  margin-top: 30px;
-  padding: 5px;
-  height: 170px;
-  background-color: #ffffff;
-}
-EventSummaryPage #bookDetailStack TextView {
-  color: #484f63;
-  font-size: 12px;
-}
-EventSummaryPage #bookDetailStack ImageView {
-  width: 40px;
-  height: 40px;
-  border-color: #3063f5;
-  border: 1px;
-}
-EventSummaryPage #bookDetailStack #fromText {
-  font-size: 20px;
-  color: #3063f5;
-}
-EventSummaryPage #bookDetailStack #toText {
-  font-size: 20px;
-  color: #ff5e4d;
-}
-EventSummaryPage #bookDetailStack .splitor {
-  border-bottom: 1px solid;
-  margin: 5px;
-  margin-left: 0px;
-}
-EventSummaryPage #bikeStack {
-  width: 60px;
 }
 IdentityPage #backgroundStack Stack {
   height: 50%;

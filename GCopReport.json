@@ -51,7 +51,7 @@
     },
     {
       "Analyzer": "AsyncAwaitMethodAnalyzer",
-      "OccurrenceCount": 874,
+      "OccurrenceCount": 1013,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -72,7 +72,7 @@
     },
     {
       "Analyzer": "ConstantVariableAnalyzer",
-      "OccurrenceCount": 7,
+      "OccurrenceCount": 8,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -93,7 +93,7 @@
     },
     {
       "Analyzer": "BooleanParameterAnalyzer",
-      "OccurrenceCount": 2,
+      "OccurrenceCount": 3,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"

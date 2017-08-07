@@ -25,7 +25,7 @@
             });
         }
 
-        public SignUpPage SignupPage => FindParent<SignUpPage>();
+        public SignUp SignupPage => FindParent<SignUp>();
 
         public string Email { get => email; set => email = value; }
         public string Skype { get => skype; set => skype = value; }
