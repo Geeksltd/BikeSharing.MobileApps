@@ -359,6 +359,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\LoginPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\ReportIncidentPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)-Custom\StaticData.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\.zebble-schema.xml" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventModule.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventModule.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventsModule.zbl" />
