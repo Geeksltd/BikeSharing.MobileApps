@@ -1,9 +1,12 @@
 ﻿namespace UI
 {
+    using Domain.Services;
     using System;
     using System.Threading.Tasks;
     using Zebble;
     using Zebble.Services;
+    using static Domain.Services.Api;
+
     public partial class StartUp : Zebble.StartUp
     {
         public override async Task Run()
@@ -21,9 +24,15 @@
 
             Services.PushNotificationListener.Setup();
 
-            LoadFirstPage().RunInParallel();
+            LoadFirstPageAsync().RunInParallel();
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.HomePage());
+        public static async Task LoadFirstPageAsync()
+        {
+            if (await ProfileService.GetCurrentProfileAsync() == null)
+                await Nav.Go<Pages.LoginPage>();
+            else
+                await Nav.Go(new Pages.HomePage());
+        }
     }
 }

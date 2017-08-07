@@ -4,20 +4,15 @@
     using Domain.Entities;
     using Domain.Services;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class SignUpPage
     {
-        IdentityPage identityPage;
-        AccountPage accountPage;
-        GenderPage genderPage;
-        UserPage userPage;
-        SubscriptionPage subscriptionPage;
-
-        public SubscriptionPage SubscriptionPage { get => subscriptionPage; set => subscriptionPage = value; }
-        public UserPage UserPage { get => userPage; set => userPage = value; }
-        public GenderPage GenderPage { get => genderPage; set => genderPage = value; }
-        public AccountPage AccountPage { get => accountPage; set => accountPage = value; }
-        public IdentityPage IdentityPage { get => identityPage; set => identityPage = value; }
+        IdentityPage IdentityPage;
+        AccountPage AccountPage;
+        GenderPage GenderPage;
+        UserPage UserPage;
+        SubscriptionPage SubscriptionPage;
 
         public override async Task OnInitializing()
         {
@@ -62,12 +57,12 @@
 
 
 
-            var result = await new ProfileService().SignUp(userAndProfile);
+            var result = await ProfileService.SignUpAsync(userAndProfile);
 
             if (result != null)
             {
                 bool isAuthenticated =
-                    await new AuthenticationService().LoginAsync(userAndProfile.UserName, userAndProfile.Password);
+                    await AuthenticationService.LoginAsync(userAndProfile.UserName, userAndProfile.Password);
 
 
                 if (isAuthenticated)

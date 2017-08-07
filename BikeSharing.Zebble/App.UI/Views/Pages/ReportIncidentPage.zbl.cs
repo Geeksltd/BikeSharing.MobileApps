@@ -4,6 +4,7 @@ namespace UI.Pages
     using Domain;
     using Domain.Services;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class ReportIncidentPage
     {
@@ -106,8 +107,8 @@ namespace UI.Pages
                     Description = Description
                 };
 
-                var _feedbackService = new FeedbackService();
-                if (await _feedbackService.SendIssueAsync(incident))
+               
+                if (await FeedbackService.SendIssueAsync(incident))
                 {
                     await Alert.Toast("Received");
                     ResetData();

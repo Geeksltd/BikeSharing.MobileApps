@@ -1,9 +1,10 @@
 ﻿namespace UI.Modules
 {
-    using System;
-    using System.Threading.Tasks;
     using Domain;
     using Domain.Services;
+    using System;
+    using System.Threading.Tasks;
+    using static Domain.Services.Api;
 
     partial class WeatherInfoModule
     {
@@ -12,13 +13,13 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            var weather = await new OpenWeatherMapService().GetDemoWeatherInfoAsync();
+            var weather = await OpenWeatherMapService.GetDemoWeatherInfoAsync();
 
             if (weather is WeatherInfo)
             {
                 var weatherInfo = weather as WeatherInfo;
                 Location.Text = weatherInfo.LocationName;
-                Temp.Text = string.Format("{0}˚{1}", Math.Round(weatherInfo.Temp).ToString(), weatherInfo.TempUnitShort);
+                Temp.Text = $"{Math.Round(weatherInfo.Temp).ToString()}˚{weatherInfo.TempUnitShort}";
                 Date.Text = DateTime.Now.ToString("dddd, MMMM dd");
             }
         }

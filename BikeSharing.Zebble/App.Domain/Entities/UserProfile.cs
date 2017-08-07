@@ -15,13 +15,11 @@ namespace Domain.Entities
         public DateTime BirthDate { get; set; }
 
         public string BirthDateString => BirthDate.ToString("dddd, MMMM dd");
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
 
-        public string FullName => FirstName + " " + LastName;
-
+        public string FullName => $"{FirstName} {LastName}";
         public Payment Payment { get; set; }
 
         public int PaymentId { get; set; }

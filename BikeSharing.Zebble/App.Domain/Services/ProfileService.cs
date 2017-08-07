@@ -1,39 +1,48 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Threading.Tasks;
-using Domain.Entities;
 using UI;
 using Zebble;
 
 namespace Domain.Services
 {
-    public class ProfileService : BaseApi
+    public partial class Api : BaseApi
     {
-        public async Task<UserProfile> GetCurrentProfileAsync()
+        public static class ProfileService
         {
-            var userId = new AuthenticationService().GetCurrentUserId();
-            var builder = new UriBuilder(string.Format("{0}api/Profiles/{1}", GlobalSettings.AuthenticationEndpoint, userId));
-            var uri = builder.ToString();
-            var result = await Get<UserProfile>(uri);
-            if (result != null)
+            public static async Task<UserProfile> GetCurrentProfileAsync()
             {
-                //   result.Result.PhotoUrl = string.IsNullOrEmpty(result.Result.PhotoUrl) ? "Images/profile_placeholder.png" : result.Result.PhotoUrl;
-                result.PhotoUrl = "Images/profile_placeholder.png";
-                Settings.UserProfile = result;
+                var userId = AuthenticationService.GetCurrentUserId();
+
+                var uri = $"{GlobalSettings.AuthenticationEndpoint}api/Profiles/{userId}";
+                var result = await BaseApi.Get<UserProfile>(uri, errorAction: OnError.Ignore);
+                if (result != null)
+                {
+                    //   result.Result.PhotoUrl = string.IsNullOrEmpty(result.Result.PhotoUrl) ? "Images/profile_placeholder.png" : result.Result.PhotoUrl;
+                    result.PhotoUrl = "Images/profile_placeholder.png";
+                    Settings.UserProfile = result;
+                }
+                return result;
             }
-            return result;
-        }
 
-        public Task<UserAndProfileModel> SignUp(UserAndProfileModel profile)
-        {
-            var uri = string.Format("{0}api/Profiles/", GlobalSettings.AuthenticationEndpoint);
-            return Post<UserAndProfileModel>(uri, profile);
-        }
+            public static async Task<UserAndProfileModel> SignUpAsync(UserAndProfileModel profile)
+            {
+                var uri = $"{GlobalSettings.AuthenticationEndpoint}api/Profiles/";
+                return await BaseApi.Post<UserAndProfileModel>(uri, profile);
+            }
 
-        public Task UploadUserImageAsync(string imageAsBase64, UserProfile profile)
-        {
-            var uri = string.Format("{0}api/Profiles/image/{1}", GlobalSettings.AuthenticationEndpoint, profile.UserId);
+            public static async Task UploadUserImageAsync(string imageAsBase64, UserProfile profile)
+            {
+                var uri = $"{GlobalSettings.AuthenticationEndpoint}api/Profiles/image/{profile.UserId}";
 
-            return Put(uri, new { Data = imageAsBase64 });
+                var imageModel = new ImageModel
+                {
+                    Data = imageAsBase64
+                };
+
+                await BaseApi.Put(uri, imageModel);
+                //await CacheHelper.RemoveFromCache(profile.PhotoUrl);
+            }
         }
     }
 }

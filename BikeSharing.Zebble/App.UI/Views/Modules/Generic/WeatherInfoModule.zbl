@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <z-Component z-type="WeatherInfoModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-
   <Stack  > 
-    <TextView Id="Date" Style.Margin.Top="50"  />
+    <TextView Id="Date" Style.Height="50" />
     <TextView Id="Location"/>
     <TextView Id="Temp"  />   
   </Stack>

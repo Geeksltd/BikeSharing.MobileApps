@@ -3,10 +3,10 @@
   <z-place inside="Body">
     <Stack Id="MainStack">
       <TextView Text="From" Style.Margin.Top="100" />
-      <TextView Text="@book.FromStation.Name" />
+      <TextView Text="@Book.FromStation.Name" />
       <TextView Text="To" />
-      <TextView Text="@book.ToStation.Name" />
-      <TextView Text="@book.DueDateString" CssClass="date" />
+      <TextView Text="@Book.ToStation.Name" />
+      <TextView Text="@Book.DueDateString" CssClass="date" />
       <TextView Text="@GlobalSettings.City" CssClass="city" />
       <Stack Id="timerStack">
           <TextView Id="timerText" />
@@ -15,7 +15,7 @@
       <Stack Id="bookingStack" Direction="Vertical">
         <Stack>
            <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" TextTransform="Uppercase"/>
-           <TextView Text="@book.BikeId.ToString()" CssClass="bluetext" />
+           <TextView Text="@Book.BikeId.ToString()" CssClass="bluetext" />
         </Stack>
       </Stack>
     </Stack>

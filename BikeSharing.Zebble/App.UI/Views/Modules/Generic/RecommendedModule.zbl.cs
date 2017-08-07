@@ -7,14 +7,16 @@
     using Domain.Services;
     using UI.Pages;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class RecommendedModule
     {
         Suggestion[] Items;
         public override async Task OnInitializing()
         {
-            var rides = await new RidesService().GetSuggestions();
-            Items = rides.ToArray();
+            var rides = await RidesService.GetSuggestions();
+            if(rides != null)
+               Items = rides.ToArray();
 
             await base.OnInitializing();
             await InitializeComponents();

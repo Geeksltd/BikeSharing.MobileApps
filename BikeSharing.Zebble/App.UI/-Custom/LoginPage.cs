@@ -1,56 +1,20 @@
+﻿using Domain;
+using Domain.Services;
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using Domain;
-using Domain.Services;
 using Zebble;
+using static Domain.Services.Api;
 
 namespace UI.Pages
 {
     partial class LoginPage
     {
-        string _userName;
-        string _password;
-        bool _isValid;
+        private string UserName;
+        private string Password;
+        private bool IsValid;
 
-
-        public string UserName
-        {
-            get
-            {
-                return _userName;
-            }
-            set
-            {
-                _userName = value;
-            }
-        }
-
-        public string Password
-        {
-            get
-            {
-                return _password;
-            }
-            set
-            {
-                _password = value;
-            }
-        }
-
-        public bool IsValid
-        {
-            get
-            {
-                return _isValid;
-            }
-            set
-            {
-                _isValid = value;
-            }
-        }
-
-        async Task SignInAsync()
+        private async Task SignInAsync()
         {
             IsValid = true;
             bool isValid = Validate();
@@ -60,7 +24,7 @@ namespace UI.Pages
             {
                 try
                 {
-                    isAuthenticated = await new AuthenticationService().LoginAsync(UserName, Password);
+                    isAuthenticated = await AuthenticationService.LoginAsync(UserName, Password);
                 }
                 catch (Exception ex) when (ex is WebException)
                 {
@@ -89,12 +53,12 @@ namespace UI.Pages
             }
         }
 
-        bool Validate()
+        private bool Validate()
         {
-            _userName = usernameTextInput?.Text;
-            _password = passwordTextInput?.Text;
-            bool isValidUser = _userName.HasValue();
-            bool isValidPassword = _password.HasValue();
+            UserName = usernameTextInput?.Text;
+            Password = passwordTextInput?.Text;
+            bool isValidUser = UserName.HasValue();
+            bool isValidPassword = Password.HasValue();
             return isValidUser && isValidPassword;
         }
     }

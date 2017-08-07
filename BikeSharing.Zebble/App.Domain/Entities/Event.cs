@@ -13,7 +13,6 @@ namespace Domain
         public DateTime StartTime { get; set; }
 
         public string StartTimeString => StartTime.ToString("dddd, MMMM dd");
-
         public string ExternalId { get; set; }
 
         public Venue Venue { get; set; }

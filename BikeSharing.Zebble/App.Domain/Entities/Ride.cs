@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 
 namespace Domain
 {
     public class Ride
     {
-        bool _isSelected;
+        public bool IsSelected;
 
         public int Id { get; set; }
 
@@ -18,8 +18,7 @@ namespace Domain
 
         public DateTime Start { get; set; }
 
-        public string StartString { get { return Start.ToString("dddd, MMMM dd"); } }
-
+        public string StartString => Start.ToString("dddd, MMMM dd");
         public DateTime Stop { get; set; }
 
         public string From { get; set; }
@@ -34,14 +33,5 @@ namespace Domain
 
         public int Duration { get; set; }
 
-        public bool IsSelected
-        {
-            get { return _isSelected; }
-            set
-            {
-                _isSelected = value;
-                //   RaisePropertyChanged(() => IsSelected);
-            }
-        }
     }
 }

@@ -7,6 +7,7 @@
     using UI;
     using Zebble;
     using Zebble.Plugin;
+    using static Domain.Services.Api;
 
     partial class BookingPage
     {
@@ -23,18 +24,18 @@
             MainStack.Y.Set((float)0);
             DateText.Text = DateTime.Now.ToString("dddd, MMMM dd");
 
-            await MapView.Add(new Map.Annotation
-            {
-                Title = From.Label,
-                Location = new Zebble.Services.GeoLocation(From.Position.Latitude, From.Position.Longitude)
-            });
+            //await MapView.Add(new Map.Annotation
+            //{
+            //    Title = From.Label,
+            //    Location = new Zebble.Services.GeoLocation(From.Position.Latitude, From.Position.Longitude)
+            //});
 
-            await MapView.Add(new Map.Annotation
-            {
-                Title = To.Label,
-                Location = new Zebble.Services.GeoLocation(To.Position.Latitude, To.Position.Longitude)
-            });
-            MapView.ZoomLevel = 14;
+            //await MapView.Add(new Map.Annotation
+            //{
+            //    Title = To.Label,
+            //    Location = new Zebble.Services.GeoLocation(To.Position.Latitude, To.Position.Longitude)
+            //});
+            //MapView.ZoomLevel = 14;
         }
 
 
@@ -46,9 +47,9 @@
                 IsBusy = true;
                 try
                 {
-                    var FromStation = await new RidesService().GetStation(From.Id);
-                    var ToStation = await new RidesService().GetStation(To.Id);
-                    Booking booking = await new RidesService().RequestBikeBooking(FromStation, ToStation);
+                    var FromStation = await  RidesService.GetStation(From.Id);
+                    var ToStation = await  RidesService.GetStation(To.Id);
+                    Booking booking = await  RidesService.RequestBikeBooking(FromStation, ToStation);
                     // if (booking != null)
                     //    FindParent<MainMenu>().upcomingRideButton.Enabled = true;
                     await Nav.Forward<BookingDetailPage>(new { ShowThanks = true, Booking = booking });

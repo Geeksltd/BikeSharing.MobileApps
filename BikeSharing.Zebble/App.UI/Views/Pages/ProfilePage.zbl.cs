@@ -1,12 +1,13 @@
 ﻿namespace UI.Pages
 {
-    using System;
-    using System.IO;
-    using System.Threading.Tasks;
     using Domain;
     using Domain.Entities;
     using Domain.Services;
+    using System;
+    using System.IO;
+    using System.Threading.Tasks;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class ProfilePage
     {
@@ -20,24 +21,24 @@
         }
 
 
-        async Task userImageTapped()
+        async Task UserImageTapped()
         {
-            var TempImage = new FileInfo("Images/profile_placeholder.png");
+            var tempImage = new FileInfo("Images/profile_placeholder.png");
             string base64Str = null;
             // try
             // {
 
-            if (await DevicePermission.Camera.IsGranted())
-                TempImage = await Device.Media.TakePhoto();
+            if (Device.Permissions.Check(DevicePermission.Camera).Result == PermissionResult.Granted)
+                tempImage = await Device.Media.TakePhoto();
 
-            if (TempImage == null || TempImage.FullName.Contains("profile_placeholder"))
-                TempImage = await Device.Media.PickPhoto();
+            if (tempImage == null || tempImage.FullName.Contains("profile_placeholder"))
+                tempImage = await Device.Media.PickPhoto();
 
-            if (TempImage != null)
+            if (tempImage != null)
             {
-                userImageView.Path = TempImage.FullName;
-                using (var mediaStream = TempImage.OpenRead())
-                using (var memStream = new MemoryStream())
+                userImageView.Path = tempImage.FullName;
+                using (Stream mediaStream = tempImage.OpenRead())
+                using (MemoryStream memStream = new MemoryStream())
                 {
                     await mediaStream.CopyToAsync(memStream);
                     base64Str = Convert.ToBase64String(memStream.ToArray());
@@ -45,8 +46,7 @@
 
                 if (base64Str.HasValue())
                 {
-                    var _profileService = new ProfileService();
-                    await _profileService.UploadUserImageAsync(base64Str, Item);
+                    await ProfileService.UploadUserImageAsync(base64Str, Item);
                 }
             }
             //}
