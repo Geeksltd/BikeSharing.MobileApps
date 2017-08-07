@@ -1,17 +1,17 @@
-﻿using Domain;
-using Domain.Services;
 using System;
 using System.Net;
 using System.Threading.Tasks;
+using Domain;
+using Domain.Services;
 using Zebble;
 
 namespace UI.Pages
 {
     partial class LoginPage
     {
-        private string _userName;
-        private string _password;
-        private bool _isValid;
+        string _userName;
+        string _password;
+        bool _isValid;
 
 
         public string UserName
@@ -50,7 +50,7 @@ namespace UI.Pages
             }
         }
 
-        private async Task SignInAsync()
+        async Task SignInAsync()
         {
             IsValid = true;
             bool isValid = Validate();
@@ -89,7 +89,7 @@ namespace UI.Pages
             }
         }
 
-        private bool Validate()
+        bool Validate()
         {
             _userName = usernameTextInput?.Text;
             _password = passwordTextInput?.Text;

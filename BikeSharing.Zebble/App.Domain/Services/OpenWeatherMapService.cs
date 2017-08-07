@@ -1,9 +1,8 @@
-﻿using Domain.Entities;
-
 using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.Threading.Tasks;
+using Domain.Entities;
 using UI;
 using Zebble;
 
@@ -11,7 +10,7 @@ namespace Domain.Services
 {
     public class OpenWeatherMapService : BaseApi
     {
-        private const int OkResponseCode = 200;
+        const int OkResponseCode = 200;
 
         public async Task<WeatherInfo> GetWeatherInfoAsync()
         {

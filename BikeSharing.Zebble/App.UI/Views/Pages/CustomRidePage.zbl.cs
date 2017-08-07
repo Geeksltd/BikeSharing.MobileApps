@@ -1,19 +1,19 @@
-﻿namespace UI.Pages
+namespace UI.Pages
 {
-    using Domain;
-    using Domain.Services;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Threading.Tasks;
+    using Domain;
+    using Domain.Services;
     using UI;
     using Zebble;
     using Zebble.Plugin;
 
     partial class CustomRidePage
     {
-        private ObservableCollection<CustomPin> _customPins;
+        ObservableCollection<CustomPin> _customPins;
         public ObservableCollection<CustomPin> CustomPins
         {
             get { return _customPins; }
@@ -45,7 +45,7 @@
             }
         }
 
-        private async Task FSelectionChanged()
+        async Task FSelectionChanged()
         {
             var selected = (CustomPin)FromItemPicker.SelectedValue;
             var _ridesService = new RidesService();
@@ -56,7 +56,7 @@
             FromPSText.Text = string.Format("Empty bike docks {0} Avilable bikes {1}", _stations.EmptyDocks, _stations.Occupied);
         }
 
-        private async Task TSelectionChanged()
+        async Task TSelectionChanged()
         {
             var selected = (CustomPin)ToItemPicker.SelectedValue;
             var _ridesService = new RidesService();
@@ -76,7 +76,7 @@
         }
 
 
-        private void InitializePinsFromStations(IEnumerable<Station> allStations)
+        void InitializePinsFromStations(IEnumerable<Station> allStations)
         {
             if (allStations != null)
             {

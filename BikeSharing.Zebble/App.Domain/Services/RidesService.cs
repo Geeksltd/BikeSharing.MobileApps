@@ -1,9 +1,9 @@
-﻿using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.Entities;
 using UI;
 using Zebble;
 
@@ -12,11 +12,11 @@ namespace Domain.Services
     class RidesService : BaseApi
     {
 
-        private static List<Suggestion> suggestions = StaticData.GetSuggestions();
+        static List<Suggestion> suggestions = StaticData.GetSuggestions();
 
-        private static int StationsCounter = 0;
+        static int StationsCounter = 0;
 
-        private static Station[] stations = new Station[]
+        static Station[] stations = new Station[]
         {
             new Station
             {
@@ -44,7 +44,7 @@ namespace Domain.Services
             }
         };
 
-        private static List<Ride> rides = new List<Ride>
+        static List<Ride> rides = new List<Ride>
         {
             new Ride
             {
@@ -105,7 +105,7 @@ namespace Domain.Services
             return BikeBooking(fromStation, RideType.Custom, 0);
         }
 
-        private async Task<Booking> BikeBooking(Station station, RideType type, int id)
+        async Task<Booking> BikeBooking(Station station, RideType type, int id)
         {
             await Task.Delay(500);
 

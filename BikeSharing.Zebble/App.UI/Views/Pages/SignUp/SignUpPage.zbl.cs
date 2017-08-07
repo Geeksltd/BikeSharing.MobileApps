@@ -1,8 +1,8 @@
 ﻿namespace UI.Pages
 {
+    using System.Threading.Tasks;
     using Domain.Entities;
     using Domain.Services;
-    using System.Threading.Tasks;
     using Zebble;
 
     partial class SignUpPage

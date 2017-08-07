@@ -1,9 +1,9 @@
-﻿namespace UI.Pages
+namespace UI.Pages
 {
-    using Domain.Entities;
     using System;
     using System.Threading;
     using System.Threading.Tasks;
+    using Domain.Entities;
     using Zebble;
 
     partial class BookingDetailPage
@@ -29,7 +29,7 @@
             await InitializeComponents();
         }
 
-        private void NavToTimeRemaining(object state)
+        void NavToTimeRemaining(object state)
         {
             if (!isFirst)
             {

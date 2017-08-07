@@ -1,6 +1,6 @@
-﻿using Domain.Entities;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Domain.Entities;
 using UI;
 using Zebble;
 

@@ -1,11 +1,11 @@
-﻿namespace UI.Pages
+namespace UI.Pages
 {
-    using Domain.Entities;
-    using Domain.Services;
     using System;
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
+    using Domain.Entities;
+    using Domain.Services;
     using Zebble;
 
     partial class TimeRemainingPage
@@ -50,7 +50,7 @@
         }
 
 
-        private void CounterFunc(object state)
+        void CounterFunc(object state)
         {
             var tp = new TimeSpan(0, 0, 1);
             timeSpanCounter = timeSpanCounter.Subtract(tp);

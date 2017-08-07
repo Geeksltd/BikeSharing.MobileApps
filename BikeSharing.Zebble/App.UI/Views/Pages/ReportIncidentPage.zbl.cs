@@ -1,8 +1,8 @@
-﻿namespace UI.Pages
+namespace UI.Pages
 {
+    using System.Threading.Tasks;
     using Domain;
     using Domain.Services;
-    using System.Threading.Tasks;
     using Zebble;
 
     partial class ReportIncidentPage
@@ -41,7 +41,7 @@
 
         async Task LossTapped() => SetReportType(ReportedIssueType.Stolen);
 
-        private void SetReportType(ReportedIssueType type)
+        void SetReportType(ReportedIssueType type)
         {
             chainImageView.BackgroundImagePath = "Images/ic_report_chain.png";
             Chain = false;
@@ -132,13 +132,13 @@
             // IsBusy = false;
         }
 
-        private void FillData()
+        void FillData()
         {
             Title = titleInput.Text;
             Description = descriptionInput.Text;
         }
 
-        private void ResetData()
+        void ResetData()
         {
             SetReportType(ReportedIssueType.Unknown);
             Title = titleInput.Text = Description = descriptionInput.Text = "";

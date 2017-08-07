@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 
 namespace Domain
 {
     public class Ride
     {
-        private bool _isSelected;
+        bool _isSelected;
 
         public int Id { get; set; }
 

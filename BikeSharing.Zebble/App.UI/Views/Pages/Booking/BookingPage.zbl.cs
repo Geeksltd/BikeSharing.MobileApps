@@ -1,11 +1,10 @@
 ﻿namespace UI.Pages
 {
-    using Domain.Entities;
-    using Domain.Services;
     using System;
     using System.Threading.Tasks;
+    using Domain.Entities;
+    using Domain.Services;
     using UI;
-    using UI.Modules;
     using Zebble;
     using Zebble.Plugin;
 

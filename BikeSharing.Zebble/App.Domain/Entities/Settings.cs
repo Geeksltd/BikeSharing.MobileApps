@@ -1,8 +1,7 @@
-﻿namespace Domain
+namespace Domain
 {
     using Domain.Entities;
     using Zebble;
-
 
     public partial class Settings
     {

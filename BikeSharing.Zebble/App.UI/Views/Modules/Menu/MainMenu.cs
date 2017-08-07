@@ -1,8 +1,8 @@
 namespace UI.Modules
 {
+    using System.Threading.Tasks;
     using Domain;
     using Domain.Services;
-    using System.Threading.Tasks;
     using UI.Pages;
     using Zebble;
 

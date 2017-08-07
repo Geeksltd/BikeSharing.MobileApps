@@ -1,22 +1,22 @@
-﻿using Domain;
 using System;
+using Domain;
 
 namespace UI.Pages
 {
     partial class ReportIncidentPage
     {
 
-        private bool _handlebar;
-        private bool _fork;
-        private bool _pedals;
-        private bool _flatTire;
-        private bool _chain;
-        private bool _loss;
-        private ReportedIssueType _reportIncidentType;
-        private string _title;
-        private string _description;
-        private bool _isValid;
-      
+        bool _handlebar;
+        bool _fork;
+        bool _pedals;
+        bool _flatTire;
+        bool _chain;
+        bool _loss;
+        ReportedIssueType _reportIncidentType;
+        string _title;
+        string _description;
+        bool _isValid;
+
         public bool Handlebar
         {
             get

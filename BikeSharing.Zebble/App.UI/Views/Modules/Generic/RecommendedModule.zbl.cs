@@ -1,10 +1,10 @@
 ﻿namespace UI.Modules
 {
-    using Domain;
-    using Domain.Services;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using Domain;
+    using Domain.Services;
     using UI.Pages;
     using Zebble;
 

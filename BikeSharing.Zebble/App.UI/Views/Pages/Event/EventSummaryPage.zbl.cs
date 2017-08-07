@@ -1,7 +1,6 @@
-﻿namespace UI.Pages
+namespace UI.Pages
 {
     using System.Threading.Tasks;
-
 
     partial class EventSummaryPage
     {
