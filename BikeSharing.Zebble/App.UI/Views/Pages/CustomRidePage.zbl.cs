@@ -13,12 +13,7 @@ namespace UI.Pages
 
     partial class CustomRidePage
     {
-        ObservableCollection<CustomPin> _customPins;
-        public ObservableCollection<CustomPin> CustomPins
-        {
-            get => _customPins;
-            set => _customPins = value;
-        }
+        ObservableCollection<CustomPin> CustomPins;
 
         public override async Task OnInitializing()
         {
