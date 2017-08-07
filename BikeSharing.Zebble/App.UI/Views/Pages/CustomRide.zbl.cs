@@ -63,7 +63,7 @@
             var fromStation = FromItemPicker.SelectedValue;
             var toStation = ToItemPicker.SelectedValue;
 
-            await Nav.Forward<BookingPage>(new { from = fromStation, to = toStation });
+            await Nav.Go<BookingPage>(new { from = fromStation, to = toStation });
         }
 
 

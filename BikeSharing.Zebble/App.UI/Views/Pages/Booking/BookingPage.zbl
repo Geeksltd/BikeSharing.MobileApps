@@ -15,7 +15,7 @@
     
     <Stack Id="BookDetailStack" Direction="Horizontal">
       <Stack Id="BikeStack">
-        <ImageView Path="Images/bike.png"/>
+        <ImageView Path="Images/Icons/myrides_event.png"/>
       </Stack>
       <Stack >
         <TextView Text="From"  />

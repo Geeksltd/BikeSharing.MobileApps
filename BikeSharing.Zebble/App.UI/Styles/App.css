@@ -141,9 +141,6 @@ MyRides #SelectedRowInfoStack .texbox {
 MyRides #FromTexView {
   margin-top: 150px;
 }
-MyRides #DateText {
-  margin-top: 100px;
-}
 #MyRidesStack {
   height: 100%;
 }
@@ -324,8 +321,7 @@ BookingPage #BookDetailStack TextView {
 BookingPage #BookDetailStack ImageView {
   width: 40px;
   height: 40px;
-  border-color: #3063f5;
-  border: 2px;
+  margin-top: 5px;
 }
 BookingPage #BookDetailStack #FromText {
   font-size: 20px;
@@ -620,7 +616,7 @@ SignUp #Body #MyCarousel {
   width: 10px;
   padding: 0px;
   height: 10px;
-  background: url('Images/SignUp/ic_close.png');
+  background: url('Images/SignUp/Icons/close.png');
 }
 .SignupPages #BackgroundStack {
   height: 100%;

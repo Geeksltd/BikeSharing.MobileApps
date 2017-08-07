@@ -10,7 +10,7 @@
               <TextView CssClass="splitor" />
             </Stack>
             <Stack Direction="Horizontal">
-              <ImageView  Path="Images/ic_distance_white.png"/>
+              <ImageView  Path="Images/Icons/distance_white.png"/>
               <TextView  Text="@Item.Distance.ToString()" />
             </Stack>         
         </Stack>

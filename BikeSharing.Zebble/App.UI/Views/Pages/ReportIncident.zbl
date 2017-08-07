@@ -6,27 +6,27 @@
     </Stack>
     <Stack Direction="Horizontal" Id="IncidentSelectorStack">
       <Stack >
-        <ImageView Id="HandlebarImageView"  Path="Images/ic_report_handlebar.png" CssClass="image" on-Tapped="HandlebarTapped"/>
+        <ImageView Id="HandlebarImageView"  Path="Images/Icons/report_handlebar.png" CssClass="image" on-Tapped="HandlebarTapped"/>
         <TextView Text="Handlebar" />
       </Stack>
       <Stack>
-        <ImageView  Id="ForkImageView" Path="Images/ic_report_fork.png" CssClass="image" on-Tapped="ForkTapped" />
+        <ImageView  Id="ForkImageView" Path="Images/Icons/report_fork.png" CssClass="image" on-Tapped="ForkTapped" />
         <TextView Text="Fork" />
       </Stack>
       <Stack>
-        <ImageView  Id="PedalsImageView" Path="Images/ic_report_pedals.png" CssClass="image" on-Tapped="PedalsTapped"/>
+        <ImageView  Id="PedalsImageView" Path="Images/Icons/report_pedals.png" CssClass="image" on-Tapped="PedalsTapped"/>
         <TextView Text="Pedals" />
       </Stack>
       <Stack>
-        <ImageView  Id="Flat_tireImageView" Path="Images/ic_report_flat_tire.png" CssClass="image" on-Tapped="FlatTireTapped"/>
+        <ImageView  Id="Flat_tireImageView" Path="Images/Icons/report_flat_tire.png" CssClass="image" on-Tapped="FlatTireTapped"/>
         <TextView Text="Flat tire" />
       </Stack>
       <Stack>
-        <ImageView  Id="ChainImageView" Path="Images/ic_report_chain.png" CssClass="image" on-Tapped="ChainTapped"/>
+        <ImageView  Id="ChainImageView" Path="Images/Icons/report_chain.png" CssClass="image" on-Tapped="ChainTapped"/>
         <TextView Text="Chain" />
       </Stack>
       <Stack>
-        <ImageView  Id="LossImageView"  Path="Images/ic_report_loss.png" CssClass="image" on-Tapped="LossTapped"/>
+        <ImageView  Id="LossImageView"  Path="Images/Icons/report_loss.png" CssClass="image" on-Tapped="LossTapped"/>
         <TextView Text="Loss" />
       </Stack>      
     </Stack>

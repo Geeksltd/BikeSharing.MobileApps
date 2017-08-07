@@ -19,6 +19,7 @@ namespace UI.Pages
             // try
             //  {
             await Device.OS.OpenBrowser(GlobalSettings.SkypeBotAccount);
+            return;
             //  }
             //   catch (Exception ex)
             //   {
@@ -44,44 +45,44 @@ namespace UI.Pages
 
         void SetReportType(ReportedIssueType type)
         {
-            ChainImageView.BackgroundImagePath = "Images/ic_report_chain.png";
+            ChainImageView.BackgroundImagePath = "Images/Icons/report_chain.png";
             Chain = false;
-            Flat_tireImageView.BackgroundImagePath = "Images/ic_report_flat_tire.png";
+            Flat_tireImageView.BackgroundImagePath = "Images/Icons/report_flat_tire.png";
             FlatTire = false;
-            ForkImageView.BackgroundImagePath = "Images/ic_report_fork.png";
+            ForkImageView.BackgroundImagePath = "Images/Icons/report_fork.png";
             Fork = false;
-            HandlebarImageView.BackgroundImagePath = "Images/ic_report_handlebar.png";
+            HandlebarImageView.BackgroundImagePath = "Images/Icons/report_handlebar.png";
             Handlebar = false;
-            LossImageView.BackgroundImagePath = "Images/ic_report_loss.png";
+            LossImageView.BackgroundImagePath = "Images/Icons/report_loss.png";
             Loss = false;
-            PedalsImageView.BackgroundImagePath = "Images/ic_report_pedals.png";
+            PedalsImageView.BackgroundImagePath = "Images/Icons/report_pedals.png";
             Pedals = false;
 
             switch (type)
             {
                 case ReportedIssueType.Chain:
-                    ChainImageView.BackgroundImagePath = "Images/ic_report_chain_selec.png";
+                    ChainImageView.BackgroundImagePath = "Images/Icons/report_chain_selec.png";
                     Chain = true;
                     break;
                 case ReportedIssueType.FlatTire:
                     FlatTire = true;
-                    Flat_tireImageView.BackgroundImagePath = "Images/ic_report_flat_tire_selec.png";
+                    Flat_tireImageView.BackgroundImagePath = "Images/Icons/report_flat_tire_selec.png";
                     break;
                 case ReportedIssueType.Fork:
-                    ForkImageView.BackgroundImagePath = "Images/ic_report_fork_selec.png";
+                    ForkImageView.BackgroundImagePath = "Images/Icons/report_fork_selec.png";
                     Fork = true;
                     break;
                 case ReportedIssueType.Handlebar:
                     Handlebar = true;
-                    HandlebarImageView.BackgroundImagePath = "Images/ic_report_handlebar_selec.png";
+                    HandlebarImageView.BackgroundImagePath = "Images/Icons/report_handlebar_selec.png";
                     break;
                 case ReportedIssueType.Stolen:
-                    LossImageView.BackgroundImagePath = "Images/ic_report_loss_selec.png";
+                    LossImageView.BackgroundImagePath = "Images/Icons/report_loss_selec.png";
                     Loss = true;
                     break;
                 case ReportedIssueType.Pedals:
                     Pedals = true;
-                    PedalsImageView.BackgroundImagePath = "Images/ic_report_pedals_selec.png";
+                    PedalsImageView.BackgroundImagePath = "Images/Icons/report_pedals_selec.png";
                     break;
                 default: break;
             }

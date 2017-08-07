@@ -8,7 +8,7 @@
           <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Ride]" >
             <Stack Direction="Horizontal" Id="MainStack" on-Tapped="@RowTapped">
               <Stack Id="IconStack">
-                <ImageView Path="Images/myrides_ic_custom_ride.png" Id="MyRidesImage" />
+                <ImageView Path="Images/Icons/myrides_custom_ride.png" Id="MyRidesImage" />
               </Stack>
               <Stack Id="RideInfoStack">
                 <TextView Text="From"   />
@@ -18,9 +18,9 @@
                 <TextView Text="@Item.StartString" Wrap="false" />
                 <TextView Text="@GlobalSettings.City" Wrap="false" />
                 <Stack  Direction="Horizontal"  >
-                  <ImageView  Path="Images/myrides_ic_time.png" CssClass="image"/>
+                  <ImageView  Path="Images/Icons/myrides_time.png" CssClass="image"/>
                   <TextView  Text="@Item.Duration.ToString()" Wrap="false" />
-                  <ImageView  Path="Images/myrides_ic_distance.png"  CssClass="image"/>
+                  <ImageView  Path="Images/Icons/myrides_distance.png"  CssClass="image"/>
                   <TextView  Text="@Item.Distance.ToString()" Wrap="false" />
                 </Stack>
               </Stack>

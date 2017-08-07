@@ -51,7 +51,7 @@
     },
     {
       "Analyzer": "AsyncAwaitMethodAnalyzer",
-      "OccurrenceCount": 1126,
+      "OccurrenceCount": 1252,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"

@@ -50,7 +50,7 @@
             var booking = await RidesService.RequestBikeBooking(fromStation, toStation);
             // if (booking != null)
             //    FindParent<MainMenu>().upcomingRideButton.Enabled = true;
-            await Nav.Forward<BookingDetail>(new { ShowThanks = true, Booking = booking });
+            await Nav.Go<BookingDetail>(new { ShowThanks = true, Booking = booking });
             //}
             //catch (Exception ex)
             //{
