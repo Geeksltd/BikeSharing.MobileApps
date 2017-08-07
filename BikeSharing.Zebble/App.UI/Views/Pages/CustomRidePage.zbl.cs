@@ -16,11 +16,8 @@ namespace UI.Pages
         ObservableCollection<CustomPin> _customPins;
         public ObservableCollection<CustomPin> CustomPins
         {
-            get { return _customPins; }
-            set
-            {
-                _customPins = value;
-            }
+            get => _customPins;
+            set => _customPins = value;
         }
 
         public override async Task OnInitializing()
