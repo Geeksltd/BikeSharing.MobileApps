@@ -4,6 +4,7 @@
     using Domain.Services;
     using System.Threading.Tasks;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class ReportIncidentPage
     {
@@ -106,8 +107,8 @@
                     Description = Description
                 };
 
-                var _feedbackService = new FeedbackService();
-                if (await _feedbackService.SendIssueAsync(incident))
+               
+                if (await FeedbackService.SendIssueAsync(incident))
                 {
                     await Alert.Toast("Received");
                     ResetData();

@@ -5,6 +5,8 @@
     using System.Threading.Tasks;
     using Zebble;
     using Zebble.Services;
+    using static Domain.Services.Api;
+
     public partial class StartUp : Zebble.StartUp
     {
         public override async Task Run()
@@ -27,7 +29,7 @@
 
         public static async Task LoadFirstPageAsync()
         {
-            if (await new ProfileService().GetCurrentProfileAsync() == null)
+            if (await ProfileService.GetCurrentProfileAsync() == null)
                 await Nav.Go<Pages.LoginPage>();
             else
                 await Nav.Go(new Pages.HomePage());

@@ -10,18 +10,11 @@
     using UI;
     using Zebble;
     using Zebble.Plugin;
+    using static Domain.Services.Api;
 
     partial class CustomRidePage
     {
-        private ObservableCollection<CustomPin> _customPins;
-        public ObservableCollection<CustomPin> CustomPins
-        {
-            get { return _customPins; }
-            set
-            {
-                _customPins = value;
-            }
-        }
+        public ObservableCollection<CustomPin> CustomPins;
 
         public override async Task OnInitializing()
         {
@@ -32,14 +25,14 @@
             RouteSelected.Y.Set(Root.ActualHeight - 230);
             FromItemPicker.SelectionChanged.Handle(FSelectionChanged);
             ToItemPicker.SelectionChanged.Handle(TSelectionChanged);
-            if (await new RidesService().GetNearestStations() != null)
+            if (await RidesService.GetNearestStations() != null)
             {
                 //await MapView.Add(new Map.Annotation
                 //{
                 //    Title = (await new RidesService().GetNearestStations()).FirstOrDefault().Name,
                 //    Location = new Zebble.Services.GeoLocation((await new RidesService().GetNearestStations()).FirstOrDefault().Latitude, (await new RidesService().GetNearestStations()).FirstOrDefault().Longitude)
                 //});
-                InitializePinsFromStations(await new RidesService().GetNearestStations());
+                InitializePinsFromStations(await RidesService.GetNearestStations());
                 FromItemPicker.DataSource = CustomPins.ToList();
                 ToItemPicker.DataSource = CustomPins.ToList();
             }
@@ -48,21 +41,21 @@
         private async Task FSelectionChanged()
         {
             var selected = (CustomPin)FromItemPicker.SelectedValue;
-            var station = await new RidesService().GetStation(selected.Id);
+            var station = await RidesService.GetStation(selected.Id);
             RouteSelected.Visible = true;
             FromPS.Visible = true;
             fromText.Text = selected.Label;
-            FromPSText.Text = string.Format("Empty bike docks {0} Avilable bikes {1}", station.EmptyDocks, station.Occupied);
+            FromPSText.Text = $"Empty bike docks {station.EmptyDocks} Avilable bikes {station.Occupied}";
         }
 
         private async Task TSelectionChanged()
         {
             var selected = (CustomPin)ToItemPicker.SelectedValue;
-            var station = await new RidesService().GetStation(selected.Id);
+            var station = await RidesService.GetStation(selected.Id);
             RouteSelected.Visible = true;
             ToPS.Visible = true;
             toText.Text = selected.Label;
-            FromPSText.Text = string.Format("Empty bike docks {0} Avilable bikes {1}", station.EmptyDocks, station.Occupied);
+            FromPSText.Text = $"Empty bike docks {station.EmptyDocks} Avilable bikes {station.Occupied}";
         }
 
         public async Task GoClicked()
@@ -89,7 +82,7 @@
                     Id = counter,
                     PinIcon = "pushpin",
                     Label = station.Name,
-                    Address = string.Format("{0}, {1}", station.Latitude, station.Longitude),
+                    Address = $"{station.Latitude}, {station.Longitude}",
                     Position = new Domain.GeoLocation(station.Latitude, station.Longitude)
                 });
                 counter++;

@@ -8,6 +8,7 @@
     using UI.Modules;
     using Zebble;
     using Zebble.Plugin;
+    using static Domain.Services.Api;
 
     partial class BookingPage
     {
@@ -47,9 +48,9 @@
                 IsBusy = true;
                 try
                 {
-                    var FromStation = await new RidesService().GetStation(From.Id);
-                    var ToStation = await new RidesService().GetStation(To.Id);
-                    Booking booking = await new RidesService().RequestBikeBooking(FromStation, ToStation);
+                    var FromStation = await  RidesService.GetStation(From.Id);
+                    var ToStation = await  RidesService.GetStation(To.Id);
+                    Booking booking = await  RidesService.RequestBikeBooking(FromStation, ToStation);
                     // if (booking != null)
                     //    FindParent<MainMenu>().upcomingRideButton.Enabled = true;
                     await Nav.Forward<BookingDetailPage>(new { ShowThanks = true, Booking = booking });

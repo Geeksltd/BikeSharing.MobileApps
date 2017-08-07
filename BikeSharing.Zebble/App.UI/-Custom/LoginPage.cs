@@ -4,51 +4,15 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 using Zebble;
+using static Domain.Services.Api;
 
 namespace UI.Pages
 {
     partial class LoginPage
     {
-        private string _userName;
-        private string _password;
-        private bool _isValid;
-
-
-        public string UserName
-        {
-            get
-            {
-                return _userName;
-            }
-            set
-            {
-                _userName = value;
-            }
-        }
-
-        public string Password
-        {
-            get
-            {
-                return _password;
-            }
-            set
-            {
-                _password = value;
-            }
-        }
-
-        public bool IsValid
-        {
-            get
-            {
-                return _isValid;
-            }
-            set
-            {
-                _isValid = value;
-            }
-        }
+        private string UserName;
+        private string Password;
+        private bool IsValid;
 
         private async Task SignInAsync()
         {
@@ -60,7 +24,7 @@ namespace UI.Pages
             {
                 try
                 {
-                    isAuthenticated = await new AuthenticationService().LoginAsync(UserName, Password);
+                    isAuthenticated = await AuthenticationService.LoginAsync(UserName, Password);
                 }
                 catch (Exception ex) when (ex is WebException)
                 {
@@ -91,10 +55,10 @@ namespace UI.Pages
 
         private bool Validate()
         {
-            _userName = usernameTextInput?.Text;
-            _password = passwordTextInput?.Text;
-            bool isValidUser = _userName.HasValue();
-            bool isValidPassword = _password.HasValue();
+            UserName = usernameTextInput?.Text;
+            Password = passwordTextInput?.Text;
+            bool isValidUser = UserName.HasValue();
+            bool isValidPassword = Password.HasValue();
             return isValidUser && isValidPassword;
         }
     }

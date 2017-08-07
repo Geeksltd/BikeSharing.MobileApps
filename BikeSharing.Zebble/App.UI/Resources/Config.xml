@@ -1,11 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <settings>
 
-  <!--Learn about the settings at: http://zebble.net/docs/standard-zebble-settings -->
-  <Facebook.App.Id>4555555445544|38d9005ab3b115f3fc24153b09f5d023</Facebook.App.Id>
-  <Application.Apple.ID>54555454</Application.Apple.ID>
-  <Application.Android.ID>BikeSharing.Zebble</Application.Android.ID>
-  <Application.Windows.ID>BikeSharing.Zebble</Application.Windows.ID>
   <Dev.Mode value="true" />
   <MultiThread.Debugging value="false" />
   <Dev.Css.Platform value="Windows" />

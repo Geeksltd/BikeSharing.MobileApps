@@ -7,13 +7,14 @@
     using System.Threading.Tasks;
     using UI.Pages;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class RecommendedModule
     {
         Suggestion[] Items;
         public override async Task OnInitializing()
         {
-            var rides = await new RidesService().GetSuggestions();
+            var rides = await RidesService.GetSuggestions();
             if(rides != null)
                Items = rides.ToArray();
 

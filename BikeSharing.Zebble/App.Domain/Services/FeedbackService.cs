@@ -6,47 +6,47 @@ using Zebble;
 
 namespace Domain.Services
 {
-    public class FeedbackService : BaseApi
+    public partial class Api : BaseApi
     {
-        public async Task<bool> SendIssueAsync(ReportedIssue issue)
+        public static class FeedbackService
         {
-            await AddUserAndBikeIdsToIssue(issue);
-            await AddLocationToIssue(issue);
-
-            var builder = new UriBuilder(string.Format("{0}api/Issues", GlobalSettings.IssuesEndpoint));
-
-
-            string uri = builder.ToString();
-            if (await BaseApi.Post(uri, issue))
-                return true;
-            return false;
-        }
-
-        private async Task AddUserAndBikeIdsToIssue(ReportedIssue issue)
-        {
-            if (Settings.UserId == 0)
+            public static async Task<bool> SendIssueAsync(ReportedIssue issue)
             {
-                throw new InvalidOperationException("UserId is not saved");
+                await AddUserAndBikeIdsToIssue(issue);
+                await AddLocationToIssue(issue);
+
+                string uri = $"{GlobalSettings.IssuesEndpoint}api/Issues";
+                if (await BaseApi.Post(uri, issue))
+                    return true;
+                return false;
             }
 
-            if (Settings.CurrentBookingId == 0)
+            private static async Task AddUserAndBikeIdsToIssue(ReportedIssue issue)
             {
-                throw new InvalidOperationException("CurrentBookingId is not saved");
+                if (Settings.UserId == 0)
+                {
+                    throw new InvalidOperationException("UserId is not saved");
+                }
+
+                if (Settings.CurrentBookingId == 0)
+                {
+                    throw new InvalidOperationException("CurrentBookingId is not saved");
+                }
+                var currentBooking = await RidesService.GetBooking(Settings.CurrentBookingId);
+
+                issue.BikeId = currentBooking.BikeId;
+                issue.UserId = Settings.UserId;
             }
-            var currentBooking = await new RidesService().GetBooking(Settings.CurrentBookingId);
 
-            issue.BikeId = currentBooking.BikeId;
-            issue.UserId = Settings.UserId;
-        }
-
-        private async Task AddLocationToIssue(ReportedIssue issue)
-        {
-            var location = await Device.Location.GetCurrentPosition();
-
-            if (location != null)
+            private static async Task AddLocationToIssue(ReportedIssue issue)
             {
-                issue.Latitude = location.Latitude;
-                issue.Longitude = location.Longitude;
+                var location = await Device.Location.GetCurrentPosition();
+
+                if (location != null)
+                {
+                    issue.Latitude = location.Latitude;
+                    issue.Longitude = location.Longitude;
+                }
             }
         }
     }

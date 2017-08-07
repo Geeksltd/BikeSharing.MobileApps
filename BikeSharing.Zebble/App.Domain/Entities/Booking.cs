@@ -20,6 +20,6 @@ namespace Domain.Entities
 
         public DateTime DueDate { get; set; }
 
-        public string DueDateString { get { return DueDate.ToString("dddd, MMMM dd"); } }
+        public string DueDateString => DueDate.ToString("dddd, MMMM dd");
     }
 }

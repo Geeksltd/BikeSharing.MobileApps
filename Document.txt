@@ -1,0 +1,30 @@
+
+
+
+
+Requirements
+
+    Windows 10
+    Visual Studio 2015 Update 3 (14.0 or higher) to compile C# 6 language features (or Visual Studio MacOS)
+    Zebble
+    Visual Studio Community Edition is fully supported!
+    Android SDK Tools 25.2.3 or higher
+    OpenWeatherMap Key - Getting a OpenWeatherMap Api Key
+    Bing Maps Key - Getting a Bing Maps Key
+    Microsoft Azure subscription or using local IIS and SQL
+	
+Setup
+
+	Download or clone the repository
+	
+	
+	Rebuild the solution to get all neccesary NuGet packages.
+
+	Access to GlobalSettings.cs file available in the Portable Class Library to introduce your Azure endpoints and APIs keys.
+	
+Deploy to Azure
+
+	Use the Backend Services repository to deploy backend services for Xamarin App to your subscription. Or you can deploy backend services on your local iis. for this part you should install .net core for iis (https://docs.microsoft.com/en-us/aspnet/core/publishing/iis)
+	for nodejs api service you can use iis-node 
+	Database are 
+	

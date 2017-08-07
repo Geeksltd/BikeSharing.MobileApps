@@ -6,19 +6,21 @@ using Zebble;
 
 namespace Domain.Services
 {
-    public class EventsService : BaseApi
+    public partial class Api : BaseApi
     {
-        public async Task<Event[]> GetEvents()
+        public static class EventsService
         {
-            var builder = new UriBuilder(string.Format("{0}api/Events/", GlobalSettings.EventsEndpoint));
-            string uri = builder.ToString();
-            return await BaseApi.Get<Event[]>(uri);
-        }
+            public static async Task<Event[]> GetEvents()
+            {
+                string uri = $"{GlobalSettings.EventsEndpoint}api/Events/";
+                return await BaseApi.Get<Event[]>(uri);
+            }
 
-        public async Task<Event> GetEventById(int eventId)
-        {
-            var allEvents = await GetEvents();
-            return allEvents.FirstOrDefault(e => e.Id == eventId);
+            public static async Task<Event> GetEventById(int eventId)
+            {
+                var allEvents = await GetEvents();
+                return allEvents.FirstOrDefault(e => e.Id == eventId);
+            }
         }
     }
 }

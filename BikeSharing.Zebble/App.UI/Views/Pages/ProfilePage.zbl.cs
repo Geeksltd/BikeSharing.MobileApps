@@ -7,6 +7,7 @@
     using System.IO;
     using System.Threading.Tasks;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class ProfilePage
     {
@@ -45,7 +46,7 @@
 
                 if (base64Str.HasValue())
                 {
-                    await new ProfileService().UploadUserImageAsync(base64Str, Item);
+                    await ProfileService.UploadUserImageAsync(base64Str, Item);
                 }
             }
             //}

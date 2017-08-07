@@ -6,50 +6,53 @@ using Zebble;
 
 namespace Domain.Services
 {
-    public class AuthenticationService : BaseApi
+    public partial class Api : BaseApi
     {
-        public bool IsAuthenticated => Settings.AccessToken.HasValue();
-
-
-        public async Task<bool> LoginAsync(string userName, string password)
+        public static class AuthenticationService
         {
-            var auth = new AuthenticationRequest
+            public static bool IsAuthenticated => Settings.AccessToken.HasValue();
+
+
+            public static async Task<bool> LoginAsync(string userName, string password)
             {
-                UserName = userName,
-                Credentials = password,
-                GrantType = "password"
-            };
+                var auth = new AuthenticationRequest
+                {
+                    UserName = userName,
+                    Credentials = password,
+                    GrantType = "password"
+                };
 
-            var builder = new UriBuilder(string.Format("{0}{1}", GlobalSettings.AuthenticationEndpoint, "api/login"));
-            string uri = builder.ToString();
 
-            var authenticationInfo = await BaseApi.Post<AuthenticationResponse>(uri, auth);
-            if (authenticationInfo == null)
+                string uri = $"{GlobalSettings.AuthenticationEndpoint}{"api/login"}";
+
+                var authenticationInfo = await BaseApi.Post<AuthenticationResponse>(uri, auth);
+                if (authenticationInfo == null)
+                    return false;
+                Settings.UserId = authenticationInfo.UserId;
+                Settings.ProfileId = authenticationInfo.ProfileId;
+                Settings.AccessToken = authenticationInfo.AccessToken;
+                if (authenticationInfo.UserId != 0)
+                {
+                    Device.IO.File("Session.txt").WriteAllText(authenticationInfo.UserId.ToString());
+                    return true;
+                }
                 return false;
-            Settings.UserId = authenticationInfo.UserId;
-            Settings.ProfileId = authenticationInfo.ProfileId;
-            Settings.AccessToken = authenticationInfo.AccessToken;
-            if (authenticationInfo.UserId != 0)
-            {
-                Device.IO.File("Session.txt").WriteAllText(authenticationInfo.UserId.ToString());
-                return true;
+                //   if (authenticationInfo.AccessToken.HasValue())
+                //           Device.IO.File("SessionToken.txt").WriteAllText(authenticationInfo.AccessToken);
+
             }
-            return false;
-            //   if (authenticationInfo.AccessToken.HasValue())
-            //           Device.IO.File("SessionToken.txt").WriteAllText(authenticationInfo.AccessToken);
 
+            public static Task LogoutAsync()
+            {
+                Settings.RemoveUserId();
+                Settings.RemoveProfileId();
+                Settings.RemoveAccessToken();
+                Settings.RemoveCurrentBookingId();
+
+                return Task.CompletedTask;
+            }
+
+            public static int GetCurrentUserId() => Settings.UserId;
         }
-
-        public Task LogoutAsync()
-        {
-            Settings.RemoveUserId();
-            Settings.RemoveProfileId();
-            Settings.RemoveAccessToken();
-            Settings.RemoveCurrentBookingId();
-
-            return Task.CompletedTask;
-        }
-
-        public int GetCurrentUserId() => Settings.UserId;
     }
 }

@@ -6,6 +6,7 @@
     using System.Threading.Tasks;
     using UI.Pages;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class EventSummaryModule
     {
@@ -14,12 +15,12 @@
 
         public override async Task OnInitializing()
         {
-            Item = await new EventsService().GetEventById(Nav.Param<int>("Id"));
+            Item = await EventsService.GetEventById(Nav.Param<int>("Id"));
             if (Item != null)
             {
                 var toGeoLocation = new Domain.GeoLocation(Item.Venue.Latitude, Item.Venue.Longitude);
-                FromStation = await new RidesService().GetInfoForNearestStation();
-                ToStation = await new RidesService().GetInfoForNearestStationTo(toGeoLocation);
+                FromStation = await RidesService.GetInfoForNearestStation();
+                ToStation = await RidesService.GetInfoForNearestStationTo(toGeoLocation);
             }
             await base.OnInitializing();
             await InitializeComponents();
@@ -28,7 +29,7 @@
 
         async Task BookBikeButtonTapped()
         {
-            var booking = await new RidesService().RequestBikeBooking(FromStation, ToStation, Item);
+            var booking = await RidesService.RequestBikeBooking(FromStation, ToStation, Item);
             await Nav.Go<BookingDetailPage>(new { ShowThanks = true, Booking = booking });
         }
     }

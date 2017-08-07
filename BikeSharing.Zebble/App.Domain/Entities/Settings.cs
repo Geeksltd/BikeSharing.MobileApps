@@ -8,91 +8,28 @@
     {
         /* -------------------------- Fields -------------------------*/
 
-        private static int UserIdKey = 1;
+        private static int userId = 1;
 
+        private static int profileId = 1;
 
-        private static int ProfileIdKey = 1;
+        private static string accessToken = string.Empty;
 
+        private static int currentBookingId = 1;
 
-        private static string AccessTokenKey = string.Empty;
-
-
-        private static int CurrentBookingIdKey = 1;
-
-        private static UserProfile _userProfile = null;
+        private static UserProfile userProfile = null;
 
 
         /* -------------------------- Properties -------------------------*/
 
-        public static UserProfile UserProfile
-        {
-            get
-            {
-                return _userProfile;
-            }
-            set
-            {
-                _userProfile = value;
-            }
-        }
-
-        public static int ProfileId
-        {
-            get
-            {
-                return ProfileIdKey;
-            }
-            set
-            {
-                ProfileIdKey = value;
-            }
-        }
-        public static string AccessToken
-        {
-            get
-            {
-                return AccessTokenKey;
-            }
-            set
-            {
-                AccessTokenKey = value;
-            }
-        }
-
-        public static int CurrentBookingId
-        {
-            get
-            {
-                return CurrentBookingIdKey;
-            }
-            set
-            {
-                CurrentBookingIdKey = value;
-            }
-        }
-
-
-
-
-        #region UserId Property
-
-        public static int UserId
-        {
-            get
-            {
-                return UserIdKey;
-            }
-            set
-            {
-                UserIdKey = value;
-            }
-        }
-
-        #endregion
 
         #region Name Property
 
         public string Name { get; set; }
+        public static int UserId { get => userId; set => userId = value; }
+        public static int ProfileId { get => profileId; set => profileId = value; }
+        public static string AccessToken { get => accessToken; set => accessToken = value; }
+        public static int CurrentBookingId { get => currentBookingId; set => currentBookingId = value; }
+        public static UserProfile UserProfile { get => userProfile; set => userProfile = value; }
 
         #endregion
 

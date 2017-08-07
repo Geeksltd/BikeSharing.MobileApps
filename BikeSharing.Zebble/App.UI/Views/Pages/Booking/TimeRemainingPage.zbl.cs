@@ -7,15 +7,15 @@
     using System.Threading;
     using System.Threading.Tasks;
     using Zebble;
+    using static Domain.Services.Api;
 
     partial class TimeRemainingPage
     {
         Timer timer;
-        TimeSpan timeSpanCounter = new TimeSpan(0, 3, 1);
-        Booking book;
+        TimeSpan TimeSpanCounter = new TimeSpan(0, 3, 1);
+        Booking Book;
 
-        public Booking Book { get => book; set => book = value; }
-        public TimeSpan TimeSpanCounter { get => timeSpanCounter; set => timeSpanCounter = value; }
+
 
         public override async Task OnInitializing()
         {
@@ -23,9 +23,9 @@
 
             if (Book == null)
             {
-                if (await new RidesService().GetUserRides() != null)
+                if (await RidesService.GetUserRides() != null)
                 {
-                    var ride = (await new RidesService().GetUserRides()).Where(rec => rec.Start > LocalTime.Now).OrderBy(rec => rec.Start).FirstOrDefault();
+                    var ride = (await RidesService.GetUserRides()).Where(rec => rec.Start > LocalTime.Now).OrderBy(rec => rec.Start).FirstOrDefault();
                     if (ride != null)
                     {
                         Book = new Booking()
