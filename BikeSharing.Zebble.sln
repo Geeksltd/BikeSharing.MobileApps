@@ -9,11 +9,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App.UI", "BikeSharing.Zebbl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Run", "Run", "{3FB67C29-4006-489F-8C98-D8230602353A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP", "BikeSharing.Zebble\Run\UWP\UWP.csproj", "{51AEAFB7-E02B-4F51-8AB0-AA90E034E684}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~UWP", "BikeSharing.Zebble\Run\UWP\~UWP.csproj", "{51AEAFB7-E02B-4F51-8AB0-AA90E034E684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "BikeSharing.Zebble\Run\Android\Android.csproj", "{573F454C-6003-40C8-A09D-3304F28D5F10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~Android", "BikeSharing.Zebble\Run\Android\~Android.csproj", "{573F454C-6003-40C8-A09D-3304F28D5F10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "BikeSharing.Zebble\Run\iOS\iOS.csproj", "{3B21A769-F17C-4219-A595-27A34955228F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~iOS", "BikeSharing.Zebble\Run\iOS\~iOS.csproj", "{3B21A769-F17C-4219-A595-27A34955228F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A70C3196-1B84-468A-8BC8-D905E60FB584}"
 	ProjectSection(SolutionItems) = preProject
@@ -225,10 +225,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{51AEAFB7-E02B-4F51-8AB0-AA90E034E684} = {3FB67C29-4006-489F-8C98-D8230602353A}
-		{573F454C-6003-40C8-A09D-3304F28D5F10} = {3FB67C29-4006-489F-8C98-D8230602353A}
-		{3B21A769-F17C-4219-A595-27A34955228F} = {3FB67C29-4006-489F-8C98-D8230602353A}
 	EndGlobalSection
 EndGlobal

@@ -73,20 +73,6 @@ Picker { padding: $input-padding; border-color: $very-light-grey;
     #PlaceholderLabel { }
 }
 
-FilePicker {
-    #Button { }
-    #Preview { }
-}
-
-FilePicker-Dialog {
-    IconButton {
-        @extend .primary-button;
-    }
-    #PickPhotoButton #Icon { background: url(Images/Icons/Pick-photo.png); }
-    #PickVideoButton #Icon { background: url(Images/Icons/Pick-video.png); }
-    #TakePhotoButton #Icon { background: url(Images/Icons/Take-photo.png); }
-    #TakeVideoButton #Icon { background: url(Images/Icons/Take-video.png); }
-}
 
 DatePicker-Cell, TimePicker-Cell {
     #Label { color: $grey; }

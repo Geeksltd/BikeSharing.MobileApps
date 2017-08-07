@@ -139,16 +139,30 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Zebble.iOS">
-      <HintPath>..\..\..\packages\Zebble.4.0.207\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+    <Reference Include="Zebble.DateTimePicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.DateTimePicker.4.5.264\lib\Xamarin.iOS10\Zebble.DateTimePicker.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.4.0.267\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.Map.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.Plugin.Map.4.1.319\lib\Xamarin.iOS10\Zebble.Map.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.NavBarTabs.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.NavBarTabs.2.6.322\lib\Xamarin.iOS10\Zebble.NavBarTabs.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.WebApi.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.WebApi.4.5.265\lib\Xamarin.iOS10\Zebble.WebApi.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
+    <Content Include="Zebble-LicenseAgreement.txt" />
     <EmbeddedResource Include="Resources\Icon-76%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

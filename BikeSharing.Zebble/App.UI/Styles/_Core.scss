@@ -31,13 +31,6 @@ Switch { width: 56px; height: 32px;
 
 /*Map { width: 100%; height: 100%; }*/
 
-
-
-FilePicker { height: 35px;
-    & > #Button { text-align: left; height: 100%; }
-    & > #Preview { width: 35px; height: 35px; background-size: cover; }
-}
-
 FormField { margin-top: 5px;
     & > #Label { width: 30%; height: 100%; }
     & > #Icon { width: 30%; width: 25px; height: 25px; }
