@@ -1,15 +1,12 @@
 ﻿namespace UI.Pages
 {
     using Domain;
-    using Domain.Services;
     using System;
-    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Threading.Tasks;
     using UI;
     using Zebble;
-    using Zebble.Plugin;
     using static Domain.Services.Api;
 
     partial class CustomRide
@@ -41,6 +38,7 @@
         private async Task FSelectionChanged()
         {
             var selected = (CustomPin)FromItemPicker.SelectedValue;
+
             var station = await RidesService.GetStation(selected.Id);
             RouteSelected.Visible = true;
             FromPS.Visible = true;

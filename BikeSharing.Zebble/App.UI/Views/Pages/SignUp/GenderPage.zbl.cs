@@ -56,7 +56,7 @@
 
         async Task ImageViewTapped()
         {
-            NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+            NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/Icons/floating_action_button_normal.png");
             if (Gender)
             {
                 Gender = false;

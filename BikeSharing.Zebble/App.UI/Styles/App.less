@@ -377,7 +377,7 @@ BookingPage {
         border: 4px solid;
         border-color: @WhiteColor;
         width: 200px;
-        padding: 20px;
+        padding: 10px;
         margin-top: 20px;
     }
 
@@ -472,6 +472,10 @@ BookingPage {
         margin-top: 50px;
         margin-left: calc("(View.Root.ActualWidth/ 2)- 40");
         background-size: cover;
+
+        TextView{
+            margin-top:30px;
+        }
     }
 
     .label {
@@ -721,6 +725,13 @@ SignUp {
 
     #CloseStack {
         height: 10px;
+
+        Button {
+            width: 10px;
+            padding: 0px;
+            height: 10px;
+            background: url('Images/Icons/close.png');
+        }
     }
 
     TextInput {
@@ -753,13 +764,6 @@ SignUp {
         width: 50px;
         margin-top: 10px;
         margin-left: calc("view.Parent.ActualWidth - 50");
-    }
-
-    #CloseButton {
-        width: 10px;
-        padding: 0px;
-        height: 10px;
-        background: url('Images/SignUp/Icons/close.png');
     }
 
     #BackgroundStack {
@@ -827,7 +831,7 @@ AccountPage {
     }
 
     #BuildingStack {
-        height: 25%;
+        height: 52%;
     }
 
     #BuildingImageView {

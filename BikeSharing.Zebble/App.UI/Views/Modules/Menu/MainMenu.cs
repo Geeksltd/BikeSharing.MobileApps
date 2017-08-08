@@ -1,8 +1,7 @@
 namespace UI.Modules
 {
-    using System.Threading.Tasks;
     using Domain;
-    using Domain.Services;
+    using System.Threading.Tasks;
     using UI.Pages;
     using Zebble;
 
@@ -11,6 +10,11 @@ namespace UI.Modules
 
         public override async Task OnInitializing()
         {
+            if (Settings.UserProfile == null)
+            {
+                await Nav.Go<Login>();
+                return;
+            }
             await base.OnInitializing();
             await InitializeComponents();
         }

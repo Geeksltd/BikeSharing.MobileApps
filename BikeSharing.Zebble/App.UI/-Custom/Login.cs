@@ -1,5 +1,4 @@
 ﻿using Domain;
-using Domain.Services;
 using System;
 using System.Net;
 using System.Threading.Tasks;
@@ -10,13 +9,11 @@ namespace UI.Pages
 {
     partial class Login
     {
-        private string UserName;
-        private string Password;
-        private bool IsValid;
+        string userName;
+        string password;
 
         private async Task SignInAsync()
         {
-            IsValid = true;
             bool isValid = Validate();
             bool isAuthenticated = false;
 
@@ -24,27 +21,13 @@ namespace UI.Pages
             {
                 try
                 {
-                    isAuthenticated = await AuthenticationService.LoginAsync(UserName, Password);
+                    isAuthenticated = await AuthenticationService.LoginAsync(userName, password);
                 }
                 catch (Exception ex) when (ex is WebException)
                 {
                     Console.WriteLine($"[SignIn] Error signing in: {ex}");
                     await Alert.Show("Error", "Communication error");
                 }
-            }
-            else
-            {
-                var file = Device.IO.File("Session.txt");
-                if (file.Exists())
-                {
-                    var data = file.ReadAllText();
-                    Settings.UserId = Convert.ToInt32(data);
-                    if (Settings.UserId != 0)
-                        isAuthenticated = true;
-                }
-
-
-                IsValid = false;
             }
 
             if (isAuthenticated)
@@ -55,12 +38,11 @@ namespace UI.Pages
 
         private bool Validate()
         {
-            UserName = UsernameTextInput?.Text;
-            Password = PasswordTextInput?.Text;
-            bool isValidUser = UserName.HasValue();
-            bool isValidPassword = Password.HasValue();
+            userName = UsernameTextInput?.Text;
+            password = PasswordTextInput?.Text;
+            bool isValidUser = userName.HasValue();
+            bool isValidPassword = password.HasValue();
             return isValidUser && isValidPassword;
         }
     }
-
 }

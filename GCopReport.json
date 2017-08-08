@@ -9,7 +9,7 @@
     },
     {
       "Analyzer": "LongMethodAnalyzer",
-      "OccurrenceCount": 23,
+      "OccurrenceCount": 24,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -51,7 +51,7 @@
     },
     {
       "Analyzer": "AsyncAwaitMethodAnalyzer",
-      "OccurrenceCount": 1252,
+      "OccurrenceCount": 1259,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"
@@ -79,7 +79,7 @@
     },
     {
       "Analyzer": "MeaningfulNameForVariablesAnalyzer",
-      "OccurrenceCount": 7,
+      "OccurrenceCount": 13,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-R7QIUKI"

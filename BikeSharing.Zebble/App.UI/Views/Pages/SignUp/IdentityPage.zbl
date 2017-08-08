@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <z-Component z-type="IdentityPage" z-base="Page" CssClass="SignupPages"  z-namespace="UI.Pages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <Stack Id="mainStack">
-    <Stack Id="backgroundStack" >
+  <Stack Id="MainStack">
+    <Stack Id="BackgroundStack" >
       <Stack />
       <Stack >
         <Canvas Id="LeftCloudBox" on-VisibilityChanged="LeftCloudBoxVisibilityChanged" />
@@ -11,7 +11,7 @@
     </Stack>
     <Stack Id="ForegroundStack">
       <Stack Id="CloseStack" >
-        <Button  Id="CloseButton" z-nav-go="Pages.Login"/>
+        <Button z-nav-go="Pages.Login"/>
       </Stack>
       <Stack Id="DetailStack">
         <TextView Text="Username" CssClass="title"    />
@@ -23,7 +23,7 @@
       </Stack>
       <Stack Id="NextButtonStack"  >
         <Stack>
-          <Button  Id="NextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+          <Button  Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
         </Stack>
       </Stack>
     </Stack>

@@ -1,12 +1,7 @@
 ﻿namespace UI.Pages
 {
-    using System;
-    using System.Linq;
-    using System.Threading.Tasks;
     using Domain;
-    using UI;
-    using Zebble;
-    using Zebble.Plugin;
+    using System.Threading.Tasks;
     using static Domain.Services.Api;
     partial class MyRides
     {

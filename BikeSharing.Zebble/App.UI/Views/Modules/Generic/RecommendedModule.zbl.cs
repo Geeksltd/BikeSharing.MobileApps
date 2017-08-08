@@ -1,10 +1,9 @@
 ﻿namespace UI.Modules
 {
+    using Domain;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-    using Domain;
-    using Domain.Services;
     using UI.Pages;
     using Zebble;
     using static Domain.Services.Api;
@@ -15,8 +14,8 @@
         public override async Task OnInitializing()
         {
             var rides = await RidesService.GetSuggestions();
-            if(rides != null)
-               Items = rides.ToArray();
+            if (rides != null)
+                Items = rides.ToArray();
 
             await base.OnInitializing();
             await InitializeComponents();

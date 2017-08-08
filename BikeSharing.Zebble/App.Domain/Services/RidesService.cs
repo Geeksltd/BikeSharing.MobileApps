@@ -222,7 +222,7 @@ namespace Domain.Services
             {
                 await Task.Delay(500);
 
-                return Stations[stationId > 3 ? 0 : stationId];
+                return Stations[stationId > 2 ? 0 : stationId];
             }
 
             public static Task<Booking> RequestBikeBooking(Station fromStation, Station toStation, Event @event)

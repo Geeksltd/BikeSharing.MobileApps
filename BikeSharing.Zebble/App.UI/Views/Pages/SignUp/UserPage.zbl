@@ -11,7 +11,7 @@
     </Stack>
     <Stack Id="ForegroundStack">
       <Stack Id="CloseStack" >
-        <Button  Id="CloseButton" z-nav-go="Pages.Login"/>
+        <Button  z-nav-go="Pages.Login"/>
       </Stack>
       <Stack Id="DetailStack">
         <TextView Text="First Name" CssClass="title"   />
@@ -24,7 +24,7 @@
         <DatePicker Id="BirthdateInput"  YearFrom="1950"  />
       </Stack>
       <Stack Id="NextButtonStack">
-        <Button  Id="NextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <Button  Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
       </Stack>
     </Stack>
   </Stack>

@@ -1,7 +1,6 @@
 ﻿namespace UI.Modules
 {
     using Domain;
-    using Domain.Services;
     using System;
     using System.Threading.Tasks;
     using static Domain.Services.Api;

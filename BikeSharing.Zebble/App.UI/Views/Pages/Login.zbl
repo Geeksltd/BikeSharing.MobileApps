@@ -10,7 +10,7 @@
       </Stack>
       <Stack Id="SignUpStack" Direction="Horizontal" >
         <TextView   Text="Don't have an account?" Wrap="false"  CssClass="label" />
-        <TextView Text="Sign up" z-nav-forward="Pages.SignUp" Id="signupTextView" CssClass="label"/>
+        <TextView Text="Sign up" z-nav-forward="Pages.SignUp" Id="SignupTextView" CssClass="label"/>
       </Stack>
     </Stack>
   </Stack>

@@ -7,8 +7,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App.Domain", "BikeSharing.Z
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "App.UI", "BikeSharing.Zebble\App.UI\App.UI.shproj", "{CD40D45A-CFFE-46FC-8A9D-055EF9FF9440}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Run", "Run", "{3FB67C29-4006-489F-8C98-D8230602353A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~UWP", "BikeSharing.Zebble\Run\UWP\~UWP.csproj", "{51AEAFB7-E02B-4F51-8AB0-AA90E034E684}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~Android", "BikeSharing.Zebble\Run\Android\~Android.csproj", "{573F454C-6003-40C8-A09D-3304F28D5F10}"

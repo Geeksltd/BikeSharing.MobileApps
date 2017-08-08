@@ -2,11 +2,8 @@
 {
     using System;
     using System.Threading.Tasks;
-    using Domain.Entities;
-    using Domain.Services;
     using UI;
     using Zebble;
-    using Zebble.Plugin;
     using static Domain.Services.Api;
 
     partial class BookingPage

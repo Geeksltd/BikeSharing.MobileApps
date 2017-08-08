@@ -45,9 +45,9 @@
         async Task TextChanged()
         {
             if (UsernameInput.Text.HasValue() && PasswordInput.Text.HasValue() && RepeatPasswordInput.Text.HasValue() && RepeatPasswordInput.Text == PasswordInput.Text)
-                NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+                NextButton.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/Icons/floating_action_button_normal.png");
             else
-                NextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
+                NextButton.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/Icons/floating_action_button_disable.png");
         }
 
         async Task RightCloudBoxVisibilityChanged()

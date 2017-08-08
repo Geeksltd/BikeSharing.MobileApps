@@ -1,7 +1,7 @@
 ﻿namespace UI.Modules
 {
-    using System.Threading.Tasks;
     using Domain;
+    using System.Threading.Tasks;
 
     partial class EventModule
     {

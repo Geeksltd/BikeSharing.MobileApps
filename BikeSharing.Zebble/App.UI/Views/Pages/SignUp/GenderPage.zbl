@@ -11,7 +11,7 @@
     </Stack>
     <Stack Id="ForegroundStack">
       <Stack Id="CloseStack" >
-        <Button  Id="CloseButton" z-nav-go="Pages.Login"/>
+        <Button z-nav-go="Pages.Login"/>
       </Stack>
       <Stack Id="DetailStack">
         <ImageView Path="Images/SignUp/signup_woman.png" Id="WomanImageView" on-Tapped="ImageViewTapped"/>
@@ -19,7 +19,7 @@
       </Stack>
       <Stack Id="NextButtonStack"  Direction="Horizontal">
         <TextView Text="Skip" Id="SkipTextView" on-Tapped="NextButtonTapped" />
-        <Button  Id="NextButton" BackgroundImagePath="Images/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <Button  Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
       </Stack>
     </Stack>
   </Stack>

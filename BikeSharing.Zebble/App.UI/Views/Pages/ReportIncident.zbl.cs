@@ -1,8 +1,7 @@
 namespace UI.Pages
 {
-    using System.Threading.Tasks;
     using Domain;
-    using Domain.Services;
+    using System.Threading.Tasks;
     using Zebble;
     using static Domain.Services.Api;
 
@@ -16,23 +15,12 @@ namespace UI.Pages
 
         async Task OpenBot()
         {
-            // try
-            //  {
             await Device.OS.OpenBrowser(GlobalSettings.SkypeBotAccount);
             return;
-            //  }
-            //   catch (Exception ex)
-            //   {
-            //       Console.Write(ex.Message);
-            //       await Alert.Show("Error", "Unable to launch Skype.", KeyValuePair.Of("Ok", true));
-            //   }
         }
 
-        async Task HandlebarTapped()
-        {
-            SetReportType(ReportedIssueType.Handlebar);
-            //   handlebarImageView.Set(x => x.Style.BackgroundColor = "Red"); 
-        }
+        async Task HandlebarTapped() => SetReportType(ReportedIssueType.Handlebar);
+
         async Task ChainTapped() => SetReportType(ReportedIssueType.Chain);
 
         async Task FlatTireTapped() => SetReportType(ReportedIssueType.FlatTire);
@@ -46,69 +34,61 @@ namespace UI.Pages
         void SetReportType(ReportedIssueType type)
         {
             ChainImageView.BackgroundImagePath = "Images/Icons/report_chain.png";
-            Chain = false;
+            chain = false;
             Flat_tireImageView.BackgroundImagePath = "Images/Icons/report_flat_tire.png";
-            FlatTire = false;
+            flatTire = false;
             ForkImageView.BackgroundImagePath = "Images/Icons/report_fork.png";
-            Fork = false;
+            fork = false;
             HandlebarImageView.BackgroundImagePath = "Images/Icons/report_handlebar.png";
-            Handlebar = false;
+            handlebar = false;
             LossImageView.BackgroundImagePath = "Images/Icons/report_loss.png";
-            Loss = false;
+            loss = false;
             PedalsImageView.BackgroundImagePath = "Images/Icons/report_pedals.png";
-            Pedals = false;
+            pedals = false;
 
             switch (type)
             {
                 case ReportedIssueType.Chain:
                     ChainImageView.BackgroundImagePath = "Images/Icons/report_chain_selec.png";
-                    Chain = true;
+                    chain = true;
                     break;
                 case ReportedIssueType.FlatTire:
-                    FlatTire = true;
+                    flatTire = true;
                     Flat_tireImageView.BackgroundImagePath = "Images/Icons/report_flat_tire_selec.png";
                     break;
                 case ReportedIssueType.Fork:
                     ForkImageView.BackgroundImagePath = "Images/Icons/report_fork_selec.png";
-                    Fork = true;
+                    fork = true;
                     break;
                 case ReportedIssueType.Handlebar:
-                    Handlebar = true;
+                    handlebar = true;
                     HandlebarImageView.BackgroundImagePath = "Images/Icons/report_handlebar_selec.png";
                     break;
                 case ReportedIssueType.Stolen:
                     LossImageView.BackgroundImagePath = "Images/Icons/report_loss_selec.png";
-                    Loss = true;
+                    loss = true;
                     break;
                 case ReportedIssueType.Pedals:
-                    Pedals = true;
+                    pedals = true;
                     PedalsImageView.BackgroundImagePath = "Images/Icons/report_pedals_selec.png";
                     break;
                 default: break;
             }
-
-            _reportIncidentType = type;
+            reportIncidentType = type;
         }
 
         async Task ReportButtonTapped()
         {
-            // IsBusy = true;
-            FillData();
-            //try
-            //{
-            IsValid = true;
-
             bool isValid = Validate();
 
             if (isValid)
             {
                 var incident = new ReportedIssue
                 {
-                    Type = _reportIncidentType,
-                    Title = Title,
-                    Description = Description
+                    Type = reportIncidentType,
+                    Title = title,
+                    Description = description
                 };
-
 
                 if (await FeedbackService.SendIssueAsync(incident))
                 {
@@ -117,35 +97,23 @@ namespace UI.Pages
                 }
                 else
                     await Alert.Toast("Error on save");
-
             }
             else
             {
-                IsValid = false;
+                isValid = false;
             }
-            //}
-            //catch (Exception ex) when (ex is WebException)
-            //{
-            //    await Alert.Show("Error", "Communication error");
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine($"Error reporting incident in: {ex}");
-            //}
-            // IsBusy = false;
         }
 
         void FillData()
         {
-            Title = TitleInput.Text;
-            Description = DescriptionInput.Text;
+            title = TitleInput.Text;
+            description = DescriptionInput.Text;
         }
 
         void ResetData()
         {
             SetReportType(ReportedIssueType.Unknown);
-            Title = TitleInput.Text = Description = DescriptionInput.Text = "";
+            title = TitleInput.Text = description = DescriptionInput.Text = "";
         }
-
     }
 }

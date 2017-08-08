@@ -35,9 +35,9 @@
         async Task TextChanged()
         {
             if (FirstNameInput.Text.HasValue() && LastNameInput.Text.HasValue())
-                NextButton.Set(rec => rec.Enabled = true).Background("Images/SignUp/floating_action_button_normal.png");
+                NextButton.Set(rec => rec.Enabled = true).Background("Images/Icons/floating_action_button_normal.png");
             else
-                NextButton.Set(rec => rec.Enabled = false).Background("Images/SignUp/floating_action_button_disable.png");
+                NextButton.Set(rec => rec.Enabled = false).Background("Images/Icons/floating_action_button_disable.png");
         }
 
     }

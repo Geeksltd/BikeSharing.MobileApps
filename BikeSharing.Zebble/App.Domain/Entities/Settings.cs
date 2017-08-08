@@ -7,7 +7,7 @@ namespace Domain
     {
         /* -------------------------- Fields -------------------------*/
 
-        private static int userId = 1;
+        private static int userId = 0;
 
         private static int profileId = 1;
 

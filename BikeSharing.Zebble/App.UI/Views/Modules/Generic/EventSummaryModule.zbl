@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <z-Component z-type="EventSummaryModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-
   <Stack Id ="MainStack" BackgroundImagePath="@Item.ImagePath" >
     <Stack>
       <Button Text="Buy Ticket" Id="BuyTicketButton" />

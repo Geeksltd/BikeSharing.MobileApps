@@ -1,11 +1,10 @@
 namespace UI.Pages
 {
+    using Domain.Entities;
     using System;
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
-    using Domain.Entities;
-    using Domain.Services;
     using Zebble;
     using static Domain.Services.Api;
 
@@ -53,9 +52,10 @@ namespace UI.Pages
             timerControl = new Timer(CounterFunc, null, 1, 1000);
         }
 
-
         void CounterFunc(object state)
         {
+            // Device.UIThread.Run(async () =>
+            // {
             var tp = new TimeSpan(0, 0, 1);
             timeSpanCounter = timeSpanCounter.Subtract(tp);
 
@@ -65,6 +65,7 @@ namespace UI.Pages
             }
             else
                 timerControl.Dispose();
+            //  });
         }
     }
 }

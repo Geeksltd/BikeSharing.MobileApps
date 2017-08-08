@@ -45,9 +45,9 @@
         async Task TextChanged()
         {
             if (SkypeInput.Text.HasValue() && EmailValidation())
-                ButtonNext.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_normal.png");
+                ButtonNext.Set(rec => rec.Enabled = true).Set(rec => rec.BackgroundImagePath = "Images/Icons/floating_action_button_normal.png");
             else
-                ButtonNext.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/SignUp/floating_action_button_disable.png");
+                ButtonNext.Set(rec => rec.Enabled = false).Set(rec => rec.BackgroundImagePath = "Images/Icons/floating_action_button_disable.png");
         }
 
 

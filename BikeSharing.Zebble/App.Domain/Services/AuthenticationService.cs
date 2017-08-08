@@ -33,13 +33,11 @@ namespace Domain.Services
                 Settings.AccessToken = authenticationInfo.AccessToken;
                 if (authenticationInfo.UserId != 0)
                 {
+                    Settings.UserProfile = await ProfileService.GetCurrentProfileAsync();
                     Device.IO.File("Session.txt").WriteAllText(authenticationInfo.UserId.ToString());
                     return true;
                 }
                 return false;
-                //   if (authenticationInfo.AccessToken.HasValue())
-                //           Device.IO.File("SessionToken.txt").WriteAllText(authenticationInfo.AccessToken);
-
             }
 
             public static Task LogoutAsync()

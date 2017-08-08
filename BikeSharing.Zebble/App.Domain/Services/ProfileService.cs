@@ -12,17 +12,31 @@ namespace Domain.Services
         {
             public static async Task<UserProfile> GetCurrentProfileAsync()
             {
-                var userId = AuthenticationService.GetCurrentUserId();
-
-                var uri = $"{GlobalSettings.AuthenticationEndpoint}api/Profiles/{userId}";
-                var result = await BaseApi.Get<UserProfile>(uri, errorAction: OnError.Ignore);
-                if (result != null)
+                try
                 {
-                    //   result.Result.PhotoUrl = string.IsNullOrEmpty(result.Result.PhotoUrl) ? "Images/profile_placeholder.png" : result.Result.PhotoUrl;
-                    result.PhotoUrl = "Images/profile_placeholder.png";
-                    Settings.UserProfile = result;
+                    var userId = AuthenticationService.GetCurrentUserId();
+                    if (userId == 0)
+                    {
+                        var file = Device.IO.File("Session.txt");
+                        if (file.Exists())
+                        {
+                            var data = file.ReadAllText();
+                            userId = Convert.ToInt32(data);
+                        }
+                        else
+                            return null;
+                    }
+                    var uri = $"{GlobalSettings.AuthenticationEndpoint}api/Profiles/{userId}";
+                    var result = await BaseApi.Get<UserProfile>(uri, errorAction: OnError.Ignore);
+                    if (result != null)
+                    {
+                        //   result.Result.PhotoUrl = string.IsNullOrEmpty(result.Result.PhotoUrl) ? "Images/profile_placeholder.png" : result.Result.PhotoUrl;
+                        result.PhotoUrl = "Images/profile_placeholder.png";
+                        Settings.UserProfile = result;
+                    }
+                    return result;
                 }
-                return result;
+                catch { return null; }
             }
 
             public static async Task<UserAndProfileModel> SignUpAsync(UserAndProfileModel profile)

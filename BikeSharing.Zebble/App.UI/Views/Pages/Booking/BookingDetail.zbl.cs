@@ -1,9 +1,9 @@
 namespace UI.Pages
 {
+    using Domain.Entities;
     using System;
     using System.Threading;
     using System.Threading.Tasks;
-    using Domain.Entities;
     using Zebble;
 
     partial class BookingDetail
@@ -34,7 +34,7 @@ namespace UI.Pages
             {
                 timerControl.Dispose();
                 isFirst = false;
-                Nav.Forward<TimeRemaining>(new { Booking = bookRequest });
+                Nav.Go<TimeRemaining>(new { Booking = bookRequest });
             }
             else
                 isFirst = false;
