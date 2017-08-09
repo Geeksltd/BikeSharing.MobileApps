@@ -390,6 +390,8 @@ BookingPage #BookDetailStack .splitor {
 }
 ReportIncident {
   height: 100%;
+}
+ReportIncident #Body {
   padding: 10px;
 }
 ReportIncident #IncidentSelectorStack {

@@ -28,7 +28,7 @@
           </z-Component>
         </ListView>
       </Stack>
-      <!--<MapBox  />-->
+      <Map Id="MapView" ZoomLevel="13" ZoomEnable="true" />
       <Stack  Id="SelectedRowInfoStack" >
         <Stack Id="SelectedStack" Visible="false">
           <TextView Text="From" CssClass="label" Id="FromTexView" />

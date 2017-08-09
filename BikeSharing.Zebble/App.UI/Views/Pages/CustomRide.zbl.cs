@@ -17,7 +17,7 @@
         {
             await base.OnInitializing();
             await InitializeComponents();
-            // MapView.ZoomLevel = 11;
+            MapView.ZoomLevel = 11;
             RouteSelector.Y.Set(10);
             RouteSelected.Y.Set(Root.ActualHeight - 230);
             FromItemPicker.SelectionChanged.Handle(FSelectionChanged);

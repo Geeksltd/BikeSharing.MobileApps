@@ -33,6 +33,7 @@ namespace Domain.Services
                         //   result.Result.PhotoUrl = string.IsNullOrEmpty(result.Result.PhotoUrl) ? "Images/profile_placeholder.png" : result.Result.PhotoUrl;
                         result.PhotoUrl = "Images/profile_placeholder.png";
                         Settings.UserProfile = result;
+                        Settings.UserId = userId;                       
                     }
                     return result;
                 }

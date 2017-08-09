@@ -3,7 +3,9 @@
     using System;
     using System.Threading.Tasks;
     using UI;
+    using UI.Modules;
     using Zebble;
+    using Zebble.Plugin;
     using static Domain.Services.Api;
 
     partial class BookingPage
@@ -21,40 +23,30 @@
             MainStack.Y.Set((float)0);
             DateText.Text = LocalTime.Now.ToString("dddd, MMMM dd");
 
-            //await MapView.Add(new Map.Annotation
-            //{
-            //    Title = From.Label,
-            //    Location = new Zebble.Services.GeoLocation(From.Position.Latitude, From.Position.Longitude)
-            //});
+            await MapView.Add(new Map.Annotation
+            {
+                Title = fromPin.Label,
+                Location = new Zebble.Services.GeoLocation(fromPin.Position.Latitude, fromPin.Position.Longitude)
+            });
 
-            //await MapView.Add(new Map.Annotation
-            //{
-            //    Title = To.Label,
-            //    Location = new Zebble.Services.GeoLocation(To.Position.Latitude, To.Position.Longitude)
-            //});
-            //MapView.ZoomLevel = 14;
+            await MapView.Add(new Map.Annotation
+            {
+                Title = toPin.Label,
+                Location = new Zebble.Services.GeoLocation(toPin.Position.Latitude, toPin.Position.Longitude)
+            });
+            MapView.ZoomLevel = 14;
         }
-
-
 
         public async Task BookClicked()
         {
-
-            // try
-            // {
             var fromStation = await RidesService.GetStation(fromPin.Id);
             var toStation = await RidesService.GetStation(toPin.Id);
             var booking = await RidesService.RequestBikeBooking(fromStation, toStation);
-            // if (booking != null)
-            //    FindParent<MainMenu>().upcomingRideButton.Enabled = true;
-            await Nav.Go<BookingDetail>(new { ShowThanks = true, Booking = booking });
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.Write(ex.Message);
-            //    await Alert.Show("No bike available", "We are sorry, there are no bikes in origin station");
-            //}
-
+            if (booking != null)
+            {
+                FindParent<MainMenu>().UpcomingRideButton.Enabled = true;
+                await Nav.Go<BookingDetail>(new { ShowThanks = true, Booking = booking });
+            }
         }
     }
 }
