@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
-<z-Component z-type="SubscriptionPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+<z-Component z-type="SubscriptionPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="MainStack">
     <Stack Id="BackgroundStack" >
       <Stack Id="SkyBoxStack" >
         <Canvas Id="SunBox" />
       </Stack>
       <Stack Id="CloudBoxStack" BackgroundImagePath="Images/SignUp/signup_buildings_2.png">
-        <Stack> <Canvas Id="CloudBox" on-VisibilityChanged="CloudBoxVisibilityChanged"/></Stack>
+        <Stack>
+          <Canvas Id="CloudBox" on-VisibilityChanged="CloudBoxVisibilityChanged"/>
+        </Stack>
       </Stack>
     </Stack>
     <Stack Id="ForegroundStack">
@@ -15,11 +17,11 @@
       </Stack>
       <Stack Id="DetailStack">
         <ImageView Path="Images/SignUp/signup_monthly_normal.png" Id="monthlyImageView" on-Tapped="MonthlyImageViewTapped"/>
-        <ImageView Path="Images/SignUp/signup_quarterly_normal.png" Id="quarterlyImageView"  on-Tapped="ThreeMonthlyImageViewTapped"/>
-        <ImageView Path="Images/SignUp/signup_annual_normal.png" Id="annualImageView"  on-Tapped="AnnualImageViewTapped"/>
+        <ImageView Path="Images/SignUp/signup_quarterly_normal.png" Id="quarterlyImageView" on-Tapped="ThreeMonthlyImageViewTapped"/>
+        <ImageView Path="Images/SignUp/signup_annual_normal.png" Id="annualImageView" on-Tapped="AnnualImageViewTapped"/>
       </Stack>
       <Stack Id="NextButtonStack" >
-        <Button  Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <Button Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
       </Stack>
     </Stack>
   </Stack>

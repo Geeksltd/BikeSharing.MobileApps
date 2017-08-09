@@ -4,9 +4,9 @@
     <Stack Id="BackgroundStack" >
       <Stack Id="CloudBoxStack" >
         <Canvas Id="CloudBox" on-VisibilityChanged="CloudBoxVisibilityChanged" />
-   </Stack>
+      </Stack>
       <Stack Id="BuildingStack" >
-        <ImageView  Path="Images/SignUp/building.png" />
+        <ImageView Path="Images/SignUp/building.png" />
       </Stack>
     </Stack>
     <Stack Id="ForegroundStack">
@@ -15,11 +15,11 @@
       </Stack>
       <Stack Id="DetailStack">
         <ImageView Path="Images/SignUp/signup_woman.png" Id="WomanImageView" on-Tapped="ImageViewTapped"/>
-        <ImageView Path="Images/SignUp/signup_man.png" Id="ManImageView"  on-Tapped="ImageViewTapped"/>
+        <ImageView Path="Images/SignUp/signup_man.png" Id="ManImageView" on-Tapped="ImageViewTapped"/>
       </Stack>
-      <Stack Id="NextButtonStack"  Direction="Horizontal">
+      <Stack Id="NextButtonStack" Direction="Horizontal">
         <TextView Text="Skip" Id="SkipTextView" on-Tapped="NextButtonTapped" />
-        <Button  Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <Button Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
       </Stack>
     </Stack>
   </Stack>

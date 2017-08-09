@@ -11,32 +11,32 @@
                 <ImageView Path="Images/Icons/myrides_custom_ride.png" Id="MyRidesImage" />
               </Stack>
               <Stack Id="RideInfoStack">
-                <TextView Text="From"   />
-                <TextView Text="@Item.From" Id="FromStationNameTextView"  Wrap="false" />
-                <TextView Text="To"  />
-                <TextView Text="@Item.To" Id="ToStationNameTextView" Wrap="false"  />
-                <TextView Text="@Item.StartString" Wrap="false" />
-                <TextView Text="@GlobalSettings.City" Wrap="false" />
-                <Stack  Direction="Horizontal"  >
-                  <ImageView  Path="Images/Icons/myrides_time.png" CssClass="image"/>
-                  <TextView  Text="@Item.Duration.ToString()" Wrap="false" />
-                  <ImageView  Path="Images/Icons/myrides_distance.png"  CssClass="image"/>
-                  <TextView  Text="@Item.Distance.ToString()" Wrap="false" />
+                <TextView Text="From" />
+                <TextView Text="@Item.From" Id="FromStationNameTextView" />
+                <TextView Text="To" />
+                <TextView Text="@Item.To" Id="ToStationNameTextView" />
+                <TextView Text="@Item.StartString" />
+                <TextView Text="@GlobalSettings.City" />
+                <Stack Direction="Horizontal" >
+                  <ImageView Path="Images/Icons/myrides_time.png" CssClass="image"/>
+                  <TextView Text="@Item.Duration.ToString()" />
+                  <ImageView Path="Images/Icons/myrides_distance.png" CssClass="image"/>
+                  <TextView Text="@Item.Distance.ToString()" />
                 </Stack>
               </Stack>
-            </Stack> 
+            </Stack>
           </z-Component>
         </ListView>
       </Stack>
       <Map Id="MapView" ZoomLevel="13" ZoomEnable="true" />
-      <Stack  Id="SelectedRowInfoStack" >
+      <Stack Id="SelectedRowInfoStack" >
         <Stack Id="SelectedStack" Visible="false">
           <TextView Text="From" CssClass="label" Id="FromTexView" />
-          <TextView Id="FromSNSelectedRowTextView" CssClass="texbox"   Wrap="false" />
-          <TextView Text="To"  CssClass="label"    />
-          <TextView Id="ToSNSelectedRowTextView" CssClass="texbox"  Wrap="false"  />
-          <TextView Id="DateSelectedRowTextView" Wrap="false" />
-          <TextView Text="@GlobalSettings.City" Wrap="false" />
+          <TextView Id="FromSNSelectedRowTextView" CssClass="texbox" />
+          <TextView Text="To" CssClass="label"/>
+          <TextView Id="ToSNSelectedRowTextView" CssClass="texbox" />
+          <TextView Id="DateSelectedRowTextView"/>
+          <TextView Text="@GlobalSettings.City"/>
         </Stack>
       </Stack>
     </Stack>

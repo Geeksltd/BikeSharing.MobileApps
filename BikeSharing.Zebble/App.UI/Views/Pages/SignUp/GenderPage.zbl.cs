@@ -70,7 +70,6 @@
                 ManImageView.Path("Images/SignUp/signup_man_select.png");
             }
         }
-
         async Task NextButtonTapped() => await SignupPage.NextPage();
     }
 }

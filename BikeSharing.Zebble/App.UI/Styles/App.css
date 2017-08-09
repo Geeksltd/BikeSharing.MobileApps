@@ -81,6 +81,9 @@ Home .title {
   padding: 10px;
   padding-left: 0px;
 }
+.HomeModules #RowStack {
+  margin-top: 20px;
+}
 .HomeModules .splitor {
   border-bottom: 1px solid;
   border-color: #ffffff;
@@ -151,6 +154,7 @@ MyRides #FromTexView {
   color: #000000;
   font-size: 12px;
   margin-top: 5px;
+  white-space: nowrap;
 }
 #MyRidesStack #IconStack {
   width: 40px;

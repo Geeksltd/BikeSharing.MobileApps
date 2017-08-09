@@ -23,19 +23,19 @@
             var userId = "???";
 
             await BaseApi.Post("v1/authentication/push-notification/register",
-                new
-                {
-                    User = userId,
-                    InstallationToken = UIRuntime.GetInstallationToken(),
-                    PushNotificationToken = token,
-                    DeviceType = Device.Platform
-                });
+             new
+             {
+                 User = userId,
+                 InstallationToken = UIRuntime.GetInstallationToken(),
+                 PushNotificationToken = token,
+                 DeviceType = Device.Platform
+             });
         }
 
         static async Task OnUnRegistered()
         {
             await BaseApi.Post("v1/authentication/push-notification/unregister",
-                new { InstallationToken = UIRuntime.GetInstallationToken() });
+             new { InstallationToken = UIRuntime.GetInstallationToken() });
         }
     }
 }

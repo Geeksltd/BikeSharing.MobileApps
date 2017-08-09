@@ -4,24 +4,24 @@
     <Map Id="MapView"/>
     <Stack Id="RouteSelector" />
     <Stack Id="InnerStack">
-      <TextView Text="From"  CssClass="TextView"/>
-      <ItemPicker  Id="FromItemPicker"  />
-      <TextView Text="To"  CssClass="TextView"/>
-      <ItemPicker  Id="ToItemPicker"   />
+      <TextView Text="From" CssClass="TextView"/>
+      <ItemPicker Id="FromItemPicker" />
+      <TextView Text="To" CssClass="TextView"/>
+      <ItemPicker Id="ToItemPicker" />
       <Stack Id="GoButtonStack" >
         <Button Text="Go" on-Tapped="GoClicked" AutoFlash="true" />
       </Stack>
-    </Stack>   
+    </Stack>
     <Stack Id="RouteSelected" Visible="false" />
     <Stack Id="FromPS" >
-      <TextView  Text="From"  />
+      <TextView Text="From" />
       <TextView Id="FromText" CssClass="title" />
       <TextView Id="FromPSText" Text="Empty bike docks 0 Avilable bikes 7" />
     </Stack>
     <Stack Id="ToPS">
-      <TextView  Text="To"  />
+      <TextView Text="To" />
       <TextView Id="ToText" CssClass="title" />
-      <TextView Id="ToPSText" Text="Empty bike docks 0 Avilable bikes 7"  />
+      <TextView Id="ToPSText" Text="Empty bike docks 0 Avilable bikes 7" />
     </Stack>
   </z-place>
 </z-Component>

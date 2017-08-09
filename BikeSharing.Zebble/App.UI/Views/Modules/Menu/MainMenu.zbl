@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 
 <z-Component z-type="MainMenu" z-base="Canvas" z-namespace="UI.Modules"
-    z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="./../../.zebble-schema.xml">
+ z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="./../../.zebble-schema.xml">
 
   <Stack Id="Body">
     <Stack Id="ItemsStack" >
       <Stack >
         <Stack Id="MenuItemsStack">
-          <IconButton  Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.Home" AutoFlash="true" />
-          <IconButton  Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRide"  AutoFlash="true" />
-          <IconButton  Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRides" AutoFlash="true"/>
-          <IconButton  Id="UpcomingRideButton" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemaining" Enabled="false"  AutoFlash="true" />
-          <IconButton  Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncident" AutoFlash="true"/>
-          <IconButton  Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.Profile" AutoFlash="true"/>
+          <IconButton Text="Home" IconPath="Images/Menu/Home.png" z-nav-go="Pages.Home" AutoFlash="true" />
+          <IconButton Text="New Ride" IconPath="Images/Menu/new_ride.png" z-nav-go="Pages.CustomRide" AutoFlash="true" />
+          <IconButton Text="My Rides" IconPath="Images/Menu/my_rides.png" z-nav-go="Pages.MyRides" AutoFlash="true"/>
+          <IconButton Id="UpcomingRideButton" Text="Upcoming ride" IconPath="Images/Menu/upcoming_ride.png" z-nav-go="Pages.TimeRemaining" Enabled="false" AutoFlash="true" />
+          <IconButton Text="Report" IconPath="Images/Menu/report.png" z-nav-go="Pages.ReportIncident" AutoFlash="true"/>
+          <IconButton Text="Profile" IconPath="Images/Menu/user.png" z-nav-go="Pages.Profile" AutoFlash="true"/>
         </Stack>
-        <IconButton  Text="@Settings.UserProfile.FullName" IconPath="@Settings.UserProfile.PhotoUrl"  />
+        <IconButton Text="@Settings.UserProfile.FullName" IconPath="@Settings.UserProfile.PhotoUrl" />
       </Stack>
     </Stack>
     <Stack Id="LogoutStack">

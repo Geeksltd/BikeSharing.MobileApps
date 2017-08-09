@@ -65,7 +65,7 @@ namespace UI.Pages
             }
             else
                 timerControl.Dispose();
-            //  });
+            // });
         }
     }
 }

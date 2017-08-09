@@ -14,7 +14,7 @@
 
             await InstallIfNeeded();
 
-            //  RegisterDataProvider(typeof(AppData.AdoDotNetDataProviderFactory));
+            // RegisterDataProvider(typeof(AppData.AdoDotNetDataProviderFactory));
 
             CssStyles.LoadAll();
             ImageService.MemoryCacheFolder("Images");

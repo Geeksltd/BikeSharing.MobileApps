@@ -5,96 +5,96 @@
 @import "_Settings";
 
 /*General components -----------------*/
-TextView { color: $text-color;  font-size:16px;}
+TextView { color: $text-color; font-size:16px;}
 
 Button { opacity: 1;
-    &:disabled { opacity: 0.3; }
+ &:disabled { opacity: 0.3; }
 }
 
 ImageView { opacity: 1;
-    &:disabled { opacity: 0.3; }
+ &:disabled { opacity: 0.3; }
 }
 
 IconButton { opacity: 1;
-    &:disabled { opacity: 0.3; }
-    #TextView { color: white; }
-    #Icon { }
+ &:disabled { opacity: 0.3; }
+ #TextView { color: white; }
+ #Icon { }
 }
 
 PopUp, Waiting-Indicator { margin-top: calc("View.Root.Height, view.Height, (r,h) => (r - h) / 2"); }
 PopUp {
-    #HeaderTitle, #Title { font-size: 20px; }
+ #HeaderTitle, #Title { font-size: 20px; }
 }
 
 Waiting-Indicator #Image { background: url(Images/icons/Spinner.gif); }
 
 /*Dialogs ----------------*/
 Prompt {
-    #Description { }
-    #Input { }
+ #Description { }
+ #Input { }
 }
 
 AlertDialog {
-    #Message { }
+ #Message { }
 }
 
 Dialog {
-    #Title { color: $primary-color; font-size: 20px; }
-    #ButtonsRow {
-        Button { color: $primary-color;
-            &.primary-button { color: white; }
-        }
-    }
+ #Title { color: $primary-color; font-size: 20px; }
+ #ButtonsRow {
+  Button { color: $primary-color;
+   &.primary-button { color: white; }
+  }
+ }
 }
 
 Toast { background: white; padding: 20px; background: black;
-    #Label { color: white; }
-    #OKButton { color: $primary-color; }
+ #Label { color: white; }
+ #OKButton { color: $primary-color; }
 }
 
 /*Form -------------------*/
 FormField {
-    #Label { }
-    #HelpIcon { }
-    #Icon { }
+ #Label { }
+ #HelpIcon { }
+ #Icon { }
 }
 
 TextInput { padding: 7px; }
 
 Switch {
-    #Bar { background: $grey; }
-    &:checked #Bar { background: $primary-color; }
-    #Toggle { }
+ #Bar { background: $grey; }
+ &:checked #Bar { background: $primary-color; }
+ #Toggle { }
 }
 
 
 Picker { padding: $input-padding; border-color: $very-light-grey;
-    #Caret { background: url(Images/Icons/Caret.png); }
-    #PlaceholderLabel { }
+ #Caret { background: url(Images/Icons/Caret.png); }
+ #PlaceholderLabel { }
 }
 
 
 DatePicker-Cell, TimePicker-Cell {
-    #Label { color: $grey; }
-    &:active #Label { color: $text-color; }
+ #Label { color: $grey; }
+ &:active #Label { color: $text-color; }
 }
 
 DatePicker-Dialog, TimePicker-Dialog {
-    #RotatorsRow { }
+ #RotatorsRow { }
 }
 
 
 /*Navigation bar ----------------------------- */
 .navbar-background { background: $blue-color; }
 NavigationBar {
-    IconButton { margin: 0; padding: 0 }
-    Button { padding: 0; }
-    #Title { color: white; }
-    .navbar-button { width: 42px; height: 100%; color: white; }
-    .back { color: white;
-        #Icon { background: url(Images/Icons/Back.png); margin: 0; width: 48px; padding: 10px 5px; height: 100%; }
-    }
-    .menu-icon { background: url(Images/Icons/Burger.png); margin: 0; height: 30px; }
+ IconButton { margin: 0; padding: 0 }
+ Button { padding: 0; }
+ #Title { color: white; }
+ .navbar-button { width: 42px; height: 100%; color: white; }
+ .back { color: white;
+  #Icon { background: url(Images/Icons/Back.png); margin: 0; width: 48px; padding: 10px 5px; height: 100%; }
+ }
+ .menu-icon { background: url(Images/Icons/Burger.png); margin: 0; height: 30px; }
 }
 
 Modal { background: white; padding: 20px; height: auto; }
@@ -105,40 +105,40 @@ MenuDisplayer { position: absolute; width: 100%; height: 100%; MenuWidth: 250px;
 
 /*Tabs --------------------- */
 Tabs {
-    Tabs-Tab { background-color: transparent;
-        &:active { background-color: $primary-color; }
-        #Label { color: #eeeeee; padding-top: 5px; }
-        #Icon { }
-    }
+ Tabs-Tab { background-color: transparent;
+  &:active { background-color: $primary-color; }
+  #Label { color: #eeeeee; padding-top: 5px; }
+  #Icon { }
+ }
 }
 
 /*list views ----------------*/
 ListView {
-    #EmptyTextLabel { color: $grey; }
-    .view-row { width: 20px; height: 100%; }
+ #EmptyTextLabel { color: $grey; }
+ .view-row { width: 20px; height: 100%; }
 
-    ListViewItem { border-color: $very-light-grey;
-        .title { font-weight: bold; margin-bottom: 10px; }
-    }
+ ListViewItem { border-color: $very-light-grey;
+  .title { font-weight: bold; margin-bottom: 10px; }
+ }
 
-    #SlideIn TextView { height: 100%; margin: 0; color: white; background: #444;  AutoSizeWidth: calc("true");
-        &.delete-button { background: #ff4c32; }
-    }
+ #SlideIn TextView { height: 100%; margin: 0; color: white; background: #444; AutoSizeWidth: calc("true");
+  &.delete-button { background: #ff4c32; }
+ }
 }
 
 .standard-list {
-    ListViewItem { padding: 10px;
-        .icon { width: 60px; }
-    }
+ ListViewItem { padding: 10px;
+  .icon { width: 60px; }
+ }
 
-    ListView:lazy-loaded ListViewItem { height: 60px; }
+ ListView:lazy-loaded ListViewItem { height: 60px; }
 }
 
 SearchInput { margin-bottom: 5px;
-    #TextBox { text-align: center; }
-    &:focus #TextBox { text-align: left; }
-    #Icon { }
-    #CancelButton { }
+ #TextBox { text-align: center; }
+ &:focus #TextBox { text-align: left; }
+ #Icon { }
+ #CancelButton { }
 }
 
 /*App components -----------------*/
@@ -151,14 +151,14 @@ SearchInput { margin-bottom: 5px;
 
 /*main menu --------------------*/
 MainMenu {background-color:white;
-          
-    Button { height: 50px; }
-    #LogoImage { height: 90px; width: 100%; margin-bottom: 10px; margin-top: 10px; }
-    IconButton { height: 60px;  color: deepskyblue; padding: 10px;
-        #TextView { color: deepskyblue;  text-align:left; font-size:16px; margin-left:50px; }
-        #Icon { background-size: contain; margin-top: 10px; height: 25px; width: 30px; margin-left: 10px; }
-    }
+   
+ Button { height: 50px; }
+ #LogoImage { height: 90px; width: 100%; margin-bottom: 10px; margin-top: 10px; }
+ IconButton { height: 60px; color: deepskyblue; padding: 10px;
+  #TextView { color: deepskyblue; text-align:left; font-size:16px; margin-left:50px; }
+  #Icon { background-size: contain; margin-top: 10px; height: 25px; width: 30px; margin-left: 10px; }
+ }
 }
 
 
-Default #BodyScroller > #Body {  }
+Default #BodyScroller > #Body { }

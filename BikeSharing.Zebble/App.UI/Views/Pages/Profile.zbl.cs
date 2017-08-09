@@ -24,8 +24,6 @@
         {
             var tempImage = new FileInfo("Images/profile_placeholder.png");
             string base64Str = null;
-            // try
-            // {
 
             if (Device.Permissions.Check(DevicePermission.Camera).Result == PermissionResult.Granted)
                 tempImage = await Device.Media.TakePhoto();
@@ -48,12 +46,6 @@
                     await ProfileService.UploadUserImageAsync(base64Str, Item);
                 }
             }
-            //}
-            //catch (Exception ex)
-            //{
-            //    await Alert.Show(ex.Message);
-            //    return;
-            //}
         }
     }
 }

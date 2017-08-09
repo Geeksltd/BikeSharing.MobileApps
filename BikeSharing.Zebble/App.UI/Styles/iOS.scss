@@ -5,10 +5,10 @@
 @import "_Settings";
 
 .ios-only {
-    TextInput, TextView { font-family: Arial; }
-    .module-header-title { font-size: 24px; font-weight: bold; }
+ TextInput, TextView { font-family: Arial; }
+ .module-header-title { font-size: 24px; font-weight: bold; }
 
-    Dialog, Modal { border-radius: 15px; }
+ Dialog, Modal { border-radius: 15px; }
 
-    .primary-button { border-radius: 5px; }
+ .primary-button { border-radius: 5px; }
 }

@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using UI;
     using Zebble;
+    using Zebble.Plugin;
     using static Domain.Services.Api;
 
     partial class CustomRide
@@ -22,19 +23,19 @@
             RouteSelected.Y.Set(Root.ActualHeight - 230);
             FromItemPicker.SelectionChanged.Handle(FSelectionChanged);
             ToItemPicker.SelectionChanged.Handle(TSelectionChanged);
-            if (await RidesService.GetNearestStations() != null)
+            var nearestStations = await RidesService.GetNearestStations();
+            if (nearestStations != null)
             {
-                //await MapView.Add(new Map.Annotation
-                //{
-                //    Title = (await new RidesService().GetNearestStations()).FirstOrDefault().Name,
-                //    Location = new Zebble.Services.GeoLocation((await new RidesService().GetNearestStations()).FirstOrDefault().Latitude, (await new RidesService().GetNearestStations()).FirstOrDefault().Longitude)
-                //});
+                await MapView.Add(new Map.Annotation
+                {
+                    Title = nearestStations[0].Name,
+                    Location = new Zebble.Services.GeoLocation(nearestStations[0].Latitude, nearestStations[0].Longitude)
+                });
                 InitializePinsFromStations(await RidesService.GetNearestStations());
                 FromItemPicker.DataSource = CustomPins.ToList();
                 ToItemPicker.DataSource = CustomPins.ToList();
             }
         }
-
         private async Task FSelectionChanged()
         {
             var selected = (CustomPin)FromItemPicker.SelectedValue;
@@ -55,7 +56,6 @@
             ToText.Text = selected.Label;
             ToPSText.Text = $"Empty bike docks {station.EmptyDocks} Avilable bikes {station.Occupied}";
         }
-
         public async Task GoClicked()
         {
             var fromStation = FromItemPicker.SelectedValue;
@@ -63,7 +63,6 @@
 
             await Nav.Go<BookingPage>(new { from = fromStation, to = toStation });
         }
-
 
         private void InitializePinsFromStations(Station[] allStations)
         {

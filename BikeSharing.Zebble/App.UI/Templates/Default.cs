@@ -8,7 +8,7 @@ namespace UI.Templates
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            //  BodyScroller.Background(Colors.White);
+            // BodyScroller.Background(Colors.White);
             await WhenShown(() => new MenuDisplayer().Setup());
         }
 

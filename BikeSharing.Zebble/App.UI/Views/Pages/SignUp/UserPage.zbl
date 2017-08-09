@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
-<z-Component z-type="UserPage" z-base="Page" z-namespace="UI.Pages" CssClass="SignupPages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+<z-Component z-type="UserPage" z-base="Page" z-namespace="UI.Pages" CssClass="SignupPages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="MainStack">
     <Stack Id="BackgroundStack" >
       <Stack Id="TempStack" />
       <Stack Direction="Horizontal" Id="DesignStack" >
-          <ImageView Id="SignupTreesImageView"/>
-          <ImageView Id="BikeImageView"/>     
+        <ImageView Id="SignupTreesImageView"/>
+        <ImageView Id="BikeImageView"/>
       </Stack>
       <ImageView Id="FenceImageView"/>
     </Stack>
     <Stack Id="ForegroundStack">
       <Stack Id="CloseStack" >
-        <Button  z-nav-go="Pages.Login"/>
+        <Button z-nav-go="Pages.Login"/>
       </Stack>
       <Stack Id="DetailStack">
-        <TextView Text="First Name" CssClass="title"   />
+        <TextView Text="First Name" CssClass="title" />
         <TextInput Id="FirstNameInput" on-UserTextChanged="TextChanged" />
 
-        <TextView Text="Last Name" CssClass="title"    />
+        <TextView Text="Last Name" CssClass="title" />
         <TextInput Id="LastNameInput" on-UserTextChanged="TextChanged" />
 
-        <TextView Text="Birthdate" CssClass="title"   />
-        <DatePicker Id="BirthdateInput"  YearFrom="1950"  />
+        <TextView Text="Birthdate" CssClass="title" />
+        <DatePicker Id="BirthdateInput" YearFrom="1950" />
       </Stack>
       <Stack Id="NextButtonStack">
-        <Button  Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <Button Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
       </Stack>
     </Stack>
   </Stack>

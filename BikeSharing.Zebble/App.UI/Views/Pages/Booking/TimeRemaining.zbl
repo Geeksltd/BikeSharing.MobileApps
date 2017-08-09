@@ -9,13 +9,15 @@
       <TextView Text="@bookRequest.DueDateString" CssClass="date" />
       <TextView Text="@GlobalSettings.City" CssClass="city" />
       <Stack Id="TimerStack">
-        <Stack>  <TextView Id="TimerText" /> </Stack>
+        <Stack>
+          <TextView Id="TimerText" />
+        </Stack>
       </Stack>
-      <TextView Text="Time remaining"  CssClass="label" />
+      <TextView Text="Time remaining" CssClass="label" />
       <Stack Id="BookingStack" Direction="Vertical">
         <Stack>
-           <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" />
-           <TextView Text="@bookRequest.BikeId.ToString()" CssClass="bluetext" />
+          <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true"/>
+          <TextView Text="@bookRequest.BikeId.ToString()" CssClass="bluetext" />
         </Stack>
       </Stack>
     </Stack>

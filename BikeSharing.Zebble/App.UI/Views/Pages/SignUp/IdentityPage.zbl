@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<z-Component z-type="IdentityPage" z-base="Page" CssClass="SignupPages"  z-namespace="UI.Pages" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+<z-Component z-type="IdentityPage" z-base="Page" CssClass="SignupPages" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id="MainStack">
     <Stack Id="BackgroundStack" >
       <Stack />
       <Stack >
         <Canvas Id="LeftCloudBox" on-VisibilityChanged="LeftCloudBoxVisibilityChanged" />
-        <ImageView Id="PadlockImageView"   />
+        <ImageView Id="PadlockImageView" />
         <Canvas Id="RightCloudBox" on-VisibilityChanged="RightCloudBoxVisibilityChanged" />
       </Stack>
     </Stack>
@@ -14,16 +14,16 @@
         <Button z-nav-go="Pages.Login"/>
       </Stack>
       <Stack Id="DetailStack">
-        <TextView Text="Username" CssClass="title"    />
+        <TextView Text="Username" CssClass="title" />
         <TextInput Id="UsernameInput" on-UserTextChanged="TextChanged" />
-        <TextView Text="Password" CssClass="title"  />
-        <TextInput Id="PasswordInput" on-UserTextChanged="TextChanged"    />
-        <TextView Text="RepeatPassword" CssClass="title"  />
-        <TextInput Id="RepeatPasswordInput" on-UserTextChanged="TextChanged"   />
+        <TextView Text="Password" CssClass="title" />
+        <TextInput Id="PasswordInput" on-UserTextChanged="TextChanged" />
+        <TextView Text="RepeatPassword" CssClass="title" />
+        <TextInput Id="RepeatPasswordInput" on-UserTextChanged="TextChanged" />
       </Stack>
-      <Stack Id="NextButtonStack"  >
+      <Stack Id="NextButtonStack" >
         <Stack>
-          <Button  Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+          <Button Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
         </Stack>
       </Stack>
     </Stack>

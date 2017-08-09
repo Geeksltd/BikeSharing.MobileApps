@@ -14,7 +14,7 @@
             await base.OnInitializing();
             await InitializeComponents();
 
-            if (Items!= null && Items.Length > 0)
+            if (Items != null && Items.Length > 0)
             {
                 var Item = Items[0];
                 await MapView.Add(new Map.Annotation

@@ -7,7 +7,6 @@ namespace UI.Modules
 
     partial class MainMenu
     {
-
         public override async Task OnInitializing()
         {
             if (Settings.UserProfile == null)
@@ -19,12 +18,10 @@ namespace UI.Modules
             await InitializeComponents();
         }
 
-
         async Task LogoutButtonTapped()
         {
             Settings.LogoutUser();
             await Nav.Go<Pages.Login>();
         }
-
     }
 }

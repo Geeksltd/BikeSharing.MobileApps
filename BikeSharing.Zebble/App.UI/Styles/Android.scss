@@ -6,30 +6,20 @@
 
 .android-only {
 
-    TextInput, TextView { font-family: Roboto; }
+ TextInput, TextView { font-family: Roboto; }
 
-    Button, IconButton { text-transform: uppercase;  border-radius: 4px; }
-    IconButton #TextView { text-transform: uppercase; }
+ Button, IconButton { text-transform: uppercase; border-radius: 4px; }
+ IconButton #TextView { text-transform: uppercase; }
 
-    PopUp {
-        Dialog, Page { border-radius: 4px; }
-    }
+ PopUp {
+  Dialog, Page { border-radius: 4px; }
+ }
 
-    .module-header-title { font-size: 26px; margin-top: 10px; }
+ .module-header-title { font-size: 26px; margin-top: 10px; }
 
-    NavigationBar {
-        #Title { text-align: left; padding-left: 65px; font-size: 20px; font-weight: normal; padding-top: 5px; }
-    }
+ NavigationBar {
+  #Title { text-align: left; padding-left: 65px; font-size: 20px; font-weight: normal; padding-top: 5px; }
+ }
 
-    TextInput { font-family: Roboto; border: 0 $very-light-grey; border-bottom-width: 1px; padding: 2px; margin-bottom: 10px; }
-
-    Switch { width: 50px;
-        #Bar { background: $grey; height: 14px; border-radius: 7px; margin-top: 6px; opacity: 1; }
-        #Toggle { background: white; border-width: 1px; border-color: $grey; margin: 0; }
-
-        &:checked {
-            #Toggle { background: $primary-color; border-color: transparent; }
-            #Bar { opacity: 0.35; background: $primary-color; }
-        }
-    }
+ TextInput { font-family: Roboto; border: 0 $very-light-grey; border-bottom-width: 1px; padding: 2px; margin-bottom: 10px; }
 }

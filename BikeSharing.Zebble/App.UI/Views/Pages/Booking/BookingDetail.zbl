@@ -2,14 +2,14 @@
 <z-Component z-type="BookingDetail" z-base="Templates.Default" CssClass="BookingDetail" data-TopMenu="MainMenu" z-namespace="UI.Pages" z-partial="true" z-cache="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
     <Stack >
-      <TextView Text="THANK YOU FOR BOOKING" CssClass="title"  />     
-      <TextView Text="Your bike will be available for 30 minutes" />     
+      <TextView Text="THANK YOU FOR BOOKING" CssClass="title" />
+      <TextView Text="Your bike will be available for 30 minutes" />
       <TextView Text="@bookRequest.DueDateString" CssClass="date" />
       <TextView Text="@GlobalSettings.City" CssClass="city" />
       <Stack Id="BookingStack" Direction="Vertical">
         <Stack>
-        <TextView Text="Your bike number is" CssClass="blacktext" Wrap="true" TextTransform="Uppercase"/>
-        <TextView Text="@bookRequest.BikeId.ToString()" CssClass="bluetext" />
+          <TextView Text="Your bike number is" CssClass="blacktext" TextTransform="Uppercase" Wrap="true"/>
+          <TextView Text="@bookRequest.BikeId.ToString()" CssClass="bluetext" />
         </Stack>
       </Stack>
     </Stack>

@@ -35,12 +35,6 @@
 
         public async Task SaveUserData()
         {
-            //   try
-            //  {
-            //var CreditCard = "01234567890";
-            //var CreditCardType = 0;
-            //var ExpirationDate = DateTime.Now.AddYears(1);
-
             var userAndProfile = new UserAndProfileModel
             {
                 UserName = IdentityPage.UserName,
@@ -61,7 +55,7 @@
             if (result != null)
             {
                 bool isAuthenticated =
-                    await AuthenticationService.LoginAsync(userAndProfile.UserName, userAndProfile.Password);
+                 await AuthenticationService.LoginAsync(userAndProfile.UserName, userAndProfile.Password);
 
 
                 if (isAuthenticated)
@@ -77,13 +71,6 @@
             {
                 await Alert.Show("Invalid data", "Sign Up failure");
             }
-            // }
-            // catch (Exception ex)
-            // {
-            //    Console.WriteLine($"Error reporting incident in: {ex}");
-            //    await Alert.Show("Invalid data", "Sign Up failure");
-            // }
         }
-
     }
 }

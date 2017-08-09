@@ -21,7 +21,7 @@
             await InitializeComponents();
         }
 
-        //  Task Refresh(Suggestion[] items) => WhenShown(() => List.UpdateSource(Items = items));
+        // Task Refresh(Suggestion[] items) => WhenShown(() => List.UpdateSource(Items = items));
         public override Task OnPreRender()
         {
             List.Width.Set(Length.AutoStartegy.Content);
@@ -45,6 +45,5 @@
                 return Task.CompletedTask;
             }
         }
-
     }
 }

@@ -39,6 +39,5 @@
             else
                 NextButton.Set(rec => rec.Enabled = false).Background("Images/Icons/floating_action_button_disable.png");
         }
-
     }
 }

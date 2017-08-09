@@ -1,84 +1,84 @@
 ﻿@import "Variables.less";
 
 .form-pages {
-    #Body {
-        height: 100%;
-    }
+ #Body {
+  height: 100%;
+ }
 }
 
 #MapView {
-    height: 100%
+ height: 100%
 }
 
 MainMenu {
-    .form-pages();
+ .form-pages();
 
-    TextView {
-        color: @BlueColor;
-    }
+ TextView {
+  color: @BlueColor;
+ }
 
-    #LogoutStack {
-        height: 50px;
+ #LogoutStack {
+  height: 50px;
 
-        Button {
-            width: 100%;
-            background-color: @WhiteColor;
-            text-align: center;
-            padding: 10px;
-        }
-    }
+  Button {
+   width: 100%;
+   background-color: @WhiteColor;
+   text-align: center;
+   padding: 10px;
+  }
+ }
 
-    Stack {
-        height: 100%;
-    }
+ Stack {
+  height: 100%;
+ }
 
-    #ItemsStack {
-        height: calc("(View.Root.ActualHeight- 45- 50)");
-        background: url("Images/Menu/background.png");
-        background-size: cover;
-        width: 300px;
-    }
+ #ItemsStack {
+  height: calc("(View.Root.ActualHeight- 45- 50)");
+  background: url("Images/Menu/background.png");
+  background-size: cover;
+  width: 300px;
+ }
 
-    #MenuItemsStack {
-        height: calc("(view.Parent.ActualHeight - 50)");
-    }
+ #MenuItemsStack {
+  height: calc("(view.Parent.ActualHeight - 50)");
+ }
 }
 
 Home {
-    .form-pages();
+ .form-pages();
 
-    .title {
-        color: @BlueColor;
-        margin: 10px;
-        margin-bottom: 0px;
-        font-size: 20px;
-    }
+ .title {
+  color: @BlueColor;
+  margin: 10px;
+  margin-bottom: 0px;
+  font-size: 20px;
+ }
 }
 
 #WeatherInfoModule {
-    background: url("Images/background.png");
-    background-size: auto;
-    height: 25%;
-    padding: 10px;
+ background: url("Images/background.png");
+ background-size: auto;
+ height: 25%;
+ padding: 10px;
 
-    Stack {
-        /*margin-top: calc("view.Parent.ActualHeight /4");*/
-        TextView {
-            color: @WhiteColor;
-        }
+ Stack {
+  /*margin-top: calc("view.Parent.ActualHeight /4");*/
+  TextView {
+   color: @WhiteColor;
+  }
 
-        #TempText {
-            font-size: 36px;
-        }
+  #TempText {
+   font-size: 36px;
+  }
 
-        #DateText {
-            height: 30px;
-        }
-    }
+  #DateText {
+   height: 30px;
+  }
+ }
 
-    TextView {
-        margin-top: 10px;
-    }
+ TextView {
+  margin-top: 10px;
+ }
 }
 
 .HomeModules {
@@ -104,6 +104,10 @@ Home {
     #Content {
         padding: 10px;
         padding-left: 0px;
+    }
+
+    #RowStack {
+        margin-top: 20px;
     }
 
     .splitor {
@@ -137,850 +141,852 @@ Home {
 }
 
 #EventsModule {
-    border-bottom: 1px;
-    border-color: @GrayColor;
+ border-bottom: 1px;
+ border-color: @GrayColor;
+ 
 }
 
 MyRides {
-    .form-pages();
+ .form-pages();
 
-    #InfoStack {
-        height: 75%;
-    }
+ #InfoStack {
+  height: 75%;
+ }
 
-    #MyRidesModule {
-        width: 30%;
-    }
+ #MyRidesModule {
+  width: 30%;
+ }
 
-    #MapView {
-        width: 40%;
-    }
+ #MapView {
+  width: 40%;
+ }
 
-    #SelectedRowInfoStack {
-        width: 30%;
-        background: url("Images/myrides_placeholder_event.png");
-        background-size: cover;
-        height: 100%;
-        padding: 10px;
+ #SelectedRowInfoStack {
+  width: 30%;
+  background: url("Images/myrides_placeholder_event.png");
+  background-size: cover;
+  height: 100%;
+  padding: 10px;
 
-        TextView {
-            color: @WhiteColor;
-            margin: 7px;
-            font-size: 14px;
-        }
+  TextView {
+   color: @WhiteColor;
+   margin: 7px;
+   font-size: 14px;
+  }
 
-        .label {
-            font-size: 12px;
-        }
+  .label {
+   font-size: 12px;
+  }
 
-        .texbox {
-            font-size: 16px;
-        }
-    }
+  .texbox {
+   font-size: 16px;
+  }
+ }
 
-    #FromTexView {
-        margin-top: 150px;
-    }
+ #FromTexView {
+  margin-top: 150px;
+ }
 
-  
+ 
 }
 
 #MyRidesStack {
+  height: 100%;
+
+  #List {
+    height: 100%;
+  }
+
+  TextView {
+    color: @BlackColor;
+    font-size: 12px;
+    margin-top: 5px;
+    white-space: nowrap;
+  }
+
+  #IconStack {
+    width: 40px;
     height: 100%;
 
-    #List {
-        height: 100%;
+    #MyRidesImage {
+      margin-top: 10px;
+      margin-left: 5px;
+      height: 30px;
+    }
+  }
+
+  #RideInfoStack {
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+
+    .image {
+      height: 20px;
+      width: 20px;
+      margin-right: 5px;
     }
 
-    TextView {
-        color: @BlackColor;
-        font-size: 12px;
-        margin-top: 5px;
+    #FromStationNameTextView {
+      color: @BlueColor;
     }
 
-    #IconStack {
-        width: 40px;
-        height: 100%;
-
-        #MyRidesImage {
-            margin-top: 10px;
-            margin-left: 5px;
-            height: 30px;
-        }
+    #ToStationNameTextView {
+      color: @OrangeColor;
     }
+  }
 
-    #RideInfoStack {
-        width: 90%;
-        height: 100%;
-        padding: 10px;
-
-        .image {
-            height: 20px;
-            width: 20px;
-            margin-right: 5px;
-        }
-
-        #FromStationNameTextView {
-            color: @BlueColor;
-        }
-
-        #ToStationNameTextView {
-            color: @OrangeColor;
-        }
-    }
-
-    #MainStack {
-        width: 100%;
-        height: 170px;
-        border: 1px solid;
-        border-color: @GrayColor;
-    }
+  #MainStack {
+    width: 100%;
+    height: 170px;
+    border: 1px solid;
+    border-color: @GrayColor;
+  }
 }
 
 CustomRide {
-    .form-pages();
+ .form-pages();
 
-    #RouteSelector {
-        height: 220px;
-        width: calc("View.Root.ActualWidth - 60");
-        background-color: @WhiteColor;
-        opacity: 0.4;
-        margin: 20px;
-    }
+ #RouteSelector {
+  height: 220px;
+  width: calc("View.Root.ActualWidth - 60");
+  background-color: @WhiteColor;
+  opacity: 0.4;
+  margin: 20px;
+ }
 
-    #InnerStack {
-        margin-left: 40px;
-        padding: 10px;
-        background-color: @WhiteColor;
-        height: 180px;
-        width: calc("View.Root.ActualWidth - 100");
-        position: absolute;
-        top: 30px;
-    }
+ #InnerStack {
+  margin-left: 40px;
+  padding: 10px;
+  background-color: @WhiteColor;
+  height: 180px;
+  width: calc("View.Root.ActualWidth - 100");
+  position: absolute;
+  top: 30px;
+ }
 
-    #GoButtonStack {
-        margin-top: 20px;
-        background-color: @ProfileGrayColor;
-        height: 40px;
-        width: 100%;
+ #GoButtonStack {
+  margin-top: 20px;
+  background-color: @ProfileGrayColor;
+  height: 40px;
+  width: 100%;
 
-        Button {
-            width: 60px;
-            margin-left: calc("view.Parent.ActualWidth - 60");
-            padding: 10px;
-            background-color: @BlueColor;
-            color: @WhiteColor;
-            height: 100%;
-        }
-    }
+  Button {
+   width: 60px;
+   margin-left: calc("view.Parent.ActualWidth - 60");
+   padding: 10px;
+   background-color: @BlueColor;
+   color: @WhiteColor;
+   height: 100%;
+  }
+ }
 
-    #RouteSelected {
-        width: calc("View.Root.ActualWidth - 60");
-        height: 150px;
-        background-color: @GrayColor;
-        opacity: 0.4;
-        padding: 20px;
-        margin: 20px;
-        position: absolute;
-        top: calc("View.Root.ActualHeight - 230");
-    }
-
-
-
-    .title {
-        font-size: 16px;
-    }
+ #RouteSelected {
+  width: calc("View.Root.ActualWidth - 60");
+  height: 150px;
+  background-color: @GrayColor;
+  opacity: 0.4;
+  padding: 20px;
+  margin: 20px;
+  position: absolute;
+  top: calc("View.Root.ActualHeight - 230");
+ }
 
 
-    #FromPS {
-        margin-left: 40px;
-        background-color: @BlueColor;
-        padding: 10px;
-        visibility: hidden;
-        width: calc("View.Root.ActualWidth - 100");
-        position: absolute;
-        top: calc("View.Root.ActualHeight - 220");
 
-        TextView {
-            color: @WhiteColor;
-            font-size: 12px;
-        }
-    }
+ .title {
+  font-size: 16px;
+ }
 
-    #ToPS {
-        margin-left: 40px;
-        background-color: @OrangeColor;
-        padding: 10px;
-        visibility: hidden;
-        margin-top: 10px;
-        width: calc("View.Root.ActualWidth - 100");
-        position: absolute;
-        top: calc("View.Root.ActualHeight - 150");
 
-        TextView {
-            color: @WhiteColor;
-            font-size: 12px;
-        }
-    }
+ #FromPS {
+  margin-left: 40px;
+  background-color: @BlueColor;
+  padding: 10px;
+  visibility: hidden;
+  width: calc("View.Root.ActualWidth - 100");
+  position: absolute;
+  top: calc("View.Root.ActualHeight - 220");
+
+  TextView {
+   color: @WhiteColor;
+   font-size: 12px;
+  }
+ }
+
+ #ToPS {
+  margin-left: 40px;
+  background-color: @OrangeColor;
+  padding: 10px;
+  visibility: hidden;
+  margin-top: 10px;
+  width: calc("View.Root.ActualWidth - 100");
+  position: absolute;
+  top: calc("View.Root.ActualHeight - 150");
+
+  TextView {
+   color: @WhiteColor;
+   font-size: 12px;
+  }
+ }
 }
 
 BookingPage {
-    .form-pages();
+ .form-pages();
 
-    #OverlayStack {
-        background-color: @BlueColor;
-        height: 100%;
-        opacity: 0.4;
-        z-index: 1;
-        position: absolute;
-        top: 0;
-    }
+ #OverlayStack {
+  background-color: @BlueColor;
+  height: 100%;
+  opacity: 0.4;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+ }
 
-    #MainStack {
-        padding: 20px;
-        padding-top: 50px;
-        background-color: transparent;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: 2;
-    }
+ #MainStack {
+  padding: 20px;
+  padding-top: 50px;
+  background-color: transparent;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+ }
 
-    TextView {
-        color: @WhiteColor;
-        margin-top: 10px;
-    }
+ TextView {
+  color: @WhiteColor;
+  margin-top: 10px;
+ }
 
-    .small {
-        font-size: 12px;
-        color: @BrightYellowColor;
-    }
+ .small {
+  font-size: 12px;
+  color: @BrightYellowColor;
+ }
 
-    .title {
-        font-size: 30px;
-    }
+ .title {
+  font-size: 30px;
+ }
 
-    .date {
-        font-size: 20px;
-    }
+ .date {
+  font-size: 20px;
+ }
 
-    .city {
-        font-size: 20px;
-    }
+ .city {
+  font-size: 20px;
+ }
 
-    .avilable {
-        color: @BrightYellowColor;
-        font-size: 11px;
-    }
+ .avilable {
+  color: @BrightYellowColor;
+  font-size: 11px;
+ }
 
-    Button {
-        border: 4px solid;
-        border-color: @WhiteColor;
-        width: 200px;
-        padding: 10px;
-        margin-top: 20px;
-    }
+ Button {
+  border: 4px solid;
+  border-color: @WhiteColor;
+  width: 200px;
+  padding: 10px;
+  margin-top: 20px;
+ }
 
-    #BookDetailStack {
-        margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
-        padding: 5px;
-        height: 180px;
-        background-color: @WhiteColor;
+ #BookDetailStack {
+  margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
+  padding: 5px;
+  height: 180px;
+  background-color: @WhiteColor;
 
-        #BikeStack {
-            width: 60px;
-        }
+  #BikeStack {
+   width: 60px;
+  }
 
-        TextView {
-            color: @GrayColor;
-            font-size: 12px;
-            margin-top: 5px;
-        }
+  TextView {
+   color: @GrayColor;
+   font-size: 12px;
+   margin-top: 5px;
+  }
 
-        ImageView {
-            width: 40px;
-            height: 40px; 
-            margin-top:5px;
-        }
+  ImageView {
+   width: 40px;
+   height: 40px; 
+   margin-top:5px;
+  }
 
-        #FromText {
-            font-size: 20px;
-            color: @BlueColor;
-        }
+  #FromText {
+   font-size: 20px;
+   color: @BlueColor;
+  }
 
-        #ToText {
-            font-size: 20px;
-            color: @OrangeColor;
-        }
+  #ToText {
+   font-size: 20px;
+   color: @OrangeColor;
+  }
 
-        .splitor {
-            border-bottom: 1px solid;
-            margin: 5px;
-            margin-left: 0px;
-        }
-    }
+  .splitor {
+   border-bottom: 1px solid;
+   margin: 5px;
+   margin-left: 0px;
+  }
+ }
 }
 
 .BookingDetail {
-    .form-pages();
+  .form-pages();
 
-    #Body {
-        background: url("Images/booking_background.png");
-        background-size: auto;
-    }
+  #Body {
+    background: url("Images/booking_background.png");
+    background-size: auto;
+  }
+
+  TextView {
+    color: @WhiteColor;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  #FromText {
+    margin-top: 50px;
+  }
+
+  .title {
+    margin-top: 150px;
+    font-size: 28px;
+  }
+
+  #BookingStack {
+    background: url("Images/booking_circle_white.png");
+    width: 90px;
+    height: 90px;
+    margin-top: 50px;
+    margin-left: calc("(View.Root.ActualWidth/ 2)- 45");
+    background-size: cover;
+  }
+
+  .blacktext {
+    color: @BlackColor;
+    font-size: 12px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+
+  .bluetext {
+    color: @BlueColor;
+  }
+
+  #TimerStack {
+    background: url("Images/progress.png");
+    width: 80px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: calc("(View.Root.ActualWidth/ 2)- 40");
+    background-size: cover;
 
     TextView {
-        color: @WhiteColor;
-        text-align: center;
-        margin-top: 10px;
-        font-size: 18px;
+      margin-top: 30px;
     }
+  }
 
-    #FromText {
-        margin-top: 50px;
-    }
-
-    .title {
-        margin-top: 150px;
-        font-size: 28px;
-    }
-
-    #BookingStack {
-        background: url("Images/booking_circle_white.png");
-        width: 90px;
-        height: 90px;
-        margin-top: 50px;
-        margin-left: calc("(View.Root.ActualWidth/ 2)- 45");
-        background-size: cover;
-    }
-
-    .blacktext {
-        color: @BlackColor;
-        font-size: 12px;
-        margin-top: 15px;
-        text-transform: uppercase;
-    }
-
-    .bluetext {
-        color: @BlueColor;
-    }
-
-    #TimerStack {
-        background: url("Images/progress.png");
-        width: 80px;
-        height: 80px;
-        margin-top: 50px;
-        margin-left: calc("(View.Root.ActualWidth/ 2)- 40");
-        background-size: cover;
-
-        TextView{
-            margin-top:30px;
-        }
-    }
-
-    .label {
-        font-size: 11px;
-        margin-top: 0px;
-    }
+  .label {
+    font-size: 11px;
+    margin-top: 0px;
+  }
 }
 
 ReportIncident {
-    height: 100%;
-    #Body{
-    padding: 10px;
-    }
-    #IncidentSelectorStack {
-        padding: 10px;
-        height: 200px;
+ height: 100%;
+ #Body{
+ padding: 10px;
+ }
+ #IncidentSelectorStack {
+  padding: 10px;
+  height: 200px;
 
-        TextView {
-            font-size: 12px;
-            text-align: center;
-        }
+  TextView {
+   font-size: 12px;
+   text-align: center;
+  }
 
-        .image {
-            margin: 10px;
-            margin-top: 20px;
-            width: 50px;
-            height: 50px;
-        }
-    }
+  .image {
+   margin: 10px;
+   margin-top: 20px;
+   width: 50px;
+   height: 50px;
+  }
+ }
 
-    #BotButtonStack {
-        padding: 20px;
-        border-bottom: 1px solid;
-        border-color: @GrayColor;
+ #BotButtonStack {
+  padding: 20px;
+  border-bottom: 1px solid;
+  border-color: @GrayColor;
 
-        IconButton {
-            padding: 10px;
-            width: 100%;
-            background-color: @BlueColor;
-            font-size: 20px;
-        }
+  IconButton {
+   padding: 10px;
+   width: 100%;
+   background-color: @BlueColor;
+   font-size: 20px;
+  }
 
-        #Icon {
-            margin-top: 0px;
-            margin-left: 30px;
-            height: 30px;
-        }
-    }
+  #Icon {
+   margin-top: 0px;
+   margin-left: 30px;
+   height: 30px;
+  }
+ }
 
-    .title {
-        color: @BlueColor;
-        margin: 10px 0px;
-    }
+ .title {
+  color: @BlueColor;
+  margin: 10px 0px;
+ }
 
-    TextInput {
-        color: @BlackColor;
-        border-bottom: 1px solid;
-        border-color: @BlackColor;
-    }
+ TextInput {
+  color: @BlackColor;
+  border-bottom: 1px solid;
+  border-color: @BlackColor;
+ }
 
-    #ReportButtonStack {
-        padding: 20px 0px;
-        margin-top: 50px;
+ #ReportButtonStack {
+  padding: 20px 0px;
+  margin-top: 50px;
 
-        Button {
-            padding: 10px;
-            width: 100%;
-            background-color: @BackgroundGrayColor;
-            font-size: 20px;
-        }
-    }
+  Button {
+   padding: 10px;
+   width: 100%;
+   background-color: @BackgroundGrayColor;
+   font-size: 20px;
+  }
+ }
 }
 
 EventSummary {
-    .form-pages();
+ .form-pages();
 
-    #EventSummaryModule {
-        height: 100%;
-    }
+ #EventSummaryModule {
+  height: 100%;
+ }
 
-    #MainStack {
-        background-size: auto;
-        height: 100%;
-        padding: 20px 30px 10px 30px;
-    }
+ #MainStack {
+  background-size: auto;
+  height: 100%;
+  padding: 20px 30px 10px 30px;
+ }
 
-    TextView {
-        color: @WhiteColor;
-        font-size: 18px;
-        margin-top: 5px;
-    }
+ TextView {
+  color: @WhiteColor;
+  font-size: 18px;
+  margin-top: 5px;
+ }
 
-    .titleRow {
-        font-size: 36px;
-        margin-top: 10px;
-    }
+ .titleRow {
+  font-size: 36px;
+  margin-top: 10px;
+ }
 
-    .small {
-        font-size: 12px;
-        color: @BrightYellowColor;
-    }
+ .small {
+  font-size: 12px;
+  color: @BrightYellowColor;
+ }
 
-    #VenueNameTextView {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
+ #VenueNameTextView {
+  font-size: 24px;
+  margin-bottom: 10px;
+ }
 
-    #BuyTicketButton {
-        margin-top: 70px;
-        font-size: 14px;
-        width: 120px;
-        border: 3px solid;
-        border-color: @WhiteColor;
-        font-weight: bold;
-    }
+ #BuyTicketButton {
+  margin-top: 70px;
+  font-size: 14px;
+  width: 120px;
+  border: 3px solid;
+  border-color: @WhiteColor;
+  font-weight: bold;
+ }
 
-    #BookBikeButton {
-        margin-top: 50px;
-        width: 200px;
-        padding: 8px;
-        border: 4px solid;
-        border-color: @WhiteColor;
-        font-weight: bold;
-    }
+ #BookBikeButton {
+  margin-top: 50px;
+  width: 200px;
+  padding: 8px;
+  border: 4px solid;
+  border-color: @WhiteColor;
+  font-weight: bold;
+ }
 
-    #BookDetailStack {
-        margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
-        padding: 5px;
-        height: 170px;
-        background-color: @WhiteColor;
+ #BookDetailStack {
+  margin-top: 30px; //calc("view.Parent.ActualHeight - view.ActualHeigh") ;
+  padding: 5px;
+  height: 170px;
+  background-color: @WhiteColor;
 
-        TextView {
-            color: @GrayColor;
-            font-size: 12px;
-        }
+  TextView {
+   color: @GrayColor;
+   font-size: 12px;
+  }
 
-        ImageView {
-            width: 40px;
-            height: 40px;
-            border-color: @BlueColor;
-            border: 1px;
-        }
+  ImageView {
+   width: 40px;
+   height: 40px;
+   border-color: @BlueColor;
+   border: 1px;
+  }
 
-        #FromText {
-            font-size: 20px;
-            color: @BlueColor;
-        }
+  #FromText {
+   font-size: 20px;
+   color: @BlueColor;
+  }
 
-        #ToText {
-            font-size: 20px;
-            color: @OrangeColor;
-        }
+  #ToText {
+   font-size: 20px;
+   color: @OrangeColor;
+  }
 
-        .splitor {
-            border-bottom: 1px solid;
-            margin: 5px;
-            margin-left: 0px;
-        }
-    }
+  .splitor {
+   border-bottom: 1px solid;
+   margin: 5px;
+   margin-left: 0px;
+  }
+ }
 
-    #BikeStack {
-        width: 60px;
-    }
+ #BikeStack {
+  width: 60px;
+ }
 }
 
 Login {
-    height: 100%;
+ height: 100%;
 
-    #MainStack {
-        height: 100%;
-        padding: 20px 50px;
-        background: url("Images/background.png");
-    }
+ #MainStack {
+  height: 100%;
+  padding: 20px 50px;
+  background: url("Images/background.png");
+ }
 
-    #SignupTextView {
-        color: @BrightYellowColor;
-        font-weight: bold;
-    }
+ #SignupTextView {
+  color: @BrightYellowColor;
+  font-weight: bold;
+ }
 
-    TextView {
-        color: @WhiteColor;
-    }
+ TextView {
+  color: @WhiteColor;
+ }
 
-    TextInput {
-        border-bottom: 1px solid;
-        border-color: @WhiteColor;
-        color: @WhiteColor;
-        font-size: 20px;
-        margin: 10px;
-        padding: 10px 0px;
-    }
+ TextInput {
+  border-bottom: 1px solid;
+  border-color: @WhiteColor;
+  color: @WhiteColor;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px 0px;
+ }
 
-    .label {
-        font-size: 12px;
-        margin: 10px;
-    }
+ .label {
+  font-size: 12px;
+  margin: 10px;
+ }
 
-    #UsernameTextInput {
-        margin-top: 100px;
-    }
+ #UsernameTextInput {
+  margin-top: 100px;
+ }
 
-    #SignUpStack {
-        margin-top: 200px;
-    }
+ #SignUpStack {
+  margin-top: 200px;
+ }
 
-    #SigninButtonStack {
-        padding: 0px 40px;
-        margin-top: 20px;
+ #SigninButtonStack {
+  padding: 0px 40px;
+  margin-top: 20px;
 
-        Button {
-            width: 100%;
-            color: @BlackColor;
-            background-color: @BlueColor;
-            padding: 20px;
-        }
-    }
+  Button {
+   width: 100%;
+   color: @BlackColor;
+   background-color: @BlueColor;
+   padding: 20px;
+  }
+ }
 }
 
 SignUp {
-    height: 100%;
+ height: 100%;
 
-    #Body {
-        height: 100%;
-        background: url("Images/background.png");
-        background-size: cover;
+ #Body {
+  height: 100%;
+  background: url("Images/background.png");
+  background-size: cover;
 
-        #MyCarousel {
-            height: 100%;
-        }
-    }
+  #MyCarousel {
+   height: 100%;
+  }
+ }
 }
 
 .slide-show {
-    height: 100%;
+ height: 100%;
 }
 
 .SignupPages {
-    height: 100%;
+ height: 100%;
 
-    #MainStack {
-        height: 50%;
-        width: 50%;
-        margin-top: calc("View.Root.ActualHeight / 5");
-        margin-left: calc("View.Root.ActualWidth / 4");
-        padding: 10px;
-        background-color: @WhiteColor;
-    }
+ #MainStack {
+  height: 50%;
+  width: 50%;
+  margin-top: calc("View.Root.ActualHeight / 5");
+  margin-left: calc("View.Root.ActualWidth / 4");
+  padding: 10px;
+  background-color: @WhiteColor;
+ }
 
-    #CloseStack {
-        height: 10px;
+ #CloseStack {
+  height: 10px;
 
-        Button {
-            width: 10px;
-            padding: 0px;
-            height: 10px;
-            background: url('Images/Icons/close.png');
-        }
-    }
+  Button {
+   width: 10px;
+   padding: 0px;
+   height: 10px;
+   background: url('Images/Icons/close.png');
+  }
+ }
 
-    TextInput {
-        border-bottom: 1px solid;
-        border-color: @BlackColor;
-        color: @BlackColor;
-        font-size: 20px;
-        margin: 10px;
-    }
+ TextInput {
+  border-bottom: 1px solid;
+  border-color: @BlackColor;
+  color: @BlackColor;
+  font-size: 20px;
+  margin: 10px;
+ }
 
-    .title {
-        font-size: 12px;
-        margin: 10px;
-        margin-bottom: 0px;
-        color: @BlueColor;
-    }
+ .title {
+  font-size: 12px;
+  margin: 10px;
+  margin-bottom: 0px;
+  color: @BlueColor;
+ }
 
-    #DetailStack {
-        height: calc("(view.Parent.Parent.ActualHeight - 75)");
-    }
+ #DetailStack {
+  height: calc("(view.Parent.Parent.ActualHeight - 75)");
+ }
 
-    #NextButtonStack {
-        height: 60px;
-        background-size: contain;
-    }
+ #NextButtonStack {
+  height: 60px;
+  background-size: contain;
+ }
 
-    #NextButton {
-        padding: 10px 0px;
-        height: 50px;
-        width: 50px;
-        margin-top: 10px;
-        margin-left: calc("view.Parent.ActualWidth - 50");
-    }
+ #NextButton {
+  padding: 10px 0px;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: calc("view.Parent.ActualWidth - 50");
+ }
 
-    #BackgroundStack {
-        height: 100%;
-    }
+ #BackgroundStack {
+  height: 100%;
+ }
 }
 
 Profile {
-    .form-pages();
+ .form-pages();
 
-    #Body {
-        background: url("Images/city-gray.png");
-        background-size: cover;
-    }
+ #Body {
+  background: url("Images/city-gray.png");
+  background-size: cover;
+ }
 
-    #MainStack {
-        height: 100%;
-        padding: 100px 20px 20px 20px;
-    }
+ #MainStack {
+  height: 100%;
+  padding: 100px 20px 20px 20px;
+ }
 
-    #UserImageView {
-        width: 100%;
-        height: 80px;
-        background-position: center;
-    }
+ #UserImageView {
+  width: 100%;
+  height: 80px;
+  background-position: center;
+ }
 
-    .label {
-        font-size: 12px;
-        margin: 10px;
-        color: @BlueColor;
-    }
+ .label {
+  font-size: 12px;
+  margin: 10px;
+  color: @BlueColor;
+ }
 
-    .title {
-        font-size: 20px;
-        margin: 10px;
-        color: @BlackColor;
-    }
+ .title {
+  font-size: 20px;
+  margin: 10px;
+  color: @BlackColor;
+ }
 }
 
 AccountPage {
 
-    #ButtonNext {
-        padding: 10px 0px;
-        height: 50px;
-        width: 50px;
-        margin-top: 10px;
-        margin-left: calc("view.Parent.ActualWidth - 130 ");
-    }
+ #ButtonNext {
+  padding: 10px 0px;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: calc("view.Parent.ActualWidth - 130 ");
+ }
 
-    #SunBox {
-        margin-left: 20px;
-        width: 60px;
-        height: 60px;
-        background: url('Images/SignUp/signup_sun.png')
-    }
+ #SunBox {
+  margin-left: 20px;
+  width: 60px;
+  height: 60px;
+  background: url('Images/SignUp/signup_sun.png')
+ }
 
-    #BikeImageView {
-        width: 80px;
-        height: 50px;
-    }
+ #BikeImageView {
+  width: 80px;
+  height: 50px;
+ }
 
-    #SunBoxStack {
-        padding: 60px;
-        height: 40%;
-    }
+ #SunBoxStack {
+  padding: 60px;
+  height: 40%;
+ }
 
-    #BuildingStack {
-        height: 52%;
-    }
+ #BuildingStack {
+  height: 52%;
+ }
 
-    #BuildingImageView {
-        height: 100%;
-        background: url("Images/SignUp/signup_buildings_2.png");
-    }
+ #BuildingImageView {
+  height: 100%;
+  background: url("Images/SignUp/signup_buildings_2.png");
+ }
 
-    #FenceImageView {
-        height: 8%;
-        background: url('Images/SignUp/fence.png');
-    }
+ #FenceImageView {
+  height: 8%;
+  background: url('Images/SignUp/fence.png');
+ }
 }
 
 GenderPage {
-    #MainStack {
-        #WomanImageView {
-            width: 100%;
-            height: 80px;
-            margin-left: 80px;
-        }
+ #MainStack {
+  #WomanImageView {
+   width: 100%;
+   height: 80px;
+   margin-left: 80px;
+  }
 
-        #BuildingStack {
-            height: 80%;
+  #BuildingStack {
+   height: 80%;
 
-            ImageView {
-                height: 100%;
-            }
-        }
+   ImageView {
+    height: 100%;
+   }
+  }
 
-        #ManImageView {
-            width: 100%;
-            height: 80px;
-            margin-left: 10px;
-        }
+  #ManImageView {
+   width: 100%;
+   height: 80px;
+   margin-left: 10px;
+  }
 
-        #NextButton {
-            margin-left: calc("view.Parent.ActualWidth - 110 ");
-        }
+  #NextButton {
+   margin-left: calc("view.Parent.ActualWidth - 110 ");
+  }
 
-        #CloudBox {
-            margin-left: 40px;
-            width: 40px;
-            height: 40px;
-            background: url('Images/SignUp/signup_cloud_1.png');
-        }
+  #CloudBox {
+   margin-left: 40px;
+   width: 40px;
+   height: 40px;
+   background: url('Images/SignUp/signup_cloud_1.png');
+  }
 
-        #CloudBoxStack {
-            padding: 10px;
-            height: 20%;
-        }
+  #CloudBoxStack {
+   padding: 10px;
+   height: 20%;
+  }
 
-        #SkipTextView {
-            font-weight: bold;
-            font-size: 20px;
-            width: 60px;
-            margin-top: 10px;
-        }
-    }
+  #SkipTextView {
+   font-weight: bold;
+   font-size: 20px;
+   width: 60px;
+   margin-top: 10px;
+  }
+ }
 }
 
 SubscriptionPage {
-    ImageView {
-        width: 100%;
-        height: 75px;
-        margin-left: 20px;
-        margin-top: 10px;
-    }
+ ImageView {
+  width: 100%;
+  height: 75px;
+  margin-left: 20px;
+  margin-top: 10px;
+ }
 
-    #SkyBoxStack {
-        padding: 10px;
-        height: 30%;
-    }
+ #SkyBoxStack {
+  padding: 10px;
+  height: 30%;
+ }
 
-    #CloudBox {
-        margin-left: 50px;
-        width: 40px;
-        height: 40px;
-        background: url('Images/SignUp/signup_cloud_1.png');
-    }
+ #CloudBox {
+  margin-left: 50px;
+  width: 40px;
+  height: 40px;
+  background: url('Images/SignUp/signup_cloud_1.png');
+ }
 
-    #CloudBoxStack {
-        height: 70%;
-    }
+ #CloudBoxStack {
+  height: 70%;
+ }
 
-    #SunBox {
-        margin-left: 70px;
-        margin-top: 30px;
-        width: 60px;
-        height: 60px;
-        background: url('Images/SignUp/signup_sun.png')
-    }
+ #SunBox {
+  margin-left: 70px;
+  margin-top: 30px;
+  width: 60px;
+  height: 60px;
+  background: url('Images/SignUp/signup_sun.png')
+ }
 }
 
 UserPage {
-    #DesignStack {
-        height: 22%;
-        padding-top: 10px;
-    }
+ #DesignStack {
+  height: 22%;
+  padding-top: 10px;
+ }
 
-    #TempStack {
-        height: 70%;
-    }
+ #TempStack {
+  height: 70%;
+ }
 
-    #FenceImageView {
-        height: 8%;
-        background: url('Images/SignUp/fence.png');
-    }
+ #FenceImageView {
+  height: 8%;
+  background: url('Images/SignUp/fence.png');
+ }
 
-    #BikeImageView {
-        height: 40px;
-        background: url('Images/SignUp/bike.png');
-        margin-top: 20px;
-        margin-left: calc("view.Parent.ActualWidth - 140");
-    }
+ #BikeImageView {
+  height: 40px;
+  background: url('Images/SignUp/bike.png');
+  margin-top: 20px;
+  margin-left: calc("view.Parent.ActualWidth - 140");
+ }
 
-    #SignupTreesImageView {
-        height: 60px;
-        background: url('Images/SignUp/signup_trees.png');
-    }
+ #SignupTreesImageView {
+  height: 60px;
+  background: url('Images/SignUp/signup_trees.png');
+ }
 }
 
 IdentityPage {
-    #BackgroundStack {
-        Stack {
-            height: 50%;
-        }
-    }
+ #BackgroundStack {
+  Stack {
+   height: 50%;
+  }
+ }
 
-    #LeftCloudBox {
-        margin-left: 10px;
-        width: 60px;
-        height: 60px;
-        background: url("Images/SignUp/signup_cloud_2.png");
-    }
+ #LeftCloudBox {
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  background: url("Images/SignUp/signup_cloud_2.png");
+ }
 
-    #RightCloudBox {
-        margin-top: -10px;
-        margin-left: 100px;
-        width: 40px;
-        height: 40px;
-        background: url("Images/SignUp/signup_cloud_1.png");
-    }
+ #RightCloudBox {
+  margin-top: -10px;
+  margin-left: 100px;
+  width: 40px;
+  height: 40px;
+  background: url("Images/SignUp/signup_cloud_1.png");
+ }
 
-    #PadlockImageView {
-        margin-top: -20px;
-        margin-left: 40px;
-        width: 80px;
-        height: 80px;
-        background: url("Images/SignUp/signup_padlock.png");
-    }
+ #PadlockImageView {
+  margin-top: -20px;
+  margin-left: 40px;
+  width: 80px;
+  height: 80px;
+  background: url("Images/SignUp/signup_padlock.png");
+ }
 }

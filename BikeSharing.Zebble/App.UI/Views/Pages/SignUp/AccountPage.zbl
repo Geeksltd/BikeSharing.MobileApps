@@ -3,27 +3,27 @@
   <Stack Id="MainStack">
     <Stack Id="BackgroundStack" >
       <Stack Id="SunBoxStack" >
-        <Canvas Id="SunBox" />       
+        <Canvas Id="SunBox" />
       </Stack>
       <Stack Id="BuildingStack" >
-        <ImageView Id="BuildingImageView" />   
+        <ImageView Id="BuildingImageView" />
       </Stack>
       <ImageView Id="FenceImageView"/>
     </Stack>
     <Stack Id="ForegroundStack">
-        <Stack Id="CloseStack" >
-          <Button z-nav-go="Login"/>
-        </Stack>
-        <Stack Id="DetailStack">
-          <TextView Text="Email" CssClass="title"   />
-          <TextInput Id="EmailInput" on-UserTextChanged="TextChanged"  />
-          <TextView Text="Skype" CssClass="title"   />
-          <TextInput Id="SkypeInput" on-UserTextChanged="TextChanged"  />
-        </Stack>
-        <Stack Id="NextButtonStack" Direction="Horizontal">
-            <ImageView Id="BikeImageView" Path="Images/SignUp/bike.png" />
-            <Button  Id="ButtonNext" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>          
-        </Stack>
+      <Stack Id="CloseStack" >
+        <Button z-nav-go="Login"/>
       </Stack>
+      <Stack Id="DetailStack">
+        <TextView Text="Email" CssClass="title" />
+        <TextInput Id="EmailInput" on-UserTextChanged="TextChanged" />
+        <TextView Text="Skype" CssClass="title" />
+        <TextInput Id="SkypeInput" on-UserTextChanged="TextChanged" />
+      </Stack>
+      <Stack Id="NextButtonStack" Direction="Horizontal">
+        <ImageView Id="BikeImageView" Path="Images/SignUp/bike.png" />
+        <Button Id="ButtonNext" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+      </Stack>
+    </Stack>
   </Stack>
 </z-Component>
