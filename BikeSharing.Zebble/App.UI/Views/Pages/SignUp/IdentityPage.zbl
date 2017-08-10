@@ -11,7 +11,7 @@
     </Stack>
     <Stack Id="ForegroundStack">
       <Stack Id="CloseStack" >
-        <Button z-nav-go="Pages.Login"/>
+        <Button z-nav-go="Pages.Login" AutoFlash="true"/>
       </Stack>
       <Stack Id="DetailStack">
         <TextView Text="Username" CssClass="title" />
@@ -23,7 +23,7 @@
       </Stack>
       <Stack Id="NextButtonStack" >
         <Stack>
-          <Button Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+          <Button Id="NextButton" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped" AutoFlash="true"/>
         </Stack>
       </Stack>
     </Stack>

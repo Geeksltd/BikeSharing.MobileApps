@@ -6,7 +6,7 @@
       <TextInput Placeholder="Password" Id="PasswordTextInput" on-UserTextChanged="TextChanged" />
       <TextView Text="Forgot Password?" CssClass="label" Style.TextAlignment="Right" />
       <Stack Id="SigninButtonStack">
-        <Button Id="SigninButton" Text="Sign in" on-Tapped="SigninTapped" Enabled="false"/>
+        <Button Id="SigninButton" Text="Sign in" on-Tapped="SigninTapped" Enabled="false" AutoFlash="true"/>
       </Stack>
       <Stack Id="SignUpStack" Direction="Horizontal" >
         <TextView Text="Don't have an account?" Wrap="false" CssClass="label" />

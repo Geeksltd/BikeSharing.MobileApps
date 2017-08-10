@@ -2,9 +2,9 @@
 <z-Component z-type="EventSummaryModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
   <Stack Id ="MainStack" BackgroundImagePath="@Item.ImagePath" >
     <Stack>
-      <Button Text="Buy Ticket" Id="BuyTicketButton" />
+      <Button Text="Buy Ticket" Id="BuyTicketButton" AutoFlash="true"/>
       <Modules.EventModule Id="EventModule"/>
-      <Button Text="Book a Bike" Id="BookBikeButton" on-Tapped="BookBikeButtonTapped" />
+      <Button Text="Book a Bike" Id="BookBikeButton" on-Tapped="BookBikeButtonTapped" AutoFlash="true" />
       <TextView CssClass="small" Text="Avilable for 30 minutes" />
       <Stack Id="BookDetailStack" Direction="Horizontal">
         <Stack Id="BikeStack">

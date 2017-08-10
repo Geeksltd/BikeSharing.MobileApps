@@ -111,7 +111,7 @@ Home {
         border-bottom: 1px solid;
         border-color: @WhiteColor;
         margin: 10px;
-        margin-top:20px;
+        margin-top: 20px;
     }
 
     ImageView {
@@ -478,14 +478,14 @@ ReportIncident {
 
     #IncidentSelectorStack {
         padding: 10px;
-        height: 200px;
+        height: 130px;
 
         TextView {
             font-size: 12px;
             text-align: center;
         }
 
-        .image {
+        ImageView {
             margin: 10px;
             margin-top: 20px;
             width: 50px;
@@ -517,15 +517,21 @@ ReportIncident {
         margin: 10px 0px;
     }
 
+    FormField{
+        height:130px;
+        ImageView{ display:none;}
+    }
     TextInput {
         color: @BlackColor;
         border-bottom: 1px solid;
         border-color: @BlackColor;
+        position:absolute;
+        top:80px;
     }
 
     #ReportButtonStack {
         padding: 20px 0px;
-        margin-top: 50px;
+        margin-top: 10px;
 
         Button {
             padding: 10px;

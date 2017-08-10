@@ -19,7 +19,6 @@
     <None Include="$(MSBuildThisFileDirectory)Styles\Windows.scss" />
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json.defaults" />
     <None Include="$(MSBuildThisFileDirectory)compilerconfig.json" />
-    <None Include="$(MSBuildThisFileDirectory)Splash.png" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)Styles\_Core.scss" />
     <None Include="$(MSBuildThisFileDirectory)Styles\Common.scss" />
@@ -345,6 +344,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\BookModule.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\BookStationsModule.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\BookStationsModule.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\CustomeStack.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\CustomeStack.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventModule.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventModule.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Modules\Generic\EventsModule.zbl" />

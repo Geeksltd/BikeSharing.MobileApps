@@ -33,44 +33,44 @@ namespace UI.Pages
 
         void SetReportType(ReportedIssueType type)
         {
-            ChainImageView.BackgroundImagePath = "Images/Icons/report_chain.png";
+            ChainImageView.Image.BackgroundImagePath = "Images/Icons/report_chain.png";
             chain = false;
-            Flat_tireImageView.BackgroundImagePath = "Images/Icons/report_flat_tire.png";
+            Flat_tireImageView.Image.BackgroundImagePath = "Images/Icons/report_flat_tire.png";
             flatTire = false;
-            ForkImageView.BackgroundImagePath = "Images/Icons/report_fork.png";
+            ForkImageView.Image.BackgroundImagePath = "Images/Icons/report_fork.png";
             fork = false;
-            HandlebarImageView.BackgroundImagePath = "Images/Icons/report_handlebar.png";
+            HandlebarImageView.Image.BackgroundImagePath = "Images/Icons/report_handlebar.png";
             handlebar = false;
-            LossImageView.BackgroundImagePath = "Images/Icons/report_loss.png";
+            LossImageView.Image.BackgroundImagePath = "Images/Icons/report_loss.png";
             loss = false;
-            PedalsImageView.BackgroundImagePath = "Images/Icons/report_pedals.png";
+            PedalsImageView.Image.BackgroundImagePath = "Images/Icons/report_pedals.png";
             pedals = false;
 
             switch (type)
             {
                 case ReportedIssueType.Chain:
-                    ChainImageView.BackgroundImagePath = "Images/Icons/report_chain_selec.png";
+                    ChainImageView.Image.BackgroundImagePath = "Images/Icons/report_chain_selec.png";
                     chain = true;
                     break;
                 case ReportedIssueType.FlatTire:
                     flatTire = true;
-                    Flat_tireImageView.BackgroundImagePath = "Images/Icons/report_flat_tire_selec.png";
+                    Flat_tireImageView.Image.BackgroundImagePath = "Images/Icons/report_flat_tire_selec.png";
                     break;
                 case ReportedIssueType.Fork:
-                    ForkImageView.BackgroundImagePath = "Images/Icons/report_fork_selec.png";
+                    ForkImageView.Image.BackgroundImagePath = "Images/Icons/report_fork_selec.png";
                     fork = true;
                     break;
                 case ReportedIssueType.Handlebar:
                     handlebar = true;
-                    HandlebarImageView.BackgroundImagePath = "Images/Icons/report_handlebar_selec.png";
+                    HandlebarImageView.Image.BackgroundImagePath = "Images/Icons/report_handlebar_selec.png";
                     break;
                 case ReportedIssueType.Stolen:
-                    LossImageView.BackgroundImagePath = "Images/Icons/report_loss_selec.png";
+                    LossImageView.Image.BackgroundImagePath = "Images/Icons/report_loss_selec.png";
                     loss = true;
                     break;
                 case ReportedIssueType.Pedals:
                     pedals = true;
-                    PedalsImageView.BackgroundImagePath = "Images/Icons/report_pedals_selec.png";
+                    PedalsImageView.Image.BackgroundImagePath = "Images/Icons/report_pedals_selec.png";
                     break;
                 default: break;
             }
@@ -113,7 +113,8 @@ namespace UI.Pages
         void ResetData()
         {
             SetReportType(ReportedIssueType.Unknown);
-            title = TitleInput.Text = description = DescriptionInput.Text = "";
+            description = title = "";
+            TitleInput.Value = DescriptionInput.Value = null;
         }
     }
 }

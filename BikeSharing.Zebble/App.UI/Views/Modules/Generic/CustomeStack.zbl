@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<z-Component z-type="CustomeStack" z-base="Stack" z-partial="true" z-namespace="UI.Modules" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+    <ImageView Path="@path" Id="Image" />
+    <TextView Text="@name" />
+</z-Component>

@@ -12,7 +12,7 @@
     </Stack>
     <Stack Id="ForegroundStack">
       <Stack Id="CloseStack" >
-        <Button z-nav-go="Login"/>
+        <Button z-nav-go="Login" AutoFlash="true"/>
       </Stack>
       <Stack Id="DetailStack">
         <TextView Text="Email" CssClass="title" />
@@ -22,7 +22,7 @@
       </Stack>
       <Stack Id="NextButtonStack" Direction="Horizontal">
         <ImageView Id="BikeImageView" Path="Images/SignUp/bike.png" />
-        <Button Id="ButtonNext" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped"/>
+        <Button Id="ButtonNext" BackgroundImagePath="Images/Icons/floating_action_button_disable.png" Enabled="false" on-Tapped="NextButtonTapped" AutoFlash="true"/>
       </Stack>
     </Stack>
   </Stack>
