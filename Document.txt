@@ -15,8 +15,7 @@ Requirements
 	
 Setup
 
-	Download or clone the repository
-	
+	Download or clone the repository	
 	
 	Rebuild the solution to get all neccesary NuGet packages.
 
@@ -24,7 +23,15 @@ Setup
 	
 Deploy to Azure
 
-	Use the Backend Services repository to deploy backend services for Xamarin App to your subscription. Or you can deploy backend services on your local iis. for this part you should install .net core for iis (https://docs.microsoft.com/en-us/aspnet/core/publishing/iis)
-	for nodejs api service you can use iis-node 
-	Database are 
+	Use the Backend Services repository to deploy backend services for Xamarin App to your subscription.
+Use Local IIS and SQL
+    you can deploy backend services on your local iis. for this part you should install .net core for iis (https://docs.microsoft.com/en-us/aspnet/core/publishing/iis)
+	for nodejs api service you can use iis-node or node 
+	Database are already in Db folder and you should just attach them on your sql server, you also need to add a sql user with this detail 
+	User : "MyBikes"
+	Password : "BikesShare360@1"
+	
+	After hosting web Api on iis, you need to allow firewall for testing on external device like android
+	
+	
 	

@@ -1,13 +1,8 @@
 <?xml version="1.0"?>
 <z-Component z-type="TimeRemaining" z-base="Templates.Default" CssClass="BookingDetail" data-TopMenu="MainMenu" z-namespace="UI.Pages" z-partial="true" Title="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
-    <Stack >
-      <TextView Text="From" Id="FromText" />
-      <TextView Text="@bookRequest.FromStation.Name" />
-      <TextView Text="To" />
-      <TextView Text="@bookRequest.ToStation.Name" />
-      <TextView Text="@bookRequest.DueDateString" CssClass="date" />
-      <TextView Text="@GlobalSettings.City" CssClass="city" />
+    <Stack Id="BookingDetailStack">     
+      <Modules.BookModule Id="BookModule" />
       <Stack Id="TimerStack">
         <Stack>
           <TextView Id="TimerText" />

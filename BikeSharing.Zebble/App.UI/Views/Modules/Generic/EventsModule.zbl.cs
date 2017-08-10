@@ -37,10 +37,7 @@
 
             public Task RowTapped()
             {
-                Nav.Go<EventSummary>(new
-                {
-                    Id = Item.Id,
-                });
+                Nav.Go<EventSummary>(new { Id = Item.Id });
 
                 return Task.CompletedTask;
             }

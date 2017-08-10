@@ -18,6 +18,6 @@ namespace UI.Templates
             await BodyScroller.Add(Body = new Stack());
         }
 
-        public string Title { get { return string.Empty; } set { } }
+        public string Title { get => string.Empty; set { } }
     }
 }

@@ -10,7 +10,8 @@
         <Stack Id="BikeStack">
           <ImageView Path="Images/bike.png"/>
         </Stack>
-        <Stack >
+        <Modules.BookStationsModule Id="BookStationsModule" />
+        <!--<Stack >
           <TextView Text="From" />
           <TextView Text="@FromStation.Name" Id="FromText"/>
           <TextView Text="Empty bike docks 0 Avilable bikes 7" />
@@ -18,7 +19,7 @@
           <TextView Text="To" />
           <TextView Text="@ToStation.Name" Id="ToText" />
           <TextView Text="Empty bike docks 0 Avilable bikes 7" />
-        </Stack>
+        </Stack>-->
       </Stack>
     </Stack>
   </Stack>

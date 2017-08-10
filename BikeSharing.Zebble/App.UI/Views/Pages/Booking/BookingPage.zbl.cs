@@ -10,37 +10,37 @@
 
     partial class BookingPage
     {
-        CustomPin fromPin;
-        CustomPin toPin;
+        CustomPin From;
+        CustomPin To;
 
         public override async Task OnInitializing()
         {
-            fromPin = Nav.Param<CustomPin>("from");
-            toPin = Nav.Param<CustomPin>("to");
+            From = Nav.Param<CustomPin>("from");
+            To = Nav.Param<CustomPin>("to");
 
             await base.OnInitializing();
             await InitializeComponents();
             MainStack.Y.Set((float)0);
-            DateText.Text = LocalTime.Now.ToString("dddd, MMMM dd");
+            
 
             await MapView.Add(new Map.Annotation
             {
-                Title = fromPin.Label,
-                Location = new Zebble.Services.GeoLocation(fromPin.Position.Latitude, fromPin.Position.Longitude)
+                Title = From.Label,
+                Location = new Zebble.Services.GeoLocation(From.Position.Latitude, From.Position.Longitude)
             });
 
             await MapView.Add(new Map.Annotation
             {
-                Title = toPin.Label,
-                Location = new Zebble.Services.GeoLocation(toPin.Position.Latitude, toPin.Position.Longitude)
+                Title = To.Label,
+                Location = new Zebble.Services.GeoLocation(To.Position.Latitude, To.Position.Longitude)
             });
             MapView.ZoomLevel = 14;
         }
 
         public async Task BookClicked()
         {
-            var fromStation = await RidesService.GetStation(fromPin.Id);
-            var toStation = await RidesService.GetStation(toPin.Id);
+            var fromStation = await RidesService.GetStation(From.Id);
+            var toStation = await RidesService.GetStation(To.Id);
             var booking = await RidesService.RequestBikeBooking(fromStation, toStation);
             if (booking != null)
             {

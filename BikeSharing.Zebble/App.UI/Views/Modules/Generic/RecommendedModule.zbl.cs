@@ -13,15 +13,12 @@
         Suggestion[] Items;
         public override async Task OnInitializing()
         {
-            var rides = await RidesService.GetSuggestions();
-            if (rides != null)
-                Items = rides.ToArray();
+            Items = await RidesService.GetSuggestions();
 
             await base.OnInitializing();
             await InitializeComponents();
         }
 
-        // Task Refresh(Suggestion[] items) => WhenShown(() => List.UpdateSource(Items = items));
         public override Task OnPreRender()
         {
             List.Width.Set(Length.AutoStartegy.Content);
@@ -38,10 +35,7 @@
 
             public Task RowTapped()
             {
-                Nav.Forward<CustomRide>(new
-                {
-                    Id = Item.Id
-                });
+                Nav.Forward<CustomRide>(new { Id = Item.Id });
                 return Task.CompletedTask;
             }
         }

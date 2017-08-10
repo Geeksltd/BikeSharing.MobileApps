@@ -21,6 +21,6 @@ namespace UI.Templates
             this.Margin(top: (View.Root.ActualHeight - Body.ActualHeight) / 2);
         }
 
-        public string Title { get { return string.Empty; } set { } }
+        public string Title { get => string.Empty; set { } }
     }
 }

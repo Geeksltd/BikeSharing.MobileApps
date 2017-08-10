@@ -81,13 +81,11 @@ Home .title {
   padding: 10px;
   padding-left: 0px;
 }
-.HomeModules #RowStack {
-  margin-top: 20px;
-}
 .HomeModules .splitor {
   border-bottom: 1px solid;
   border-color: #ffffff;
   margin: 10px;
+  margin-top: 20px;
 }
 .HomeModules ImageView {
   width: 25px;
@@ -99,10 +97,7 @@ Home .title {
 }
 .HomeModules .titleRow {
   font-size: 26px;
-  margin-top: 10px;
-}
-.HomeModules #InfoStack {
-  height: 80%;
+  margin-top: 20px;
 }
 .HomeModules #RecommendedTitleText {
   font-size: 30px;
@@ -132,22 +127,16 @@ MyRides #SelectedRowInfoStack {
 }
 MyRides #SelectedRowInfoStack TextView {
   color: #ffffff;
-  margin: 7px;
-  font-size: 14px;
+  white-space: nowrap;
+  margin-top: 10px;
 }
-MyRides #SelectedRowInfoStack .label {
-  font-size: 12px;
-}
-MyRides #SelectedRowInfoStack .texbox {
-  font-size: 16px;
-}
-MyRides #FromTexView {
-  margin-top: 150px;
+MyRides #SelectedRowInfoStack .firstitem {
+  margin-top: 100px;
 }
 #MyRidesStack {
   height: 100%;
 }
-#MyRidesStack #List {
+#MyRidesStack ScrollView {
   height: 100%;
 }
 #MyRidesStack TextView {
@@ -160,7 +149,7 @@ MyRides #FromTexView {
   width: 40px;
   height: 100%;
 }
-#MyRidesStack #IconStack #MyRidesImage {
+#MyRidesStack #IconStack ImageView {
   margin-top: 10px;
   margin-left: 5px;
   height: 30px;
@@ -175,10 +164,10 @@ MyRides #FromTexView {
   width: 20px;
   margin-right: 5px;
 }
-#MyRidesStack #RideInfoStack #FromStationNameTextView {
+#MyRidesStack #RideInfoStack #FromTextView {
   color: #3063f5;
 }
-#MyRidesStack #RideInfoStack #ToStationNameTextView {
+#MyRidesStack #RideInfoStack #ToTextView {
   color: #ff5e4d;
 }
 #MyRidesStack #MainStack {
@@ -357,14 +346,22 @@ BookingPage #BookDetailStack .splitor {
   margin-top: 50px;
 }
 .BookingDetail .title {
-  margin-top: 150px;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.BookingDetail .thanks {
+  margin-top: 50px;
   font-size: 28px;
+}
+.BookingDetail #BookingDetailStack {
+  height: 100%;
 }
 .BookingDetail #BookingStack {
   background: url("Images/booking_circle_white.png");
   width: 90px;
   height: 90px;
-  margin-top: 50px;
+  top: calc("View.Root.ActualHeight  - 250");
+  position: absolute;
   margin-left: calc("(View.Root.ActualWidth/ 2)- 45");
   background-size: cover;
 }

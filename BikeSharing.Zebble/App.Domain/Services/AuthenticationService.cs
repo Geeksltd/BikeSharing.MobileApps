@@ -23,7 +23,7 @@ namespace Domain.Services
                 };
 
 
-                string uri = $"{GlobalSettings.AuthenticationEndpoint}{"api/login"}";
+                var uri = $"{GlobalSettings.AuthenticationEndpoint}{"api/login"}";
 
                 var authenticationInfo = await BaseApi.Post<AuthenticationResponse>(uri, auth);
                 if (authenticationInfo == null)

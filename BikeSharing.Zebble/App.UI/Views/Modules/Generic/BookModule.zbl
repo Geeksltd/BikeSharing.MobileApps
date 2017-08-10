@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<z-Component z-type="BookModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+ 
+    <TextView Text="From" CssClass="firstitem" />
+    <TextView Id="FromTextView" CssClass="title" />
+    <TextView Text="To" />
+    <TextView Id="ToTextView" CssClass="title" />
+    <TextView Id="DateText" CssClass="date" />
+    <TextView Text="@GlobalSettings.City" CssClass="city" />
+ 
+</z-Component>

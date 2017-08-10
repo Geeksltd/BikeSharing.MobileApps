@@ -1,5 +1,6 @@
 ﻿@import "Variables.less";
 
+
 .form-pages {
  #Body {
   height: 100%;
@@ -106,14 +107,11 @@ Home {
         padding-left: 0px;
     }
 
-    #RowStack {
-        margin-top: 20px;
-    }
-
     .splitor {
         border-bottom: 1px solid;
         border-color: @WhiteColor;
         margin: 10px;
+        margin-top:20px;
     }
 
     ImageView {
@@ -128,11 +126,7 @@ Home {
 
     .titleRow {
         font-size: 26px;
-        margin-top: 10px;
-    }
-
-    #InfoStack {
-        height: 80%;
+        margin-top: 20px;
     }
 
     #RecommendedTitleText {
@@ -147,100 +141,75 @@ Home {
 }
 
 MyRides {
- .form-pages();
+    .form-pages();
 
- #InfoStack {
-  height: 75%;
- }
+    #InfoStack { height: 75%;  }
 
- #MyRidesModule {
-  width: 30%;
- }
+    #MyRidesModule {  width: 30%; }
+    #MapView { width: 40%;  }
+    #SelectedRowInfoStack {
+        width: 30%;
+        background: url("Images/myrides_placeholder_event.png");
+        background-size: cover;
+        height: 100%;
+        padding: 10px;
 
- #MapView {
-  width: 40%;
- }
-
- #SelectedRowInfoStack {
-  width: 30%;
-  background: url("Images/myrides_placeholder_event.png");
-  background-size: cover;
-  height: 100%;
-  padding: 10px;
-
-  TextView {
-   color: @WhiteColor;
-   margin: 7px;
-   font-size: 14px;
-  }
-
-  .label {
-   font-size: 12px;
-  }
-
-  .texbox {
-   font-size: 16px;
-  }
- }
-
- #FromTexView {
-  margin-top: 150px;
- }
-
- 
+        TextView { color: @WhiteColor; white-space: nowrap;  margin-top:10px;  }
+        .firstitem{ margin-top:100px;}
+    }
 }
 
 #MyRidesStack {
-  height: 100%;
-
-  #List {
-    height: 100%;
-  }
-
-  TextView {
-    color: @BlackColor;
-    font-size: 12px;
-    margin-top: 5px;
-    white-space: nowrap;
-  }
-
-  #IconStack {
-    width: 40px;
     height: 100%;
 
-    #MyRidesImage {
-      margin-top: 10px;
-      margin-left: 5px;
-      height: 30px;
-    }
-  }
-
-  #RideInfoStack {
-    width: 90%;
-    height: 100%;
-    padding: 10px;
-
-    .image {
-      height: 20px;
-      width: 20px;
-      margin-right: 5px;
+    ScrollView {
+        height: 100%;
     }
 
-    #FromStationNameTextView {
-      color: @BlueColor;
+    TextView {
+        color: @BlackColor;
+        font-size: 12px;
+        margin-top: 5px;
+        white-space: nowrap;
     }
 
-    #ToStationNameTextView {
-      color: @OrangeColor;
-    }
-  }
+    #IconStack {
+        width: 40px;
+        height: 100%;
 
-  #MainStack {
-    width: 100%;
-    height: 170px;
-    border: 1px solid;
-    border-color: @GrayColor;
-  }
+        ImageView {
+            margin-top: 10px;
+            margin-left: 5px;
+            height: 30px;
+        }
+    }
+
+    #RideInfoStack {
+        width: 90%;
+        height: 100%;
+        padding: 10px;
+
+        .image {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        #FromTextView {
+            color: @BlueColor;
+        }
+
+        #ToTextView {
+            color: @OrangeColor;
+        }
+    }
+
+    #MainStack {
+        width: 100%;
+        height: 170px;
+        border: 1px solid;
+        border-color: @GrayColor;
+    }
 }
 
 CustomRide {
@@ -428,131 +397,143 @@ BookingPage {
 }
 
 .BookingDetail {
-  .form-pages();
+    .form-pages();
 
-  #Body {
-    background: url("Images/booking_background.png");
-    background-size: auto;
-  }
-
-  TextView {
-    color: @WhiteColor;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-  }
-
-  #FromText {
-    margin-top: 50px;
-  }
-
-  .title {
-    margin-top: 150px;
-    font-size: 28px;
-  }
-
-  #BookingStack {
-    background: url("Images/booking_circle_white.png");
-    width: 90px;
-    height: 90px;
-    margin-top: 50px;
-    margin-left: calc("(View.Root.ActualWidth/ 2)- 45");
-    background-size: cover;
-  }
-
-  .blacktext {
-    color: @BlackColor;
-    font-size: 12px;
-    margin-top: 15px;
-    text-transform: uppercase;
-  }
-
-  .bluetext {
-    color: @BlueColor;
-  }
-
-  #TimerStack {
-    background: url("Images/progress.png");
-    width: 80px;
-    height: 80px;
-    margin-top: 50px;
-    margin-left: calc("(View.Root.ActualWidth/ 2)- 40");
-    background-size: cover;
+    #Body {
+        background: url("Images/booking_background.png");
+        background-size: auto;
+    }
 
     TextView {
-      margin-top: 30px;
+        color: @WhiteColor;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
     }
-  }
 
-  .label {
-    font-size: 11px;
-    margin-top: 0px;
-  }
+    #FromText {
+        margin-top: 50px;
+    }
+
+    .title {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .thanks {
+        margin-top: 50px;
+        font-size: 28px;
+    }
+
+    #BookingDetailStack{
+        height:100%;
+    }
+    #BookingStack {
+        background: url("Images/booking_circle_white.png");
+        width: 90px;
+        height: 90px;
+        top: calc("View.Root.ActualHeight  - 250");
+        position:absolute;
+        
+        margin-left: calc("(View.Root.ActualWidth/ 2)- 45");
+        background-size: cover;
+    }
+
+    .blacktext {
+        color: @BlackColor;
+        font-size: 12px;
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+
+    .bluetext {
+        color: @BlueColor;
+    }
+
+    #TimerStack {
+        background: url("Images/progress.png");
+        width: 80px;
+        height: 80px;
+        margin-top: 50px;
+        margin-left: calc("(View.Root.ActualWidth/ 2)- 40");
+        background-size: cover;
+
+        TextView {
+            margin-top: 30px;
+        }
+    }
+
+    .label {
+        font-size: 11px;
+        margin-top: 0px;
+    }
 }
 
 ReportIncident {
- height: 100%;
- #Body{
- padding: 10px;
- }
- #IncidentSelectorStack {
-  padding: 10px;
-  height: 200px;
+    height: 100%;
 
-  TextView {
-   font-size: 12px;
-   text-align: center;
-  }
+    #Body {
+        padding: 10px;
+    }
 
-  .image {
-   margin: 10px;
-   margin-top: 20px;
-   width: 50px;
-   height: 50px;
-  }
- }
+    #IncidentSelectorStack {
+        padding: 10px;
+        height: 200px;
 
- #BotButtonStack {
-  padding: 20px;
-  border-bottom: 1px solid;
-  border-color: @GrayColor;
+        TextView {
+            font-size: 12px;
+            text-align: center;
+        }
 
-  IconButton {
-   padding: 10px;
-   width: 100%;
-   background-color: @BlueColor;
-   font-size: 20px;
-  }
+        .image {
+            margin: 10px;
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    }
 
-  #Icon {
-   margin-top: 0px;
-   margin-left: 30px;
-   height: 30px;
-  }
- }
+    #BotButtonStack {
+        padding: 20px;
+        border-bottom: 1px solid;
+        border-color: @GrayColor;
 
- .title {
-  color: @BlueColor;
-  margin: 10px 0px;
- }
+        IconButton {
+            padding: 10px;
+            width: 100%;
+            background-color: @BlueColor;
+            font-size: 20px;
+        }
 
- TextInput {
-  color: @BlackColor;
-  border-bottom: 1px solid;
-  border-color: @BlackColor;
- }
+        #Icon {
+            margin-top: 0px;
+            margin-left: 30px;
+            height: 30px;
+        }
+    }
 
- #ReportButtonStack {
-  padding: 20px 0px;
-  margin-top: 50px;
+    .title {
+        color: @BlueColor;
+        margin: 10px 0px;
+    }
 
-  Button {
-   padding: 10px;
-   width: 100%;
-   background-color: @BackgroundGrayColor;
-   font-size: 20px;
-  }
- }
+    TextInput {
+        color: @BlackColor;
+        border-bottom: 1px solid;
+        border-color: @BlackColor;
+    }
+
+    #ReportButtonStack {
+        padding: 20px 0px;
+        margin-top: 50px;
+
+        Button {
+            padding: 10px;
+            width: 100%;
+            background-color: @BackgroundGrayColor;
+            font-size: 20px;
+        }
+    }
 }
 
 EventSummary {

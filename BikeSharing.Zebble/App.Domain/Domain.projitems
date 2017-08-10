@@ -37,7 +37,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\OpenWeatherMapService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ProfileService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RidesService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Settings.cs" />
   </ItemGroup>
 </Project>

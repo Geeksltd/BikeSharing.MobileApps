@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<z-Component z-type="BookStationsModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+  <Stack >
+    <TextView Text="From" />
+    <TextView Text="@From.Label" Id="FromText"/>
+    <TextView Text="Empty bike docks 0 Avilable bikes 7" />
+    <TextView CssClass="splitor" />
+    <TextView Text="To" />
+    <TextView Text="@To.Label" Id="ToText" />
+    <TextView Text="Empty bike docks 0 Avilable bikes 7" />
+  </Stack>
+</z-Component>

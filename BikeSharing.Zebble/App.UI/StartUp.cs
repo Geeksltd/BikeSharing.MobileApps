@@ -21,7 +21,7 @@
 
             //Device.System.ReceivedMemoryWarning.Handle(() => Alert.Toast("There is a shortage of memory. The application may crash."));
 
-            Services.PushNotificationListener.Setup();
+            //Services.PushNotificationListener.Setup();
 
             LoadFirstPageAsync().RunInParallel();
         }

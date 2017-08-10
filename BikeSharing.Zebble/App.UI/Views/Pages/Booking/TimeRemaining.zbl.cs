@@ -49,6 +49,8 @@ namespace UI.Pages
             }
             await base.OnInitializing();
             await InitializeComponents();
+            BookModule.From = new CustomPin { Label = bookRequest.FromStation.Name };
+            BookModule.To = new CustomPin { Label = bookRequest.ToStation.Name };
             timerControl = new Timer(CounterFunc, null, 1, 1000);
         }
 

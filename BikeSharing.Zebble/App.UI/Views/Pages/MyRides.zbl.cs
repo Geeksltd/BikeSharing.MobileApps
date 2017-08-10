@@ -47,7 +47,10 @@
             {
                 await base.OnInitializing();
                 await InitializeComponents();
+                RideInfoModule.From = new CustomPin { Label = Item.From };
+                RideInfoModule.To = new CustomPin { Label = Item.To };
             }
+
 
             public async Task RowTapped()
             {
@@ -69,10 +72,10 @@
                 Module.MapView.ZoomLevel++;
                 Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
 
-                Module.FromSNSelectedRowTextView.Text = Item.From;
-                Module.ToSNSelectedRowTextView.Text = Item.To;
-                Module.DateSelectedRowTextView.Text = Item.StartString;
-                Module.SelectedStack.Visible = true;
+                Module.BookModule.Visible = true;
+                Module.BookModule.From = new CustomPin { Label = Item.From };
+                Module.BookModule.To = new CustomPin { Label = Item.To };
+                await Module.BookModule.ChangeValues();
             }
         }
     }

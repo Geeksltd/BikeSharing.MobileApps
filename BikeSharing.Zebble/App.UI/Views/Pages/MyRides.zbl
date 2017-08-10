@@ -4,40 +4,30 @@
     <Modules.WeatherInfoModule Id="WeatherInfoModule" />
     <Stack Direction="Horizontal" Id="InfoStack">
       <Stack Id="MyRidesStack" >
-        <ListView z-of="Ride, Row" Id="List" EmptyText="Empty list" DataSource="@Items" >
-          <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Ride]" >
-            <Stack Direction="Horizontal" Id="MainStack" on-Tapped="@RowTapped">
-              <Stack Id="IconStack">
-                <ImageView Path="Images/Icons/myrides_custom_ride.png" Id="MyRidesImage" />
-              </Stack>
-              <Stack Id="RideInfoStack">
-                <TextView Text="From" />
-                <TextView Text="@Item.From" Id="FromStationNameTextView" />
-                <TextView Text="To" />
-                <TextView Text="@Item.To" Id="ToStationNameTextView" />
-                <TextView Text="@Item.StartString" />
-                <TextView Text="@GlobalSettings.City" />
-                <Stack Direction="Horizontal" >
-                  <ImageView Path="Images/Icons/myrides_time.png" CssClass="image"/>
-                  <TextView Text="@Item.Duration.ToString()" />
-                  <ImageView Path="Images/Icons/myrides_distance.png" CssClass="image"/>
-                  <TextView Text="@Item.Distance.ToString()" />
+        <ScrollView ShowVerticalScrollBars="true" ShowScroll="true" Direction="Vertical" >
+          <ListView z-of="Ride, Row" Id="List" EmptyText="Empty list" DataSource="@Items" >
+            <z-Component z-type="Row" z-partial="true" z-base="ListViewItem[Ride]" >
+              <Stack Direction="Horizontal" Id="MainStack" on-Tapped="@RowTapped">
+                <Stack Id="IconStack">
+                  <ImageView Path="Images/Icons/myrides_custom_ride.png" />
+                </Stack>
+                <Stack Id="RideInfoStack">
+                  <Modules.BookModule Id="RideInfoModule" />
+                  <Stack Direction="Horizontal" >
+                    <ImageView Path="Images/Icons/myrides_time.png" CssClass="image"/>
+                    <TextView Text="@Item.Duration.ToString()" />
+                    <ImageView Path="Images/Icons/myrides_distance.png" CssClass="image"/>
+                    <TextView Text="@Item.Distance.ToString()" />
+                  </Stack>
                 </Stack>
               </Stack>
-            </Stack>
-          </z-Component>
-        </ListView>
+            </z-Component>
+          </ListView>
+        </ScrollView>
       </Stack>
       <Map Id="MapView" ZoomLevel="13" ZoomEnable="true" />
       <Stack Id="SelectedRowInfoStack" >
-        <Stack Id="SelectedStack" Visible="false">
-          <TextView Text="From" CssClass="label" Id="FromTexView" />
-          <TextView Id="FromSNSelectedRowTextView" CssClass="texbox" />
-          <TextView Text="To" CssClass="label"/>
-          <TextView Id="ToSNSelectedRowTextView" CssClass="texbox" />
-          <TextView Id="DateSelectedRowTextView"/>
-          <TextView Text="@GlobalSettings.City"/>
-        </Stack>
+        <Modules.BookModule Id="BookModule"  Visible="false"/>
       </Stack>
     </Stack>
   </z-place>

@@ -4,27 +4,14 @@
     <Map Id="MapView" />
     <Stack Id="OverlayStack"/>
     <Stack Id="MainStack">
-      <TextView Text="From" />
-      <TextView Text="@fromPin.Label" CssClass="title" />
-      <TextView Text="To" />
-      <TextView Text="@toPin.Label" CssClass="title" />
-      <TextView Id="DateText" CssClass="date" />
-      <TextView Text="@GlobalSettings.City" CssClass="city" />
+      <Modules.BookModule Id="BookModule" />
       <Button Text="Book a bike" on-Tapped="BookClicked" AutoFlash="true" />
       <TextView CssClass="small" Text="Avilable for 30 minutes" />
       <Stack Id="BookDetailStack" Direction="Horizontal">
         <Stack Id="BikeStack">
           <ImageView Path="Images/Icons/myrides_event.png"/>
         </Stack>
-        <Stack >
-          <TextView Text="From" />
-          <TextView Text="@fromPin.Label" Id="FromText"/>
-          <TextView Text="Empty bike docks 0 Avilable bikes 7" />
-          <TextView CssClass="splitor" />
-          <TextView Text="To" />
-          <TextView Text="@toPin.Label" Id="ToText" />
-          <TextView Text="Empty bike docks 0 Avilable bikes 7" />
-        </Stack>
+        <Modules.BookStationsModule Id="BookStationsModule" />
       </Stack>
     </Stack>
   </z-place>

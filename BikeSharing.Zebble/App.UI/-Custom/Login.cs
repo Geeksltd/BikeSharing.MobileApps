@@ -14,8 +14,8 @@ namespace UI.Pages
 
         private async Task SignInAsync()
         {
-            bool isValid = Validate();
-            bool isAuthenticated = false;
+            var isValid = Validate();
+            var isAuthenticated = false;
 
             if (isValid)
             {
@@ -40,8 +40,8 @@ namespace UI.Pages
         {
             userName = UsernameTextInput?.Text;
             password = PasswordTextInput?.Text;
-            bool isValidUser = userName.HasValue();
-            bool isValidPassword = password.HasValue();
+            var isValidUser = userName.HasValue();
+            var isValidPassword = password.HasValue();
             return isValidUser && isValidPassword;
         }
     }

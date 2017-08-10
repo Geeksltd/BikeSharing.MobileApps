@@ -15,7 +15,7 @@ namespace Domain.Services
                 await AddUserAndBikeIdsToIssue(issue);
                 await AddLocationToIssue(issue);
 
-                string uri = $"{GlobalSettings.IssuesEndpoint}api/Issues";
+                var uri = $"{GlobalSettings.IssuesEndpoint}api/Issues";
                 if (await BaseApi.Post(uri, issue))
                     return true;
                 return false;
