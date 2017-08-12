@@ -3,7 +3,7 @@
   <z-place inside="Body">
     <Map Id="MapView"/>
     <Stack Id="RouteSelector" />
-    <Stack Id="InnerStack">
+    <Stack Id="InnerStack" >
       <TextView Text="From" CssClass="TextView"/>
       <ItemPicker Id="FromItemPicker" />
       <TextView Text="To" CssClass="TextView"/>
@@ -18,7 +18,7 @@
       <TextView Id="FromText" CssClass="title" />
       <TextView Id="FromPSText" Text="Empty bike docks 0 Avilable bikes 7" />
     </Stack>
-    <Stack Id="ToPS">
+    <Stack Id="ToPS" >
       <TextView Text="To" />
       <TextView Id="ToText" CssClass="title" />
       <TextView Id="ToPSText" Text="Empty bike docks 0 Avilable bikes 7" />

@@ -51,7 +51,6 @@ Toast { background: white; padding: 20px; background: black;
  #Label { color: white; }
  #OKButton { color: $primary-color; }
 }
-
 /*Form -------------------*/
 FormField {
  #Label { }
@@ -66,8 +65,6 @@ Switch {
  &:checked #Bar { background: $primary-color; }
  #Toggle { }
 }
-
-
 Picker { padding: $input-padding; border-color: $very-light-grey;
  #Caret { background: url(Images/Icons/Caret.png); }
  #PlaceholderLabel { }
@@ -113,11 +110,11 @@ Tabs {
 }
 
 /*list views ----------------*/
-ListView {
+ListView { height: 100%; 
  #EmptyTextLabel { color: $grey; }
  .view-row { width: 20px; height: 100%; }
 
- ListViewItem { border-color: $very-light-grey;
+ ListViewItem { border-color: $very-light-grey; height: auto;
   .title { font-weight: bold; margin-bottom: 10px; }
  }
 

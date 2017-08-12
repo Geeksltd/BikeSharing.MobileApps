@@ -35,8 +35,8 @@
  "outputFile": "Styles/App.css",
  "inputFile": "Styles/App.scss"
  },
- {
- "outputFile": "Styles/App.css",
- "inputFile": "Styles/App.less"
- }
+  {
+    "outputFile": "Styles/App.css",
+    "inputFile": "Styles/App.less"
+  }
 ]

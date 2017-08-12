@@ -4,10 +4,10 @@ namespace UI
 {
     public static class GlobalSettings
     {
-        public const string AuthenticationEndpoint = "http://192.168.1.3:83/";// "http://bikesharing-services-profilestgr242k3hirba.azurewebsites.net/";
-        public const string EventsEndpoint = "http://192.168.1.3:81/";// "http://bikesharing-services-eventstgr242k3hirba.azurewebsites.net/";
-        public const string IssuesEndpoint = "http://192.168.1.3:82/";// "http://bikesharing-services-feedbacktgr242k3hirba.azurewebsites.net/";
-        public const string RidesEndpoint = "http://192.168.1.3:1337/";//"http://bikesharing-services-ridestgr242k3hirba.azurewebsites.net/";
+        public const string AuthenticationEndpoint = "http://192.168.1.196:83/";// "http://bikesharing-services-profilestgr242k3hirba.azurewebsites.net/";
+        public const string EventsEndpoint = "http://192.168.1.196:81/";// "http://bikesharing-services-eventstgr242k3hirba.azurewebsites.net/";
+        public const string IssuesEndpoint = "http://192.168.1.196:82/";// "http://bikesharing-services-feedbacktgr242k3hirba.azurewebsites.net/";
+        public const string RidesEndpoint = "http://192.168.1.196:1337/";//"http://bikesharing-services-ridestgr242k3hirba.azurewebsites.net/";
         public const string OpenWeatherMapEndpoint = "http://api.openweathermap.org/";
         public const string OpenWeatherMapAPIKey = "a62cddcaa47bd94ae33f6390d647d009";
 

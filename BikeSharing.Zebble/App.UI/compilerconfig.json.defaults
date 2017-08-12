@@ -34,16 +34,14 @@
    "sourceMap": false
   }
  },
- "minifiers": {
-  "css": {
-   "enabled": false,
-   "termSemicolons": true,
-   "gzip": false
-  },
-  "javascript": {
-   "enabled": false,
-   "termSemicolons": true,
-   "gzip": false
+  "minifiers": {   
+    "css": {
+      "enabled": false     
+    },
+    "javascript": {
+      "enabled": false,
+      "termSemicolons": true,
+      "gzip": false
+    }
   }
- }
-}
+  }
