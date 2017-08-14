@@ -3,7 +3,6 @@
     using System;
     using System.Threading.Tasks;
     using UI;
-    using UI.Modules;
     using Zebble;
     using Zebble.Plugin;
     using static Domain.Services.Api;
@@ -21,7 +20,7 @@
             await base.OnInitializing();
             await InitializeComponents();
             MainStack.Y.Set((float)0);
-            
+
 
             await MapView.Add(new Map.Annotation
             {
