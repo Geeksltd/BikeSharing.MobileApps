@@ -25,7 +25,7 @@
           </ListView>
         </ScrollView>
       </Stack>
-      <Map Id="MapView" ZoomLevel="13" ZoomEnable="true" />
+      <Map Id="MapView" ZoomLevel="13" Zoomable="true" />
       <Stack Id="SelectedRowInfoStack" >
         <Modules.BookModule Id="BookModule"  Visible="false"/>
       </Stack>

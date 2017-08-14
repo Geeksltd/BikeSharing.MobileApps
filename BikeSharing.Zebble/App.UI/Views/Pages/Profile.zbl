@@ -13,7 +13,7 @@
         <TextView Text="@Item.LastName" CssClass="title" Wrap="false" />
 
         <TextView Text="Birhdate" CssClass="label" />
-        <TextView Text="@Item.BirthDateString" CssClass="title" Wrap="false" />
+        <TextView Text="@Item.BirthDateString" CssClass="title" />
       </Stack>
       <Stack>
         <TextView Text="Email" CssClass="label" />

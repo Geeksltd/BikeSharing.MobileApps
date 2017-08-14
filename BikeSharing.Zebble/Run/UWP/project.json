@@ -10,13 +10,14 @@
     "System.Reflection": "4.3.0",
     "System.Security.Cryptography.Algorithms": "4.3.0",
     "System.Threading": "4.3.0",
-    "Zebble": "4.0.267",
-    "Zebble.Data": "4.2.183",
+    "Zebble": "4.0.282",
+    "Zebble.Data": "4.2.184",
     "Zebble.DateTimePicker": "4.5.264",
+    "Zebble.Inspector": "2.7.125",
     "Zebble.NavBarTabs": "2.6.322",
     "Zebble.Plugin.Carousel": "4.5.263",
     "Zebble.Plugin.Drawing": "3.1.280",
-    "Zebble.Plugin.Map": "4.1.319",
+    "Zebble.Plugin.Map": "4.3.105",
     "Zebble.WebApi": "4.5.265"
   },
   "frameworks": {

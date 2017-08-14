@@ -55,7 +55,7 @@
             public async Task RowTapped()
             {
                 Module.MapView.ZoomLevel--;
-                Module.MapView.Annotations.Clear();
+              //  Module.MapView.Annotations.Clear();
 
                 await Module.MapView.Add(new Map.Annotation
                 {

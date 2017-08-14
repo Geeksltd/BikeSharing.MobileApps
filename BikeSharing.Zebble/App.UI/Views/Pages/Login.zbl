@@ -9,7 +9,7 @@
         <Button Id="SigninButton" Text="Sign in" on-Tapped="SigninTapped" Enabled="false" AutoFlash="true"/>
       </Stack>
       <Stack Id="SignUpStack" Direction="Horizontal" >
-        <TextView Text="Don't have an account?" Wrap="false" CssClass="label" />
+        <TextView Text="Don't have an account? " Wrap="false" CssClass="label" />
         <TextView Text="Sign up" z-nav-forward="Pages.SignUp" Id="SignupTextView" CssClass="label"/>
       </Stack>
     </Stack>

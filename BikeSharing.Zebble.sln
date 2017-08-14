@@ -19,9 +19,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		GCop.json = GCop.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Run", "Run", "{FDDB0AA3-5974-40F6-B853-7E3824BD2C39}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		BikeSharing.Zebble\App.Domain\Domain.projitems*{38e83e4d-f88c-40c0-9528-9c818b0eaf42}*SharedItemsImports = 13
+		BikeSharing.Zebble\App.Domain\Domain.projitems*{3b21a769-f17c-4219-a595-27a34955228f}*SharedItemsImports = 4
+		BikeSharing.Zebble\App.UI\UI.projitems*{3b21a769-f17c-4219-a595-27a34955228f}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.Domain\Domain.projitems*{51aeafb7-e02b-4f51-8ab0-aa90e034e684}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.UI\UI.projitems*{51aeafb7-e02b-4f51-8ab0-aa90e034e684}*SharedItemsImports = 4
 		BikeSharing.Zebble\App.Domain\Domain.projitems*{573f454c-6003-40c8-a09d-3304f28d5f10}*SharedItemsImports = 4
@@ -222,5 +226,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51AEAFB7-E02B-4F51-8AB0-AA90E034E684} = {FDDB0AA3-5974-40F6-B853-7E3824BD2C39}
+		{573F454C-6003-40C8-A09D-3304F28D5F10} = {FDDB0AA3-5974-40F6-B853-7E3824BD2C39}
+		{3B21A769-F17C-4219-A595-27A34955228F} = {FDDB0AA3-5974-40F6-B853-7E3824BD2C39}
 	EndGlobalSection
 EndGlobal
