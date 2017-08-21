@@ -24,3 +24,11 @@ You might think, counting lines of code isn't fair, because there can be differe
 * Xamarin Forms: ~62,000 tokens
 * Zebble: ~12,700 tokens
 
+### UI Code & maintainability
+
+The code of the Zebble version not only briefer but also cleaner, easier to write and debug. As you can see for yourself by comparing the source code of the two implementations:
+
+* The Zebble UI styling code is in CSS, instead of hard-coded embedded resource styling you see in Xamarin Forms.
+* There is almost no platform specific code in the Zebble version, contrary to the over 850 references to specific platforms (iOS, Android or Windows) in the Xamarin Forms's version.
+* The mark up in Zebble (.zbl files) is much briefer, cleaner and more semanric than the XAML markup used by Xamarin Forms.
+* Resources (images and other files) are centrally hosted in a single directory in Zebble, while they are duplicated 3 times in different folder structures in the Xamarin Forms version.
