@@ -4,7 +4,7 @@
 
 At Microsoft Connect(); 2016 event last year, Microsoft demoed a mobile apps for BikeSharing360, a fictional company that allows users to rent bikes located throughout New York City and Seattle. BikeRider, the consumer mobile app for BikeSharing360, is an open source, beautiful native mobile app for iOS, Android, and Windows built with **Xamarin.Forms**. 
 
-You can [learn more about it here](https://blog.xamarin.com/introducing-bikerider-app/) or [check out the Xamarin Forms version's](https://github.com/Microsoft/BikeSharing360_MobileApps) source here.
+You can [learn more about it here](https://blog.xamarin.com/introducing-bikerider-app/) or check out the [Xamarin Forms version's](https://github.com/Microsoft/BikeSharing360_MobileApps) source.
 
 ## Comparison
 
