@@ -6,6 +6,10 @@ At Microsoft Connect(); 2016 event last year, Microsoft demoed a mobile apps for
 
 You can [learn more about it here](https://blog.xamarin.com/introducing-bikerider-app/) or check out the [Xamarin Forms version's](https://github.com/Microsoft/BikeSharing360_MobileApps) source.
 
+
+
+![](http://zebble.net/content/bikerider.png)
+
 ## Comparison
 
 To demonstrate the benefits of **Zebble** and provide a fair comparison with Xamarin Forms, we have implemented exactly the same design and functionality ***using Zebble instead of Xamarin Forms***.
