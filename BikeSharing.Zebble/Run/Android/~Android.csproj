@@ -152,6 +152,9 @@
     <Reference Include="Zebble.SearchInput.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.SearchInput.3.18.261\lib\MonoAndroid10\Zebble.SearchInput.Android.dll</HintPath>
     </Reference>
+    <Reference Include="Zebble.Switch.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.Switch.1.31.235\lib\MonoAndroid10\Zebble.Switch.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Zebble.WebApi.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.WebApi.4.5.265\lib\MonoAndroid10\Zebble.WebApi.Android.dll</HintPath>
     </Reference>

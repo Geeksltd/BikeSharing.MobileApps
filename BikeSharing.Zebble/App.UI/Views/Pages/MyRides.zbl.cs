@@ -27,7 +27,7 @@
                     Title = Item.To,
                     Location = new Zebble.Services.GeoLocation(Item.ToStation.Latitude, Item.ToStation.Longitude)
                 });
-                MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
+            //    MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
             }
             else
                 await MapView.Add(new Map.Annotation
@@ -70,7 +70,7 @@
 
                 await Task.Delay(500);
                 Module.MapView.ZoomLevel++;
-                Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
+            //    Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
 
                 Module.BookModule.Visible = true;
                 Module.BookModule.From = new CustomPin { Label = Item.From };

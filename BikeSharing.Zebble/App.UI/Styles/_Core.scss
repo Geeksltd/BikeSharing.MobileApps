@@ -14,10 +14,10 @@ IconButton { margin: 2px; height: 40px; padding: 5px;
 }
 
 
-/*Switch { width: 56px; height: 32px;
+Switch { width: 56px; height: 32px;
  #Bar { height: 32px; border-radius: 16px; }
  #Toggle { height: 28px; width: 28px; border-radius: 14px; background: white; margin: 2px; }
-}*/
+}
 
 
 /*Map { width: 100%; height: 100%; }*/
@@ -56,8 +56,16 @@ Toast { background: black; border-radius: 7px; margin: 20px; padding: 20px;
  & > #EmptyTextLabel { text-align: center; }
 }*/
 
-/*ListView:lazy-loaded OptionsList-Option { height: 30px; }*/
-
+ListView:lazy-loaded OptionsList-Option { height: 30px; }
+SearchInput {
+ & > #Icon { background-image: url(Images/Icons/Search.png); opacity: 0.3; padding: 8px; }
+ & > #TextBox { text-align: center; }
+ & > #CancelButton { border: 0; height: 35px; left: 100%; white-space: nowrap; padding: 0; padding-left: 0; opacity: 0; }
+ &:focus {
+  & > #TextBox { text-align: left; padding-left: 30px; }
+  & > #CancelButton { opacity: 1; }
+ }
+}
 
 NavBarPage { height: 100%; width: 100%;
  #BodyScroller { background: white; height:100%; width:100%;

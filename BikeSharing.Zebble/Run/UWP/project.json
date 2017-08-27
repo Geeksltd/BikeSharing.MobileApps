@@ -12,6 +12,7 @@
     "System.Threading": "4.3.0",
     "Zebble": "4.1.310",
     "zebble.Carousel": "4.5.266",
+    "Zebble.CheckBox": "1.22.109",
     "Zebble.Data": "4.2.186",
     "Zebble.DateTimePicker": "4.5.267",
     "Zebble.IconButton": "3.20.267",
@@ -20,6 +21,9 @@
     "Zebble.ListView": "3.17.126",
     "Zebble.Map": "4.3.109",
     "Zebble.NavBarTabs": "2.6.330",
+    "Zebble.OptionsList": "3.14.117",
+    "Zebble.SearchInput": "3.18.263",
+    "Zebble.Switch": "1.31.235",
     "Zebble.WebApi": "4.5.265",
     "Zebble.WebView": "4.1.232"
   },
