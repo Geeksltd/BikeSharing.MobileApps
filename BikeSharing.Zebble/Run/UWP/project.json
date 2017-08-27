@@ -10,18 +10,21 @@
     "System.Reflection": "4.3.0",
     "System.Security.Cryptography.Algorithms": "4.3.0",
     "System.Threading": "4.3.0",
-    "Zebble": "4.0.282",
-    "Zebble.Data": "4.2.184",
-    "Zebble.DateTimePicker": "4.5.264",
+    "Zebble": "4.1.310",
+    "zebble.Carousel": "4.5.266",
+    "Zebble.Data": "4.2.186",
+    "Zebble.DateTimePicker": "4.5.267",
+    "Zebble.IconButton": "3.20.267",
     "Zebble.Inspector": "2.7.125",
-    "Zebble.NavBarTabs": "2.6.322",
-    "Zebble.Plugin.Carousel": "4.5.263",
-    "Zebble.Plugin.Drawing": "3.1.280",
-    "Zebble.Plugin.Map": "4.3.105",
-    "Zebble.WebApi": "4.5.265"
+    "Zebble.ItemPicker": "3.12.140",
+    "Zebble.ListView": "3.17.126",
+    "Zebble.Map": "4.3.109",
+    "Zebble.NavBarTabs": "2.6.330",
+    "Zebble.WebApi": "4.5.265",
+    "Zebble.WebView": "4.1.232"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10240": {}
   },
   "runtimes": {
     "win10-arm": {},

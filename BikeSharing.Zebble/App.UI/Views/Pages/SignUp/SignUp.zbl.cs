@@ -48,8 +48,6 @@
                 TenantId = GlobalSettings.TenantId
             };
 
-
-
             var result = await ProfileService.SignUpAsync(userAndProfile);
 
             if (result != null)
@@ -66,10 +64,6 @@
                 {
                     await Alert.Show("Invalid credentials", "Login failure");
                 }
-            }
-            else
-            {
-                await Alert.Show("Invalid data", "Sign Up failure");
             }
         }
     }

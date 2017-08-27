@@ -759,6 +759,9 @@ SubscriptionPage #SunBox {
   padding: 0px;
   background: url('Images/SignUp/signup_sun.png');
 }
+UserPage #Label {
+  color: black;
+}
 UserPage #DesignStack {
   height: 22%;
   padding-top: 10px;

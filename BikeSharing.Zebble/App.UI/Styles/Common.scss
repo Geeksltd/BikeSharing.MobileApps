@@ -60,11 +60,11 @@ FormField {
 
 TextInput { padding: 7px; }
 
-Switch {
+/*Switch {
  #Bar { background: $grey; }
  &:checked #Bar { background: $primary-color; }
  #Toggle { }
-}
+}*/
 Picker { padding: $input-padding; border-color: $very-light-grey;
  #Caret { background: url(Images/Icons/Caret.png); }
  #PlaceholderLabel { }
@@ -131,12 +131,6 @@ ListView {
  ListView:lazy-loaded ListViewItem { height: 60px; }
 }
 
-SearchInput { margin-bottom: 5px;
- #TextBox { text-align: center; }
- &:focus #TextBox { text-align: left; }
- #Icon { }
- #CancelButton { }
-}
 
 /*App components -----------------*/
 .module-header-title { color: $primary-color; margin-bottom: 20px; }
