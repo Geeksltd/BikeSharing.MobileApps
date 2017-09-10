@@ -9,7 +9,7 @@
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+          
         }
 
         async Task SigninTapped() => await SignInAsync();

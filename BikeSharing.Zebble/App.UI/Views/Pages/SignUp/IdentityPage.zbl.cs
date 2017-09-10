@@ -14,7 +14,7 @@
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+          
             ForegroundStack.Y.Set(10);
             await LeftCloudBox.Animate(new Animation
             {

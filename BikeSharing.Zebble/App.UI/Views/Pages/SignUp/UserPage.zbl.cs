@@ -14,7 +14,7 @@
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+         
             ForegroundStack.Y.Set(10);
             BirthdateInput.SelectedValue = new DateTime(1970, 01, 01);
         }

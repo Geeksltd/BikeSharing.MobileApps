@@ -2,7 +2,7 @@
 {
     using Domain;
     using System.Threading.Tasks;
-    using Zebble.Plugin;
+    using Zebble;
     using static Domain.Services.Api;
     partial class MyRides
     {
@@ -12,7 +12,7 @@
             Items = await RidesService.GetUserRides(refresher: Refresh);
 
             await base.OnInitializing();
-            await InitializeComponents();
+
 
             if (Items != null && Items.Length > 0)
             {
@@ -27,7 +27,7 @@
                     Title = Item.To,
                     Location = new Zebble.Services.GeoLocation(Item.ToStation.Latitude, Item.ToStation.Longitude)
                 });
-            //    MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
+                MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
             }
             else
                 await MapView.Add(new Map.Annotation
@@ -46,7 +46,7 @@
             public override async Task OnInitializing()
             {
                 await base.OnInitializing();
-                await InitializeComponents();
+
                 RideInfoModule.From = new CustomPin { Label = Item.From };
                 RideInfoModule.To = new CustomPin { Label = Item.To };
             }
@@ -55,7 +55,7 @@
             public async Task RowTapped()
             {
                 Module.MapView.ZoomLevel--;
-              //  Module.MapView.Annotations.Clear();
+                await Module.MapView.ClearAnnotations();
 
                 await Module.MapView.Add(new Map.Annotation
                 {
@@ -70,7 +70,7 @@
 
                 await Task.Delay(500);
                 Module.MapView.ZoomLevel++;
-            //    Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
+                Module.MapView.Center = new Zebble.Services.GeoLocation(((Item.ToStation.Latitude + Item.FromStation.Latitude) / 2), ((Item.ToStation.Longitude + Item.FromStation.Longitude) / 2));
 
                 Module.BookModule.Visible = true;
                 Module.BookModule.From = new CustomPin { Label = Item.From };

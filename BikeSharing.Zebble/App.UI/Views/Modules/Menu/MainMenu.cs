@@ -15,7 +15,7 @@ namespace UI.Modules
                 return;
             }
             await base.OnInitializing();
-            await InitializeComponents();
+        
         }
 
         async Task LogoutButtonTapped()

@@ -117,13 +117,13 @@
       <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Tasks.42.1021.1\lib\MonoAndroid70\Xamarin.GooglePlayServices.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.4.1.310\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.4.2.343\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Carousel.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.Carousel.4.5.266\lib\MonoAndroid10\Zebble.Carousel.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.CheckBox.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.CheckBox.1.22.107\lib\MonoAndroid10\Zebble.CheckBox.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.CheckBox.1.22.109\lib\MonoAndroid10\Zebble.CheckBox.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Data.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.Data.4.2.186\lib\MonoAndroid10\Zebble.Data.Android.dll</HintPath>
@@ -135,28 +135,28 @@
       <HintPath>..\..\..\packages\Zebble.IconButton.3.20.267\lib\MonoAndroid10\Zebble.IconButton.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ItemPicker.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.ItemPicker.3.12.143\lib\MonoAndroid10\Zebble.ItemPicker.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.ItemPicker.3.12.146\lib\MonoAndroid10\Zebble.ItemPicker.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ListView.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.ListView.3.17.132\lib\MonoAndroid10\Zebble.ListView.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Map.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.Map.4.3.109\lib\MonoAndroid10\Zebble.Map.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.Map.4.3.125\lib\MonoAndroid10\Zebble.Map.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.NavBarTabs.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.NavBarTabs.2.6.322\lib\MonoAndroid10\Zebble.NavBarTabs.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.NavBarTabs.2.6.330\lib\MonoAndroid10\Zebble.NavBarTabs.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.OptionsList.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.OptionsList.3.14.113\lib\MonoAndroid10\Zebble.OptionsList.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.OptionsList.3.14.117\lib\MonoAndroid10\Zebble.OptionsList.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.SearchInput.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.SearchInput.3.18.261\lib\MonoAndroid10\Zebble.SearchInput.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.SearchInput.3.18.263\lib\MonoAndroid10\Zebble.SearchInput.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Switch.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.Switch.1.31.235\lib\MonoAndroid10\Zebble.Switch.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.WebApi.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.WebApi.4.5.265\lib\MonoAndroid10\Zebble.WebApi.Android.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.WebApi.4.5.271\lib\MonoAndroid10\Zebble.WebApi.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -25,7 +25,7 @@ namespace UI.Pages
                 await Nav.Go<Home>();
             }
             await base.OnInitializing();
-            await InitializeComponents();
+           
         }
 
         void NavToTimeRemaining(object state)

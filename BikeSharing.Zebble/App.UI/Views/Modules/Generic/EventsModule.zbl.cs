@@ -15,7 +15,7 @@
             Items = await EventsService.GetEvents(refresher: Refresh); // BaseApi.Get<Event[]>(uri, cacheChoice: ApiResponseCache.PreferThenUpdate, refresher: Refresh);
 
             await base.OnInitializing();
-            await InitializeComponents();
+         
         }
 
         public override Task OnPreRender()
@@ -30,7 +30,7 @@
             public override async Task OnInitializing()
             {
                 await base.OnInitializing();
-                await InitializeComponents();
+             
                 this.Width.Set(300);
                 EventModule.Item = Item;
             }

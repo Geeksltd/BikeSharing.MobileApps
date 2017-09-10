@@ -10,7 +10,7 @@
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+          
             var weather = await OpenWeatherMapService.GetDemoWeatherInfoAsync();
 
             if (weather is WeatherInfo)

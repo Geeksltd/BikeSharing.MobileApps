@@ -10,7 +10,7 @@ namespace UI.Pages
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+        
         }
 
         async Task OpenBot()

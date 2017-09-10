@@ -23,7 +23,7 @@
                 toStation = await RidesService.GetInfoForNearestStationTo(toGeoLocation);
             }
             await base.OnInitializing();
-            await InitializeComponents();
+           
             EventModule.Item = Item;
             BookStationsModule.From = new CustomPin { Label = fromStation.Name };
             BookStationsModule.To = new CustomPin { Label = toStation.Name };

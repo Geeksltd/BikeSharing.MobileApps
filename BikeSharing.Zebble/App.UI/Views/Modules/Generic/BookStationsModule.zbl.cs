@@ -16,7 +16,7 @@
             From = From ?? Nav.Param<CustomPin>("from");
             To = To ?? Nav.Param<CustomPin>("to");
             await base.OnInitializing();
-            await InitializeComponents();
+           
         }
     }
 }

@@ -15,7 +15,7 @@
             Items = await RidesService.GetSuggestions();
 
             await base.OnInitializing();
-            await InitializeComponents();
+          
         }
 
         public override Task OnPreRender()
@@ -28,7 +28,7 @@
             public override async Task OnInitializing()
             {
                 await base.OnInitializing();
-                await InitializeComponents();
+            
                 this.Width.Set(400);
             }
 

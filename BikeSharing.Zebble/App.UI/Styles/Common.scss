@@ -130,12 +130,12 @@ ListView {
 
  ListView:lazy-loaded ListViewItem { height: 60px; }
 }
-SearchInput { margin-bottom: 5px;
+/*SearchInput { margin-bottom: 5px;
  #TextBox { text-align: center; }
  &:focus #TextBox { text-align: left; }
  #Icon { }
  #CancelButton { }
-}
+}*/
 
 /*App components -----------------*/
 .module-header-title { color: $primary-color; margin-bottom: 20px; }

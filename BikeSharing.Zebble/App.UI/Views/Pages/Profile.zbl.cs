@@ -16,7 +16,7 @@
             Item = Settings.UserProfile;
 
             await base.OnInitializing();
-            await InitializeComponents();
+          
         }
 
 

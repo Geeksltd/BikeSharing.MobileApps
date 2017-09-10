@@ -12,7 +12,7 @@
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+         
         }
 
     }

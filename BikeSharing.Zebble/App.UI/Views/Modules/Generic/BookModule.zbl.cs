@@ -17,7 +17,7 @@
             From = From ?? Nav.Param<CustomPin>("from");
             To = To ?? Nav.Param<CustomPin>("to");
             await base.OnInitializing();
-            await InitializeComponents();
+
             DateText.Text = LocalTime.Now.ToString("dddd, MMMM dd");
             FromTextView.Text = From != null ? From.Label : "";
             ToTextView.Text = To != null ? To.Label : "";

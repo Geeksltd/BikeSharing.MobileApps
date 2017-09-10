@@ -16,7 +16,7 @@
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-            await InitializeComponents();
+           
             var user = new UserAndProfileModel();
             IdentityPage = new IdentityPage();
 

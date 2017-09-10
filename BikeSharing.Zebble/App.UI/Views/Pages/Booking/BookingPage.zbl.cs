@@ -18,7 +18,7 @@
             To = Nav.Param<CustomPin>("to");
 
             await base.OnInitializing();
-            await InitializeComponents();
+         
             MainStack.Y.Set((float)0);
 
 
