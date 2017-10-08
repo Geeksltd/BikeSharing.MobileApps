@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <z-Component z-type="EventSummaryModule" z-base="Stack" z-namespace="UI.Modules" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
-  <Stack Id ="MainStack" BackgroundImagePath="@Item.ImagePath" >
-    <Stack>
+  <Stack BackgroundImagePath="@Item.ImagePath" Id ="MainStack" >
+    <Stack Id="InternalBody">
       <Button Text="Buy Ticket" Id="BuyTicketButton" AutoFlash="true"/>
       <Modules.EventModule Id="EventModule"/>
       <Button Text="Book a Bike" Id="BookBikeButton" on-Tapped="BookBikeButtonTapped" AutoFlash="true" />
@@ -10,16 +10,7 @@
         <Stack Id="BikeStack">
           <ImageView Path="Images/bike.png"/>
         </Stack>
-        <Modules.BookStationsModule Id="BookStationsModule" />
-        <!--<Stack >
-          <TextView Text="From" />
-          <TextView Text="@FromStation.Name" Id="FromText"/>
-          <TextView Text="Empty bike docks 0 Avilable bikes 7" />
-          <TextView CssClass="splitor" />
-          <TextView Text="To" />
-          <TextView Text="@ToStation.Name" Id="ToText" />
-          <TextView Text="Empty bike docks 0 Avilable bikes 7" />
-        </Stack>-->
+        <Modules.BookStationsModule Id="BookStationsModule" />        
       </Stack>
     </Stack>
   </Stack>

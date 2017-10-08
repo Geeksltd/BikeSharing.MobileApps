@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Android
 {
-    [Activity(Label = "Application",
+    [Activity(Label = "Zebble Bike360",
         MainLauncher = true,
         NoHistory = true,
         Theme = "@style/Theme.Splash",

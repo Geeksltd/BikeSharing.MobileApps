@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <z-Component z-type="CustomRide" z-base="Templates.Default" z-namespace="UI.Pages" z-partial="true" Title="New Ride" data-TopMenu="MainMenu" z-cache="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
   <z-place inside="Body">
-    <Map Id="MapView"/>
+    <Map Id="MapView" Enabled="false"/>
     <Stack Id="RouteSelector" />
     <Stack Id="InnerStack" >
       <TextView Text="From" CssClass="TextView"/>

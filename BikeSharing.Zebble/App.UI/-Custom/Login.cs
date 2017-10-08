@@ -8,8 +8,8 @@ namespace UI.Pages
 {
     partial class Login
     {
-        string userName;
-        string password;
+        string UserName;
+        string Password;
 
         private async Task SignInAsync()
         {
@@ -20,11 +20,10 @@ namespace UI.Pages
             {
                 try
                 {
-                    isAuthenticated = await AuthenticationService.LoginAsync(userName, password);
+                    isAuthenticated = await AuthenticationService.LoginAsync(UserName, Password);
                 }
                 catch (Exception ex) when (ex is WebException)
-                {
-                    Console.WriteLine($"[SignIn] Error signing in: {ex}");
+                {                    
                     await Alert.Show("Error", "Communication error");
                 }
             }
@@ -37,10 +36,10 @@ namespace UI.Pages
 
         private bool Validate()
         {
-            userName = UsernameTextInput?.Text;
-            password = PasswordTextInput?.Text;
-            var isValidUser = userName.HasValue();
-            var isValidPassword = password.HasValue();
+            UserName = UsernameTextInput?.Text;
+            Password = PasswordTextInput?.Text;
+            var isValidUser = UserName.HasValue();
+            var isValidPassword = Password.HasValue();
             return isValidUser && isValidPassword;
         }
     }

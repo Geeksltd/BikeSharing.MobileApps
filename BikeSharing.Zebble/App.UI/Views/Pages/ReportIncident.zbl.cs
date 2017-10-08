@@ -10,7 +10,7 @@ namespace UI.Pages
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-        
+
         }
 
         async Task OpenBot()
@@ -79,6 +79,7 @@ namespace UI.Pages
 
         async Task ReportButtonTapped()
         {
+            FillData();
             bool isValid = Validate();
 
             if (isValid)

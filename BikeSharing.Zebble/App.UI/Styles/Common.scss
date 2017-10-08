@@ -115,7 +115,7 @@ ListView {
  .view-row { width: 20px; height: 100%; }
 
  ListViewItem { border-color: $very-light-grey; height: auto;
-  .title { font-weight: bold; margin-bottom: 10px; }
+  .title { font-weight: bold; }
  }
 
  #SlideIn TextView { height: 100%; margin: 0; color: white; background: #444; AutoSizeWidth: calc("true");

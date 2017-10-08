@@ -144,20 +144,44 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Zebble.Carousel.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.Carousel.4.5.270\lib\Xamarin.iOS10\Zebble.Carousel.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.CheckBox.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.CheckBox.1.22.109\lib\Xamarin.iOS10\Zebble.CheckBox.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.Data.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.Data.4.2.189\lib\Xamarin.iOS10\Zebble.Data.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Zebble.DateTimePicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.DateTimePicker.4.5.264\lib\Xamarin.iOS10\Zebble.DateTimePicker.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.DateTimePicker.4.5.273\lib\Xamarin.iOS10\Zebble.DateTimePicker.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.IconButton.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.IconButton.3.20.267\lib\Xamarin.iOS10\Zebble.IconButton.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.4.0.267\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.4.2.362\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.ItemPicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.ItemPicker.3.12.146\lib\Xamarin.iOS10\Zebble.ItemPicker.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.ListView.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.ListView.3.17.132\lib\Xamarin.iOS10\Zebble.ListView.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Map.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.Plugin.Map.4.1.319\lib\Xamarin.iOS10\Zebble.Map.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.Map.4.3.128\lib\Xamarin.iOS10\Zebble.Map.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.NavBarTabs.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.NavBarTabs.2.6.322\lib\Xamarin.iOS10\Zebble.NavBarTabs.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.NavBarTabs.2.6.334\lib\Xamarin.iOS10\Zebble.NavBarTabs.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.OptionsList.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.OptionsList.3.14.117\lib\Xamarin.iOS10\Zebble.OptionsList.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.SearchInput.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.SearchInput.3.18.263\lib\Xamarin.iOS10\Zebble.SearchInput.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.WebApi.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.WebApi.4.5.265\lib\Xamarin.iOS10\Zebble.WebApi.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.WebApi.4.5.271\lib\Xamarin.iOS10\Zebble.WebApi.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

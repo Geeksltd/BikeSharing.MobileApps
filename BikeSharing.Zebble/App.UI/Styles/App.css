@@ -54,18 +54,19 @@ Home .title {
 #WeatherInfoModule {
   height: 25%;
   width: auto;
-  margin: 0px;
-  padding: 10px;
   background: url("Images/background.png");
   background-size: auto;
 }
-#WeatherInfoModule #TempText {
+#WeatherInfoModule Stack {
+  margin: 0px 10px;
+}
+#WeatherInfoModule Stack #TempText {
   font-size: 36px;
 }
-#WeatherInfoModule #DateText {
+#WeatherInfoModule Stack #DateText {
   height: 30px;
 }
-#WeatherInfoModule TextView {
+#WeatherInfoModule Stack TextView {
   margin-top: 10px;
 }
 .HomeModules {
@@ -119,10 +120,11 @@ MyRides #MapView {
 MyRides #SelectedRowInfoStack {
   height: 100%;
   width: 30%;
-  margin: 0px;
-  padding: 10px;
   background: url("Images/myrides_placeholder_event.png");
   background-size: cover;
+}
+MyRides #SelectedRowInfoStack #BookModule {
+  margin: 10px;
 }
 MyRides #SelectedRowInfoStack TextView {
   white-space: nowrap;
@@ -187,6 +189,7 @@ CustomRide #RouteSelector {
   margin: 20px;
   background-color: #ffffff;
   opacity: 0.4;
+  z-index: 999;
 }
 CustomRide #InnerStack {
   height: 180px;
@@ -196,6 +199,7 @@ CustomRide #InnerStack {
   background: #ffffff;
   position: absolute;
   top: 30px;
+  z-index: 1000;
 }
 CustomRide #GoButtonStack {
   height: 40px;
@@ -458,9 +462,10 @@ EventSummary #EventSummaryModule {
 EventSummary #MainStack {
   height: 100%;
   width: auto;
-  margin: 0px;
-  padding: 20px 30px 10px 30px;
   background-size: auto;
+}
+EventSummary #MainStack #InternalBody {
+  margin: 0px 30px 0px 30px;
 }
 EventSummary TextView {
   font-size: 18px;
@@ -502,7 +507,7 @@ EventSummary #BookDetailStack {
 }
 EventSummary #BookDetailStack TextView {
   font-size: 12px;
-  margin: 0px;
+  margin: 5px;
   color: #484f63;
 }
 EventSummary #BookDetailStack ImageView {
@@ -526,20 +531,18 @@ EventSummary #BikeStack {
 }
 Login {
   height: 100%;
-}
-Login #MainStack {
-  height: 100%;
-  width: auto;
-  margin: 0px;
-  padding: 20px 50px;
+  width: 100%;
   background: url("Images/background.png");
   background-size: cover;
 }
-Login #SignupTextView {
+Login Stack {
+  margin: 20px 50px;
+}
+Login Stack #SignupTextView {
   color: #ffed00;
   font-weight: bold;
 }
-Login TextInput {
+Login Stack TextInput {
   font-size: 20px;
   margin: 10px;
   color: #ffffff;
@@ -547,23 +550,23 @@ Login TextInput {
   border-bottom: 1px solid;
   border-color: #ffffff;
 }
-Login .label {
+Login Stack .label {
   font-size: 12px;
   margin: 10px;
 }
-Login #UsernameTextInput {
+Login Stack #UsernameTextInput {
   margin-top: 100px;
 }
-Login #SignUpStack {
+Login Stack #SignUpStack {
   margin-top: 200px;
 }
-Login #SigninButtonStack {
+Login Stack #SigninButtonStack {
   height: auto;
   width: auto;
   margin: 20px 0px 0px 0px;
   padding: 0px 40px;
 }
-Login #SigninButtonStack Button {
+Login Stack #SigninButtonStack Button {
   width: 100%;
   color: #000000;
   background-color: #3063f5;

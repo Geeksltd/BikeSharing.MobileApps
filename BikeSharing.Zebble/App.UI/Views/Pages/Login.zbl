@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <z-Component z-type="Login" z-base="Page" z-namespace="UI.Pages" z-partial="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
-  <Stack Id="MainStack">
+ 
     <Stack>
       <TextInput Placeholder="Username" Id="UsernameTextInput" on-UserTextChanged="TextChanged"/>
       <TextInput Placeholder="Password" Id="PasswordTextInput" on-UserTextChanged="TextChanged" />
@@ -13,5 +13,5 @@
         <TextView Text="Sign up" z-nav-forward="Pages.SignUp" Id="SignupTextView" CssClass="label"/>
       </Stack>
     </Stack>
-  </Stack>
+ 
 </z-Component>

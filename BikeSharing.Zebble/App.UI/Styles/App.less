@@ -38,10 +38,12 @@ Home {
  .title { .text-view(20px, 10px 10px 0px 10px, @BlueColor); }
 }
 
-#WeatherInfoModule { .view(25%, auto, 0px, 10px, url("Images/background.png")); background-size: auto;  
-     #TempText { font-size: 36px; }
-     #DateText { height: 30px; }
-     TextView { margin-top: 10px; }
+#WeatherInfoModule { .view(25%, auto); background: url("Images/background.png"); background-size: auto;  //0px, 10px,
+                     Stack{   margin:0px 10px;
+                             #TempText { font-size: 36px; }
+                             #DateText { height: 30px; }
+                             TextView { margin-top: 10px; }
+                          }
 }
 
 .HomeModules { .view(32%, auto, 0px, 10px); 
@@ -63,7 +65,8 @@ MyRides {
     #InfoStack { height: 75%;  }
     #MyRidesModule { width: 30%; }
     #MapView { width: 40%;  }
-    #SelectedRowInfoStack { .view(100%, 30%, 0px ,10px, url("Images/myrides_placeholder_event.png")); background-size: cover;
+    #SelectedRowInfoStack { .view(100%, 30%); background: url("Images/myrides_placeholder_event.png"); background-size: cover; 
+                            #BookModule{ margin: 10px;}
                             TextView { white-space: nowrap;  margin-top:10px;  }
                             .firstitem{ margin-top:100px;}
     }
@@ -87,8 +90,8 @@ MyRides {
 CustomRide {
      .form-pages();
       TextView{ color:@BlackColor;}
-     #RouteSelector { .outer-stack( @WhiteColor,220px);  }
-     #InnerStack { .view(180px,calc("View.Root.ActualWidth - 100"),0px 0px 0px 40px,10px,@WhiteColor,30px);
+     #RouteSelector { .outer-stack( @WhiteColor,220px);  z-index:999;}
+     #InnerStack { .view(180px,calc("View.Root.ActualWidth - 100"),0px 0px 0px 40px,10px,@WhiteColor,30px); z-index:1000;
      }
      #GoButtonStack { .view(40px,100%,20px 0px 0px 0px,0px,@ProfileGrayColor);
                       Button {height: 100%; width: 60px; margin-left: calc("view.Parent.ActualWidth - 60"); padding: 10px; background-color: @BlueColor; color: @WhiteColor;}
@@ -162,7 +165,9 @@ ReportIncident { height: 100%;
 EventSummary {
      .form-pages();// #Body{ height:auto;}
      #EventSummaryModule { height: 100%; }
-     #MainStack { .view(100%,auto,0px,20px 30px 10px 30px); background-size: auto; }
+     #MainStack { .view(100%,auto); background-size: auto; 
+               #InternalBody{margin:0px 30px 0px 30px;}
+     }
      TextView { .text-view(18px); }
      .titleRow { .text-view(36px,10px 0px 0px 0px); }
      .splitor { border-color: @GrayColor; margin: 5px 10px 10px 10px; }
@@ -170,7 +175,7 @@ EventSummary {
      #BuyTicketButton { margin-top: 70px; font-size: 14px; width: 120px; border: 3px solid; border-color: @WhiteColor; font-weight: bold; }
      #BookBikeButton { margin-top: 50px; width: 200px; padding: 8px; border: 4px solid; border-color: @WhiteColor; font-weight: bold; }
      #BookDetailStack { .view(170px,auto,30px 0px 0px 0px,5px, @WhiteColor);
-                        TextView { .text-view(12px,0px, @GrayColor); }
+                        TextView { .text-view(12px,5px, @GrayColor); }
                         ImageView {  height: 40px; width: 40px; border-color: @BlueColor; border: 1px; }
                         #FromText { .text-view(20px, 0px,@BlueColor); }
                         #ToText { .text-view( 20px, 0px, @OrangeColor); }
@@ -178,8 +183,8 @@ EventSummary {
      #BikeStack { width: 60px; }
 }
 
-Login { height: 100%;
-        #MainStack { .view(100%,auto,0px,20px 50px,url("Images/background.png")); background-size: cover;}
+Login {  .view(100%,100%); background: url("Images/background.png"); background-size: cover; //,0px,20px 50px,
+        Stack{ margin:20px 50px;
         #SignupTextView { color: @BrightYellowColor; font-weight: bold; }
         TextInput { .text-view(20px,10px,@WhiteColor); padding :10px 0px; border-bottom: 1px solid; border-color: @WhiteColor; }
         .label { .text-view(12px, 10px); }
@@ -189,7 +194,7 @@ Login { height: 100%;
                              Button { width: 100%; color: @BlackColor; background-color: @BlueColor; padding: 20px; }
                            }
        }
-
+}
 SignUp { height: 100%;
          #Body { height: 100%; background: url("Images/background.png"); background-size: cover;
                  #MyCarousel { height: 100%; }

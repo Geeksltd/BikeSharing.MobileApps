@@ -17,7 +17,7 @@
         public override async Task OnInitializing()
         {
             await base.OnInitializing();
-         
+
             MapView.ZoomLevel = 11;
             RouteSelector.Y.Set(10);
             RouteSelected.Y.Set(Root.ActualHeight - 230);
